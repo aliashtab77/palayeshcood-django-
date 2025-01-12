@@ -1,15 +1,16 @@
 {% load static %}
 {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
 <!DOCTYPE html>
 <html lang="{{ LANGUAGE_CODE }}">
 
 <head>
 <meta charset="utf-8">
     <!-- Author Meta -->
-    <meta name="author" content="starkteam, palayeshcoode, استارک تیم,پالایش گوود">
+    <meta name="author" content="starkteam, palayeshcoode, استارک تیم,پالایش کود">
     <!-- Meta Description -->
-    <meta name="description" content="{% block description %}main page of palayeshcood.com{% endblock description %}">
+    <meta name="description" content="{% block description %}{% endblock description %}">
     <!-- Meta Keyword -->
     <meta name="keywords" content="palayeshcood, palayeshkood, استارک تیم, پالایش کود,{% block keywords%}{% endblock keywords%}">
 
@@ -18,14 +19,18 @@
 	<meta property="og:locale" content="{{ LANGUAGE_CODE }}" />
 {% if LANGUAGE_CODE == 'fa'%}
     <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="ar" />
+    {% elif LANGUAGE_CODE == 'en' %}
+    <meta property="og:locale:alternate" content="fa_IR" />
+    <meta property="og:locale:alternate" content="ar" />
 {% else %}
 	<meta property="og:locale:alternate" content="fa_IR" />
+        <meta property="og:locale:alternate" content="en_US" />
 {% endif %}
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://palayeshcood.com/" />
 
-
-    <title>{% translate 'پالایش کود' %} | {% block title %}{% endblock title %}</title>
+    <title>{% translate 'Palayeshcood' %} | {% block title %}{% endblock title %}</title>
     <!-- Stylesheets -->
     <link href="{% static 'haman/css/bootstrap.css' %}" rel="stylesheet">
     <link href="{% static 'haman/css/revolution-slider.css' %}" rel="stylesheet">
@@ -36,6 +41,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link href="{% static 'haman/css/responsive.css' %}" rel="stylesheet">
+{% if LANGUAGE_BIDI %}
+    <link href="{% static 'haman/css/mamad.css' %}" rel="stylesheet">
+{% endif %}
     <!--[if lt IE 9]><script src="{% static 'haman/cdn/html5shiv.js' %}"></script><![endif]-->
     <!--[if lt IE 9]><script src="{% static 'haman/js/respond.js' %}"></script><![endif]-->
 </head>
@@ -117,7 +125,7 @@
 
                             <div class="navbar-collapse collapse clearfix">
                                 <ul class="navigation clearfix">
-                                    <li class="current"><a href="">Home</a></li>
+                                    <li class="{% block homec %}{% endblock homec %}"><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
                                     <li class="dropdown"><a href="#">About Us</a>
                                     	<ul>
                                             <li><a href="about-us.html">About Us</a></li>
@@ -168,7 +176,7 @@
                                         </ul>
                                     </li>
 
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li class="{% block contactc %}{% endblock contactc %}"><a href="{% url 'contact' %}">{% translate 'Contact' %}</a></li>
 
                                  </ul>
                             </div>
@@ -189,12 +197,15 @@
                             <input type="hidden" value="{% autoescape off %}{% block next %}{{ request.path }}{% endblock next %}{% endautoescape %}" name="next" id="next">
                             {% if LANGUAGE_CODE == 'fa' %}
                                 <button class="btn btn-primary dropdown-toggle" style="color: black;background-color: whitesmoke;" type="button" data-toggle="dropdown"><img src="{% static 'haman/images/icons/iran.png' %} " alt="iran flag logo"/> &nbsp; <span class="fa fa-angle-down"></span></button>
-                            {% else %}
+                            {% elif LANGUAGE_CODE == 'en' %}
                                 <button  class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><img src="{% static 'haman/images/icons/flog.png' %} " alt="british flag logo"/> &nbsp; <span class="fa fa-angle-down"></span></button>
+                            {% else %}
+                                <button  class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><img src="{% static 'haman/images/icons/arab.png' %} " width="24px" height="14px" alt="Arabian flag logo"/> &nbsp; <span class="fa fa-angle-down"></span></button>
                             {% endif %}
                             <ul class="dropdown-menu">
-                                <li><button onclick="chLaToPe();"><img src="{% static 'haman/images/icons/iran.png' %} " alt="iran flag logo" /></button></li>
-                                <li><button onclick="chLaToEn();"><img src="{% static 'haman/images/icons/flog.png' %} " alt="british flag logo" /></button></li>
+                                <li><button onclick="chLaToPe();"><img src="{% static 'haman/images/icons/iran.png' %}" alt="iran flag logo" /></button></li>
+                                <li><button onclick="chLaToEn();"><img src="{% static 'haman/images/icons/flog.png' %}" alt="british flag logo" /></button></li>
+                                <li><button onclick="chLaToAr();"><img src="{% static 'haman/images/icons/arab.png' %}" width="24px" height="14px" alt="Arabian flag logo" /></button></li>
                             </ul>
                         </form>
                     </div>
@@ -204,6 +215,94 @@
 
     </header>
     <!--End Main Header -->
+
+     <!-- Hidden Navigation Bar -->
+    <section class="hidden-bar right-align">
+
+        <div class="hidden-bar-closer">
+            <button class="btn"><i class="fa fa-close"></i></button>
+        </div>
+
+        <!-- Hidden Bar Wrapper -->
+        <div class="hidden-bar-wrapper">
+
+            <!-- .logo -->
+            <div class="logo text-center">
+                <a href="{% url 'home' %}"><img src="{% static '/haman/images/logo-2.png' %}" alt=""></a>
+            </div><!-- /.logo -->
+
+            <!-- .Side-menu -->
+            <div class="side-menu">
+            <!-- .navigation -->
+                <ul class="navigation">
+                    <li class="{% block homecz %}{% endblock homecz %}"><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
+                    <li class="dropdown"><a href="#">About Us</a>
+                        <ul>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="our-team.html">Our Team</a></li>
+                            <li><a href="team-single.html">Team Single</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">Services</a>
+                        <ul class="submenu">
+                            <li><a href="services.html">Our Services</a></li>
+                            <li><a href="service-single.html">Services Single</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">Projects</a>
+                        <ul class="submenu">
+                            <li><a href="portfolio-default.html">Projects Standard</a></li>
+                            <li><a href="portfolio-fullwidth.html">Projects Fullwidth</a></li>
+                            <li><a href="portfolio-with-text.html">Projects With Text</a></li>
+                            <li><a href="portfolio-single-one.html">Projects Single 01</a></li>
+                            <li><a href="portfolio-single-two.html">Projects Single 02</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">Blog</a>
+                        <ul class="submenu">
+                            <li><a href="blog.html">Blog Standard</a></li>
+                            <li><a href="blog-large-image.html">Blog large Image</a></li>
+                            <li><a href="blog-single.html">Blog Single</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown"><a href="#">Shop</a>
+                        <ul class="submenu">
+                            <li><a href="shop.html">Shop Products</a></li>
+                            <li><a href="shop-single.html">Shop Single</a></li>
+                            <li><a href="shopping-cart.html">Shopping Cart</a></li>
+                            <li><a href="checkout.html">Checkout</a></li>
+                            <li><a href="register.html">Login / Register</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown"><a href="#">Pages</a>
+                        <ul class="submenu">
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="our-team.html">Our Team</a></li>
+                            <li><a href="team-single.html">Team Single</a></li>
+                            <li><a href="pricing.html">Pricing Table</a></li>
+                            <li><a href="faqs.html">FAQ's</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="{% block contactcz %}{% endblock contactcz %}"><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </div><!-- /.Side-menu -->
+
+            <div class="social-icons">
+                <ul>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+
+        </div><!-- / Hidden Bar Wrapper -->
+    </section>
+    <!-- / Hidden Bar -->
+
 
 
 
@@ -229,9 +328,9 @@
                                     <div class="widget-content">
                                     	<div class="text">Must explain too you all this mistaken idea off denouncing pleasure and well praising pain was born and I will gives you complete accounts systems must explain to idea of denouncing.</div>
                                         <ul class="contact-info">
-                                        	<li><span class="icon fa fa-map-marker"></span>Rock St 12, Newyork City, USA</li>
-                                            <li><span class="icon fa fa-phone"></span>(526) 236-895-4732</li>
-                                            <li><span class="icon fa fa-envelope-o"></span>Decoratorssuport@gmail.com</li>
+                                        	<li><span class="icon fa fa-map-marker"></span>{% translate 'Unit 31, Safavieh Office Complex, Rajaee St, Kashan, Iran' %}</li>
+                                            <li><span class="icon fa fa-phone"></span><a href="tel:+9891300025744">+98(913) 0002-57-44</a></li>
+                                            <li><span class="icon fa fa-envelope-o"></span><a href="mailto:info@palayeshcood.com">Info@Palayeshcood.com</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -240,7 +339,7 @@
                             <!--Footer Column-->
                         	<div class="footer-column col-md-6 col-sm-6 col-xs-12">
                             	<div class="footer-widget tags-widget">
-                                	<h2>{% translate 'تگ های محبوب' %}</h2>
+                                	<h2>{% translate 'Popular Tags' %}</h2>
                                     <div class="widget-content">
                                     	<ul class="tags-list">
                                         	<li><a href="#">Designs</a></li>
@@ -252,7 +351,7 @@
                                     </div>
                                 </div>
                                 <div class="footer-widget gallery-widget">
-                                	<h2>{% translate 'کار های اخیر' %}</h2>
+                                	<h2>{% translate 'Recent Works' %}</h2>
                                     <div class="gallery-widget-carousel">
                                     	<div class="item"><figure class="post-thumb"><img src="{% static 'haman/images/gallery/thumb-1.jpg' %}" alt=""><a href="#" class="overlay-link"><span class="fa fa-link"></span></a></figure></div>
                                         <div class="item"><figure class="post-thumb"><img src="{% static 'haman/images/gallery/thumb-2.jpg' %}" alt=""><a href="#" class="overlay-link"><span class="fa fa-link"></span></a></figure></div>
@@ -280,7 +379,7 @@
                             <!--Footer Column-->
                         	<div class="footer-column col-md-6 col-sm-6 col-xs-12">
                             	<div class="footer-widget posts-widget">
-                                	<h2>{% translate 'اخبار اخیر' %}</h2>
+                                	<h2>{% translate 'Recent News' %}</h2>
                                     <div class="widget-content">
                                     	<div class="posts">
                                             <div class="post">
@@ -294,7 +393,7 @@
                                                 <div class="time"><span class="fa fa-clock-o"></span> Aug 21, 2015</div>
                                             </div>
                                         </div>
-                                        <a class="view-more theme-btn" href="#">Read More <span class="fa fa-caret-right"></span></a>
+                                        <a class="view-more theme-btn" href="#">{% translate 'Read More' %} <span class="fa fa-caret-right"></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -302,20 +401,20 @@
                             <!--Footer Column-->
                         	<div class="footer-column col-md-6 col-sm-6 col-xs-12">
                             	<div class="footer-widget contact-widget">
-                                	<h2>{% translate 'برای ما پیام بفرستید' %}</h2>
+                                	<h2>{% translate 'Send Us Message' %}</h2>
                                     <div class="widget-content">
                                         <div class="newsletter-form">
                                             <form method="post" action="#">
                                                 <div class="form-group">
-                                                    <input type="text" name="name" value="" placeholder="Name" required>
+                                                    <input type="text" name="name" value="" placeholder="{% translate 'Name *' %}" required>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="email" name="email" value="" placeholder="Email *" required>
+                                                    <input type="email" name="email" value="" placeholder="{% translate 'Email *' %}" required>
                                                 </div>
                                                 <div class="form-group">
-                                                    <textarea name="message" placeholder="Message *" required></textarea>
+                                                    <textarea name="message" placeholder="{% translate 'Message *' %}" required></textarea>
                                                 </div>
-                                                <button type="submit" class="theme-btn btn-style-two">Send us</button>
+                                                <button type="submit" class="theme-btn btn-style-two">{% translate 'Send us' %}</button>
                                             </form>
                                         </div>
                                     </div>
@@ -334,13 +433,13 @@
          <div class="footer-bottom">
          	<div class="auto-container">
             	<div class="clearfix">
-                	<div class="pull-left"><div class="copyright"><a href="https://www.templateshub.net" target="_blank">Templates Hub</a></div></div>
+                	<div class="pull-left"><div class="copyright"><a href="https://www.github.com/aliashtab77" target="_blank">{% translate 'Stark Team' %}</a></div></div>
                     <div class="pull-right">
                     	<ul class="footer-nav">
-                        	<li><a href="#">Home</a></li>
+                        	<li><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
                             <li><a href="#">About</a></li>
                             <li><a href="#">Services</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="{% url 'contact' %}">{% translate 'Contact' %}</a></li>
                         </ul>
                     </div>
                 </div>

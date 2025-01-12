@@ -18,13 +18,14 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-
-from haman.views import index, index2
+from haman.views import index, contact
 
 urlpatterns = [
     path("i18n/", include("django.conf.urls.i18n")),
-    path('admin/', admin.site.urls),
-    path('', index),
+    path("admin/", admin.site.urls),
+    path('', index, name="home"),
+    path("contact-us/", contact, name="contact"),
+
 ]
 
 
@@ -36,3 +37,4 @@ if settings.IS_DEVEL:
 urlpatterns += [
     path("ckeditor5/", include('django_ckeditor_5.urls')),
 ]
+

@@ -1,101 +1,19 @@
 {% extends 'base.html' %}
 {% load i18n %}
+{% load static %}
+
 
 {% block title %}
-	{% translate 'خانه' %}
+	{% translate 'Home' %}
 {% endblock title %}
+{% block homec %}current{% endblock homec%}
+{% block homecz %}current{% endblock homecz%}
+
+
+{% block body %}
 
 
 
-{% block 'body' %}
-
-
-    <!-- Hidden Navigation Bar -->
-    <section class="hidden-bar right-align">
-
-        <div class="hidden-bar-closer">
-            <button class="btn"><i class="fa fa-close"></i></button>
-        </div>
-
-        <!-- Hidden Bar Wrapper -->
-        <div class="hidden-bar-wrapper">
-
-            <!-- .logo -->
-            <div class="logo text-center">
-                <a href="index-2.html"><img src="images/logo-2.png" alt=""></a>
-            </div><!-- /.logo -->
-
-            <!-- .Side-menu -->
-            <div class="side-menu">
-            <!-- .navigation -->
-                <ul class="navigation">
-                    <li class="current"><a href="index-2.html">Home</a></li>
-                    <li class="dropdown"><a href="#">About Us</a>
-                        <ul>
-                            <li><a href="about-us.html">About Us</a></li>
-                            <li><a href="our-team.html">Our Team</a></li>
-                            <li><a href="team-single.html">Team Single</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#">Services</a>
-                        <ul class="submenu">
-                            <li><a href="services.html">Our Services</a></li>
-                            <li><a href="service-single.html">Services Single</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#">Projects</a>
-                        <ul class="submenu">
-                            <li><a href="portfolio-default.html">Projects Standard</a></li>
-                            <li><a href="portfolio-fullwidth.html">Projects Fullwidth</a></li>
-                            <li><a href="portfolio-with-text.html">Projects With Text</a></li>
-                            <li><a href="portfolio-single-one.html">Projects Single 01</a></li>
-                            <li><a href="portfolio-single-two.html">Projects Single 02</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#">Blog</a>
-                        <ul class="submenu">
-                            <li><a href="blog.html">Blog Standard</a></li>
-                            <li><a href="blog-large-image.html">Blog large Image</a></li>
-                            <li><a href="blog-single.html">Blog Single</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown"><a href="#">Shop</a>
-                        <ul class="submenu">
-                            <li><a href="shop.html">Shop Products</a></li>
-                            <li><a href="shop-single.html">Shop Single</a></li>
-                            <li><a href="shopping-cart.html">Shopping Cart</a></li>
-                            <li><a href="checkout.html">Checkout</a></li>
-                            <li><a href="register.html">Login / Register</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown"><a href="#">Pages</a>
-                        <ul class="submenu">
-                            <li><a href="about-us.html">About Us</a></li>
-                            <li><a href="our-team.html">Our Team</a></li>
-                            <li><a href="team-single.html">Team Single</a></li>
-                            <li><a href="pricing.html">Pricing Table</a></li>
-                            <li><a href="faqs.html">FAQ's</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div><!-- /.Side-menu -->
-
-            <div class="social-icons">
-                <ul>
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
-            </div>
-
-        </div><!-- / Hidden Bar Wrapper -->
-    </section>
-    <!-- / Hidden Bar -->
 
     <!--Main Slider-->
     <section class="main-slider">
@@ -104,8 +22,8 @@
             <div class="tp-banner">
                 <ul>
 
-                    <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/image-1.jpg"  data-saveperformance="off"  data-title="Awesome Title Here">
-                    <img src="images/main-slider/image-1.jpg"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                    <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="{% static 'haman/images/main-slider/image-1.jpg' %}"  data-saveperformance="off"  data-title="Awesome Title Here">
+                    <img src="{% static 'haman/images/main-slider/image-1.jpg' %}"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
 
                     <div class="tp-caption sfl sfb tp-resizeme"
                     data-x="left" data-hoffset="15"
@@ -149,8 +67,8 @@
 
                     </li>
 
-                    <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/image-2.jpg"  data-saveperformance="off"  data-title="Awesome Title Here">
-                    <img src="images/main-slider/image-2.jpg"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                    <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="{% static 'haman/images/main-slider/image-2.jpg' %}"  data-saveperformance="off"  data-title="Awesome Title Here">
+                    <img src="{% static 'haman/images/main-slider/image-2.jpg' %}"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
 
                     <div class="tp-caption sfl sfb tp-resizeme"
                     data-x="center" data-hoffset="0"
@@ -194,8 +112,8 @@
 
                     </li>
 
-                    <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/image-3.jpg"  data-saveperformance="off"  data-title="Awesome Title Here">
-                    <img src="images/main-slider/image-3.jpg"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                    <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="{% static 'haman/images/main-slider/image-3.jpg' %}"  data-saveperformance="off"  data-title="Awesome Title Here">
+                    <img src="{% static 'haman/images/main-slider/image-3.jpg' %}"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
 
                     <div class="tp-caption sfl sfb tp-resizeme"
                     data-x="left" data-hoffset="500"
@@ -246,6 +164,7 @@
         </div>
     </section>
 
+    {% comment %}
     <!--welcome-section-->
     <section class="welcome-section">
     	<div class="auto-container">
@@ -2396,8 +2315,6 @@
             </div>
         </div>
     </section>
-
-
-
-{% endblock 'body' %}
+{% endcomment %}
+{% endblock body %}
 

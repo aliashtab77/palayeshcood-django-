@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-10 21:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+#: palayeshcood/settings.py:113
+msgid "Persian"
+msgstr "الفارسية"
+
+#: palayeshcood/settings.py:114
+msgid "English"
+msgstr "إنجليزي"
+
+#: palayeshcood/settings.py:115
+msgid "Arabic"
+msgstr "عربي"
+
+#: templates/base.html:33
+msgid "Palayeshcood"
+msgstr "بالایش کود"
+
+#: templates/base.html:124 templates/base.html:234 templates/base.html:435
+#: templates/contact.html:23 templates/index.html:5
+msgid "Home"
+msgstr "بيت"
+
+#: templates/base.html:175 templates/base.html:438
+msgid "Contact"
+msgstr "اتصال"
+
+#: templates/base.html:327 templates/contact.html:84
+msgid "Unit 31, Safavieh Office Complex, Rajaee St, Kashan, Iran"
+msgstr "إيران، كاشان، شارع رجائي، مجمع صفوية الإداري، وحدة 31"
+
+#: templates/base.html:338
+msgid "Popular Tags"
+msgstr "العلامات الشعبية"
+
+#: templates/base.html:350
+msgid "Recent Works"
+msgstr "الأعمال الأخيرة"
+
+#: templates/base.html:378
+msgid "Recent News"
+msgstr "الأخبار الأخيرة"
+
+#: templates/base.html:392
+msgid "Read More"
+msgstr "اقرأ المزيد"
+
+#: templates/base.html:400
+msgid "Send Us Message"
+msgstr "أرسل لنا رسالة"
+
+#: templates/base.html:405
+msgid "Name *"
+msgstr "اسم *"
+
+#: templates/base.html:408
+msgid "Email *"
+msgstr "بريد إلكتروني *"
+
+#: templates/base.html:411 templates/contact.html:67
+msgid "Message *"
+msgstr "رسالة *"
+
+#: templates/base.html:413
+msgid "Send us"
+msgstr "أرسل لنا"
+
+#: templates/contact.html:4 templates/contact.html:13 templates/contact.html:20
+#: templates/contact.html:24
+msgid "Contact Us"
+msgstr "اتصل بنا"
+
+#: templates/contact.html:37
+msgid "Send Message Us"
+msgstr "أرسل لنا رسالة"
+
+#: templates/contact.html:51
+msgid "Subject"
+msgstr "موضوع"
+
+#: templates/contact.html:55
+msgid "Your Name *"
+msgstr "اسمك *"
+
+#: templates/contact.html:59
+msgid "Your Mail *"
+msgstr "بريدك الإلكتروني *"
+
+#: templates/contact.html:63
+msgid "Phone Number"
+msgstr "رقم التليفون"
+
+#: templates/contact.html:70
+msgid "Get Quote"
+msgstr "الحصول على الاقتباس"
+
+#: templates/contact.html:80
+msgid "Contact Details"
+msgstr "تفاصيل الاتصال"
+
+#: templates/contact.html:81
+msgid "We are at your service on business days from 9 am to 8 pm."
+msgstr "نحن في خدمتكم خلال أيام العمل من الساعة 9 صباحاً حتى الساعة 8 مساءً."
+
+#: templates/contact.html:84
+msgid "Address:"
+msgstr "عنوان:"
+
+#: templates/contact.html:84
+msgid "Head Office: "
+msgstr "المكتب الرئيسي:"
+
+#: templates/contact.html:84
+msgid "Factory: Kashan, after Dar-e-Salam, Amir Kabir Town, Phase 3"
+msgstr "المصنع: كاشان بعد دار السلام بلدة أميركبير المرحلة الثالثة"
+
+#: templates/contact.html:85
+msgid "Mail to Haman:"
+msgstr "البريد الإلكتروني إلى هامان:"
+
+#: templates/contact.html:86
+msgid "Call Him:"
+msgstr "اتصل به:"

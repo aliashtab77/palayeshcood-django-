@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-10 21:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+#: palayeshcood/settings.py:113
+msgid "Persian"
+msgstr "فارسی"
+
+#: palayeshcood/settings.py:114
+msgid "English"
+msgstr "انگلیسی"
+
+#: palayeshcood/settings.py:115
+msgid "Arabic"
+msgstr "عربی"
+
+#: templates/base.html:33
+msgid "Palayeshcood"
+msgstr "پالایش گود"
+
+#: templates/base.html:124 templates/base.html:234 templates/base.html:435
+#: templates/contact.html:23 templates/index.html:5
+msgid "Home"
+msgstr "خانه"
+
+#: templates/base.html:175 templates/base.html:438
+msgid "Contact"
+msgstr "تماس با ما"
+
+#: templates/base.html:327 templates/contact.html:84
+msgid "Unit 31, Safavieh Office Complex, Rajaee St, Kashan, Iran"
+msgstr "ایران, کاشان، خیابان رجائی، مجتمع اداری صفویه، واحد 31"
+
+#: templates/base.html:338
+msgid "Popular Tags"
+msgstr "تگ های محبوب"
+
+#: templates/base.html:350
+msgid "Recent Works"
+msgstr "کار های اخیر"
+
+#: templates/base.html:378
+msgid "Recent News"
+msgstr "اخبار اخیر"
+
+#: templates/base.html:392
+msgid "Read More"
+msgstr "بیشتر"
+
+#: templates/base.html:400
+msgid "Send Us Message"
+msgstr "برای ما پیام ارسال کنید"
+
+#: templates/base.html:405
+msgid "Name *"
+msgstr "نام *"
+
+#: templates/base.html:408
+msgid "Email *"
+msgstr "ایمیل *"
+
+#: templates/base.html:411 templates/contact.html:67
+msgid "Message *"
+msgstr "پیام *"
+
+#: templates/base.html:413
+msgid "Send us"
+msgstr "ارسال"
+
+#: templates/contact.html:4 templates/contact.html:13 templates/contact.html:20
+#: templates/contact.html:24
+msgid "Contact Us"
+msgstr "تماس با ما"
+
+#: templates/contact.html:37
+msgid "Send Message Us"
+msgstr "برای ما پیام ارسال کنید"
+
+#: templates/contact.html:51
+msgid "Subject"
+msgstr "موضوع"
+
+#: templates/contact.html:55
+msgid "Your Name *"
+msgstr "نام شما *"
+
+#: templates/contact.html:59
+msgid "Your Mail *"
+msgstr "ایمیل شما *"
+
+#: templates/contact.html:63
+msgid "Phone Number"
+msgstr "شماره تماس"
+
+#: templates/contact.html:70
+msgid "Get Quote"
+msgstr "ارسال"
+
+#: templates/contact.html:80
+msgid "Contact Details"
+msgstr "اطلاعات تماس"
+
+#: templates/contact.html:81
+msgid "We are at your service on business days from 9 am to 8 pm."
+msgstr "روزهای کاری از ساعت 9 صبح الی 8 شب در خدمت شما هستیم."
+
+#: templates/contact.html:84
+msgid "Address:"
+msgstr "آدرس:"
+
+#: templates/contact.html:84
+msgid "Head Office: "
+msgstr "دفتر مرکزی: "
+
+#: templates/contact.html:84
+msgid "Factory: Kashan, after Dar-e-Salam, Amir Kabir Town, Phase 3"
+msgstr "کارخانه : کاشان ، بعد از دارالسلام، شهرک امیرکبیر، فاز 3"
+
+#: templates/contact.html:85
+msgid "Mail to Haman:"
+msgstr "ایمیل به هامان"
+
+#: templates/contact.html:86
+msgid "Call Him:"
+msgstr "زنگش بزن"

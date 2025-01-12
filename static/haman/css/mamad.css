@@ -1,0 +1,43 @@
+body{
+    direction: ltr;
+    text-align: right;
+}
+
+mamad{
+    direction: rtl;
+}
+zahra{
+    text-align: left;
+}
+
+.main-footer .footer-column h2::before {
+  content: '';
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 70px;
+  border-bottom: 3px solid #fc721e;
+    left: auto;
+}
+.main-footer .footer-column h2::after {
+  content: '';
+  position: absolute;
+  right: 0px;
+  bottom: 4px;
+  width: 70px;
+  border-bottom: 1px solid #fc721e;
+    left: auto;
+}
+
+input , textarea{
+  text-align: right;
+  direction: ltr;
+}
+
+.gallery-widget .owl-controls {
+  padding: 0px !important;
+  margin: 0px 0px 0px !important;
+  position: absolute;
+  top: -70px;
+  right: auto;
+}

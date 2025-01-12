@@ -11,3 +11,10 @@ function chLaToEn() {
     language.value = "en";
     form.submit();
 }
+
+function chLaToAr() {
+    const language = document.getElementById("language");
+    const form = document.getElementById("changelangugefo");
+    language.value = "ar";
+    form.submit();
+}
