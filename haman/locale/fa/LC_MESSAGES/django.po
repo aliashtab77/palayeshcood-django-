@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-10 21:11+0000\n"
+"POT-Creation-Date: 2025-01-12 01:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
 #: palayeshcood/settings.py:113
 msgid "Persian"
 msgstr "فارسی"
@@ -33,54 +34,58 @@ msgstr "عربی"
 msgid "Palayeshcood"
 msgstr "پالایش گود"
 
-#: templates/base.html:124 templates/base.html:234 templates/base.html:435
-#: templates/contact.html:23 templates/index.html:5
+#: templates/base.html:128 templates/base.html:238 templates/base.html:439
+#: templates/contact.html:23 templates/index.html:7
 msgid "Home"
 msgstr "خانه"
 
-#: templates/base.html:175 templates/base.html:438
+#: templates/base.html:179 templates/base.html:442
 msgid "Contact"
 msgstr "تماس با ما"
 
-#: templates/base.html:327 templates/contact.html:84
+#: templates/base.html:331 templates/contact.html:84
 msgid "Unit 31, Safavieh Office Complex, Rajaee St, Kashan, Iran"
 msgstr "ایران, کاشان، خیابان رجائی، مجتمع اداری صفویه، واحد 31"
 
-#: templates/base.html:338
+#: templates/base.html:342
 msgid "Popular Tags"
 msgstr "تگ های محبوب"
 
-#: templates/base.html:350
+#: templates/base.html:354
 msgid "Recent Works"
 msgstr "کار های اخیر"
 
-#: templates/base.html:378
+#: templates/base.html:382
 msgid "Recent News"
 msgstr "اخبار اخیر"
 
-#: templates/base.html:392
+#: templates/base.html:396
 msgid "Read More"
 msgstr "بیشتر"
 
-#: templates/base.html:400
+#: templates/base.html:404
 msgid "Send Us Message"
 msgstr "برای ما پیام ارسال کنید"
 
-#: templates/base.html:405
+#: templates/base.html:409
 msgid "Name *"
 msgstr "نام *"
 
-#: templates/base.html:408
+#: templates/base.html:412
 msgid "Email *"
 msgstr "ایمیل *"
 
-#: templates/base.html:411 templates/contact.html:67
+#: templates/base.html:415 templates/contact.html:67
 msgid "Message *"
 msgstr "پیام *"
 
-#: templates/base.html:413
+#: templates/base.html:417
 msgid "Send us"
 msgstr "ارسال"
+
+#: templates/base.html:436
+msgid "Stark Team"
+msgstr ""
 
 #: templates/contact.html:4 templates/contact.html:13 templates/contact.html:20
 #: templates/contact.html:24

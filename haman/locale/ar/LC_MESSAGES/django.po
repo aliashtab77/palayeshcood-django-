@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-10 21:11+0000\n"
+"POT-Creation-Date: 2025-01-12 01:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
 #: palayeshcood/settings.py:113
 msgid "Persian"
 msgstr "الفارسية"
@@ -34,54 +35,58 @@ msgstr "عربي"
 msgid "Palayeshcood"
 msgstr "بالایش کود"
 
-#: templates/base.html:124 templates/base.html:234 templates/base.html:435
-#: templates/contact.html:23 templates/index.html:5
+#: templates/base.html:128 templates/base.html:238 templates/base.html:439
+#: templates/contact.html:23 templates/index.html:7
 msgid "Home"
 msgstr "بيت"
 
-#: templates/base.html:175 templates/base.html:438
+#: templates/base.html:179 templates/base.html:442
 msgid "Contact"
 msgstr "اتصال"
 
-#: templates/base.html:327 templates/contact.html:84
+#: templates/base.html:331 templates/contact.html:84
 msgid "Unit 31, Safavieh Office Complex, Rajaee St, Kashan, Iran"
 msgstr "إيران، كاشان، شارع رجائي، مجمع صفوية الإداري، وحدة 31"
 
-#: templates/base.html:338
+#: templates/base.html:342
 msgid "Popular Tags"
 msgstr "العلامات الشعبية"
 
-#: templates/base.html:350
+#: templates/base.html:354
 msgid "Recent Works"
 msgstr "الأعمال الأخيرة"
 
-#: templates/base.html:378
+#: templates/base.html:382
 msgid "Recent News"
 msgstr "الأخبار الأخيرة"
 
-#: templates/base.html:392
+#: templates/base.html:396
 msgid "Read More"
 msgstr "اقرأ المزيد"
 
-#: templates/base.html:400
+#: templates/base.html:404
 msgid "Send Us Message"
 msgstr "أرسل لنا رسالة"
 
-#: templates/base.html:405
+#: templates/base.html:409
 msgid "Name *"
 msgstr "اسم *"
 
-#: templates/base.html:408
+#: templates/base.html:412
 msgid "Email *"
 msgstr "بريد إلكتروني *"
 
-#: templates/base.html:411 templates/contact.html:67
+#: templates/base.html:415 templates/contact.html:67
 msgid "Message *"
 msgstr "رسالة *"
 
-#: templates/base.html:413
+#: templates/base.html:417
 msgid "Send us"
 msgstr "أرسل لنا"
+
+#: templates/base.html:436
+msgid "Stark Team"
+msgstr ""
 
 #: templates/contact.html:4 templates/contact.html:13 templates/contact.html:20
 #: templates/contact.html:24
