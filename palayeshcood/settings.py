@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'haman.apps.HamanConfig',
-    'django_ckeditor_5'
+    'django_ckeditor_5',
+    'request'
 ]
 
 MIDDLEWARE = [
@@ -50,6 +51,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'request.middleware.RequestMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -268,3 +270,21 @@ CKEDITOR_5_CONFIGS = {
 
 # Define a constant in settings.py to specify file upload permissions
 CKEDITOR_5_FILE_UPLOAD_PERMISSION = "staff"
+
+
+
+REQUEST_IGNORE_PATHS = (
+    r'^admin/',
+    r'^image_upload/',
+    r'setlang/',
+
+)
+REQUEST_TRAFFIC_MODULES = (
+    'request.traffic.UniqueVisitor',
+    'request.traffic.UniqueVisit',
+    'request.traffic.Hit',
+    'request.traffic.Error',
+    'request.traffic.Error404',
+    'request.traffic.Search',
+
+)

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-12 01:40+0000\n"
+"POT-Creation-Date: 2025-01-14 02:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,74 +19,90 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: palayeshcood/settings.py:113
+#: palayeshcood/settings.py:115
 msgid "Persian"
 msgstr "الفارسية"
 
-#: palayeshcood/settings.py:114
+#: palayeshcood/settings.py:116
 msgid "English"
 msgstr "إنجليزي"
 
-#: palayeshcood/settings.py:115
+#: palayeshcood/settings.py:117
 msgid "Arabic"
 msgstr "عربي"
+
+#: templates/about-us.html:7 templates/about-us.html:29
+#: templates/about-us.html:33 templates/base.html:172 templates/base.html:174
+#: templates/base.html:280 templates/base.html:282 templates/base.html:437
+msgid "About Us"
+msgstr "معلومات عنا"
+
+#: templates/about-us.html:22
+msgid "Know About Us"
+msgstr "تعرف عنا"
+
+#: templates/about-us.html:32 templates/base.html:129 templates/base.html:237
+#: templates/base.html:436 templates/contact.html:23 templates/index.html:7
+#: templates/our-team.html:7 templates/our-team.html:32
+msgid "Home"
+msgstr "بيت"
 
 #: templates/base.html:33
 msgid "Palayeshcood"
 msgstr "بالایش کود"
 
-#: templates/base.html:128 templates/base.html:238 templates/base.html:439
-#: templates/contact.html:23 templates/index.html:7
-msgid "Home"
-msgstr "بيت"
+#: templates/base.html:175 templates/base.html:283 templates/our-team.html:29
+#: templates/our-team.html:33
+msgid "Our Team"
+msgstr "فريقنا"
 
-#: templates/base.html:179 templates/base.html:442
+#: templates/base.html:178 templates/base.html:286 templates/base.html:439
 msgid "Contact"
 msgstr "اتصال"
 
-#: templates/base.html:331 templates/contact.html:84
+#: templates/base.html:328 templates/contact.html:84
 msgid "Unit 31, Safavieh Office Complex, Rajaee St, Kashan, Iran"
 msgstr "إيران، كاشان، شارع رجائي، مجمع صفوية الإداري، وحدة 31"
 
-#: templates/base.html:342
+#: templates/base.html:339
 msgid "Popular Tags"
 msgstr "العلامات الشعبية"
 
-#: templates/base.html:354
+#: templates/base.html:351
 msgid "Recent Works"
 msgstr "الأعمال الأخيرة"
 
-#: templates/base.html:382
+#: templates/base.html:379
 msgid "Recent News"
 msgstr "الأخبار الأخيرة"
 
-#: templates/base.html:396
+#: templates/base.html:393
 msgid "Read More"
 msgstr "اقرأ المزيد"
 
-#: templates/base.html:404
+#: templates/base.html:401
 msgid "Send Us Message"
 msgstr "أرسل لنا رسالة"
 
-#: templates/base.html:409
+#: templates/base.html:406
 msgid "Name *"
 msgstr "اسم *"
 
-#: templates/base.html:412
+#: templates/base.html:409
 msgid "Email *"
 msgstr "بريد إلكتروني *"
 
-#: templates/base.html:415 templates/contact.html:67
+#: templates/base.html:412 templates/contact.html:67
 msgid "Message *"
 msgstr "رسالة *"
 
-#: templates/base.html:417
+#: templates/base.html:414
 msgid "Send us"
 msgstr "أرسل لنا"
 
-#: templates/base.html:436
+#: templates/base.html:433
 msgid "Stark Team"
-msgstr ""
+msgstr "فريق استارك"
 
 #: templates/contact.html:4 templates/contact.html:13 templates/contact.html:20
 #: templates/contact.html:24
@@ -101,7 +117,7 @@ msgstr "أرسل لنا رسالة"
 msgid "Subject"
 msgstr "موضوع"
 
-#: templates/contact.html:55
+#: templates/contact.html:55 templates/index.html:2057
 msgid "Your Name *"
 msgstr "اسمك *"
 
@@ -144,3 +160,23 @@ msgstr "البريد الإلكتروني إلى هامان:"
 #: templates/contact.html:86
 msgid "Call Him:"
 msgstr "اتصل به:"
+
+#: templates/index.html:2044
+msgid "Newsletter Signup"
+msgstr "الاشتراك في النشرة الإخبارية"
+
+#: templates/index.html:2045
+msgid "We send you latest news couple a month ( No Spam)."
+msgstr "نرسل لك آخر الأخبار زوجين شهريا (بدون البريد العشوائي)."
+
+#: templates/index.html:2064
+msgid "Your Email *"
+msgstr "بريدك الإلكتروني *"
+
+#: templates/index.html:2071
+msgid "Subscribe"
+msgstr "يشترك"
+
+#: templates/our-team.html:22
+msgid "Team Behind Palayeshcood"
+msgstr "فريق وراء بالایش کود"

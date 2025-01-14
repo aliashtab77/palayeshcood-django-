@@ -3,12 +3,6 @@ body{
     text-align: right;
 }
 
-mamad{
-    direction: rtl;
-}
-zahra{
-    text-align: left;
-}
 
 .main-footer .footer-column h2::before {
   content: '';
@@ -31,7 +25,7 @@ zahra{
 
 input , textarea{
   text-align: right;
-  direction: ltr;
+  direction: rtl;
 }
 
 .gallery-widget .owl-controls {
@@ -39,5 +33,17 @@ input , textarea{
   margin: 0px 0px 0px !important;
   position: absolute;
   top: -70px;
+  right: auto;
+}
+
+.newsletter-style-one .form-group .floated-icon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  font-size: 15px;
+  color: #a04c18;
+  line-height: 24px;
+  margin-top: -12px;
+  opacity: 0.80;
   right: auto;
 }

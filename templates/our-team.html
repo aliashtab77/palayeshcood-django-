@@ -1,0 +1,247 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+
+{% block title %}
+	{% translate 'Home' %}
+{% endblock title %}
+{% block aboutc %}current{% endblock aboutc%}
+{% block aboutcz %}current{% endblock aboutcz%}
+
+
+
+
+
+
+
+{% block body %}
+    <!--Page Title-->
+    <section class="page-title" style="background-image:url({% static 'haman/images/background/bg-page-title-1.jpg' %});">
+        <div class="auto-container">
+            <h1>{% translate 'Team Behind Palayeshcood' %}</h1>
+        </div>
+    </section>
+
+    <!--Page Info-->
+    <section class="page-info">
+        <div class="auto-container clearfix">
+            <div class="pull-left"><h2>{% translate 'Our Team' %}</h2></div>
+            <div class="pull-right">
+                <ul class="bread-crumb clearfix">
+                    <li><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
+                    <li>{% translate 'Our Team' %}</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    {% comment %}
+    
+    <!--Team Section One-->
+    <section class="team-section-one">
+    	<div class="auto-container">
+            
+            <div class="row clearfix">
+            	<!--Team Member-->
+                <div class="team-member-one col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<figure class="image-box">
+                        	<img src="images/resource/team-image-5.jpg" alt="">
+                            <div class="overlay">
+                            	<ul class="social-links">
+                                	<li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                                </ul>
+                            </div>
+                        </figure>
+                        <div class="lower-content">
+                        	<h3><a href="team-single.html">Richard Antony</a></h3>
+                            <div class="designation">Founder and CEO</div>
+                            <div class="desc-text">On the other hands, we denounce with  righteous indignations and dislike men demoralized  by the charms.</div>
+                            <div class="links-box"><a class="theme-btn read-more" href="team-single.html">Enter Profile <span class="fa fa-caret-right"></span></a></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Team Member-->
+                <div class="team-member-one col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<figure class="image-box">
+                        	<img src="images/resource/team-image-6.jpg" alt="">
+                            <div class="overlay">
+                            	<ul class="social-links">
+                                	<li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                                </ul>
+                            </div>
+                        </figure>
+                        <div class="lower-content">
+                        	<h3><a href="team-single.html">William Rickmen</a></h3>
+                            <div class="designation">Vice President</div>
+                            <div class="desc-text">Foresee the pains and troublle that are bound to ensue; and equall blame seds belongs to those duty finance.</div>
+                            <div class="links-box"><a class="theme-btn read-more" href="team-single.html">Enter Profile <span class="fa fa-caret-right"></span></a></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Team Member-->
+                <div class="team-member-one col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<figure class="image-box">
+                        	<img src="images/resource/team-image-7.jpg" alt="">
+                            <div class="overlay">
+                            	<ul class="social-links">
+                                	<li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                                </ul>
+                            </div>
+                        </figure>
+                        <div class="lower-content">
+                        	<h3><a href="team-single.html">David Fernando</a></h3>
+                            <div class="designation">Interior Designer</div>
+                            <div class="desc-text">When our power of choice is ut untram melled and when nothing prevents our being able to do what we like best.</div>
+                            <div class="links-box"><a class="theme-btn read-more" href="team-single.html">Enter Profile <span class="fa fa-caret-right"></span></a></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Team Member-->
+                <div class="team-member-one col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<figure class="image-box">
+                        	<img src="images/resource/team-image-8.jpg" alt="">
+                            <div class="overlay">
+                            	<ul class="social-links">
+                                	<li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                                </ul>
+                            </div>
+                        </figure>
+                        <div class="lower-content">
+                        	<h3><a href="team-single.html">Charles Nicholes</a></h3>
+                            <div class="designation">Manager Sales</div>
+                            <div class="desc-text">Certain circumstances and owings too the claims of duty or the obligations of business it will frequently.</div>
+                            <div class="links-box"><a class="theme-btn read-more" href="team-single.html">Enter Profile <span class="fa fa-caret-right"></span></a></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Team Member-->
+                <div class="team-member-one col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<figure class="image-box">
+                        	<img src="images/resource/team-image-9.jpg" alt="">
+                            <div class="overlay">
+                            	<ul class="social-links">
+                                	<li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                                </ul>
+                            </div>
+                        </figure>
+                        <div class="lower-content">
+                        	<h3><a href="team-single.html">Esther Fletcher</a></h3>
+                            <div class="designation">Administrator</div>
+                            <div class="desc-text">Voluptateem accusantium dolore quite laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</div>
+                            <div class="links-box"><a class="theme-btn read-more" href="team-single.html">Enter Profile <span class="fa fa-caret-right"></span></a></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Team Member-->
+                <div class="team-member-one col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<figure class="image-box">
+                        	<img src="images/resource/team-image-10.jpg" alt="">
+                            <div class="overlay">
+                            	<ul class="social-links">
+                                	<li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                                </ul>
+                            </div>
+                        </figure>
+                        <div class="lower-content">
+                        	<h3><a href="team-single.html">Alex Simmons</a></h3>
+                            <div class="designation">Tax Consultant</div>
+                            <div class="desc-text">Accusantium doloremque laudanttium totam remo aperiams eaquet ipsa quae ab illo inventore veritatis et quas.</div>
+                            <div class="links-box"><a class="theme-btn read-more" href="team-single.html">Enter Profile <span class="fa fa-caret-right"></span></a></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Team Member-->
+                <div class="team-member-one col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<figure class="image-box">
+                        	<img src="images/resource/team-image-11.jpg" alt="">
+                            <div class="overlay">
+                            	<ul class="social-links">
+                                	<li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                                </ul>
+                            </div>
+                        </figure>
+                        <div class="lower-content">
+                        	<h3><a href="team-single.html">Susan Stevans</a></h3>
+                            <div class="designation">Marketing Manager</div>
+                            <div class="desc-text">Dolorems que laudantium, total remos aperiam, eaque ipsa quae ab illo sed ut Nemo enim ipsam voluptatem.</div>
+                            <div class="links-box"><a class="theme-btn read-more" href="team-single.html">Enter Profile <span class="fa fa-caret-right"></span></a></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Team Member-->
+                <div class="team-member-one col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<figure class="image-box">
+                        	<img src="images/resource/team-image-12.jpg" alt="">
+                            <div class="overlay">
+                            	<ul class="social-links">
+                                	<li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                                </ul>
+                            </div>
+                        </figure>
+                        <div class="lower-content">
+                        	<h3><a href="team-single.html">Robert Harwing</a></h3>
+                            <div class="designation">Team Leader</div>
+                            <div class="desc-text">On the other hands, we denounce with  righteous indignations and dislike men demoralized  by the charms.</div>
+                            <div class="links-box"><a class="theme-btn read-more" href="team-single.html">Enter Profile <span class="fa fa-caret-right"></span></a></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+    
+    
+    <!--Call to Action Style One-->
+    <section class="call-to-action-one">
+    	<div class="auto-container">
+        	<div class="clearfix">
+            	
+                <div class="pull-left">
+                	<h3>We provide full and specific solution for every clients &amp; Get lifetime support from us.</h3>
+                </div>
+                <div class="pull-right">
+                	<a href="contact.html" class="theme-btn btn-style-two">Buy Theme Now</a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+{% endcomment %}
+{% endblock body %}
+    
+
+

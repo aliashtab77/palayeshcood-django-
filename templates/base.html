@@ -48,6 +48,7 @@
     <!--[if lt IE 9]><script src="{% static 'haman/js/respond.js' %}"></script><![endif]-->
 </head>
 
+
 <body>
 
 <div class="page-wrapper">
@@ -126,13 +127,6 @@
                             <div class="navbar-collapse collapse clearfix">
                                 <ul class="navigation clearfix">
                                     <li class="{% block homec %}{% endblock homec %}"><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
-                                    <li class="dropdown"><a href="#">About Us</a>
-                                    	<ul>
-                                            <li><a href="about-us.html">About Us</a></li>
-                                            <li><a href="our-team.html">Our Team</a></li>
-                                            <li><a href="team-single.html">Team Single</a></li>
-                                        </ul>
-                                    </li>
                                     <li class="dropdown"><a href="#">Services</a>
                                     	<ul>
                                             <li><a href="services.html">Our Services</a></li>
@@ -175,7 +169,12 @@
                                             <li><a href="faqs.html">FAQ's</a></li>
                                         </ul>
                                     </li>
-
+                                    <li class="{% block aboutc %}{% endblock aboutc %} dropdown"><a href="#">{% translate 'About Us' %}</a>
+                                    	<ul>
+                                            <li><a href="{% url 'about' %}">{% translate 'About Us' %}</a></li>
+                                            <li><a href="{% url 'team' %}">{% translate 'Our Team' %}</a></li>
+                                        </ul>
+                                    </li>
                                     <li class="{% block contactc %}{% endblock contactc %}"><a href="{% url 'contact' %}">{% translate 'Contact' %}</a></li>
 
                                  </ul>
@@ -236,13 +235,6 @@
             <!-- .navigation -->
                 <ul class="navigation">
                     <li class="{% block homecz %}{% endblock homecz %}"><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
-                    <li class="dropdown"><a href="#">About Us</a>
-                        <ul>
-                            <li><a href="about-us.html">About Us</a></li>
-                            <li><a href="our-team.html">Our Team</a></li>
-                            <li><a href="team-single.html">Team Single</a></li>
-                        </ul>
-                    </li>
                     <li class="dropdown"><a href="#">Services</a>
                         <ul class="submenu">
                             <li><a href="services.html">Our Services</a></li>
@@ -285,8 +277,13 @@
                             <li><a href="faqs.html">FAQ's</a></li>
                         </ul>
                     </li>
-
-                    <li class="{% block contactcz %}{% endblock contactcz %}"><a href="{% url 'contact' %}">Contact</a></li>
+                    <li class="{% block aboutcz %}{% endblock aboutcz %} dropdown"><a href="#">{% translate 'About Us' %}</a>
+                        <ul>
+                            <li><a href="{% url 'about' %}">{% translate 'About Us' %}</a></li>
+                            <li><a href="{% url 'team' %}">{% translate 'Our Team' %}</a></li>
+                        </ul>
+                    </li>
+                    <li class="{% block contactcz %}{% endblock contactcz %}"><a href="{% url 'contact' %}">{% translate 'Contact' %}</a></li>
                 </ul>
             </div><!-- /.Side-menu -->
 
@@ -437,7 +434,7 @@
                     <div class="pull-right">
                     	<ul class="footer-nav">
                         	<li><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
-                            <li><a href="#">About</a></li>
+                            <li><a href="{% url 'about' %}">{% translate 'About Us' %}</a></li>
                             <li><a href="#">Services</a></li>
                             <li><a href="{% url 'contact' %}">{% translate 'Contact' %}</a></li>
                         </ul>

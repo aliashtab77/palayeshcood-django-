@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.utils.translation import activate
+
 
 
 # Create your views here.
@@ -15,4 +15,18 @@ def contact(request):
 
     }
     return render(request, 'contact.html', context=context)
+
+
+
+def about(request):
+    context = {
+
+    }
+    return render(request, 'about-us.html', context=context)
+
+def team(request):
+    context = {
+
+    }
+    return render(request, 'our-team.html', context=context)
 
