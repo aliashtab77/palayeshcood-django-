@@ -47,3 +47,9 @@ input , textarea{
   opacity: 0.80;
   right: auto;
 }
+
+
+.haman{
+  display: flex;
+  flex-direction: row-reverse;
+}

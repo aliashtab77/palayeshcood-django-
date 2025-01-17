@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-14 02:37+0000\n"
+"POT-Creation-Date: 2025-01-17 00:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,76 +30,193 @@ msgstr "انگلیسی"
 msgid "Arabic"
 msgstr "عربی"
 
-#: templates/about-us.html:7 templates/about-us.html:29
-#: templates/about-us.html:33 templates/base.html:172 templates/base.html:174
-#: templates/base.html:280 templates/base.html:282 templates/base.html:437
+#: templates/about-us.html:9 templates/about-us.html:31
+#: templates/about-us.html:35 templates/base.html:173 templates/base.html:175
+#: templates/base.html:281 templates/base.html:283 templates/base.html:438
 msgid "About Us"
 msgstr "درباره ما"
 
-#: templates/about-us.html:22
+#: templates/about-us.html:24
 msgid "Know About Us"
 msgstr "درباره ما بدانید"
 
-#: templates/about-us.html:32 templates/base.html:129 templates/base.html:237
-#: templates/base.html:436 templates/contact.html:23 templates/index.html:7
+#: templates/about-us.html:34 templates/base.html:130 templates/base.html:238
+#: templates/base.html:437 templates/contact.html:23 templates/index.html:7
 #: templates/our-team.html:7 templates/our-team.html:32
 msgid "Home"
 msgstr "خانه"
 
-#: templates/base.html:33
+#: templates/about-us.html:48
+msgid "We Have The Right Products and Services to Fit Your Needs and Budget "
+msgstr "ما محصولات و خدمات مناسب متناسب با نیازها و بودجه شما را داریم"
+
+#: templates/about-us.html:48
+msgid "Purchase - Palayeshcood."
+msgstr "خرید - پالایشکود."
+
+#: templates/about-us.html:51
+msgid ""
+"Palayeshcood has gained a distinctive position in the domestic and "
+"international markets as one of the pioneers in the export industry and "
+"trade of quality products, with more than 15 years of brilliant experience "
+"in the field of exporting petrochemicals, refinery materials and "
+"agricultural fertilizers, and selling sugar."
+msgstr ""
+"پالایش خاک رویان کیمیا با بیش از ۱۵ سال سابقه درخشان در عرصه صادرات مواد "
+"شیمیایی پتروشیمی ها، مواد پالایشگاهی و کودهای کشاورزی، فروش شکر، به‌عنوان یکی "
+"از پیشگامان صنعت صادرات و تجارت محصولات با کیفیت، جایگاهی متمایز در بازارهای "
+"داخلی و بین‌المللی به دست آورده است."
+
+#: templates/about-us.html:53
+msgid ""
+"Since the beginning of our activity, we have always emphasized the principle "
+"of quality, innovation and customer satisfaction and have tried to meet the "
+"diverse needs of our customers worldwide. Our expert team, by utilizing the "
+"world's latest technical knowledge and applying international standards, has "
+"been able to provide products that meet the highest expectations of "
+"customers."
+msgstr ""
+"ما از آغاز فعالیت خود، همواره بر اصل کیفیت، نوآوری و رضایت مشتری تأکید "
+"داشته‌ایم و تلاش کرده‌ایم تا نیازهای متنوع مشتریان خود را در سطح جهانی برآورده "
+"کنیم. تیم متخصص ما با بهره‌گیری از دانش فنی روز دنیا و به‌کارگیری استانداردهای "
+"بین‌المللی، توانسته است محصولاتی ارائه دهد که پاسخگوی بالاترین انتظارات "
+"مشتریان باشد"
+
+#: templates/about-us.html:55
+msgid ""
+"Our mission at Palayeshcood is to achieve sustainable development in the "
+"agricultural and refining industry and create added value for our customers. "
+"We believe that success is the result of relentless effort and commitment to "
+"quality.Our vision is to expand export markets and provide differentiated "
+"services to business partners around the world. As a leading company, we are "
+"always looking to strengthen long-term, sustainable and mutually beneficial "
+"partnerships."
+msgstr ""
+"رسالت ما در پالایش خاک رویان کیمیا ، توسعه پایدار در صنعت کشاورزی و "
+"پالایشگاهی و ایجاد ارزش افزوده برای مشتریانمان است. ما باور داریم که موفقیت، "
+"نتیجه تلاش بی‌وقفه و تعهد به کیفیت است.چشم‌انداز ما گسترش بازارهای صادراتی و "
+"ارائه خدمات متمایز به شرکای تجاری در سراسر جهان است. ما به‌عنوان یک شرکت "
+"پیشرو، همواره به دنبال تقویت همکاری‌های بلندمدت، پایدار و متقابل هستیم"
+
+#: templates/about-us.html:57
+msgid "Why Palayeshcood?"
+msgstr "چرا پالایش کود"
+
+#: templates/about-us.html:59
+msgid ""
+"Over a decade of professional experienceClose collaboration with "
+"petrochemicals, refineries and sugar factories around the world Commitment "
+"to providing quality and environmentally friendly products Extensive "
+"international distribution network In Palayeshcood, we bring a greener and "
+"more economically sustainable future to our customers and the global "
+"community. By trusting us, you not only have access to quality products, but "
+"also a reliable business partner."
+msgstr ""
+"بیش از یک دهه تجربه حرفه‌ایهمکاری نزدیک با پتروشیمی ها، پالایشگاهها و کارخانه "
+"جات های تولید شکر در سراسر جهان تعهد به ارائه محصولات با کیفیت و سازگار با "
+"محیط زیستشبکه توزیع گسترده در سطح بین‌المللی ما در پالایش خاک رویان کیمیا ، "
+"آینده‌ای سبزتر و اقتصادی پایدارتر را برای مشتریان و جامعه جهانی به ارمغان "
+"می‌آوریم. با اعتماد به ما، شما نه ‌تنها به محصولات با کیفیت دسترسی دارید، بلکه "
+"همراه یک شریک تجاری قابل‌اعتماد خواهید بود"
+
+#: templates/about-us.html:63
+msgid "Haman Lesan,"
+msgstr "هامان لسان,"
+
+#: templates/about-us.html:63
+msgid "Founder"
+msgstr "بنیانگذار"
+
+#: templates/about-us.html:64 templates/base.html:34
 msgid "Palayeshcood"
 msgstr "پالایش گود"
 
-#: templates/base.html:175 templates/base.html:283 templates/our-team.html:29
+#: templates/about-us.html:91
+msgid "We are Professional"
+msgstr "ما حرفه ای هستیم"
+
+#: templates/about-us.html:93
+msgid ""
+"With years of experience and technical knowledge, we operate in the "
+"production and supply of industrial products with the highest quality "
+"standards. By utilizing advanced technologies and a team of experts, we "
+"provide reliable and efficient solutions to supply various industries."
+msgstr "ما با سال‌ها تجربه و دانش فنی، در تولید و تأمین محصولات صنعتی با بالاترین استانداردهای کیفیت فعالیت می‌کنیم. با بهره‌گیری از فناوری‌های پیشرفته و تیمی متخصص، راهکارهای مطمئن و کارآمد را برای تامین صنایع مختلف ارائه می‌دهیم."
+
+#: templates/about-us.html:103
+msgid "We are Expert"
+msgstr "ما متخصص هستیم"
+
+#: templates/about-us.html:105
+msgid ""
+"With our expertise and experience in selling industrial products, we offer "
+"the best solutions to supply the products needed by various industries. With "
+"quality assurance, competitive prices, and expert advice, we are your "
+"reliable partner in supplying industrial products."
+msgstr "ما با تخصص و تجربه در فروش محصولات صنعتی، بهترین راهکارها را برای تأمین محصولات مورد نیاز صنایع مختلف ارائه می‌دهیم. با تضمین کیفیت، قیمت رقابتی و مشاوره تخصصی، همراه مطمئن شما در تأمین محصولات صنعتی هستیم."
+
+#: templates/about-us.html:115
+msgid "We are Trusted"
+msgstr "ما مورد اعتماد هستیم"
+
+#: templates/about-us.html:117
+msgid ""
+"With years of experience in selling industrial products, we are known as a "
+"reliable and trusted supplier. Guaranteed quality, fair prices and a "
+"commitment to customer satisfaction are the foundations of our sustainable "
+"cooperation."
+msgstr "با سال‌ها تجربه در فروش محصولات صنعتی، ما به عنوان یک تأمین‌کننده مطمئن و مورد اعتماد شناخته شده‌ایم. کیفیت تضمین‌شده، قیمت منصفانه و تعهد به رضایت مشتری، پایه‌های همکاری پایدار ما هستند."
+
+#: templates/base.html:176 templates/base.html:284 templates/our-team.html:29
 #: templates/our-team.html:33
 msgid "Our Team"
 msgstr "تیم ما"
 
-#: templates/base.html:178 templates/base.html:286 templates/base.html:439
+#: templates/base.html:179 templates/base.html:287 templates/base.html:440
 msgid "Contact"
 msgstr "تماس با ما"
 
-#: templates/base.html:328 templates/contact.html:84
+#: templates/base.html:329 templates/contact.html:84
 msgid "Unit 31, Safavieh Office Complex, Rajaee St, Kashan, Iran"
 msgstr "ایران, کاشان، خیابان رجائی، مجتمع اداری صفویه، واحد 31"
 
-#: templates/base.html:339
+#: templates/base.html:340
 msgid "Popular Tags"
 msgstr "تگ های محبوب"
 
-#: templates/base.html:351
+#: templates/base.html:352
 msgid "Recent Works"
 msgstr "کار های اخیر"
 
-#: templates/base.html:379
+#: templates/base.html:380
 msgid "Recent News"
 msgstr "اخبار اخیر"
 
-#: templates/base.html:393
+#: templates/base.html:394
 msgid "Read More"
 msgstr "بیشتر"
 
-#: templates/base.html:401
+#: templates/base.html:402
 msgid "Send Us Message"
 msgstr "برای ما پیام ارسال کنید"
 
-#: templates/base.html:406
+#: templates/base.html:407
 msgid "Name *"
 msgstr "نام *"
 
-#: templates/base.html:409
+#: templates/base.html:410
 msgid "Email *"
 msgstr "ایمیل *"
 
-#: templates/base.html:412 templates/contact.html:67
+#: templates/base.html:413 templates/contact.html:67
 msgid "Message *"
 msgstr "پیام *"
 
-#: templates/base.html:414
+#: templates/base.html:415
 msgid "Send us"
 msgstr "ارسال"
 
-#: templates/base.html:433
+#: templates/base.html:434
 msgid "Stark Team"
 msgstr "استارک تیم"
 

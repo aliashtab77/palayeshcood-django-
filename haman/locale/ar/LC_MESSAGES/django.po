@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-14 02:41+0000\n"
+"POT-Creation-Date: 2025-01-17 00:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,76 +31,173 @@ msgstr "إنجليزي"
 msgid "Arabic"
 msgstr "عربي"
 
-#: templates/about-us.html:7 templates/about-us.html:29
-#: templates/about-us.html:33 templates/base.html:172 templates/base.html:174
-#: templates/base.html:280 templates/base.html:282 templates/base.html:437
+#: templates/about-us.html:9 templates/about-us.html:31
+#: templates/about-us.html:35 templates/base.html:173 templates/base.html:175
+#: templates/base.html:281 templates/base.html:283 templates/base.html:438
 msgid "About Us"
 msgstr "معلومات عنا"
 
-#: templates/about-us.html:22
+#: templates/about-us.html:24
 msgid "Know About Us"
 msgstr "تعرف عنا"
 
-#: templates/about-us.html:32 templates/base.html:129 templates/base.html:237
-#: templates/base.html:436 templates/contact.html:23 templates/index.html:7
+#: templates/about-us.html:34 templates/base.html:130 templates/base.html:238
+#: templates/base.html:437 templates/contact.html:23 templates/index.html:7
 #: templates/our-team.html:7 templates/our-team.html:32
 msgid "Home"
 msgstr "بيت"
 
-#: templates/base.html:33
+#: templates/about-us.html:48
+msgid "We Have The Right Products and Services to Fit Your Needs and Budget "
+msgstr "لدينا المنتجات والخدمات المناسبة التي تناسب احتياجاتك وميزانيتك"
+
+#: templates/about-us.html:48
+msgid "Purchase - Palayeshcood."
+msgstr "الشراء - باليشكود."
+
+#: templates/about-us.html:51
+msgid ""
+"Palayeshcood has gained a distinctive position in the domestic and "
+"international markets as one of the pioneers in the export industry and "
+"trade of quality products, with more than 15 years of brilliant experience "
+"in the field of exporting petrochemicals, refinery materials and "
+"agricultural fertilizers, and selling sugar."
+msgstr "لقد اكتسبت شركة بالايشكوود مكانة مميزة في الأسواق المحلية والدولية كواحدة من الشركات الرائدة في صناعة التصدير وتجارة المنتجات عالية الجودة، مع أكثر من 15 عامًا من الخبرة الرائعة في مجال تصدير البتروكيماويات ومواد التكرير والأسمدة الزراعية وبيع السكر."
+
+#: templates/about-us.html:53
+msgid ""
+"Since the beginning of our activity, we have always emphasized the principle "
+"of quality, innovation and customer satisfaction and have tried to meet the "
+"diverse needs of our customers worldwide. Our expert team, by utilizing the "
+"world's latest technical knowledge and applying international standards, has "
+"been able to provide products that meet the highest expectations of "
+"customers."
+msgstr "منذ بداية نشاطنا، أكدنا دائمًا على مبدأ الجودة والابتكار وإرضاء العملاء وحاولنا تلبية الاحتياجات المتنوعة لعملائنا في جميع أنحاء العالم. تمكن فريق الخبراء لدينا، من خلال الاستفادة من أحدث المعارف التقنية في العالم وتطبيق المعايير الدولية، من تقديم منتجات تلبي أعلى توقعات العملاء."
+
+#: templates/about-us.html:55
+msgid ""
+"Our mission at Palayeshcood is to achieve sustainable development in the "
+"agricultural and refining industry and create added value for our customers. "
+"We believe that success is the result of relentless effort and commitment to "
+"quality.Our vision is to expand export markets and provide differentiated "
+"services to business partners around the world. As a leading company, we are "
+"always looking to strengthen long-term, sustainable and mutually beneficial "
+"partnerships."
+msgstr "تتمثل مهمتنا في بالایشکود في تحقيق التنمية المستدامة في صناعة الزراعة والتكرير وخلق قيمة مضافة لعملائنا. نعتقد أن النجاح هو نتيجة للجهود الدؤوبة والالتزام بالجودة. تتمثل رؤيتنا في توسيع أسواق التصدير وتقديم خدمات متميزة لشركاء الأعمال في جميع أنحاء العالم. بصفتنا شركة رائدة، فإننا نتطلع دائمًا إلى تعزيز الشراكات طويلة الأمد والمستدامة والمفيدة للطرفين."
+
+#: templates/about-us.html:57
+msgid "Why Palayeshcood?"
+msgstr "لماذا باليشكود؟"
+
+#: templates/about-us.html:59
+msgid ""
+"Over a decade of professional experienceClose collaboration with "
+"petrochemicals, refineries and sugar factories around the world Commitment "
+"to providing quality and environmentally friendly products Extensive "
+"international distribution network In Palayeshcood, we bring a greener and "
+"more economically sustainable future to our customers and the global "
+"community. By trusting us, you not only have access to quality products, but "
+"also a reliable business partner."
+msgstr "أكثر من عقد من الخبرة المهنيةالتعاون الوثيق مع شركات البتروكيماويات ومصافي التكرير ومصانع السكر في جميع أنحاء العالمالالتزام بتوفير منتجات عالية الجودة وصديقة للبيئةشبكة توزيع دولية واسعة النطاقفي بالایشکود، نوفر مستقبلًا أكثر خضرة واستدامة اقتصاديًا لعملائنا والمجتمع العالمي. من خلال الثقة بنا، لا يمكنك الوصول إلى منتجات عالية الجودة فحسب، بل وأيضًا شريك تجاري موثوق به."
+
+#: templates/about-us.html:63
+msgid "Haman Lesan,"
+msgstr "هامان لسان،"
+
+#: templates/about-us.html:63
+msgid "Founder"
+msgstr "مؤسس"
+
+#: templates/about-us.html:64 templates/base.html:34
 msgid "Palayeshcood"
 msgstr "بالایش کود"
 
-#: templates/base.html:175 templates/base.html:283 templates/our-team.html:29
+#: templates/about-us.html:91
+msgid "We are Professional"
+msgstr "نحن محترفون"
+
+#: templates/about-us.html:93
+msgid ""
+"With years of experience and technical knowledge, we operate in the "
+"production and supply of industrial products with the highest quality "
+"standards. By utilizing advanced technologies and a team of experts, we "
+"provide reliable and efficient solutions to supply various industries."
+msgstr "بفضل سنوات الخبرة والمعرفة الفنية، نعمل في مجال إنتاج وتوريد المنتجات الصناعية بأعلى معايير الجودة. ومن خلال الاستفادة من التقنيات المتقدمة وفريق من الخبراء، نقدم حلولاً موثوقة وفعالة لتلبية احتياجات مختلف الصناعات."
+
+#: templates/about-us.html:103
+msgid "We are Expert"
+msgstr "نحن خبراء"
+
+#: templates/about-us.html:105
+msgid ""
+"With our expertise and experience in selling industrial products, we offer "
+"the best solutions to supply the products needed by various industries. With "
+"quality assurance, competitive prices, and expert advice, we are your "
+"reliable partner in supplying industrial products."
+msgstr "بفضل خبرتنا وخبرتنا في بيع المنتجات الصناعية، فإننا نقدم أفضل الحلول لتوريد المنتجات التي تحتاجها الصناعات المختلفة. مع ضمان الجودة والأسعار التنافسية والمشورة المتخصصة، نحن شريكك الموثوق به في توريد المنتجات الصناعية."
+
+#: templates/about-us.html:115
+msgid "We are Trusted"
+msgstr "نحن موثوقون"
+
+#: templates/about-us.html:117
+msgid ""
+"With years of experience in selling industrial products, we are known as a "
+"reliable and trusted supplier. Guaranteed quality, fair prices and a "
+"commitment to customer satisfaction are the foundations of our sustainable "
+"cooperation."
+msgstr "بفضل سنوات الخبرة في بيع المنتجات الصناعية، أصبحنا معروفين كموردين موثوقين. الجودة المضمونة والأسعار العادلة والالتزام بإرضاء العملاء هي أسس تعاوننا المستدام."
+
+#: templates/base.html:176 templates/base.html:284 templates/our-team.html:29
 #: templates/our-team.html:33
 msgid "Our Team"
 msgstr "فريقنا"
 
-#: templates/base.html:178 templates/base.html:286 templates/base.html:439
+#: templates/base.html:179 templates/base.html:287 templates/base.html:440
 msgid "Contact"
 msgstr "اتصال"
 
-#: templates/base.html:328 templates/contact.html:84
+#: templates/base.html:329 templates/contact.html:84
 msgid "Unit 31, Safavieh Office Complex, Rajaee St, Kashan, Iran"
 msgstr "إيران، كاشان، شارع رجائي، مجمع صفوية الإداري، وحدة 31"
 
-#: templates/base.html:339
+#: templates/base.html:340
 msgid "Popular Tags"
 msgstr "العلامات الشعبية"
 
-#: templates/base.html:351
+#: templates/base.html:352
 msgid "Recent Works"
 msgstr "الأعمال الأخيرة"
 
-#: templates/base.html:379
+#: templates/base.html:380
 msgid "Recent News"
 msgstr "الأخبار الأخيرة"
 
-#: templates/base.html:393
+#: templates/base.html:394
 msgid "Read More"
 msgstr "اقرأ المزيد"
 
-#: templates/base.html:401
+#: templates/base.html:402
 msgid "Send Us Message"
 msgstr "أرسل لنا رسالة"
 
-#: templates/base.html:406
+#: templates/base.html:407
 msgid "Name *"
 msgstr "اسم *"
 
-#: templates/base.html:409
+#: templates/base.html:410
 msgid "Email *"
 msgstr "بريد إلكتروني *"
 
-#: templates/base.html:412 templates/contact.html:67
+#: templates/base.html:413 templates/contact.html:67
 msgid "Message *"
 msgstr "رسالة *"
 
-#: templates/base.html:414
+#: templates/base.html:415
 msgid "Send us"
 msgstr "أرسل لنا"
 
-#: templates/base.html:433
+#: templates/base.html:434
 msgid "Stark Team"
 msgstr "فريق استارك"
 

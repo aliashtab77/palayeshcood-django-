@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 {% load i18n %}
 {% load static %}
-
-
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+{% block excss %}
+<link href="{% static 'haman/css/bootstrap.min.css' %}" rel="stylesheet">
+{% endblock %}
 {% block title %}
 	{% translate 'About Us' %}
 {% endblock title %}
@@ -35,30 +37,40 @@
             </div>
         </div>
     </section>
-{% comment %}
+
     <!--About Us Section-->
     <section class="about-us-section">
     	<div class="auto-container">
         	<div class="row clearfix">
-                
+
                 <!--Text Column -->
-            	<div class="column text-column col-md-6 col-sm-12 col-xs-12">
-                	<h2>We Have The Right Products to Fit Your Needs and Budget <a href="#">Purchase - Decorators.</a></h2>
+            	<div class="column text-column col-md-6 col-sm-12 col-xs-12 {% if LANGUAGE_BIDI%}order-md-last{% endif %}">
+                	<h2>{% translate 'We Have The Right Products and Services to Fit Your Needs and Budget ' %} <a href="#">{% translate 'Purchase - Palayeshcood.' %}</a></h2>
                     <div class="inner-box">
-                         <div class="text">Explain to you how all this mistaken idea of denouncing ut pleasures work expond praising pain was born and  will give you can complete teaching design accont sed the system, and expound the actual teachngs mistake interiors of the great design explorer of the truth, the master-builders design praising of human happiness one seds rejects, dislikes, or avoids pleasures itself</div>
-                         <div class="signature-image"><img src="images/resource/signature.png" alt=""></div>
+                         <div class="text">
+                             {% translate 'Palayeshcood has gained a distinctive position in the domestic and international markets as one of the pioneers in the export industry and trade of quality products, with more than 15 years of brilliant experience in the field of exporting petrochemicals, refinery materials and agricultural fertilizers, and selling sugar.' %}
+                             <br>
+                             {% translate "Since the beginning of our activity, we have always emphasized the principle of quality, innovation and customer satisfaction and have tried to meet the diverse needs of our customers worldwide. Our expert team, by utilizing the world's latest technical knowledge and applying international standards, has been able to provide products that meet the highest expectations of customers." %}
+                             <br>
+                             {% translate "Our mission at Palayeshcood is to achieve sustainable development in the agricultural and refining industry and create added value for our customers. We believe that success is the result of relentless effort and commitment to quality.Our vision is to expand export markets and provide differentiated services to business partners around the world. As a leading company, we are always looking to strengthen long-term, sustainable and mutually beneficial partnerships." %}
+                             <br>
+                             <bold>{% translate 'Why Palayeshcood?' %}</bold>
+                             <br>
+                             {% translate "Over a decade of professional experienceClose collaboration with petrochemicals, refineries and sugar factories around the world Commitment to providing quality and environmentally friendly products Extensive international distribution network In Palayeshcood, we bring a greener and more economically sustainable future to our customers and the global community. By trusting us, you not only have access to quality products, but also a reliable business partner." %}
+                         </div>
+                         <div class="signature-image"><img src="{% static 'haman/images/resource/55555.png' %}" alt="signature of haman lesan"></div>
                          <div class="about-owner">
-                         	<h4>William Shocks, <span class="designation">Founder</span></h4>
-                            <div class="company-title">Decorators.</div>
+                         	<h4>{% translate 'Haman Lesan,' %} <span class="designation">{% translate 'Founder' %}</span></h4>
+                            <div class="company-title">{% translate 'Palayeshcood' %}</div>
                          </div>
                     </div>
                 </div>
                 
                 <!--Column-->
-                <div class="column image-column col-md-6 col-sm-12 col-xs-12">
+                <div class="column image-column col-md-6 col-sm-12 col-xs-12 {% if LANGUAGE_BIDI %}order-md-first{% endif %}">
                 	<article class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
                 		<figure class="image-box video-box">
-                        	<img src="images/resource/featured-image-1.jpg" alt="">
+                        	<img src="{% static 'haman/images/resource/featured-image-1.jpg' %}" alt="">
                             <a href="https://www.youtube.com/watch?v=OrJKD11Rmdg" class="lightbox-image video-link"><div class="icon"><span class="flaticon-play-button-5"></span></div></a>
                         </figure>
                     </article>
@@ -76,9 +88,9 @@
                             <div class="icon-box">
                                 <span class="flaticon-cursor"></span>
                             </div>
-                            <h3>We are Professional</h3>
+                            <h3>{% translate 'We are Professional' %}</h3>
                             <div class="category"><a href="#">Designers</a></div>
-                            <div class="text">How all this mistakens idea of denouncing pleasures and praising pain was born and I will give you a completed by account of the system, and expound.</div>
+                            <div class="text">{% translate 'With years of experience and technical knowledge, we operate in the production and supply of industrial products with the highest quality standards. By utilizing advanced technologies and a team of experts, we provide reliable and efficient solutions to supply various industries.' %}</div>
                         </div>
                     </div>
                     <!--service-block-one-->
@@ -88,9 +100,9 @@
                             <div class="icon-box">
                                 <span class="flaticon-compass"></span>
                             </div>
-                            <h3>We are Expert</h3>
+                            <h3>{% translate 'We are Expert' %}</h3>
                             <div class="category"><a href="#">Interiors</a></div>
-                            <div class="text">Denouncing pleasures and praisings pain was born work  will give you a complete seds account of the system, and actual master-builder of human happiness.</div>
+                            <div class="text">{% translate 'With our expertise and experience in selling industrial products, we offer the best solutions to supply the products needed by various industries. With quality assurance, competitive prices, and expert advice, we are your reliable partner in supplying industrial products.' %}</div>
                         </div>
                     </div>
                     <!--service-block-one-->
@@ -100,9 +112,9 @@
                             <div class="icon-box">
                                 <span class="flaticon-correct"></span>
                             </div>
-                            <h3>We are Trusted</h3>
+                            <h3>{% translate 'We are Trusted' %}</h3>
                             <div class="category"><a href="#">Team Members</a></div>
-                            <div class="text">Idea of denouncing pleasure and praisings pain was born and I will give you a complete account of the system and expound the actual great explorer of the truth.</div>
+                            <div class="text">{% translate 'With years of experience in selling industrial products, we are known as a reliable and trusted supplier. Guaranteed quality, fair prices and a commitment to customer satisfaction are the foundations of our sustainable cooperation.' %}</div>
                         </div>
                     </div>
                     
@@ -111,7 +123,7 @@
             
         </div>
     </section>
-    
+{% comment %}
 
     <!--best-service-two-->
     <section class="best-service-two" style="background-image:url(images/background/image-4.jpg);">

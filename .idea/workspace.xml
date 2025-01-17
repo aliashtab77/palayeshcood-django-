@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60508cdf-84c1-4e38-9f07-29198cb6ba53" name="Changes" comment="stark team link was added">
-      <change afterPath="$PROJECT_DIR$/templates/about-us.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/our-team.html" afterDir="false" />
+    <list default="true" id="60508cdf-84c1-4e38-9f07-29198cb6ba53" name="Changes" comment="first of two pages abou an team added and django requesty was added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/haman/locale/ar/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/haman/locale/ar/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/haman/locale/ar/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/haman/locale/ar/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/haman/locale/fa/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/haman/locale/fa/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/haman/locale/fa/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/haman/locale/fa/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/haman/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/haman/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/palayeshcood/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/palayeshcood/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/palayeshcood/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/palayeshcood/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/haman/css/mamad.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/haman/css/mamad.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,25 +48,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "django.template.preview.state": "SHOW_EDITOR",
-    "git-widget-placeholder": "master",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="palayeshcood" type="Python.DjangoServer" factoryName="Django server">
       <module name="palayeshcood" />
@@ -132,7 +119,8 @@
       <workItem from="1736635173042" duration="5280000" />
       <workItem from="1736724051374" duration="494000" />
       <workItem from="1736739884404" duration="1070000" />
-      <workItem from="1736815624077" duration="7809000" />
+      <workItem from="1736815624077" duration="8683000" />
+      <workItem from="1737040502883" duration="30000" />
     </task>
     <task id="LOCAL-00001" summary="first haman see">
       <option name="closed" value="true" />
@@ -158,7 +146,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736646108955</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="first of two pages abou an team added and django requesty was added">
+      <option name="closed" value="true" />
+      <created>1736823777073</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1736823777073</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,7 +175,8 @@
     <MESSAGE value="first haman see" />
     <MESSAGE value="arabic was added" />
     <MESSAGE value="stark team link was added" />
-    <option name="LAST_COMMIT_MESSAGE" value="stark team link was added" />
+    <MESSAGE value="first of two pages abou an team added and django requesty was added" />
+    <option name="LAST_COMMIT_MESSAGE" value="first of two pages abou an team added and django requesty was added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
