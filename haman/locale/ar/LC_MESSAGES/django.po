@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-17 00:16+0000\n"
+"POT-Creation-Date: 2025-01-19 21:06+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,21 +19,69 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: palayeshcood/settings.py:115
+#: haman/apps.py:7
+msgid "Admin Panel"
+msgstr "لوحة الإدارة"
+
+#: haman/models.py:7 haman/models.py:22
+msgid "name"
+msgstr "اسم"
+
+#: haman/models.py:8
+msgid "your email is not valid"
+msgstr "بريدك الإلكتروني غير صالح"
+
+#: haman/models.py:8 haman/models.py:23
+msgid "email"
+msgstr "بريد إلكتروني"
+
+#: haman/models.py:9
+msgid "message"
+msgstr "رسالة"
+
+#: haman/models.py:10 templates/refinery.html:164
+msgid "subject"
+msgstr "موضوع"
+
+#: haman/models.py:11
+msgid "your phone number is not valid"
+msgstr "رقم هاتفك غير صالح"
+
+#: haman/models.py:11
+msgid "phone number"
+msgstr "رقم التليفون"
+
+#: haman/models.py:12 haman/models.py:24
+msgid "time"
+msgstr "وقت"
+
+#: haman/models.py:14
+msgid "User Message"
+msgstr "رسالة المستخدم"
+
+#: haman/models.py:15
+msgid "User Messages"
+msgstr "رسائل المستخدم"
+
+#: haman/models.py:26 haman/models.py:27
+msgid "News Shelter"
+msgstr "مأوى الأخبار"
+
+#: palayeshcood/settings.py:117
 msgid "Persian"
 msgstr "الفارسية"
 
-#: palayeshcood/settings.py:116
+#: palayeshcood/settings.py:118
 msgid "English"
 msgstr "إنجليزي"
 
-#: palayeshcood/settings.py:117
+#: palayeshcood/settings.py:119
 msgid "Arabic"
 msgstr "عربي"
 
 #: templates/about-us.html:9 templates/about-us.html:31
-#: templates/about-us.html:35 templates/base.html:173 templates/base.html:175
-#: templates/base.html:281 templates/base.html:283 templates/base.html:438
+#: templates/about-us.html:35 templates/base.html:118 templates/base.html:120
+#: templates/base.html:213 templates/base.html:215 templates/base.html:370
 msgid "About Us"
 msgstr "معلومات عنا"
 
@@ -41,9 +89,10 @@ msgstr "معلومات عنا"
 msgid "Know About Us"
 msgstr "تعرف عنا"
 
-#: templates/about-us.html:34 templates/base.html:130 templates/base.html:238
-#: templates/base.html:437 templates/contact.html:23 templates/index.html:7
+#: templates/about-us.html:34 templates/base.html:88 templates/base.html:183
+#: templates/base.html:369 templates/contact.html:23 templates/index.html:7
 #: templates/our-team.html:7 templates/our-team.html:32
+#: templates/refinery.html:25 templates/services.html:27
 msgid "Home"
 msgstr "بيت"
 
@@ -62,7 +111,11 @@ msgid ""
 "trade of quality products, with more than 15 years of brilliant experience "
 "in the field of exporting petrochemicals, refinery materials and "
 "agricultural fertilizers, and selling sugar."
-msgstr "لقد اكتسبت شركة بالايشكوود مكانة مميزة في الأسواق المحلية والدولية كواحدة من الشركات الرائدة في صناعة التصدير وتجارة المنتجات عالية الجودة، مع أكثر من 15 عامًا من الخبرة الرائعة في مجال تصدير البتروكيماويات ومواد التكرير والأسمدة الزراعية وبيع السكر."
+msgstr ""
+"لقد اكتسبت شركة بالايشكوود مكانة مميزة في الأسواق المحلية والدولية كواحدة من "
+"الشركات الرائدة في صناعة التصدير وتجارة المنتجات عالية الجودة، مع أكثر من 15 "
+"عامًا من الخبرة الرائعة في مجال تصدير البتروكيماويات ومواد التكرير والأسمدة "
+"الزراعية وبيع السكر."
 
 #: templates/about-us.html:53
 msgid ""
@@ -72,7 +125,11 @@ msgid ""
 "world's latest technical knowledge and applying international standards, has "
 "been able to provide products that meet the highest expectations of "
 "customers."
-msgstr "منذ بداية نشاطنا، أكدنا دائمًا على مبدأ الجودة والابتكار وإرضاء العملاء وحاولنا تلبية الاحتياجات المتنوعة لعملائنا في جميع أنحاء العالم. تمكن فريق الخبراء لدينا، من خلال الاستفادة من أحدث المعارف التقنية في العالم وتطبيق المعايير الدولية، من تقديم منتجات تلبي أعلى توقعات العملاء."
+msgstr ""
+"منذ بداية نشاطنا، أكدنا دائمًا على مبدأ الجودة والابتكار وإرضاء العملاء "
+"وحاولنا تلبية الاحتياجات المتنوعة لعملائنا في جميع أنحاء العالم. تمكن فريق "
+"الخبراء لدينا، من خلال الاستفادة من أحدث المعارف التقنية في العالم وتطبيق "
+"المعايير الدولية، من تقديم منتجات تلبي أعلى توقعات العملاء."
 
 #: templates/about-us.html:55
 msgid ""
@@ -83,7 +140,12 @@ msgid ""
 "services to business partners around the world. As a leading company, we are "
 "always looking to strengthen long-term, sustainable and mutually beneficial "
 "partnerships."
-msgstr "تتمثل مهمتنا في بالایشکود في تحقيق التنمية المستدامة في صناعة الزراعة والتكرير وخلق قيمة مضافة لعملائنا. نعتقد أن النجاح هو نتيجة للجهود الدؤوبة والالتزام بالجودة. تتمثل رؤيتنا في توسيع أسواق التصدير وتقديم خدمات متميزة لشركاء الأعمال في جميع أنحاء العالم. بصفتنا شركة رائدة، فإننا نتطلع دائمًا إلى تعزيز الشراكات طويلة الأمد والمستدامة والمفيدة للطرفين."
+msgstr ""
+"تتمثل مهمتنا في بالایشکود في تحقيق التنمية المستدامة في صناعة الزراعة "
+"والتكرير وخلق قيمة مضافة لعملائنا. نعتقد أن النجاح هو نتيجة للجهود الدؤوبة "
+"والالتزام بالجودة. تتمثل رؤيتنا في توسيع أسواق التصدير وتقديم خدمات متميزة "
+"لشركاء الأعمال في جميع أنحاء العالم. بصفتنا شركة رائدة، فإننا نتطلع دائمًا "
+"إلى تعزيز الشراكات طويلة الأمد والمستدامة والمفيدة للطرفين."
 
 #: templates/about-us.html:57
 msgid "Why Palayeshcood?"
@@ -98,7 +160,12 @@ msgid ""
 "more economically sustainable future to our customers and the global "
 "community. By trusting us, you not only have access to quality products, but "
 "also a reliable business partner."
-msgstr "أكثر من عقد من الخبرة المهنيةالتعاون الوثيق مع شركات البتروكيماويات ومصافي التكرير ومصانع السكر في جميع أنحاء العالمالالتزام بتوفير منتجات عالية الجودة وصديقة للبيئةشبكة توزيع دولية واسعة النطاقفي بالایشکود، نوفر مستقبلًا أكثر خضرة واستدامة اقتصاديًا لعملائنا والمجتمع العالمي. من خلال الثقة بنا، لا يمكنك الوصول إلى منتجات عالية الجودة فحسب، بل وأيضًا شريك تجاري موثوق به."
+msgstr ""
+"أكثر من عقد من الخبرة المهنيةالتعاون الوثيق مع شركات البتروكيماويات ومصافي "
+"التكرير ومصانع السكر في جميع أنحاء العالمالالتزام بتوفير منتجات عالية الجودة "
+"وصديقة للبيئةشبكة توزيع دولية واسعة النطاقفي بالایشکود، نوفر مستقبلًا أكثر "
+"خضرة واستدامة اقتصاديًا لعملائنا والمجتمع العالمي. من خلال الثقة بنا، لا "
+"يمكنك الوصول إلى منتجات عالية الجودة فحسب، بل وأيضًا شريك تجاري موثوق به."
 
 #: templates/about-us.html:63
 msgid "Haman Lesan,"
@@ -122,7 +189,10 @@ msgid ""
 "production and supply of industrial products with the highest quality "
 "standards. By utilizing advanced technologies and a team of experts, we "
 "provide reliable and efficient solutions to supply various industries."
-msgstr "بفضل سنوات الخبرة والمعرفة الفنية، نعمل في مجال إنتاج وتوريد المنتجات الصناعية بأعلى معايير الجودة. ومن خلال الاستفادة من التقنيات المتقدمة وفريق من الخبراء، نقدم حلولاً موثوقة وفعالة لتلبية احتياجات مختلف الصناعات."
+msgstr ""
+"بفضل سنوات الخبرة والمعرفة الفنية، نعمل في مجال إنتاج وتوريد المنتجات "
+"الصناعية بأعلى معايير الجودة. ومن خلال الاستفادة من التقنيات المتقدمة وفريق "
+"من الخبراء، نقدم حلولاً موثوقة وفعالة لتلبية احتياجات مختلف الصناعات."
 
 #: templates/about-us.html:103
 msgid "We are Expert"
@@ -134,7 +204,10 @@ msgid ""
 "the best solutions to supply the products needed by various industries. With "
 "quality assurance, competitive prices, and expert advice, we are your "
 "reliable partner in supplying industrial products."
-msgstr "بفضل خبرتنا وخبرتنا في بيع المنتجات الصناعية، فإننا نقدم أفضل الحلول لتوريد المنتجات التي تحتاجها الصناعات المختلفة. مع ضمان الجودة والأسعار التنافسية والمشورة المتخصصة، نحن شريكك الموثوق به في توريد المنتجات الصناعية."
+msgstr ""
+"بفضل خبرتنا وخبرتنا في بيع المنتجات الصناعية، فإننا نقدم أفضل الحلول لتوريد "
+"المنتجات التي تحتاجها الصناعات المختلفة. مع ضمان الجودة والأسعار التنافسية "
+"والمشورة المتخصصة، نحن شريكك الموثوق به في توريد المنتجات الصناعية."
 
 #: templates/about-us.html:115
 msgid "We are Trusted"
@@ -146,58 +219,83 @@ msgid ""
 "reliable and trusted supplier. Guaranteed quality, fair prices and a "
 "commitment to customer satisfaction are the foundations of our sustainable "
 "cooperation."
-msgstr "بفضل سنوات الخبرة في بيع المنتجات الصناعية، أصبحنا معروفين كموردين موثوقين. الجودة المضمونة والأسعار العادلة والالتزام بإرضاء العملاء هي أسس تعاوننا المستدام."
+msgstr ""
+"بفضل سنوات الخبرة في بيع المنتجات الصناعية، أصبحنا معروفين كموردين موثوقين. "
+"الجودة المضمونة والأسعار العادلة والالتزام بإرضاء العملاء هي أسس تعاوننا "
+"المستدام."
 
-#: templates/base.html:176 templates/base.html:284 templates/our-team.html:29
+#: templates/base.html:89 templates/base.html:184 templates/base.html:371
+#: templates/refinery.html:26 templates/services.html:5
+#: templates/services.html:24 templates/services.html:28
+msgid "Services"
+msgstr "خدمات"
+
+#: templates/base.html:121 templates/base.html:216 templates/our-team.html:29
 #: templates/our-team.html:33
 msgid "Our Team"
 msgstr "فريقنا"
 
-#: templates/base.html:179 templates/base.html:287 templates/base.html:440
+#: templates/base.html:124 templates/base.html:219 templates/base.html:372
 msgid "Contact"
 msgstr "اتصال"
 
-#: templates/base.html:329 templates/contact.html:84
+#: templates/base.html:259
+msgid ""
+"Palayeshcood Company, as a reputable distributor of chemicals, refineries "
+"and sugar, is ready to sell raw materials from petrochemicals, refineries "
+"and food factories all over the world and we are committed to meeting the "
+"needs of our valued customers in all regions. Join us and benefit from our "
+"expertise and experience. For more information and to place an order, "
+"contact us."
+msgstr ""
+"شركة بالایشکود، باعتبارها الموزع ذو السمعة الطيبة للمواد الكيميائية والمصافي "
+"والسكر، على استعداد لبيع المواد الخام من البتروكيماويات والمصافي ومصانع "
+"المواد الغذائية في جميع أنحاء العالم ونحن ملتزمون بتلبية احتياجات عملائنا "
+"الكرام في جميع المناطق. انضم إلينا واستفد من خبرتنا وتجربتنا. لمزيد من "
+"المعلومات وتقديم الطلب، اتصل بنا."
+
+#: templates/base.html:261 templates/contact.html:85
 msgid "Unit 31, Safavieh Office Complex, Rajaee St, Kashan, Iran"
 msgstr "إيران، كاشان، شارع رجائي، مجمع صفوية الإداري، وحدة 31"
 
-#: templates/base.html:340
+#: templates/base.html:272
 msgid "Popular Tags"
 msgstr "العلامات الشعبية"
 
-#: templates/base.html:352
+#: templates/base.html:284
 msgid "Recent Works"
 msgstr "الأعمال الأخيرة"
 
-#: templates/base.html:380
+#: templates/base.html:312
 msgid "Recent News"
 msgstr "الأخبار الأخيرة"
 
-#: templates/base.html:394
+#: templates/base.html:326 templates/index.html:266 templates/services.html:49
 msgid "Read More"
 msgstr "اقرأ المزيد"
 
-#: templates/base.html:402
+#: templates/base.html:334
 msgid "Send Us Message"
 msgstr "أرسل لنا رسالة"
 
-#: templates/base.html:407
+#: templates/base.html:339
 msgid "Name *"
 msgstr "اسم *"
 
-#: templates/base.html:410
+#: templates/base.html:342
 msgid "Email *"
 msgstr "بريد إلكتروني *"
 
-#: templates/base.html:413 templates/contact.html:67
+#: templates/base.html:345 templates/contact.html:68
+#: templates/refinery.html:180
 msgid "Message *"
 msgstr "رسالة *"
 
-#: templates/base.html:415
+#: templates/base.html:347
 msgid "Send us"
 msgstr "أرسل لنا"
 
-#: templates/base.html:434
+#: templates/base.html:366
 msgid "Stark Team"
 msgstr "فريق استارك"
 
@@ -210,70 +308,256 @@ msgstr "اتصل بنا"
 msgid "Send Message Us"
 msgstr "أرسل لنا رسالة"
 
-#: templates/contact.html:51
+#: templates/contact.html:52
 msgid "Subject"
 msgstr "موضوع"
 
-#: templates/contact.html:55 templates/index.html:2057
+#: templates/contact.html:56 templates/index.html:2059
+#: templates/refinery.html:168
 msgid "Your Name *"
 msgstr "اسمك *"
 
-#: templates/contact.html:59
+#: templates/contact.html:60 templates/refinery.html:172
 msgid "Your Mail *"
 msgstr "بريدك الإلكتروني *"
 
-#: templates/contact.html:63
+#: templates/contact.html:64 templates/refinery.html:176
 msgid "Phone Number"
 msgstr "رقم التليفون"
 
-#: templates/contact.html:70
+#: templates/contact.html:71 templates/refinery.html:183
 msgid "Get Quote"
 msgstr "الحصول على الاقتباس"
 
-#: templates/contact.html:80
+#: templates/contact.html:81
 msgid "Contact Details"
 msgstr "تفاصيل الاتصال"
 
-#: templates/contact.html:81
+#: templates/contact.html:82
 msgid "We are at your service on business days from 9 am to 8 pm."
 msgstr "نحن في خدمتكم خلال أيام العمل من الساعة 9 صباحاً حتى الساعة 8 مساءً."
 
-#: templates/contact.html:84
+#: templates/contact.html:85
 msgid "Address:"
 msgstr "عنوان:"
 
-#: templates/contact.html:84
+#: templates/contact.html:85
 msgid "Head Office: "
 msgstr "المكتب الرئيسي:"
 
-#: templates/contact.html:84
+#: templates/contact.html:85
 msgid "Factory: Kashan, after Dar-e-Salam, Amir Kabir Town, Phase 3"
 msgstr "المصنع: كاشان بعد دار السلام بلدة أميركبير المرحلة الثالثة"
 
-#: templates/contact.html:85
+#: templates/contact.html:86
 msgid "Mail to Haman:"
 msgstr "البريد الإلكتروني إلى هامان:"
 
-#: templates/contact.html:86
+#: templates/contact.html:87
 msgid "Call Him:"
 msgstr "اتصل به:"
 
-#: templates/index.html:2044
+#: templates/index.html:248
+msgid "Our Best Services"
+msgstr "أفضل خدماتنا"
+
+#: templates/index.html:249
+msgid "More Services"
+msgstr "المزيد من الخدمات"
+
+#: templates/index.html:264 templates/refinery.html:15
+#: templates/refinery.html:22 templates/refinery.html:27
+#: templates/refinery.html:73 templates/services-side.html:5
+#: templates/services.html:47
+msgid "refinery products"
+msgstr "منتجات المصفاة"
+
+#: templates/index.html:265 templates/services.html:48
+msgid ""
+"We are proud to provide direct and quality guaranteed refinery products "
+"supply services to our customers around the world. Our goal is to create "
+"reliable, fast and economical solutions to meet your strategic and essential "
+"fuel needs."
+msgstr ""
+"نحن فخورون بتقديم خدمات توريد منتجات التكرير بشكل مباشر ومضمون الجودة "
+"لعملائنا في جميع أنحاء العالم. هدفنا هو إنشاء حلول موثوقة وسريعة واقتصادية "
+"لتلبية احتياجاتك الإستراتيجية والأساسية من الوقود."
+
+#: templates/index.html:2046
 msgid "Newsletter Signup"
 msgstr "الاشتراك في النشرة الإخبارية"
 
-#: templates/index.html:2045
+#: templates/index.html:2047
 msgid "We send you latest news couple a month ( No Spam)."
 msgstr "نرسل لك آخر الأخبار زوجين شهريا (بدون البريد العشوائي)."
 
-#: templates/index.html:2064
+#: templates/index.html:2066
 msgid "Your Email *"
 msgstr "بريدك الإلكتروني *"
 
-#: templates/index.html:2071
+#: templates/index.html:2073
 msgid "Subscribe"
 msgstr "يشترك"
 
 #: templates/our-team.html:22
 msgid "Team Behind Palayeshcood"
 msgstr "فريق وراء بالایش کود"
+
+#: templates/refinery.html:5
+msgid "refinery"
+msgstr "مصفاة"
+
+#: templates/refinery.html:48
+msgid "Our Brochures"
+msgstr "كتيباتنا"
+
+#: templates/refinery.html:76
+msgid "Direct supply of refinery products from all over the world"
+msgstr "التوريد المباشر لمنتجات المصفاة من جميع أنحاء العالم"
+
+#: templates/refinery.html:77
+msgid ""
+"We proudly provide direct, quality-assured refinery supply services to our "
+"customers worldwide. Our goal is to create reliable, fast and economical "
+"solutions to meet your critical and strategic fuel needs."
+msgstr "نحن نقدم بكل فخر خدمات توريد مصافي مباشرة ومضمونة الجودة لعملائنا في جميع أنحاء العالم. هدفنا هو إنشاء حلول موثوقة وسريعة واقتصادية لتلبية احتياجاتك الحرجة والاستراتيجية من الوقود."
+
+#: templates/refinery.html:78
+msgid "Refinery products offered by us:"
+msgstr "منتجات المصفاة التي نقدمها:"
+
+#: templates/refinery.html:79
+msgid "1- Diesel with a standard of 10 ppm:"
+msgstr "1- الديزل بمعيار 10 جزء في المليون:"
+
+#: templates/refinery.html:80
+msgid ""
+"Ultra-low sulfur diesel (10 ppm) is one of the cleanest and highest quality "
+"fuels available on the global market, suitable for diesel vehicles, "
+"industrial equipment and environmentally sensitive applications. This fuel "
+"is produced in full compliance with environmental standards and guarantees "
+"high efficiency."
+msgstr "يعد الديزل منخفض الكبريت (10 جزء في المليون) واحدًا من أنظف أنواع الوقود المتوفرة في السوق العالمية وأعلى جودة، وهو مناسب لمركبات الديزل والمعدات الصناعية والتطبيقات الحساسة للبيئة. يتم إنتاج هذا الوقود وفقًا للمعايير البيئية ويضمن كفاءة عالية."
+
+#: templates/refinery.html:81
+msgid "2- Diesel with a standard of 5000 ppm:"
+msgstr "2- الديزل بمعيار 5000 جزء في المليون:"
+
+#: templates/refinery.html:82
+msgid ""
+"5000 ppm sulfur diesel is designed for a variety of industrial and heavy-"
+"duty transportation applications. This product is an ideal choice for large "
+"industries and infrastructure projects that require diesel fuels due to its "
+"affordable price and high quality."
+msgstr "تم تصميم الديزل الكبريتي بنسبة 5000 جزء في المليون لمجموعة متنوعة من تطبيقات النقل الصناعية والثقيلة. يعد هذا المنتج خيارًا مثاليًا للصناعات الكبيرة ومشاريع البنية التحتية التي تتطلب وقود الديزل نظرًا لسعره المعقول وجودته العالية."
+
+#: templates/refinery.html:83
+msgid "3- Jet Fuel:"
+msgstr "3- وقود الطائرات:"
+
+#: templates/refinery.html:84
+msgid ""
+"Jet fuel is one of the most important and sensitive refinery products "
+"designed for use in passenger and cargo aircraft. We provide our customers "
+"with quality and safety assurance by sourcing jet fuel from the most "
+"reputable international refineries. The jet fuel we provide complies with "
+"global standards such as ASTM D1655 and DEF STAN 91-91."
+msgstr "يعد وقود الطائرات أحد أهم منتجات التكرير وأكثرها حساسية والمصمم للاستخدام في طائرات الركاب والبضائع. نحن نقدم لعملائنا ضمان الجودة والسلامة من خلال الحصول على وقود الطائرات من المصافي العالمية الأكثر شهرة. يتوافق وقود الطائرات الذي نقدمه مع المعايير العالمية مثل ASTM D1655 وDEF STAN 91-91."
+
+#: templates/refinery.html:85
+msgid "Work with us"
+msgstr "العمل معنا"
+
+#: templates/refinery.html:86
+msgid ""
+"By cutting out intermediaries and connecting directly with reputable global "
+"refineries, we provide high quality products at competitive prices. All "
+"products are offered in accordance with global standards such as EN590 for "
+"diesel and specialized standards for jet fuel."
+msgstr "ومن خلال الاستغناء عن الوسطاء والتواصل مباشرة مع المصافي العالمية ذات السمعة الطيبة، فإننا نقدم منتجات عالية الجودة بأسعار تنافسية. يتم تقديم جميع المنتجات وفقًا للمعايير العالمية مثل EN590 للديزل والمعايير المتخصصة لوقود الطائرات."
+
+#: templates/refinery.html:87
+msgid ""
+"We ship products to any part of the world using our extensive transportation "
+"network and in full compliance with international regulations. Our "
+"professional team is with you from the product selection stage to the final "
+"delivery to ensure a flawless cooperation experience. We are ready to "
+"fulfill small and large orders, from meeting the needs of industrial "
+"projects to supplying fuel for air and ground transportation companies."
+msgstr "نقوم بشحن المنتجات إلى أي جزء من العالم باستخدام شبكة النقل الواسعة لدينا وبما يتوافق تمامًا مع اللوائح الدولية. فريقنا المحترف معك من مرحلة اختيار المنتج إلى التسليم النهائي لضمان تجربة تعاون لا تشوبها شائبة. نحن على استعداد لتلبية الطلبات الصغيرة والكبيرة، من تلبية احتياجات المشاريع الصناعية إلى توريد الوقود لشركات النقل الجوي والبري."
+
+#: templates/refinery.html:88
+msgid "Why choose us?"
+msgstr "لماذا تختارنا؟"
+
+#: templates/refinery.html:89
+msgid "Access to an extensive network of reputable global refineries"
+msgstr "الوصول إلى شبكة واسعة من المصافي العالمية ذات السمعة الطيبة"
+
+#: templates/refinery.html:90
+msgid "Fast and reliable delivery"
+msgstr "تسليم سريع وموثوق"
+
+#: templates/refinery.html:91
+msgid ""
+"Commitment to quality, authenticity and compliance with international "
+"standards"
+msgstr "الالتزام بالجودة والأصالة والامتثال للمعايير الدولية"
+
+#: templates/refinery.html:92
+msgid "Competitive prices for all refinery products"
+msgstr "أسعار تنافسية لجميع منتجات المصفاة"
+
+#: templates/refinery.html:93
+msgid "Customer support at all stages of cooperation"
+msgstr "دعم العملاء في جميع مراحل التعاون"
+
+#: templates/refinery.html:94
+msgid "Working with us; secure provision for a sustainable future"
+msgstr "العمل معنا؛ توفير آمن لمستقبل مستدام"
+
+#: templates/refinery.html:95
+msgid ""
+"We strive to provide you with the best possible service for your refinery "
+"fuels needs. From supplying high-quality diesel to standard jet fuel, our "
+"goal is to earn our customers' trust and build lasting partnerships."
+msgstr "نحن نسعى جاهدين لنقدم لك أفضل خدمة ممكنة لتلبية احتياجات وقود المصافي الخاصة بك. بدءًا من توريد الديزل عالي الجودة إلى وقود الطائرات القياسي، هدفنا هو كسب ثقة عملائنا وبناء شراكات دائمة."
+
+#: templates/refinery.html:96
+msgid ""
+"To place an order, receive expert advice, or for more information, contact "
+"us today. Working with us guarantees a reliable and economical supply of "
+"refinery products."
+msgstr "لتقديم طلب، والحصول على مشورة الخبراء، أو لمزيد من المعلومات، اتصل بنا اليوم. إن العمل معنا يضمن إمدادًا موثوقًا واقتصاديًا لمنتجات التكرير."
+
+#: templates/refinery.html:111
+msgid "We are in contact with the world's most reputable refineries."
+msgstr "نحن على اتصال مع المصافي الأكثر شهرة في العالم."
+
+#: templates/refinery.html:112
+msgid "We guarantee the quality of our products."
+msgstr "نحن نضمن جودة منتجاتنا."
+
+#: templates/refinery.html:124
+msgid "Direct supply of diesel fuel is our specialty."
+msgstr "التوريد المباشر لوقود الديزل هو تخصصنا."
+
+#: templates/refinery.html:125
+msgid "We ship worldwide."
+msgstr "نحن نشحن في جميع أنحاء العالم."
+
+#: templates/refinery.html:137
+msgid "We can deliver jet fuel to your port."
+msgstr "يمكننا توصيل وقود الطائرات إلى الميناء الخاص بك."
+
+#: templates/refinery.html:138
+msgid "We have expert support to answer you."
+msgstr "لدينا دعم الخبراء للرد عليك."
+
+#: templates/refinery.html:151
+msgid "Get a free consultation"
+msgstr "احصل على استشارة مجانية"
+
+#: templates/services.html:17
+msgid "Our Services"
+msgstr "خدماتنا"

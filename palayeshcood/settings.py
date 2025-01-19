@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-#$p%lj_j7&7ie#3(nb7p#8&@_77tx=f*j01d-x9++o@4e=5r_^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 IS_DEVEL = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -40,8 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'haman.apps.HamanConfig',
+    'services.apps.ServicesConfig',
     'django_ckeditor_5',
-    'request'
+    'request',
+
 ]
 
 MIDDLEWARE = [
@@ -120,7 +122,7 @@ LANGUAGES = [
 
 LANGUAGE_CODE = 'en-US'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tehran'
 
 USE_I18N = True
 

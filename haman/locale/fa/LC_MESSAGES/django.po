@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-17 00:16+0000\n"
+"POT-Creation-Date: 2025-01-19 21:06+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,21 +18,69 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: palayeshcood/settings.py:115
+#: haman/apps.py:7
+msgid "Admin Panel"
+msgstr "پنل مدیریت"
+
+#: haman/models.py:7 haman/models.py:22
+msgid "name"
+msgstr "نام"
+
+#: haman/models.py:8
+msgid "your email is not valid"
+msgstr "ایمیل وارد شده معتبر نمی باشد"
+
+#: haman/models.py:8 haman/models.py:23
+msgid "email"
+msgstr "ایمیل"
+
+#: haman/models.py:9
+msgid "message"
+msgstr "پیام"
+
+#: haman/models.py:10 templates/refinery.html:164
+msgid "subject"
+msgstr "موضوع"
+
+#: haman/models.py:11
+msgid "your phone number is not valid"
+msgstr "شماره تلفن وارد شده معتبر نمی باشد"
+
+#: haman/models.py:11
+msgid "phone number"
+msgstr "شماره تماس"
+
+#: haman/models.py:12 haman/models.py:24
+msgid "time"
+msgstr "زمان"
+
+#: haman/models.py:14
+msgid "User Message"
+msgstr "پیام کاربر"
+
+#: haman/models.py:15
+msgid "User Messages"
+msgstr "پیام های کاربران"
+
+#: haman/models.py:26 haman/models.py:27
+msgid "News Shelter"
+msgstr "خبر نامه"
+
+#: palayeshcood/settings.py:117
 msgid "Persian"
 msgstr "فارسی"
 
-#: palayeshcood/settings.py:116
+#: palayeshcood/settings.py:118
 msgid "English"
 msgstr "انگلیسی"
 
-#: palayeshcood/settings.py:117
+#: palayeshcood/settings.py:119
 msgid "Arabic"
 msgstr "عربی"
 
 #: templates/about-us.html:9 templates/about-us.html:31
-#: templates/about-us.html:35 templates/base.html:173 templates/base.html:175
-#: templates/base.html:281 templates/base.html:283 templates/base.html:438
+#: templates/about-us.html:35 templates/base.html:118 templates/base.html:120
+#: templates/base.html:213 templates/base.html:215 templates/base.html:370
 msgid "About Us"
 msgstr "درباره ما"
 
@@ -40,9 +88,10 @@ msgstr "درباره ما"
 msgid "Know About Us"
 msgstr "درباره ما بدانید"
 
-#: templates/about-us.html:34 templates/base.html:130 templates/base.html:238
-#: templates/base.html:437 templates/contact.html:23 templates/index.html:7
+#: templates/about-us.html:34 templates/base.html:88 templates/base.html:183
+#: templates/base.html:369 templates/contact.html:23 templates/index.html:7
 #: templates/our-team.html:7 templates/our-team.html:32
+#: templates/refinery.html:25 templates/services.html:27
 msgid "Home"
 msgstr "خانه"
 
@@ -141,7 +190,10 @@ msgid ""
 "production and supply of industrial products with the highest quality "
 "standards. By utilizing advanced technologies and a team of experts, we "
 "provide reliable and efficient solutions to supply various industries."
-msgstr "ما با سال‌ها تجربه و دانش فنی، در تولید و تأمین محصولات صنعتی با بالاترین استانداردهای کیفیت فعالیت می‌کنیم. با بهره‌گیری از فناوری‌های پیشرفته و تیمی متخصص، راهکارهای مطمئن و کارآمد را برای تامین صنایع مختلف ارائه می‌دهیم."
+msgstr ""
+"ما با سال‌ها تجربه و دانش فنی، در تولید و تأمین محصولات صنعتی با بالاترین "
+"استانداردهای کیفیت فعالیت می‌کنیم. با بهره‌گیری از فناوری‌های پیشرفته و تیمی "
+"متخصص، راهکارهای مطمئن و کارآمد را برای تامین صنایع مختلف ارائه می‌دهیم."
 
 #: templates/about-us.html:103
 msgid "We are Expert"
@@ -153,7 +205,10 @@ msgid ""
 "the best solutions to supply the products needed by various industries. With "
 "quality assurance, competitive prices, and expert advice, we are your "
 "reliable partner in supplying industrial products."
-msgstr "ما با تخصص و تجربه در فروش محصولات صنعتی، بهترین راهکارها را برای تأمین محصولات مورد نیاز صنایع مختلف ارائه می‌دهیم. با تضمین کیفیت، قیمت رقابتی و مشاوره تخصصی، همراه مطمئن شما در تأمین محصولات صنعتی هستیم."
+msgstr ""
+"ما با تخصص و تجربه در فروش محصولات صنعتی، بهترین راهکارها را برای تأمین "
+"محصولات مورد نیاز صنایع مختلف ارائه می‌دهیم. با تضمین کیفیت، قیمت رقابتی و "
+"مشاوره تخصصی، همراه مطمئن شما در تأمین محصولات صنعتی هستیم."
 
 #: templates/about-us.html:115
 msgid "We are Trusted"
@@ -165,58 +220,83 @@ msgid ""
 "reliable and trusted supplier. Guaranteed quality, fair prices and a "
 "commitment to customer satisfaction are the foundations of our sustainable "
 "cooperation."
-msgstr "با سال‌ها تجربه در فروش محصولات صنعتی، ما به عنوان یک تأمین‌کننده مطمئن و مورد اعتماد شناخته شده‌ایم. کیفیت تضمین‌شده، قیمت منصفانه و تعهد به رضایت مشتری، پایه‌های همکاری پایدار ما هستند."
+msgstr ""
+"با سال‌ها تجربه در فروش محصولات صنعتی، ما به عنوان یک تأمین‌کننده مطمئن و مورد "
+"اعتماد شناخته شده‌ایم. کیفیت تضمین‌شده، قیمت منصفانه و تعهد به رضایت مشتری، "
+"پایه‌های همکاری پایدار ما هستند."
 
-#: templates/base.html:176 templates/base.html:284 templates/our-team.html:29
+#: templates/base.html:89 templates/base.html:184 templates/base.html:371
+#: templates/refinery.html:26 templates/services.html:5
+#: templates/services.html:24 templates/services.html:28
+msgid "Services"
+msgstr "خدمات"
+
+#: templates/base.html:121 templates/base.html:216 templates/our-team.html:29
 #: templates/our-team.html:33
 msgid "Our Team"
 msgstr "تیم ما"
 
-#: templates/base.html:179 templates/base.html:287 templates/base.html:440
+#: templates/base.html:124 templates/base.html:219 templates/base.html:372
 msgid "Contact"
 msgstr "تماس با ما"
 
-#: templates/base.html:329 templates/contact.html:84
+#: templates/base.html:259
+msgid ""
+"Palayeshcood Company, as a reputable distributor of chemicals, refineries "
+"and sugar, is ready to sell raw materials from petrochemicals, refineries "
+"and food factories all over the world and we are committed to meeting the "
+"needs of our valued customers in all regions. Join us and benefit from our "
+"expertise and experience. For more information and to place an order, "
+"contact us."
+msgstr ""
+"شرکت پالایش کود، به عنوان توزیع‌ کننده معتبر مواد شیمیایی و پالایشگاهی و شکر، "
+"آماده فروش مواد اولیه از پتروشیمی ها و پالایشگاهها و کارخانه های مواد غذایی "
+"به سرتاسر جهان هستیم و ما متعهد به برآورده کردن نیازهای مشتریان عزیز در "
+"تمامی مناطق هستیم. به ما بپیوندید و از تخصص و تجربه ما بهره‌مند شوید. برای "
+"اطلاعات بیشتر و ثبت سفارش، با ما در تماس باشید."
+
+#: templates/base.html:261 templates/contact.html:85
 msgid "Unit 31, Safavieh Office Complex, Rajaee St, Kashan, Iran"
 msgstr "ایران, کاشان، خیابان رجائی، مجتمع اداری صفویه، واحد 31"
 
-#: templates/base.html:340
+#: templates/base.html:272
 msgid "Popular Tags"
 msgstr "تگ های محبوب"
 
-#: templates/base.html:352
+#: templates/base.html:284
 msgid "Recent Works"
 msgstr "کار های اخیر"
 
-#: templates/base.html:380
+#: templates/base.html:312
 msgid "Recent News"
 msgstr "اخبار اخیر"
 
-#: templates/base.html:394
+#: templates/base.html:326 templates/index.html:266 templates/services.html:49
 msgid "Read More"
 msgstr "بیشتر"
 
-#: templates/base.html:402
+#: templates/base.html:334
 msgid "Send Us Message"
 msgstr "برای ما پیام ارسال کنید"
 
-#: templates/base.html:407
+#: templates/base.html:339
 msgid "Name *"
 msgstr "نام *"
 
-#: templates/base.html:410
+#: templates/base.html:342
 msgid "Email *"
 msgstr "ایمیل *"
 
-#: templates/base.html:413 templates/contact.html:67
+#: templates/base.html:345 templates/contact.html:68
+#: templates/refinery.html:180
 msgid "Message *"
 msgstr "پیام *"
 
-#: templates/base.html:415
+#: templates/base.html:347
 msgid "Send us"
 msgstr "ارسال"
 
-#: templates/base.html:434
+#: templates/base.html:366
 msgid "Stark Team"
 msgstr "استارک تیم"
 
@@ -229,70 +309,261 @@ msgstr "تماس با ما"
 msgid "Send Message Us"
 msgstr "برای ما پیام ارسال کنید"
 
-#: templates/contact.html:51
+#: templates/contact.html:52
 msgid "Subject"
 msgstr "موضوع"
 
-#: templates/contact.html:55 templates/index.html:2057
+#: templates/contact.html:56 templates/index.html:2059
+#: templates/refinery.html:168
 msgid "Your Name *"
 msgstr "نام شما *"
 
-#: templates/contact.html:59
+#: templates/contact.html:60 templates/refinery.html:172
 msgid "Your Mail *"
 msgstr "ایمیل شما *"
 
-#: templates/contact.html:63
+#: templates/contact.html:64 templates/refinery.html:176
 msgid "Phone Number"
 msgstr "شماره تماس"
 
-#: templates/contact.html:70
+#: templates/contact.html:71 templates/refinery.html:183
 msgid "Get Quote"
 msgstr "ارسال"
 
-#: templates/contact.html:80
+#: templates/contact.html:81
 msgid "Contact Details"
 msgstr "اطلاعات تماس"
 
-#: templates/contact.html:81
+#: templates/contact.html:82
 msgid "We are at your service on business days from 9 am to 8 pm."
 msgstr "روزهای کاری از ساعت 9 صبح الی 8 شب در خدمت شما هستیم."
 
-#: templates/contact.html:84
+#: templates/contact.html:85
 msgid "Address:"
 msgstr "آدرس:"
 
-#: templates/contact.html:84
+#: templates/contact.html:85
 msgid "Head Office: "
 msgstr "دفتر مرکزی: "
 
-#: templates/contact.html:84
+#: templates/contact.html:85
 msgid "Factory: Kashan, after Dar-e-Salam, Amir Kabir Town, Phase 3"
 msgstr "کارخانه : کاشان ، بعد از دارالسلام، شهرک امیرکبیر، فاز 3"
 
-#: templates/contact.html:85
+#: templates/contact.html:86
 msgid "Mail to Haman:"
 msgstr "ایمیل به هامان"
 
-#: templates/contact.html:86
+#: templates/contact.html:87
 msgid "Call Him:"
 msgstr "زنگش بزن"
 
-#: templates/index.html:2044
+#: templates/index.html:248
+msgid "Our Best Services"
+msgstr "بهترین خدمات ما"
+
+#: templates/index.html:249
+msgid "More Services"
+msgstr "خدمات بیشتر"
+
+#: templates/index.html:264 templates/refinery.html:15
+#: templates/refinery.html:22 templates/refinery.html:27
+#: templates/refinery.html:73 templates/services-side.html:5
+#: templates/services.html:47
+msgid "refinery products"
+msgstr "محصولات پالایشگاهی"
+
+#: templates/index.html:265 templates/services.html:48
+msgid ""
+"We are proud to provide direct and quality guaranteed refinery products "
+"supply services to our customers around the world. Our goal is to create "
+"reliable, fast and economical solutions to meet your strategic and essential "
+"fuel needs."
+msgstr ""
+"ما با افتخار خدمات تأمین محصولات پالایشگاهی را به ‌صورت مستقیم و با کیفیت "
+"تضمین شده به مشتریان خود در سراسر جهان ارائه می‌دهیم. هدف ما ایجاد راه‌حل‌هایی "
+"مطمئن، سریع و اقتصادی برای تأمین نیازهای شما به سوخت‌های ضروری و استراتژیک "
+"است."
+
+#: templates/index.html:2046
 msgid "Newsletter Signup"
 msgstr "ثبت نام در خبرنامه"
 
-#: templates/index.html:2045
+#: templates/index.html:2047
 msgid "We send you latest news couple a month ( No Spam)."
 msgstr "ما ماهانه آخرین اخبار را برای شما ارسال می کنیم (بدون هرزنامه)."
 
-#: templates/index.html:2064
+#: templates/index.html:2066
 msgid "Your Email *"
 msgstr "ایمیل شما *"
 
-#: templates/index.html:2071
+#: templates/index.html:2073
 msgid "Subscribe"
 msgstr "مشترک شوید"
 
 #: templates/our-team.html:22
 msgid "Team Behind Palayeshcood"
 msgstr "تیم پشتیبان پالایش کود"
+
+#: templates/refinery.html:5
+msgid "refinery"
+msgstr "محصولات پالایشگاهی"
+
+#: templates/refinery.html:48
+msgid "Our Brochures"
+msgstr "بروشورهای ما"
+
+#: templates/refinery.html:76
+msgid "Direct supply of refinery products from all over the world"
+msgstr "تأمین مستقیم محصولات پالایشگاهی از سراسر دنیا"
+
+#: templates/refinery.html:77
+msgid ""
+"We proudly provide direct, quality-assured refinery supply services to our "
+"customers worldwide. Our goal is to create reliable, fast and economical "
+"solutions to meet your critical and strategic fuel needs."
+msgstr ""
+"ما با افتخار خدمات تأمین محصولات پالایشگاهی را به ‌صورت مستقیم و با کیفیت "
+"تضمین شده به مشتریان خود در سراسر جهان ارائه می‌دهیم. هدف ما ایجاد راه‌حل‌هایی "
+"مطمئن، سریع و اقتصادی برای تأمین نیازهای شما به سوخت‌های ضروری و استراتژیک "
+"است."
+
+#: templates/refinery.html:78
+msgid "Refinery products offered by us:"
+msgstr "محصولات پالایشگاهی ارائه‌شده توسط ما:"
+
+#: templates/refinery.html:79
+msgid "1- Diesel with a standard of 10 ppm:"
+msgstr "1- گازوئیل با استاندارد 10 ppm"
+
+#: templates/refinery.html:80
+msgid ""
+"Ultra-low sulfur diesel (10 ppm) is one of the cleanest and highest quality "
+"fuels available on the global market, suitable for diesel vehicles, "
+"industrial equipment and environmentally sensitive applications. This fuel "
+"is produced in full compliance with environmental standards and guarantees "
+"high efficiency."
+msgstr "گازوئیل با گوگرد بسیار پایین (10 ppm) یکی از پاک‌ترین و باکیفیت‌ترین سوخت‌های موجود در بازار جهانی است که مناسب خودروهای دیزلی، تجهیزات صنعتی و کاربردهای حساس محیط‌زیستی می‌باشد. این سوخت با رعایت کامل استانداردهای زیست‌محیطی تولید شده و کارایی بالایی را تضمین می‌کند."
+
+#: templates/refinery.html:81
+msgid "2- Diesel with a standard of 5000 ppm:"
+msgstr "2- گازوئیل با استاندارد 5000 ppm"
+
+#: templates/refinery.html:82
+msgid ""
+"5000 ppm sulfur diesel is designed for a variety of industrial and heavy-"
+"duty transportation applications. This product is an ideal choice for large "
+"industries and infrastructure projects that require diesel fuels due to its "
+"affordable price and high quality."
+msgstr "گازوئیل با گوگرد 5000 ppm برای مصارف متنوع صنعتی و حمل‌ونقل سنگین طراحی شده است. این محصول به دلیل قیمت مناسب و کیفیت بالا، انتخابی ایده‌آل برای صنایع بزرگ و پروژه‌های زیرساختی است که نیازمند سوخت‌های دیزلی هستند."
+
+#: templates/refinery.html:83
+msgid "3- Jet Fuel:"
+msgstr "3- سوخت جت:"
+
+#: templates/refinery.html:84
+msgid ""
+"Jet fuel is one of the most important and sensitive refinery products "
+"designed for use in passenger and cargo aircraft. We provide our customers "
+"with quality and safety assurance by sourcing jet fuel from the most "
+"reputable international refineries. The jet fuel we provide complies with "
+"global standards such as ASTM D1655 and DEF STAN 91-91."
+msgstr "سوخت جت یکی از مهم‌ترین و حساس‌ترین محصولات پالایشگاهی است که برای استفاده در هواپیماهای مسافربری و باربری طراحی شده است. ما با تأمین سوخت جت از معتبرترین پالایشگاه‌های بین‌المللی، تضمین کیفیت و ایمنی این محصول را برای مشتریان خود فراهم می‌کنیم. سوخت جت ارائه‌شده توسط ما مطابق با استانداردهای جهانی مانند ASTM D1655 و DEF STAN 91-91 است."
+
+#: templates/refinery.html:85
+msgid "Work with us"
+msgstr "همکاری با ما"
+
+#: templates/refinery.html:86
+msgid ""
+"By cutting out intermediaries and connecting directly with reputable global "
+"refineries, we provide high quality products at competitive prices. All "
+"products are offered in accordance with global standards such as EN590 for "
+"diesel and specialized standards for jet fuel."
+msgstr "با کنار گذاشتن واسطه‌ها و ارتباط مستقیم با پالایشگاه‌های معتبر جهانی، محصولات را با کیفیت بالا و قیمت رقابتی تأمین می‌کنیم. تمامی محصولات مطابق با استانداردهای جهانی مانند EN590 برای گازوئیل و استانداردهای تخصصی برای سوخت جت ارائه می‌شوند."
+
+#: templates/refinery.html:87
+msgid ""
+"We ship products to any part of the world using our extensive transportation "
+"network and in full compliance with international regulations. Our "
+"professional team is with you from the product selection stage to the final "
+"delivery to ensure a flawless cooperation experience. We are ready to "
+"fulfill small and large orders, from meeting the needs of industrial "
+"projects to supplying fuel for air and ground transportation companies."
+msgstr "ما با استفاده از شبکه گسترده حمل‌ ونقل و رعایت کامل مقررات بین‌المللی، محصولات را به هر نقطه از جهان ارسال می‌کنیم. تیم حرفه‌ای ما از مرحله انتخاب محصول تا تحویل نهایی در کنار شماست تا تجربه‌ای بی‌نقص از همکاری داشته باشید.ما آماده تأمین سفارش‌های کوچک و بزرگ هستیم، از تأمین نیازهای پروژه‌های صنعتی گرفته تا تأمین سوخت برای شرکت‌های حمل‌ونقل هوایی و زمینی."
+
+#: templates/refinery.html:88
+msgid "Why choose us?"
+msgstr "چرا ما را انتخاب کنید؟"
+
+#: templates/refinery.html:89
+msgid "Access to an extensive network of reputable global refineries"
+msgstr "دسترسی به شبکه‌ای گسترده از پالایشگاه‌های معتبر جهانی"
+
+#: templates/refinery.html:90
+msgid "Fast and reliable delivery"
+msgstr "تحویل سریع و قابل اطمینان"
+
+#: templates/refinery.html:91
+msgid ""
+"Commitment to quality, authenticity and compliance with international "
+"standards"
+msgstr "تعهد به کیفیت، اصالت و انطباق با استانداردهای بین‌المللی"
+
+#: templates/refinery.html:92
+msgid "Competitive prices for all refinery products"
+msgstr "قیمت‌های رقابتی برای تمامی محصولات پالایشگاهی"
+
+#: templates/refinery.html:93
+msgid "Customer support at all stages of cooperation"
+msgstr "پشتیبانی مشتریان در تمامی مراحل همکاری"
+
+#: templates/refinery.html:94
+msgid "Working with us; secure provision for a sustainable future"
+msgstr "همکاری با ما؛ تأمین مطمئن برای آینده‌ای پایدار"
+
+#: templates/refinery.html:95
+msgid ""
+"We strive to provide you with the best possible service for your refinery "
+"fuels needs. From supplying high-quality diesel to standard jet fuel, our "
+"goal is to earn our customers' trust and build lasting partnerships."
+msgstr "ما در تلاشیم تا با ارائه خدمات تخصصی، نیازهای شما به سوخت‌های پالایشگاهی را به بهترین شکل ممکن برآورده کنیم. از تأمین گازوئیل با کیفیت بالا تا سوخت جت استاندارد، هدف ما جلب اعتماد مشتریان و ایجاد شراکت‌های پایدار است."
+
+#: templates/refinery.html:96
+msgid ""
+"To place an order, receive expert advice, or for more information, contact "
+"us today. Working with us guarantees a reliable and economical supply of "
+"refinery products."
+msgstr "برای ثبت سفارش، دریافت مشاوره تخصصی یا اطلاعات بیشتر، همین امروز با ما تماس بگیرید. همکاری با ما تضمینی برای تأمین مطمئن و اقتصادی محصولات پالایشگاهی است."
+
+#: templates/refinery.html:111
+msgid "We are in contact with the world's most reputable refineries."
+msgstr "ما با پالایشگاههای معتبر دنیا در ارتباط هستیم."
+
+#: templates/refinery.html:112
+msgid "We guarantee the quality of our products."
+msgstr "ما کیفیت محصولات خود را تضمین می کنیم."
+
+#: templates/refinery.html:124
+msgid "Direct supply of diesel fuel is our specialty."
+msgstr "تامین مستقیم سوخت دیزل در تخصص ماست."
+
+#: templates/refinery.html:125
+msgid "We ship worldwide."
+msgstr "ما به سراسر دنیا ارسال داریم."
+
+#: templates/refinery.html:137
+msgid "We can deliver jet fuel to your port."
+msgstr "ما میتوانیم سوخت جت را در بندر شما تحویل دهیم."
+
+#: templates/refinery.html:138
+msgid "We have expert support to answer you."
+msgstr "ما پشتیبانی متخصصی برای پاسخگویی به شما داریم."
+
+#: templates/refinery.html:151
+msgid "Get a free consultation"
+msgstr "مشاوره رایگان دریافت کنید"
+
+#: templates/services.html:17
+msgid "Our Services"
+msgstr "خدمات ما"

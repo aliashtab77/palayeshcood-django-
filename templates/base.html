@@ -42,6 +42,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link href="{% static 'haman/css/responsive.css' %}" rel="stylesheet">
+    <link href="{% static 'haman/css/haman.css' %}" rel="stylesheet">
 {% if LANGUAGE_BIDI %}
     <link href="{% static 'haman/css/mamad.css' %}" rel="stylesheet">
 {% endif %}
@@ -59,56 +60,13 @@
 
     <!-- Main Header-->
     <header class="main-header">
-    	<!-- Header Top -->
-{#    	<div class="header-top">#}
-{#        	<div class="auto-container">#}
-{#            	<div class="row clearfix">#}
-{##}
-{#                    <!--Top Left-->#}
-{#                    <div class="top-left pull-left">#}
-{#                    	<div class="dropdown lang-dropdown">#}
-{#                        	<button  class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><img src="{% static 'haman/images/icons/flog.png' %}" alt="" /> &nbsp; English <span class="fa fa-angle-down"></span></button>#}
-{#                            <ul class="dropdown-menu">#}
-{#                                <li><a href="#">French</a></li>#}
-{#                                <li><a href="#">Espanish</a></li>#}
-{#                                <li><a href="#">Chinese</a></li>#}
-{#                            </ul>#}
-{#                        </div>#}
-{#                    </div>#}
-{##}
-{#                    <!--Top Right-->#}
-{#                    <div class="top-right pull-right">#}
-{##}
-{#                    	<!--social-icon-->#}
-{#                        <div class="social-icon">#}
-{#                        	<a href="#"><span class="fa fa-facebook"></span></a>#}
-{#                            <a href="#"><span class="fa fa-twitter"></span></a>#}
-{#                            <a href="#"><span class="fa fa-dribbble"></span></a>#}
-{#                            <a href="#"><span class="fa fa-linkedin"></span></a>#}
-{#                        </div>#}
-{##}
-{#                    	<ul>#}
-{#                        	<li><span class="fa fa-envelope-o"></span>Contact@Decorators.com</li>#}
-{#                            <li><span class="fa fa-phone"></span>Toll Free: +1 212-212-2376</li>#}
-{#                            <li><span class="fa fa-clock-o"></span>Mon - Fri : 9:00 -1700</li>#}
-{#                        </ul>#}
-{##}
-{##}
-{#                    </div>#}
-{##}
-{#                </div>#}
-{##}
-{#            </div>#}
-{#        </div><!-- Header Top End -->#}
-
-
         <!-- Main Box -->
     	<div class="main-box">
         	<div class="auto-container">
             	<div class="outer-container clearfix">
                     <!--Logo Box-->
                     <div class="logo-box">
-                        <div class="logo"><a href=""><img src="{% static 'haman/images/logo.png' %}" alt=""></a></div>
+                        <div class="logo"><a href=""><img src="{% static 'haman/images/logo-main.png' %}" alt=""></a></div>
 
                     </div>
 
@@ -128,21 +86,8 @@
                             <div class="navbar-collapse collapse clearfix">
                                 <ul class="navigation clearfix">
                                     <li class="{% block homec %}{% endblock homec %}"><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
-                                    <li class="dropdown"><a href="#">Services</a>
-                                    	<ul>
-                                            <li><a href="services.html">Our Services</a></li>
-                                            <li><a href="service-single.html">Services Single</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="#">Projects</a>
-                                    	<ul>
-                                            <li><a href="portfolio-default.html">Projects Standard</a></li>
-                                            <li><a href="portfolio-fullwidth.html">Projects Fullwidth</a></li>
-                                            <li><a href="portfolio-with-text.html">Projects With Text</a></li>
-                                            <li><a href="portfolio-single-one.html">Projects Single 01</a></li>
-                                            <li><a href="portfolio-single-two.html">Projects Single 02</a></li>
-                                        </ul>
-                                    </li>
+                                    <li class="{% block servicesc %}{% endblock servicesc %}"><a href="{% url 'services' %}">{% translate 'Services' %}</a></li>
+
                                     <li class="dropdown"><a href="#">Blog</a>
                                     	<ul>
                                             <li><a href="blog.html">Blog Standard</a></li>
@@ -202,10 +147,10 @@
                             {% else %}
                                 <button  class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><img src="{% static 'haman/images/icons/arab.png' %} " width="24px" height="14px" alt="Arabian flag logo"/> &nbsp; <span class="fa fa-angle-down"></span></button>
                             {% endif %}
-                            <ul class="dropdown-menu">
-                                <li><button onclick="chLaToPe();"><img src="{% static 'haman/images/icons/iran.png' %}" alt="iran flag logo" /></button></li>
-                                <li><button onclick="chLaToEn();"><img src="{% static 'haman/images/icons/flog.png' %}" alt="british flag logo" /></button></li>
-                                <li><button onclick="chLaToAr();"><img src="{% static 'haman/images/icons/arab.png' %}" width="24px" height="14px" alt="Arabian flag logo" /></button></li>
+                            <ul class="dropdown-menu" style="min-width: auto;">
+                                <li><button onclick="chLaToPe();"><img src="{% static 'haman/images/icons/iran.png' %}" class="chanelangimg" alt="iran flag logo" /></button></li>
+                                <li><button onclick="chLaToEn();"><img src="{% static 'haman/images/icons/flog.png' %}" class="chanelangimg" alt="british flag logo" /></button></li>
+                                <li><button onclick="chLaToAr();"><img src="{% static 'haman/images/icons/arab.png' %}" class="chanelangimg" width="24px" height="14px" alt="Arabian flag logo" /></button></li>
                             </ul>
                         </form>
                     </div>
@@ -228,7 +173,7 @@
 
             <!-- .logo -->
             <div class="logo text-center">
-                <a href="{% url 'home' %}"><img src="{% static '/haman/images/logo-2.png' %}" alt=""></a>
+                <a href="{% url 'home' %}"><img src="{% static '/haman/images/logo-main.png' %}" alt=""></a>
             </div><!-- /.logo -->
 
             <!-- .Side-menu -->
@@ -236,21 +181,8 @@
             <!-- .navigation -->
                 <ul class="navigation">
                     <li class="{% block homecz %}{% endblock homecz %}"><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
-                    <li class="dropdown"><a href="#">Services</a>
-                        <ul class="submenu">
-                            <li><a href="services.html">Our Services</a></li>
-                            <li><a href="service-single.html">Services Single</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#">Projects</a>
-                        <ul class="submenu">
-                            <li><a href="portfolio-default.html">Projects Standard</a></li>
-                            <li><a href="portfolio-fullwidth.html">Projects Fullwidth</a></li>
-                            <li><a href="portfolio-with-text.html">Projects With Text</a></li>
-                            <li><a href="portfolio-single-one.html">Projects Single 01</a></li>
-                            <li><a href="portfolio-single-two.html">Projects Single 02</a></li>
-                        </ul>
-                    </li>
+                    <li class="{% block servicescz %}{% endblock servicescz %}"><a href="{% url 'services' %}">{% translate 'Services' %}</a></li>
+
                     <li class="dropdown"><a href="#">Blog</a>
                         <ul class="submenu">
                             <li><a href="blog.html">Blog Standard</a></li>
@@ -324,7 +256,7 @@
                             	<div class="footer-widget about-widget">
                                 	<div class="footer-logo"><figure><a href="index-2.html"><img src="{% static 'haman/images/logo-4.png' %}" alt=""></a></figure></div>
                                     <div class="widget-content">
-                                    	<div class="text">Must explain too you all this mistaken idea off denouncing pleasure and well praising pain was born and I will gives you complete accounts systems must explain to idea of denouncing.</div>
+                                    	<div class="text">{% translate 'Palayeshcood Company, as a reputable distributor of chemicals, refineries and sugar, is ready to sell raw materials from petrochemicals, refineries and food factories all over the world and we are committed to meeting the needs of our valued customers in all regions. Join us and benefit from our expertise and experience. For more information and to place an order, contact us.' %}</div>
                                         <ul class="contact-info">
                                         	<li><span class="icon fa fa-map-marker"></span>{% translate 'Unit 31, Safavieh Office Complex, Rajaee St, Kashan, Iran' %}</li>
                                             <li><span class="icon fa fa-phone"></span><a href="tel:+9891300025744">+98(913) 0002-57-44</a></li>
@@ -436,7 +368,7 @@
                     	<ul class="footer-nav">
                         	<li><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
                             <li><a href="{% url 'about' %}">{% translate 'About Us' %}</a></li>
-                            <li><a href="#">Services</a></li>
+                            <li><a href="{% url 'services' %}">{% translate 'Services' %}</a></li>
                             <li><a href="{% url 'contact' %}">{% translate 'Contact' %}</a></li>
                         </ul>
                     </div>

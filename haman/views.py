@@ -16,7 +16,8 @@ def contact(request):
     }
     return render(request, 'contact.html', context=context)
 
-
+def contactformsaver(request):
+    pass
 
 def about(request):
     context = {

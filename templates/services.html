@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %}
+	{% translate 'Services' %}
+{% endblock title %}
+{% block servicesc %}current{% endblock servicesc%}
+{% block servicescz %}current{% endblock servicescz%}
+
+
+{% block body %}
+
+    
+    <!--Page Title-->
+    <section class="page-title" style="background-image:url({% static 'haman/images/background/bg-page-title-1.jpg' %});">
+        <div class="auto-container">
+            <h1>{% translate 'Our Services' %}</h1>
+        </div>
+    </section>
+
+    <!--Page Info-->
+    <section class="page-info">
+        <div class="auto-container clearfix">
+            <div class="pull-left"><h2>{% translate 'Services' %}</h2></div>
+            <div class="pull-right">
+                <ul class="bread-crumb clearfix">
+                    <li><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
+                    <li>{% translate 'Services' %}</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    
+    <!--Services Section-->
+    <section class="services-section">
+    	<div class="auto-container">
+            
+        	<div class="row clearfix">
+            	
+                <!--Service Block-->
+                <div class="default-services-block col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<figure class="image-box"><img src="{% static 'haman/images/resource/services/refinerbg.jpg' %}" alt=""><a href="{% url 'refinary' %}" class="overlay-box"><span class="fa fa-link"></span></a></figure>
+                        <div class="lower-content haman_left">
+                        	<div class="transparen-icon"><img src="{% static 'haman/images/icons/oil-refinery.png' %}" alt="oil refinery icon"></div>
+                        	<h3 class="haman_right"><a href="{% url 'refinary' %}">{% translate 'refinery products' %}</a></h3>
+                            <div class="text haman_right">{% translate 'We are proud to provide direct and quality guaranteed refinery products supply services to our customers around the world. Our goal is to create reliable, fast and economical solutions to meet your strategic and essential fuel needs.'|truncatewords:20 %}</div>
+                            <div class="link-box"><a href="{% url 'refinary' %}" class="theme-btn read-more">{% translate 'Read More' %}</a></div>
+                        </div>
+                    </div>
+                </div>
+
+{% comment %}
+
+                <!--Service Block-->
+                <div class="default-services-block col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<figure class="image-box"><img height="210px" src="{% static 'haman/images/resource/service-image-2.jpg' %}" alt=""><a href="service-single.html" class="overlay-box"><span class="fa fa-link"></span></a></figure>
+                        <div class="lower-content">
+                        	<div class="transparen-icon"><span class="flaticon-layers"></span></div>
+                        	<h3><a href="service-single.html">Wooden Flooring</a></h3>
+                            <div class="text">Explain to you how ut can mistakens ideas off denouncing pleasures and praising gives you  mistaken idea denouncing pleasure.</div>
+                            <div class="link-box"><a href="service-single.html" class="theme-btn read-more">Read More</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Service Block-->
+                <div class="default-services-block col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<figure class="image-box"><img src="images/resource/service-image-3.jpg" alt=""><a href="service-single.html" class="overlay-box"><span class="fa fa-link"></span></a></figure>
+                        <div class="lower-content">
+                        	<div class="transparen-icon"><span class="flaticon-compass"></span></div>
+                        	<h3><a href="service-single.html">Interior Curtains</a></h3>
+                            <div class="text">Denouncing pleasure and praisings pains was born and I will give you a completed  mistaken idea of denouncing pleasure account.</div>
+                            <div class="link-box"><a href="service-single.html" class="theme-btn read-more">Read More</a></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Service Block-->
+                <div class="default-services-block col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<figure class="image-box"><img src="images/resource/service-image-4.jpg" alt=""><a href="service-single.html" class="overlay-box"><span class="fa fa-link"></span></a></figure>
+                        <div class="lower-content">
+                        	<div class="transparen-icon"><span class="flaticon-tiles"></span></div>
+                        	<h3><a href="service-single.html">Tile &amp; Marble Work</a></h3>
+                            <div class="text">Plesure and praisings pain was born and I will give you an completed and mistakens idea off denouncing pleasure expound.</div>
+                            <div class="link-box"><a href="service-single.html" class="theme-btn read-more">Read More</a></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Service Block-->
+                <div class="default-services-block col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<figure class="image-box"><img src="images/resource/service-image-5.jpg" alt=""><a href="service-single.html" class="overlay-box"><span class="fa fa-link"></span></a></figure>
+                        <div class="lower-content">
+                        	<div class="transparen-icon"><span class="flaticon-two"></span></div>
+                        	<h3><a href="service-single.html">Furniture Work</a></h3>
+                            <div class="text">We will give you  mistaken idea of ut pleasure and praising pain ut was born and I will gives you a complete great of the truth.</div>
+                            <div class="link-box"><a href="service-single.html" class="theme-btn read-more">Read More</a></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Service Block-->
+                <div class="default-services-block col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<figure class="image-box"><img src="images/resource/service-image-6.jpg" alt=""><a href="service-single.html" class="overlay-box"><span class="fa fa-link"></span></a></figure>
+                        <div class="lower-content">
+                        	<div class="transparen-icon"><span class="flaticon-bright-lightbulb"></span></div>
+                        	<h3><a href="service-single.html">Lighting Works</a></h3>
+                            <div class="text">Expound that actualyl mistakens ideas of and praisings pains was born and I will give you a complete account of human happiness.</div>
+                            <div class="link-box"><a href="service-single.html" class="theme-btn read-more">Read More</a></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Service Block-->
+                <div class="default-services-block col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<figure class="image-box"><img src="images/resource/service-image-7.jpg" alt=""><a href="service-single.html" class="overlay-box"><span class="fa fa-link"></span></a></figure>
+                        <div class="lower-content">
+                        	<div class="transparen-icon"><span class="flaticon-houses"></span></div>
+                        	<h3><a href="service-single.html">Curtains Road (Steel &amp; Wood)</a></h3>
+                            <div class="text">Circumstances occur in which all toil and pain can procure him some great pleasure to take trivial example which of us ever.</div>
+                            <div class="link-box"><a href="service-single.html" class="theme-btn read-more">Read More</a></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Service Block-->
+                <div class="default-services-block col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<figure class="image-box"><img src="images/resource/service-image-8.jpg" alt=""><a href="service-single.html" class="overlay-box"><span class="fa fa-link"></span></a></figure>
+                        <div class="lower-content">
+                        	<div class="transparen-icon"><span class="flaticon-parquet"></span></div>
+                        	<h3><a href="service-single.html">Walldesigning Works</a></h3>
+                            <div class="text">The great explored off the truth, the masters builder off human happiness. No one rejects dislikes, or avoids pleasure itself.</div>
+                            <div class="link-box"><a href="service-single.html" class="theme-btn read-more">Read More</a></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Service Block-->
+                <div class="default-services-block col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<figure class="image-box"><img src="images/resource/service-image-9.jpg" alt=""><a href="service-single.html" class="overlay-box"><span class="fa fa-link"></span></a></figure>
+                        <div class="lower-content">
+                        	<div class="transparen-icon"><span class="flaticon-copy"></span></div>
+                        	<h3><a href="service-single.html">Artificial Grass Flooring</a></h3>
+                            <div class="text">Expound that actualyl mistakens ideas of and praisings pains was born and I will give you a complete account of human happiness.</div>
+                            <div class="link-box"><a href="service-single.html" class="theme-btn read-more">Read More</a></div>
+                        </div>
+                    </div>
+                </div>
+                {% endcomment %}
+                
+            </div>
+        </div>
+    </section>
+    {% comment %}
+    
+    <!--call-to-action-->
+    <section class="call-to-action" style="background-image:url(images/background/image-1.jpg);">
+    	<div class="auto-container">
+        	<div class="row">
+            	<div class="text">Join with Decorators and</div>
+                <h2>Now Make Your Home More Lovely!</h2>
+                
+                <a class="theme-btn btn-style-one" href="#">Contact Us</a>
+                <a class="theme-btn btn-style-two" href="#">Shop Now</a>
+                
+            </div>
+        </div>
+    </section>
+{% endcomment %}
+
+{% endblock body %}

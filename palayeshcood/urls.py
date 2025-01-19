@@ -18,15 +18,20 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from haman.views import index, contact, about, team
+from haman.views import index, contact, about, team, contactformsaver
 
 urlpatterns = [
     path("i18n/", include("django.conf.urls.i18n")),
+
+    path("servives/", include("services.urls")),
     path("admin/", admin.site.urls),
     path("", index, name="home"),
     path("contact-us/", contact, name="contact"),
+    path("save-meassages/", contactformsaver, name="savemessages"),
     path("about-us/", about, name="about"),
     path("our-team/", team, name="team"),
+    # path("services/refinery", ,name=""),
+
 
 
 ]

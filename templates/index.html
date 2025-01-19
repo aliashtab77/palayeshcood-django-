@@ -236,7 +236,7 @@
             </div>
         </div>
     </section>
-
+    {% endcomment %}
 
     <!--best-service-section-->
     <section class="best-service-section">
@@ -244,34 +244,34 @@
 
             <!--sec-title-->
             <div class="sec-title clearfix">
-                <h2 class="pull-left">Our Best Services</h2>
-                <a class="service-link pull-right" href="#">More Services <span class="fa fa-caret-right"></span></a>
+                <h2 class="pull-left">{% translate 'Our Best Services' %}</h2>
+                <a class="service-link pull-right" href="{% url 'services' %}">{% translate 'More Services' %} <span class="fa fa-caret-right"></span></a>
             </div>
 
         	<div class="row clearfix">
 
                 <!--service-block-two-->
-                <div class="service-block-two col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                <div class="service-block-two col-lg-4 col-md-6 col-sm-12 col-xs-12 haman_left">
                 	<!--inner-box-->
                 	<div class="inner-box wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
-                    	<div class="image-layer" style="background-image:url(images/resource/service-block-two-bg.jpg)"></div>
+                    	<div class="image-layer" style="background-image:url({% static 'haman/images/resource/services/refinerbg.jpg' %})"></div>
                     	<!--icon-box-->
                     	<div class="icon-box">
-                        	<span class="flaticon-improvement"></span>
+                        	<img src="{% static 'haman/images/icons/oil-refinery.png' %}" alt="oil refinery icon">
                         </div>
 
-                        <h3>Texture Painting</h3>
-                        <div class="text">How all this mistaken idea pleasure and praising pain was born and will give you a complete expound.</div>
-                        <a href="#" class="read-more">Read More</a>
+                        <h3 class="haman_right">{% translate 'refinery products' %}</h3>
+                        <div class="text haman_right">{% translate 'We are proud to provide direct and quality guaranteed refinery products supply services to our customers around the world. Our goal is to create reliable, fast and economical solutions to meet your strategic and essential fuel needs.'|truncatewords:15 %}</div>
+                        <a href="{% url 'refinary' %}" class="read-more">{% translate 'Read More' %}</a>
 
                         <!--bottom-icon-->
                         <div class="bottom-icon">
-                        	<span class="flaticon-improvement"></span>
+                        	<img src="{% static 'haman/images/icons/oil-refinery.png' %}" alt="oil refinery icon">
                         </div>
 
                     </div>
                 </div>
-
+                    {% comment %}
                 <div class="service-block-two col-lg-4 col-md-6 col-sm-12 col-xs-12">
                 	<!--inner-box-->
                 	<div class="inner-box wow fadeIn" data-wow-delay="400ms" data-wow-duration="1500ms">
@@ -376,13 +376,13 @@
 
                     </div>
                 </div>
-
+                    {% endcomment %}
 
             </div>
         </div>
     </section>
 
-
+    {% comment %}
     <!--call-to-action-->
     <section class="call-to-action" style="background-image:url(images/background/image-1.jpg);">
     	<div class="auto-container">

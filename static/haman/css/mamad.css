@@ -48,8 +48,52 @@ input , textarea{
   right: auto;
 }
 
+.sec-title h2::after {
+  position: absolute;
+  content: '';
+  width: 70px;
+  height: 1px;
+  right: 0px;
+  bottom: 3px;
+  background-color: #fc721e;
+  left: auto;
+}
 
-.haman{
-  display: flex;
-  flex-direction: row-reverse;
+.sec-title h2::before {
+  position: absolute;
+  content: '';
+  width: 70px;
+  height: 2px;
+  right: 0px;
+  bottom: 0px;
+  background-color: #fc721e;
+  left: auto;
+}
+
+.haman_right{
+  text-align: right;
+}
+.haman_left{
+  text-align: left;
+}
+
+.sidebar-title h3::before {
+  position: absolute;
+  content: '';
+  width: 70px;
+  height: 2px;
+  left: auto;
+  right: 0px;
+  bottom: 0px;
+  background-color: #fc721e;
+}
+.sidebar-title h3::after {
+  position: absolute;
+  content: '';
+  width: 70px;
+  height: 1px;
+  left: auto;
+  right: 0px;
+  bottom: 3px;
+  background-color: #fc721e;
 }
