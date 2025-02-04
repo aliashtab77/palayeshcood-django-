@@ -105,16 +105,6 @@
                                             <li><a href="register.html">Login / Register</a></li>
                                         </ul>
                                     </li>
-
-                                    <li class="dropdown"><a href="#">Pages</a>
-                                    	<ul>
-                                            <li><a href="about-us.html">About Us</a></li>
-                                            <li><a href="our-team.html">Our Team</a></li>
-                                            <li><a href="team-single.html">Team Single</a></li>
-                                            <li><a href="pricing.html">Pricing Table</a></li>
-                                            <li><a href="faqs.html">FAQ's</a></li>
-                                        </ul>
-                                    </li>
                                     <li class="{% block aboutc %}{% endblock aboutc %} dropdown"><a href="#">{% translate 'About Us' %}</a>
                                     	<ul>
                                             <li><a href="{% url 'about' %}">{% translate 'About Us' %}</a></li>
@@ -122,6 +112,7 @@
                                         </ul>
                                     </li>
                                     <li class="{% block contactc %}{% endblock contactc %}"><a href="{% url 'contact' %}">{% translate 'Contact' %}</a></li>
+                                    <li class="{% block faqc %}{% endblock faqc %}"><a href="{% url 'faq' %}">{% translate 'FAQ' %}</a></li>
 
                                  </ul>
                             </div>
@@ -141,14 +132,14 @@
                             <input type="hidden" value="" name="language" id="language">
                             <input type="hidden" value="{% autoescape off %}{% block next %}{{ request.path }}{% endblock next %}{% endautoescape %}" name="next" id="next">
                             {% if LANGUAGE_CODE == 'fa' %}
-                                <button class="btn btn-primary dropdown-toggle" style="color: black;background-color: whitesmoke;" type="button" data-toggle="dropdown"><img src="{% static 'haman/images/icons/iran.png' %} " alt="iran flag logo"/> &nbsp; <span class="fa fa-angle-down"></span></button>
+                                <button class="btn btn-primary dropdown-toggle" style="color: black;background-color: whitesmoke;" type="button" data-toggle="dropdown"><img src="{% static 'haman/images/icons/iran2.png' %} " width="24px" height="14px" alt="iran flag logo"/> &nbsp; <span class="fa fa-angle-down"></span></button>
                             {% elif LANGUAGE_CODE == 'en' %}
-                                <button  class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><img src="{% static 'haman/images/icons/flog.png' %} " alt="british flag logo"/> &nbsp; <span class="fa fa-angle-down"></span></button>
+                                <button  class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><img src="{% static 'haman/images/icons/flog.png' %} " width="24px" height="14px" alt="british flag logo"/> &nbsp; <span class="fa fa-angle-down"></span></button>
                             {% else %}
                                 <button  class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><img src="{% static 'haman/images/icons/arab.png' %} " width="24px" height="14px" alt="Arabian flag logo"/> &nbsp; <span class="fa fa-angle-down"></span></button>
                             {% endif %}
                             <ul class="dropdown-menu" style="min-width: auto;">
-                                <li><button onclick="chLaToPe();"><img src="{% static 'haman/images/icons/iran.png' %}" class="chanelangimg" alt="iran flag logo" /></button></li>
+                                <li><button onclick="chLaToPe();"><img src="{% static 'haman/images/icons/iran2.png' %}" class="chanelangimg" alt="iran flag logo" /></button></li>
                                 <li><button onclick="chLaToEn();"><img src="{% static 'haman/images/icons/flog.png' %}" class="chanelangimg" alt="british flag logo" /></button></li>
                                 <li><button onclick="chLaToAr();"><img src="{% static 'haman/images/icons/arab.png' %}" class="chanelangimg" width="24px" height="14px" alt="Arabian flag logo" /></button></li>
                             </ul>
@@ -201,15 +192,7 @@
                         </ul>
                     </li>
 
-                    <li class="dropdown"><a href="#">Pages</a>
-                        <ul class="submenu">
-                            <li><a href="about-us.html">About Us</a></li>
-                            <li><a href="our-team.html">Our Team</a></li>
-                            <li><a href="team-single.html">Team Single</a></li>
-                            <li><a href="pricing.html">Pricing Table</a></li>
-                            <li><a href="faqs.html">FAQ's</a></li>
-                        </ul>
-                    </li>
+
                     <li class="{% block aboutcz %}{% endblock aboutcz %} dropdown"><a href="#">{% translate 'About Us' %}</a>
                         <ul>
                             <li><a href="{% url 'about' %}">{% translate 'About Us' %}</a></li>
@@ -217,6 +200,7 @@
                         </ul>
                     </li>
                     <li class="{% block contactcz %}{% endblock contactcz %}"><a href="{% url 'contact' %}">{% translate 'Contact' %}</a></li>
+                    <li class="{% block faqcz %}{% endblock faqcz %}"><a href="{% url 'faq' %}">{% translate 'FAQ' %}</a></li>
                 </ul>
             </div><!-- /.Side-menu -->
 
@@ -425,6 +409,7 @@
 <script src="{% static 'haman/js/wow.js' %}"></script>
 <script src="{% static 'haman/js/script.js' %}"></script>
 <script src="{% static 'haman/js/changelanguge.js' %}"></script>
+{% block escript %}{% endblock escript %}
 </body>
 
 

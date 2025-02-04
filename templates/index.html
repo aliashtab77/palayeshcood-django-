@@ -271,70 +271,70 @@
 
                     </div>
                 </div>
-                    {% comment %}
-                <div class="service-block-two col-lg-4 col-md-6 col-sm-12 col-xs-12">
+
+                <div class="service-block-two col-lg-4 col-md-6 col-sm-12 col-xs-12 haman_left">
                 	<!--inner-box-->
                 	<div class="inner-box wow fadeIn" data-wow-delay="400ms" data-wow-duration="1500ms">
-                    	<div class="image-layer" style="background-image:url(images/resource/service-block-two-bg.jpg)"></div>
+                    	<div class="image-layer" style="background-image:url({% static 'haman/images/resource/services/pet.jpg' %})"></div>
                     	<!--icon-box-->
                     	<div class="icon-box">
-                        	<span class="flaticon-parquet"></span>
+                        	<img src="{% static 'haman/images/icons/plant.png' %}" alt="etrochemical icon">
                         </div>
 
-                        <h3>Wooden Flooring</h3>
-                        <div class="text">Explain to you how can mistakens idea off denouncing pleasures and praising give you a complete.</div>
-                        <a href="#" class="read-more">Read More</a>
+                        <h3 class="haman_right">{% translate 'petrochemical' %}</h3>
+                        <div class="text haman_right">{% translate 'We specialize in direct supply of petrochemical products and our main goal is to provide a fast, reliable and professional solution to meet the needs of customers around the world. By establishing close relationships with reputable petrochemicals, we have enabled the supply of high quality products.'|truncatewords:15 %}</div>
+                        <a href="{% url 'petrochemical' %}" class="read-more">{% translate 'Read More' %}</a>
 
                         <!--bottom-icon-->
                         <div class="bottom-icon">
-                        	<span class="flaticon-parquet"></span>
+                        	<img src="{% static 'haman/images/icons/plant.png' %}" alt="etrochemical icon">
                         </div>
 
                     </div>
                 </div>
 
-                <div class="service-block-two col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                <div class="service-block-two col-lg-4 col-md-6 col-sm-12 col-xs-12 haman_left">
                 	<!--inner-box-->
-                	<div class="inner-box wow fadeIn" data-wow-delay="800ms" data-wow-duration="1500ms">
-                    	<div class="image-layer" style="background-image:url(images/resource/service-block-two-bg.jpg)"></div>
+                	<div class="inner-box wow fadeIn" data-wow-delay="400ms" data-wow-duration="1500ms">
+                    	<div class="image-layer" style="background-image:url({% static 'haman/images/resource/services/global.jpg' %})"></div>
                     	<!--icon-box-->
                     	<div class="icon-box">
-                        	<span class="flaticon-window"></span>
+                        	<img src="{% static 'haman/images/icons/worldwide.png' %}" alt="global trade icon">
                         </div>
 
-                        <h3>Interior Curtains</h3>
-                        <div class="text">Denouncing pleasure and praising pain was born and I will give you a complete account the system.</div>
-                        <a href="#" class="read-more">Read More</a>
+                        <h3 class="haman_right">{% translate 'Global trade' %}</h3>
+                        <div class="text haman_right">{% translate 'Global trade in petrochemicals, refined products and sugar is recognized as one of the key pillars of the global economy. Due to their widespread use in various industries and the daily needs of humans, these materials play a vital role in energy supply, industrial and food production. Given the economic, political and technological developments, the trade in these materials in the world faces different challenges and opportunities.'|truncatewords:14 %}</div>
+                        <a href="{% url 'global' %}" class="read-more">{% translate 'Read More' %}</a>
 
                         <!--bottom-icon-->
                         <div class="bottom-icon">
-                        	<span class="flaticon-window"></span>
+                        	<img src="{% static 'haman/images/icons/worldwide.png' %}" alt="global trade icon">
                         </div>
 
                     </div>
                 </div>
 
-                <div class="service-block-two col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                <div class="service-block-two col-lg-4 col-md-6 col-sm-12 col-xs-12 haman_left">
                 	<!--inner-box-->
                 	<div class="inner-box wow fadeIn" data-wow-delay="0ms" data-wow-duration="1500ms">
-                    	<div class="image-layer" style="background-image:url(images/resource/service-block-two-bg.jpg)"></div>
+                    	<div class="image-layer" style="background-image:url({% static 'haman/images/resource/services/food.jpg' %})"></div>
                     	<!--icon-box-->
                     	<div class="icon-box">
-                        	<span class="flaticon-tiles"></span>
+                        	<img src="{% static 'haman/images/icons/edible.png' %}" alt="Food products icon">
                         </div>
 
-                        <h3>Tile & Marble Work</h3>
-                        <div class="text">Plesure and praising pain was born and I will give you a complete and expound the actual teachings.</div>
-                        <a href="#" class="read-more">Read More</a>
+                        <h3 class="haman_right">{% translate 'Food products' %}</h3>
+                        <div class="text haman_right">{% translate 'We are proud to serve the needs of our customers worldwide by providing food supply services directly from reputable factories. With a focus on quality, transparency, and speed in service delivery, we strive to provide the best experience for customers in various food industries.'|truncatewords:15 %}</div>
+                        <a href="{% url 'food' %}" class="read-more">{% translate 'Read More' %}</a>
 
                         <!--bottom-icon-->
                         <div class="bottom-icon">
-                        	<span class="flaticon-tiles"></span>
+                        	<img src="{% static 'haman/images/icons/edible.png' %}" alt="Food products icon">
                         </div>
 
                     </div>
                 </div>
-
+{% comment %}
                 <div class="service-block-two col-lg-4 col-md-6 col-sm-12 col-xs-12">
                 	<!--inner-box-->
                 	<div class="inner-box wow fadeIn" data-wow-delay="400ms" data-wow-duration="1500ms">

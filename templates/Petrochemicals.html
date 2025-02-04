@@ -1,0 +1,252 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %}
+	{% translate 'petrochemical' %}
+{% endblock title %}
+{% block servicesc %}current{% endblock servicesc%}
+{% block servicescz %}current{% endblock servicescz%}
+
+{% block body %}
+
+    <!--Page Title-->
+    <section class="page-title" style="background-image:url({% static 'haman/images/background/bg-page-title-1.jpg' %});">
+        <div class="auto-container">
+            <h1>{% translate 'petrochemical products' %}</h1>
+        </div>
+    </section>
+
+    <!--Page Info-->
+    <section class="page-info">
+        <div class="auto-container clearfix">
+            <div class="pull-left"><h2>{% translate 'petrochemical products' %}</h2></div>
+            <div class="pull-right">
+                <ul class="bread-crumb clearfix">
+                    <li><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
+                    <li><a href="{% url 'services' %}">{% translate 'Services' %}</a></li>
+                    <li>{% translate 'petrochemical products' %}</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!--Sidebar Page-->
+    <div class="sidebar-page-container">
+        <div class="auto-container">
+            <div class="row clearfix">
+
+
+                <!--Sidebar-->
+                <div class="sidebar-side col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                    <aside class="sidebar">
+
+                        <!--Sidebar Widget / Boxed Nav-->
+                        {% include 'services-side.html' with petrochemical="current" only %}
+
+                        <!--Sidebar Widget / Downloads-->
+                        <div class="widget sidebar-widget downloads">
+                            <div class="sidebar-title"><h3>{% translate 'Our Brochures' %}</h3></div>
+                            <ul>
+                                <li class="haman_left"><a href="#"><span class="icon fa fa-file-pdf-o"></span> Download.Pdf</a></li>
+                                <li class="haman_left"><a href="#"><span class="icon fa fa-file-word-o"></span> Download.Doc</a></li>
+                            </ul>
+                        </div>
+
+
+                    </aside>
+                </div><!--End Sidebar-->
+
+                <!--Content Side-->
+
+                <div class="content-side col-lg-9 col-md-8 col-sm-12 col-xs-12">
+                    <!--Service Single-->
+                    <section class="service-details">
+                    	<!--Service Images-->
+                        <div class="service-images">
+                            <ul class="single-item-carousel">
+                                <li><figure class="image-box"><a href="{% static 'haman/images/resource/services/banerpet1.jpg' %}" class="lightbox-image" title="Image Caption Here"><img src="{% static 'haman/images/resource/services/banerpet1.jpg' %}" alt="petrochemical photo"></a></figure></li>
+                                <li><figure class="image-box"><a href="{% static 'haman/images/resource/services/banerpet2.jpg' %}" class="lightbox-image" title="Image Caption Here"><img src="{% static 'haman/images/resource/services/banerpet2.jpg' %}" alt="petrochemical photo"></a></figure></li>
+                                <li><figure class="image-box"><a href="{% static 'haman/images/resource/services/banerpet3.jpg' %}" class="lightbox-image" title="Image Caption Here"><img src="{% static 'haman/images/resource/services/banerpet3.jpg' %}" alt="petrochemical photo"></a></figure></li>
+
+                            </ul>
+                        </div>
+
+                       	<div class="sec-title"><h2>{% translate 'petrochemical products' %}</h2></div>
+                        <!--Text Content-->
+                        <div class="text-content">
+                            <h3>{% translate 'Direct supply of petrochemical products worldwide' %}</h3>
+                        	<p>{% translate 'We specialize in direct supply of petrochemical products and our main goal is to provide a fast, reliable and professional solution to meet the needs of customers around the world. By establishing close relationships with reputable petrochemicals, we have enabled the supply of high quality products.' %}</p>
+                            <h3>{% translate 'What products can we supply?' %}</h3>
+                            <h4>{% translate '1- Urea fertilizer:' %}</h4>
+                            <p>{% translate 'Urea fertilizer, as one of the most widely used and efficient chemical fertilizers, plays a key role in increasing the yield of agricultural products. We supply this product directly from petrochemicals and ship it worldwide with the best quality and competitive price. All stages of production and packaging of this product are carried out under strict supervision and in accordance with international standards.' %}</p>
+                            <h4>{% translate '2- Types of plastic raw materials' %}</h4>
+                            <p>
+                                {% translate 'We supply a range of plastic raw materials to manufacturers in various industries. These materials include:' %}
+                                <br>
+                                {% translate 'Polyethylene (PE): Suitable for producing plastic films, packaging, pipes and more.' %}
+                                <br>
+                                {% translate 'Polypropylene (PP): For making automotive parts, food packaging, and industrial products.' %}
+                                <br>
+                                {% translate 'Polyvinyl chloride (PVC): Used in the construction industry, production of pipes and profiles.' %}
+                                <br>
+                                {% translate 'Polystyrene (PS): For producing lightweight and durable products such as disposable tableware and household appliances.' %}
+                                <br>
+                                {% translate 'ABS: Applied in the automotive, electronics, and home appliance industries.' %}
+                            </p>
+                            <h3>{% translate 'Benefits of our services in supplying petrochemical products' %}</h3>
+                            <p>{% translate 'All products are directly supplied from reputable petrochemicals, which reduces costs and increases the certainty of the authenticity of the goods. All products comply with international standards and their quality is checked and guaranteed by our expert team. We have the ability to send these products to all parts of the world, in compliance with all international transportation rules and standards. By eliminating intermediaries and cooperating directly with petrochemicals, we are able to offer products at the best prices on the market. Our team is with you at all stages, from order registration to delivery of goods, and is ready to provide expert advice to choose the most suitable products.' %}</p>
+                            <h3>{% translate 'Global trust, our main goal' %}</h3>
+                            <p>{% translate 'We have earned the trust of customers in various industries from all over the world by providing reliable and high-quality services. Providing the best quality petrochemical products and fast delivery is our top priority.For more information, consultation or to place an order, contact us today and experience a different kind of professional cooperation.' %}</p>
+                            <h4>{% translate 'For more information, a consultation, or to place an order, contact us today and experience a different kind of professional collaboration.' %}</h4>
+                        </div>
+
+                        <!--Service Types-->
+                        <div class="service-types">
+                        	<div class="row clearfix">
+                            	<!--Service Type-->
+                                <div class="service-type col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                	<div class="inner-box">
+                                    	<figure class="image-box"><img src="{% static 'haman/images/resource/services/pet1.jpg' %}" alt="petrochemical photo"></figure>
+                                        <div class="lower-content">
+                                            <ul class="list-style-one">
+                                            	<li>{% translate "We are registered with the world's largest petrochemical companies." %}</li>
+                                                <li>{% translate 'Our company guarantees the quality of our products.' %}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Service Type-->
+                                <div class="service-type col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                	<div class="inner-box">
+                                    	<figure class="image-box"><img src="{% static 'haman/images/resource/services/pet2.jpg' %}" alt="petrochemical photo"></figure>
+                                        <div class="lower-content">
+                                            <ul class="list-style-one">
+                                            	<li>{% translate 'Our specialty is supplying urea fertilizer from petrochemicals.' %}</li>
+                                                <li>{% translate 'We ship worldwide.' %}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Service Type-->
+                                <div class="service-type col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                	<div class="inner-box">
+                                    	<figure class="image-box"><img src="{% static 'haman/images/resource/services/pet3.jpg' %}" alt="petrochemical photo"></figure>
+                                        <div class="lower-content">
+                                            <ul class="list-style-one">
+                                            	<li>{% translate 'We can deliver plastic raw materials to your port.' %}</li>
+                                                <li>{% translate 'We have expert support to answer you.' %}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                        <!--Get Quote-->
+                        <div class="get-quote">
+                            <div class="sec-title medium"><h2>{% translate 'Get a free consultation' %}</h2></div>
+                                <div class="row clearfix">
+                                    <!--Content COlumn-->
+                                    <!--Form Column-->
+                                    <div class="column col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                                        <!--form-box-->
+                                        <div class="form-box default-form">
+                                            <div class="contact-form default-form">
+                                                <form method="post" action="{% url 'savemessages' %}" id="mform">
+                                                    <div class="row clearfix">
+                                                            {% csrf_token %}
+                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="text" name="subject" value="" placeholder="{% translate 'subject' %}">
+                                                        </div>
+
+                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="text" name="username" value="" placeholder="{% translate 'Your Name *' %}" required>
+                                                        </div>
+
+                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="email" name="email" value="" placeholder="{% translate 'Your Mail *' %}" required>
+                                                        </div>
+
+                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="text" name="number" value="" placeholder="{% translate 'Phone Number' %}">
+                                                        </div>
+
+                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                            <textarea name="message" placeholder="{% translate 'Message *' %}"></textarea>
+                                                        </div>
+                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                            <button type="submit" class="theme-btn btn-style-two">{% translate 'Get Quote' %}</button>
+                                                        </div>
+                                                        <div id="response">
+
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+
+                    </section>
+                </div><!--End Content Side-->
+
+            </div>
+        </div>
+    </div>
+
+
+{% endblock body %}
+
+
+{% block escript %}
+    <script>
+
+        $(document).ready(function() {
+
+            $('#mform').on('submit', function(event) {
+
+                {#event.preventDefault(); // Prevent the default form submission#}
+
+
+                $.ajax({
+
+                    type: 'POST',
+
+                    url: '{% url "savemessages" %}',  // Replace with your view's URL
+
+                    data: $(this).serialize(), // Serialize the form data
+
+                    success: function(response) {
+
+                        if (response.success) {
+
+                            $('#response').html('<p>' + response.message + '</p>');
+
+                        } else {
+
+                            $('#response').html('<p>Error: ' + JSON.stringify(response.errors) + '</p>');
+
+                        }
+
+                    },
+
+                    error: function(xhr, status, error) {
+
+                        $('#response').html('<p>An error occurred: ' + error + '</p>');
+
+                    }
+
+                });
+
+            });
+
+        });
+
+    </script>
+{% endblock %}

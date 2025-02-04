@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% translate 'FAQ' %}{% endblock title %}
+{% block faqc %}current{% endblock faqc %}
+{% block faqcz %}current{% endblock faqcz %}
+
+{% block body %}
+    <section class="page-title" style="background-image:url({% static 'haman/images/background/bg-page-title-1.jpg' %});">
+        <div class="auto-container">
+            <h1>{% translate "FAQ's" %}</h1>
+        </div>
+    </section>
+
+    <section class="page-info">
+        <div class="auto-container clearfix">
+            <div class="pull-left"><h2>{% translate "FAQ's" %}</h2></div>
+            <div class="pull-right">
+                <ul class="bread-crumb clearfix">
+                    <li><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
+                    <li>{% translate "FAQ's" %}</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--FAQs Section-->
+    <section class="faqs-section">
+    	<div class="auto-container">
+
+            <div class="faqs-container">
+            	<!--Accordion Box-->
+                <ul class="accordion-box">
+
+                    <!--Block-->
+                    <li class="accordion block wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="acc-btn active"><div class="icon-outer"><span class="icon icon-plus fa fa-angle-right"></span> <span class="icon icon-minus fa fa-angle-down"></span></div>{% translate 'Who are we?' %}</div>
+                        <div class="acc-content current">
+                            <div class="content clearfix">
+                                <p>{% translate "Palayeshcood Company (PKK) is known as a distributor of chemical and refinery products. At Palayeshcood, we work with the world's most reputable manufacturers to provide our customers with high quality products at reasonable prices." %}</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!--Block-->
+                    <li class="accordion block wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus fa fa-angle-right"></span> <span class="icon icon-minus fa fa-angle-down"></span></div>{% translate 'What products do you offer?' %}</div>
+                        <div class="acc-content">
+                            <div class="content clearfix">
+                                <p>{% translate 'We operate in the field of selling petrochemicals (such as urea, polyethylene, polypropylene), refinery products (such as gasoline, diesel, jet fuel), and food products (such as sugar and tomato paste).' %}</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!--Block-->
+                    <li class="accordion block wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus fa fa-angle-right"></span> <span class="icon icon-minus fa fa-angle-down"></span></div>{% translate 'How to order at PKK?' %}</div>
+                        <div class="acc-content">
+                            <div class="content clearfix">
+                                <p>{% translate '1- You can place your order by calling, emailing or WhatsApping the company. After your inquiry, our experts will provide you with the required information and also send you the product analysis. If requested, it is possible to send a sample after receiving the shipping fee. The shipping steps will be followed up carefully and step by step by the responsible expert.' %}</p>
+                                <p>{% translate "2- Registering an order in person By holding a meeting at our head office, you can negotiate face to face with the commercial manager and the company's CEO, and the expert in charge will follow up on the results of the meeting until the desired result is achieved. Usually, export products require careful examination, the procedure for which is coordinated in the meeting." %}</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!--Block-->
+                    <li class="accordion block wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus fa fa-angle-right"></span> <span class="icon icon-minus fa fa-angle-down"></span></div> {% translate 'How can I find out the price of products?' %}</div>
+                        <div class="acc-content">
+                            <div class="content clearfix">
+                                <p>{% translate 'Product prices may change due to market fluctuations. To get the latest prices, you can contact our sales department via phone number or email.' %}</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!--Block-->
+                    <li class="accordion block wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus fa fa-angle-right"></span> <span class="icon icon-minus fa fa-angle-down"></span></div> {% translate 'What are the technical specifications of your petrochemical materials?' %}</div>
+                        <div class="acc-content">
+                            <div class="content clearfix">
+                                <p>{% translate 'The technical specifications of each product (such as grade, density, melting point) are listed in the "Technical Information" section of each product. If you need more information, please contact our technical experts.' %}</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!--Block-->
+                    <li class="accordion block wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus fa fa-angle-right"></span> <span class="icon icon-minus fa fa-angle-down"></span></div> {% translate 'What are your shipping methods?' %}</div>
+                        <div class="acc-content">
+                            <div class="content clearfix">
+                                <p>{% translate 'We use various methods such as road, sea and rail transportation. The transportation method is determined according to your needs and the type of product.' %}</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!--Block-->
+                    <li class="accordion block wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus fa fa-angle-right"></span> <span class="icon icon-minus fa fa-angle-down"></span></div> {% translate 'Do your products have a warranty?' %}</div>
+                        <div class="acc-content">
+                            <div class="content clearfix">
+                                <p>{% translate 'Petrochemical and refinery products are provided based on technical specifications and if they do not meet the stated specifications, they can be returned or exchanged. For food products, returns are only possible if there is a problem with packaging or quality.' %}</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="accordion block wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus fa fa-angle-right"></span> <span class="icon icon-minus fa fa-angle-down"></span></div> {% translate 'How can I become your sales representative?' %}</div>
+                        <div class="acc-content">
+                            <div class="content clearfix">
+                                <p>{% translate "To cooperate and receive representation, please send your resume to the company's email. Our experts will contact you as soon as possible." %}</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="accordion block wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus fa fa-angle-right"></span> <span class="icon icon-minus fa fa-angle-down"></span></div> {% translate 'How can I contact support?' %}</div>
+                        <div class="acc-content">
+                            <div class="content clearfix">
+                                <p>{% translate 'You can contact us via phone number, email, or contact form on the site. Contact information is listed in the "Contact Us" section.' %}</p>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul><!--End Accordion Box-->
+            </div>
+
+            <div class="sec-title medium">
+            	<h2>{% translate 'Ask Your Questions' %}</h2>
+            </div>
+
+            <div class="ask-questions">
+            	<!--form-box-->
+                <div class="form-box default-form">
+                    <div class="contact-form default-form">
+                        <form method="post" action="#">
+                            <div class="row clearfix">
+
+                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" name="username" value="" placeholder="{% translate 'Your Name *' %}" required>
+                                </div>
+
+                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                    <input type="email" name="email" value="" placeholder="{% translate 'Email Address *' %}" required>
+                                </div>
+
+                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" name="number" value="" placeholder="{% translate 'Phone' %}">
+                                </div>
+
+                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" name="subject" value="" placeholder="{% translate 'subject' %}">
+                                </div>
+
+                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                    <textarea name="message" placeholder="{% translate 'Your Question' %}"></textarea>
+                                </div>
+
+                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                    <button type="submit" class="theme-btn btn-style-two">{% translate 'Submit Now' %}</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="call-to-action-one">
+    	<div class="auto-container">
+        	<div class="clearfix">
+
+                <div class="pull-left">
+                	<h3>{% translate 'We provide full and specific solution for every clients' %} &amp; {% translate 'Get lifetime support from us.' %}</h3>
+                </div>
+                <div class="pull-right">
+                	<a href="{% url 'contact' %}" class="theme-btn btn-style-two">{% translate 'contact Team' %}</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+{% endblock body %}

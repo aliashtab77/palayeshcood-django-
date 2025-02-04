@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-19 21:06+0330\n"
+"POT-Creation-Date: 2025-02-05 02:16+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,7 +39,9 @@ msgstr "بريد إلكتروني"
 msgid "message"
 msgstr "رسالة"
 
-#: haman/models.py:10 templates/refinery.html:164
+#: haman/models.py:10 templates/Petrochemicals.html:164 templates/faq.html:153
+#: templates/food.html:164 templates/global.html:162
+#: templates/refinery.html:161
 msgid "subject"
 msgstr "موضوع"
 
@@ -67,6 +69,14 @@ msgstr "رسائل المستخدم"
 msgid "News Shelter"
 msgstr "مأوى الأخبار"
 
+#: haman/views.py:24
+msgid "name is required"
+msgstr "الاسم مطلوب"
+
+#: haman/views.py:27
+msgid "email is required"
+msgstr "البريد الإلكتروني مطلوب"
+
 #: palayeshcood/settings.py:117
 msgid "Persian"
 msgstr "الفارسية"
@@ -79,22 +89,248 @@ msgstr "إنجليزي"
 msgid "Arabic"
 msgstr "عربي"
 
+#: templates/Petrochemicals.html:5 templates/index.html:285
+msgid "petrochemical"
+msgstr "البتروكيماويات"
+
+#: templates/Petrochemicals.html:15 templates/Petrochemicals.html:22
+#: templates/Petrochemicals.html:27 templates/Petrochemicals.html:74
+#: templates/services-side.html:6 templates/services.html:62
+msgid "petrochemical products"
+msgstr "المنتجات البتروكيماوية"
+
+#: templates/Petrochemicals.html:25 templates/about-us.html:34
+#: templates/base.html:88 templates/base.html:174 templates/base.html:353
+#: templates/contact.html:23 templates/faq.html:20 templates/food.html:24
+#: templates/global.html:25 templates/index.html:7 templates/our-team.html:7
+#: templates/our-team.html:32 templates/refinery.html:25
+#: templates/services.html:27
+msgid "Home"
+msgstr "بيت"
+
+#: templates/Petrochemicals.html:26 templates/base.html:89
+#: templates/base.html:175 templates/base.html:355 templates/food.html:25
+#: templates/global.html:26 templates/refinery.html:26
+#: templates/services.html:5 templates/services.html:24
+#: templates/services.html:28
+msgid "Services"
+msgstr "خدمات"
+
+#: templates/Petrochemicals.html:48 templates/food.html:47
+#: templates/global.html:48 templates/refinery.html:48
+msgid "Our Brochures"
+msgstr "كتيباتنا"
+
+#: templates/Petrochemicals.html:77
+msgid "Direct supply of petrochemical products worldwide"
+msgstr "التوريد المباشر للمنتجات البتروكيماوية في جميع أنحاء العالم"
+
+#: templates/Petrochemicals.html:78 templates/index.html:286
+#: templates/services.html:63
+msgid ""
+"We specialize in direct supply of petrochemical products and our main goal "
+"is to provide a fast, reliable and professional solution to meet the needs "
+"of customers around the world. By establishing close relationships with "
+"reputable petrochemicals, we have enabled the supply of high quality "
+"products."
+msgstr ""
+"نحن متخصصون في التوريد المباشر للمنتجات البتروكيماوية وهدفنا الرئيسي هو "
+"توفير حل سريع وموثوق ومهني لتلبية احتياجات العملاء في جميع أنحاء العالم. ومن "
+"خلال إقامة علاقات وثيقة مع شركات البتروكيماويات ذات السمعة الطيبة، تمكنا من "
+"توفير منتجات عالية الجودة."
+
+#: templates/Petrochemicals.html:79
+msgid "What products can we supply?"
+msgstr "ما هي المنتجات التي يمكننا توفيرها؟"
+
+#: templates/Petrochemicals.html:80
+msgid "1- Urea fertilizer:"
+msgstr "1- الأسمدة اليوريا:"
+
+#: templates/Petrochemicals.html:81
+msgid ""
+"Urea fertilizer, as one of the most widely used and efficient chemical "
+"fertilizers, plays a key role in increasing the yield of agricultural "
+"products. We supply this product directly from petrochemicals and ship it "
+"worldwide with the best quality and competitive price. All stages of "
+"production and packaging of this product are carried out under strict "
+"supervision and in accordance with international standards."
+msgstr ""
+"يلعب سماد اليوريا، باعتباره أحد الأسمدة الكيماوية الأكثر استخدامًا وكفاءة، "
+"دورًا رئيسيًا في زيادة إنتاجية المنتجات الزراعية. نقوم بتوريد هذا المنتج "
+"مباشرة من البتروكيماويات ونقوم بشحنه إلى جميع أنحاء العالم بأفضل جودة "
+"وبأسعار تنافسية. تتم جميع مراحل الإنتاج والتعبئة لهذا المنتج تحت إشراف صارم "
+"ووفقًا للمعايير الدولية."
+
+#: templates/Petrochemicals.html:82
+msgid "2- Types of plastic raw materials"
+msgstr "2- أنواع المواد الخام البلاستيكية"
+
+#: templates/Petrochemicals.html:84
+msgid ""
+"We supply a range of plastic raw materials to manufacturers in various "
+"industries. These materials include:"
+msgstr ""
+"نحن نقوم بتوريد مجموعة من المواد الخام البلاستيكية للمصنعين في مختلف "
+"الصناعات. تشمل هذه المواد:"
+
+#: templates/Petrochemicals.html:86
+msgid ""
+"Polyethylene (PE): Suitable for producing plastic films, packaging, pipes "
+"and more."
+msgstr ""
+"البولي إيثيلين (PE): مناسبة لإنتاج الأفلام البلاستيكية والتعبئة والأنابيب "
+"والمزيد."
+
+#: templates/Petrochemicals.html:88
+msgid ""
+"Polypropylene (PP): For making automotive parts, food packaging, and "
+"industrial products."
+msgstr ""
+"البولي بروبيلين (PP): لصنع قطع غيار السيارات ، وتغليف المواد الغذائية ، "
+"والمنتجات الصناعية."
+
+#: templates/Petrochemicals.html:90
+msgid ""
+"Polyvinyl chloride (PVC): Used in the construction industry, production of "
+"pipes and profiles."
+msgstr ""
+"كلوريد البولي فينيل (PVC): يستخدم في صناعة البناء ، وإنتاج الأنابيب والملامح."
+
+#: templates/Petrochemicals.html:92
+msgid ""
+"Polystyrene (PS): For producing lightweight and durable products such as "
+"disposable tableware and household appliances."
+msgstr ""
+"البوليسترين (PS): لإنتاج منتجات خفيفة الوزن ومتينة مثل أدوات المائدة "
+"والأجهزة المنزلية التي تستخدم لمرة واحدة."
+
+#: templates/Petrochemicals.html:94
+msgid ""
+"ABS: Applied in the automotive, electronics, and home appliance industries."
+msgstr "ABS: مطبق في صناعات السيارات والأجهزة المنزلية."
+
+#: templates/Petrochemicals.html:96
+msgid "Benefits of our services in supplying petrochemical products"
+msgstr "مميزات خدماتنا في توريد المنتجات البتروكيماوية"
+
+#: templates/Petrochemicals.html:97
+msgid ""
+"All products are directly supplied from reputable petrochemicals, which "
+"reduces costs and increases the certainty of the authenticity of the goods. "
+"All products comply with international standards and their quality is "
+"checked and guaranteed by our expert team. We have the ability to send these "
+"products to all parts of the world, in compliance with all international "
+"transportation rules and standards. By eliminating intermediaries and "
+"cooperating directly with petrochemicals, we are able to offer products at "
+"the best prices on the market. Our team is with you at all stages, from "
+"order registration to delivery of goods, and is ready to provide expert "
+"advice to choose the most suitable products."
+msgstr ""
+"يتم توريد جميع المنتجات مباشرة من البتروكيماويات ذات السمعة الطيبة، مما يقلل "
+"التكاليف ويزيد من التأكد من صحة البضائع. تتوافق جميع المنتجات مع المعايير "
+"الدولية ويتم فحص جودتها وضمانها من قبل فريق الخبراء لدينا. لدينا القدرة على "
+"إرسال هذه المنتجات إلى جميع أنحاء العالم، بما يتوافق مع جميع قواعد ومعايير "
+"النقل الدولية. ومن خلال التخلص من الوسطاء والتعاون المباشر مع "
+"البتروكيماويات، أصبحنا قادرين على تقديم المنتجات بأفضل الأسعار في السوق. "
+"فريقنا معك في جميع المراحل، بدءًا من تسجيل الطلب وحتى تسليم البضائع، وهو على "
+"استعداد لتقديم مشورة الخبراء لاختيار المنتجات الأكثر ملاءمة."
+
+#: templates/Petrochemicals.html:98
+msgid "Global trust, our main goal"
+msgstr "الثقة العالمية ، هدفنا الرئيسي"
+
+#: templates/Petrochemicals.html:99
+msgid ""
+"We have earned the trust of customers in various industries from all over "
+"the world by providing reliable and high-quality services. Providing the "
+"best quality petrochemical products and fast delivery is our top priority."
+"For more information, consultation or to place an order, contact us today "
+"and experience a different kind of professional cooperation."
+msgstr ""
+"لقد حصلنا على ثقة العملاء في مختلف الصناعات من جميع أنحاء العالم من خلال "
+"تقديم خدمات موثوقة وعالية الجودة. إن توفير أفضل المنتجات البتروكيماوية عالية "
+"الجودة والتسليم السريع هو أولويتنا القصوى. لمزيد من المعلومات أو الاستشارة "
+"أو تقديم طلب، اتصل بنا اليوم واستمتع بتجربة نوع مختلف من التعاون المهني."
+
+#: templates/Petrochemicals.html:100 templates/global.html:98
+msgid ""
+"For more information, a consultation, or to place an order, contact us today "
+"and experience a different kind of professional collaboration."
+msgstr ""
+"لمزيد من المعلومات ، استشارة ، أو لتقديم طلب ، اتصل بنا اليوم وتجربة نوع "
+"مختلف من التعاون المهني."
+
+#: templates/Petrochemicals.html:112
+msgid "We are registered with the world's largest petrochemical companies."
+msgstr "نحن مسجلون لدى أكبر شركات البتروكيماويات في العالم."
+
+#: templates/Petrochemicals.html:113
+msgid "Our company guarantees the quality of our products."
+msgstr "شركتنا تضمن جودة منتجاتنا."
+
+#: templates/Petrochemicals.html:125
+msgid "Our specialty is supplying urea fertilizer from petrochemicals."
+msgstr "تخصصنا هو تزويد الأسمدة اليوريا من البتروكيماويات."
+
+#: templates/Petrochemicals.html:126 templates/food.html:126
+#: templates/refinery.html:122
+msgid "We ship worldwide."
+msgstr "نحن نشحن في جميع أنحاء العالم."
+
+#: templates/Petrochemicals.html:138
+msgid "We can deliver plastic raw materials to your port."
+msgstr "يمكننا توصيل المواد الخام البلاستيكية إلى الميناء الخاص بك."
+
+#: templates/Petrochemicals.html:139 templates/food.html:139
+#: templates/refinery.html:135
+msgid "We have expert support to answer you."
+msgstr "لدينا دعم الخبراء للرد عليك."
+
+#: templates/Petrochemicals.html:152 templates/food.html:152
+#: templates/global.html:150 templates/refinery.html:148
+msgid "Get a free consultation"
+msgstr "احصل على استشارة مجانية"
+
+#: templates/Petrochemicals.html:168 templates/contact.html:56
+#: templates/faq.html:141 templates/food.html:168 templates/global.html:166
+#: templates/index.html:2059 templates/refinery.html:165
+msgid "Your Name *"
+msgstr "اسمك *"
+
+#: templates/Petrochemicals.html:172 templates/contact.html:60
+#: templates/food.html:172 templates/global.html:170
+#: templates/refinery.html:169
+msgid "Your Mail *"
+msgstr "بريدك الإلكتروني *"
+
+#: templates/Petrochemicals.html:176 templates/contact.html:64
+#: templates/food.html:176 templates/global.html:174
+#: templates/refinery.html:173
+msgid "Phone Number"
+msgstr "رقم التليفون"
+
+#: templates/Petrochemicals.html:180 templates/base.html:329
+#: templates/contact.html:68 templates/food.html:180 templates/global.html:178
+#: templates/refinery.html:177
+msgid "Message *"
+msgstr "رسالة *"
+
+#: templates/Petrochemicals.html:183 templates/contact.html:71
+#: templates/food.html:183 templates/global.html:181
+#: templates/refinery.html:180
+msgid "Get Quote"
+msgstr "الحصول على الاقتباس"
+
 #: templates/about-us.html:9 templates/about-us.html:31
-#: templates/about-us.html:35 templates/base.html:118 templates/base.html:120
-#: templates/base.html:213 templates/base.html:215 templates/base.html:370
+#: templates/about-us.html:35 templates/base.html:108 templates/base.html:110
+#: templates/base.html:196 templates/base.html:198 templates/base.html:354
 msgid "About Us"
 msgstr "معلومات عنا"
 
 #: templates/about-us.html:24
 msgid "Know About Us"
 msgstr "تعرف عنا"
-
-#: templates/about-us.html:34 templates/base.html:88 templates/base.html:183
-#: templates/base.html:369 templates/contact.html:23 templates/index.html:7
-#: templates/our-team.html:7 templates/our-team.html:32
-#: templates/refinery.html:25 templates/services.html:27
-msgid "Home"
-msgstr "بيت"
 
 #: templates/about-us.html:48
 msgid "We Have The Right Products and Services to Fit Your Needs and Budget "
@@ -224,22 +460,20 @@ msgstr ""
 "الجودة المضمونة والأسعار العادلة والالتزام بإرضاء العملاء هي أسس تعاوننا "
 "المستدام."
 
-#: templates/base.html:89 templates/base.html:184 templates/base.html:371
-#: templates/refinery.html:26 templates/services.html:5
-#: templates/services.html:24 templates/services.html:28
-msgid "Services"
-msgstr "خدمات"
-
-#: templates/base.html:121 templates/base.html:216 templates/our-team.html:29
+#: templates/base.html:111 templates/base.html:199 templates/our-team.html:29
 #: templates/our-team.html:33
 msgid "Our Team"
 msgstr "فريقنا"
 
-#: templates/base.html:124 templates/base.html:219 templates/base.html:372
+#: templates/base.html:114 templates/base.html:202 templates/base.html:356
 msgid "Contact"
 msgstr "اتصال"
 
-#: templates/base.html:259
+#: templates/base.html:115 templates/base.html:203 templates/faq.html:4
+msgid "FAQ"
+msgstr "الأسئلة المتداولة"
+
+#: templates/base.html:243
 msgid ""
 "Palayeshcood Company, as a reputable distributor of chemicals, refineries "
 "and sugar, is ready to sell raw materials from petrochemicals, refineries "
@@ -254,48 +488,46 @@ msgstr ""
 "الكرام في جميع المناطق. انضم إلينا واستفد من خبرتنا وتجربتنا. لمزيد من "
 "المعلومات وتقديم الطلب، اتصل بنا."
 
-#: templates/base.html:261 templates/contact.html:85
+#: templates/base.html:245 templates/contact.html:85
 msgid "Unit 31, Safavieh Office Complex, Rajaee St, Kashan, Iran"
 msgstr "إيران، كاشان، شارع رجائي، مجمع صفوية الإداري، وحدة 31"
 
-#: templates/base.html:272
+#: templates/base.html:256
 msgid "Popular Tags"
 msgstr "العلامات الشعبية"
 
-#: templates/base.html:284
+#: templates/base.html:268
 msgid "Recent Works"
 msgstr "الأعمال الأخيرة"
 
-#: templates/base.html:312
+#: templates/base.html:296
 msgid "Recent News"
 msgstr "الأخبار الأخيرة"
 
-#: templates/base.html:326 templates/index.html:266 templates/services.html:49
+#: templates/base.html:310 templates/index.html:266 templates/index.html:287
+#: templates/index.html:308 templates/index.html:329 templates/services.html:49
+#: templates/services.html:64 templates/services.html:77
+#: templates/services.html:90
 msgid "Read More"
 msgstr "اقرأ المزيد"
 
-#: templates/base.html:334
+#: templates/base.html:318
 msgid "Send Us Message"
 msgstr "أرسل لنا رسالة"
 
-#: templates/base.html:339
+#: templates/base.html:323
 msgid "Name *"
 msgstr "اسم *"
 
-#: templates/base.html:342
+#: templates/base.html:326
 msgid "Email *"
 msgstr "بريد إلكتروني *"
 
-#: templates/base.html:345 templates/contact.html:68
-#: templates/refinery.html:180
-msgid "Message *"
-msgstr "رسالة *"
-
-#: templates/base.html:347
+#: templates/base.html:331
 msgid "Send us"
 msgstr "أرسل لنا"
 
-#: templates/base.html:366
+#: templates/base.html:350
 msgid "Stark Team"
 msgstr "فريق استارك"
 
@@ -311,23 +543,6 @@ msgstr "أرسل لنا رسالة"
 #: templates/contact.html:52
 msgid "Subject"
 msgstr "موضوع"
-
-#: templates/contact.html:56 templates/index.html:2059
-#: templates/refinery.html:168
-msgid "Your Name *"
-msgstr "اسمك *"
-
-#: templates/contact.html:60 templates/refinery.html:172
-msgid "Your Mail *"
-msgstr "بريدك الإلكتروني *"
-
-#: templates/contact.html:64 templates/refinery.html:176
-msgid "Phone Number"
-msgstr "رقم التليفون"
-
-#: templates/contact.html:71 templates/refinery.html:183
-msgid "Get Quote"
-msgstr "الحصول على الاقتباس"
 
 #: templates/contact.html:81
 msgid "Contact Details"
@@ -357,6 +572,562 @@ msgstr "البريد الإلكتروني إلى هامان:"
 msgid "Call Him:"
 msgstr "اتصل به:"
 
+#: templates/faq.html:11 templates/faq.html:17 templates/faq.html:21
+msgid "FAQ's"
+msgstr "الأسئلة الشائعة"
+
+#: templates/faq.html:39
+msgid "Who are we?"
+msgstr "من نحن؟"
+
+#: templates/faq.html:42
+msgid ""
+"Palayeshcood Company (PKK) is known as a distributor of chemical and "
+"refinery products. At Palayeshcood, we work with the world's most reputable "
+"manufacturers to provide our customers with high quality products at "
+"reasonable prices."
+msgstr "تُعرف شركة بالایشکود باسم موزع منتجات المواد الكيميائية ومصفاة. في بالایشکود ، نعمل مع أكثر الشركات المصنعة في العالم لتزويد عملائنا بمنتجات عالية الجودة بأسعار معقولة."
+
+#: templates/faq.html:49
+msgid "What products do you offer?"
+msgstr "ما هي المنتجات التي تقدمها؟"
+
+#: templates/faq.html:52
+msgid ""
+"We operate in the field of selling petrochemicals (such as urea, "
+"polyethylene, polypropylene), refinery products (such as gasoline, diesel, "
+"jet fuel), and food products (such as sugar and tomato paste)."
+msgstr "نعمل في مجال بيع البتروكيماويات (مثل اليوريا ، البولي إيثيلين ، البولي بروبيلين) ، منتجات المصفاة (مثل البنزين ، الديزل ، وقود النفاث) ، والمنتجات الغذائية (مثل السكر والطماطم)."
+
+#: templates/faq.html:59
+msgid "How to order at PKK?"
+msgstr "كيف تطلب في بالایشکود؟"
+
+#: templates/faq.html:62
+msgid ""
+"1- You can place your order by calling, emailing or WhatsApping the company. "
+"After your inquiry, our experts will provide you with the required "
+"information and also send you the product analysis. If requested, it is "
+"possible to send a sample after receiving the shipping fee. The shipping "
+"steps will be followed up carefully and step by step by the responsible "
+"expert."
+msgstr "1- يمكنك تقديم طلبك عن طريق الاتصال أو إرسال بريد إلكتروني أو ما يتجه إلى الشركة. بعد استفسارك ، سيزودك خبراؤنا بالمعلومات المطلوبة وأيضًا إرسال تحليل المنتج لك. إذا تم طلبها ، فمن الممكن إرسال عينة بعد تلقي رسوم الشحن. سيتم متابعة خطوات الشحن بعناية وخطوة بخطوة من قبل الخبير المسؤول."
+
+#: templates/faq.html:63
+msgid ""
+"2- Registering an order in person By holding a meeting at our head office, "
+"you can negotiate face to face with the commercial manager and the company's "
+"CEO, and the expert in charge will follow up on the results of the meeting "
+"until the desired result is achieved. Usually, export products require "
+"careful examination, the procedure for which is coordinated in the meeting."
+msgstr ""
+
+#: templates/faq.html:70
+msgid "How can I find out the price of products?"
+msgstr "2- تسجيل أمر شخصي من خلال عقد اجتماع في مكتبنا الرئيسي ، يمكنك التفاوض وجهاً لوجه مع المدير التجاري والمدير التنفيذي للشركة ، وسيتابع الخبير المسؤول نتائج الاجتماع حتى تكون النتيجة المرجوة تحققت. عادة ، تتطلب منتجات التصدير فحصًا دقيقًا ، والإجراء الذي يتم تنسيقه في الاجتماع."
+
+#: templates/faq.html:73
+msgid ""
+"Product prices may change due to market fluctuations. To get the latest "
+"prices, you can contact our sales department via phone number or email."
+msgstr "قد تتغير أسعار المنتجات بسبب تقلبات السوق. للحصول على أحدث الأسعار ، يمكنك الاتصال بقسم المبيعات لدينا عبر رقم الهاتف أو البريد الإلكتروني."
+
+#: templates/faq.html:80
+msgid "What are the technical specifications of your petrochemical materials?"
+msgstr "ما هي المواصفات الفنية للمواد البتروكيماوية الخاصة بك؟"
+
+#: templates/faq.html:83
+msgid ""
+"The technical specifications of each product (such as grade, density, "
+"melting point) are listed in the \"Technical Information\" section of each "
+"product. If you need more information, please contact our technical experts."
+msgstr "يتم إدراج المواصفات الفنية لكل منتج (مثل الدرجة والكثافة ونقطة الانصهار) في قسم'المعلومات الفنية' لكل منتج. إذا كنت بحاجة إلى مزيد من المعلومات، يرجى الاتصال بخبرائنا الفنيين"
+
+#: templates/faq.html:90
+msgid "What are your shipping methods?"
+msgstr "ما هي طرق الشحن الخاصة بك؟"
+
+#: templates/faq.html:93
+msgid ""
+"We use various methods such as road, sea and rail transportation. The "
+"transportation method is determined according to your needs and the type of "
+"product."
+msgstr "نستخدم طرق مختلفة مثل النقل على الطرق والبحر والسكك الحديدية. يتم تحديد طريقة النقل وفقًا لاحتياجاتك ونوع المنتج."
+
+#: templates/faq.html:100
+msgid "Do your products have a warranty?"
+msgstr "هل منتجاتك لديها ضمان؟"
+
+#: templates/faq.html:103
+msgid ""
+"Petrochemical and refinery products are provided based on technical "
+"specifications and if they do not meet the stated specifications, they can "
+"be returned or exchanged. For food products, returns are only possible if "
+"there is a problem with packaging or quality."
+msgstr "يتم توفير منتجات البتروكيماويات ومصفاة المصفاة بناءً على المواصفات الفنية ، وإذا لم تفي بالمواصفات المعلنة ، فيمكن إرجاعها أو تبادلها. بالنسبة للمنتجات الغذائية ، تكون العوائد ممكنة فقط إذا كانت هناك مشكلة في التغليف أو الجودة"
+
+#: templates/faq.html:109
+msgid "How can I become your sales representative?"
+msgstr "كيف يمكنني أن أصبح ممثل المبيعات الخاص بك؟"
+
+#: templates/faq.html:112
+msgid ""
+"To cooperate and receive representation, please send your resume to the "
+"company's email. Our experts will contact you as soon as possible."
+msgstr "للتعاون وتلقي التمثيل ، يرجى إرسال سيرتك الذاتية إلى البريد الإلكتروني للشركة. سيتصل بك خبرائنا في أقرب وقت ممكن"
+
+#: templates/faq.html:118
+msgid "How can I contact support?"
+msgstr "كيف يمكنني الاتصال بالدعم؟"
+
+#: templates/faq.html:121
+msgid ""
+"You can contact us via phone number, email, or contact form on the site. "
+"Contact information is listed in the \"Contact Us\" section."
+msgstr "يمكنك التواصل معنا عبر رقم الهاتف أو البريد الإلكتروني أو نموذج الاتصال الموجود على الموقع. معلومات الاتصال مدرجة في قسم'اتصل بنا'."
+
+#: templates/faq.html:130
+msgid "Ask Your Questions"
+msgstr "اطرح أسئلتك"
+
+#: templates/faq.html:145
+msgid "Email Address *"
+msgstr "بريد إلكتروني *"
+
+#: templates/faq.html:149
+msgid "Phone"
+msgstr "هاتف"
+
+#: templates/faq.html:157
+msgid "Your Question"
+msgstr "سؤالك"
+
+#: templates/faq.html:161
+msgid "Submit Now"
+msgstr "أرسل الآن"
+
+#: templates/faq.html:179
+msgid "We provide full and specific solution for every clients"
+msgstr "نحن نقدم حلًا كاملاً ومحددًا لكل عملاء"
+
+#: templates/faq.html:179
+msgid "Get lifetime support from us."
+msgstr "الحصول على دعم مدى الحياة منا."
+
+#: templates/faq.html:182
+msgid "contact Team"
+msgstr "اتصل بنا"
+
+#: templates/food.html:5 templates/food.html:14 templates/food.html:21
+#: templates/food.html:26 templates/food.html:74 templates/index.html:327
+#: templates/services-side.html:8 templates/services.html:88
+msgid "Food products"
+msgstr "المنتجات الغذائية"
+
+#: templates/food.html:77
+msgid "Direct supply of premium quality food and shipping worldwide"
+msgstr ""
+"الإمداد المباشر للأطعمة ذات الجودة المتميزة والشحن في جميع أنحاء العالم"
+
+#: templates/food.html:78 templates/index.html:328 templates/services.html:89
+msgid ""
+"We are proud to serve the needs of our customers worldwide by providing food "
+"supply services directly from reputable factories. With a focus on quality, "
+"transparency, and speed in service delivery, we strive to provide the best "
+"experience for customers in various food industries."
+msgstr ""
+"نحن فخورون بخدمة احتياجات عملائنا في جميع أنحاء العالم من خلال توفير خدمات "
+"الإمداد الغذائي مباشرة من المصانع ذات السمعة الطيبة. مع التركيز على الجودة "
+"والشفافية والسرعة في تقديم الخدمات ، نسعى جاهدين لتوفير أفضل تجربة للعملاء "
+"في مختلف الصناعات الغذائية."
+
+#: templates/food.html:79
+msgid "Food products offered by us"
+msgstr "المنتجات الغذائية التي نقدمها لنا"
+
+#: templates/food.html:80
+msgid "Brazilian Sugar"
+msgstr "السكر البرازيلي"
+
+#: templates/food.html:81
+msgid ""
+"Brazilian sugar is known as one of the most popular and highest quality "
+"types of sugar on the global market. We source this product directly from "
+"the most reputable factories in Brazil."
+msgstr ""
+"يُعرف السكر البرازيلي بأنه أحد أكثر أنواع السكر شعبية وأعلى جودة في السوق "
+"العالمية. نحن مصدر هذا المنتج مباشرة من أكثر المصانع ذات السمعة الطيبة في "
+"البرازيل."
+
+#: templates/food.html:82
+msgid "Features of Brazilian sugar offered by us:"
+msgstr "ميزات السكر البرازيلي المقدم من قبلنا:"
+
+#: templates/food.html:83
+msgid "Superior quality: Manufactured in accordance with global standards."
+msgstr "جودة فائقة: تم تصنيعها وفقًا للمعايير العالمية."
+
+#: templates/food.html:84
+msgid "Variety in grades: white, raw, and brown sugar for various uses."
+msgstr "تنوع في الدرجات: السكر الأبيض والخام والبني لاستخدامات مختلفة"
+
+#: templates/food.html:85
+msgid ""
+"Delivery on various scales: suitable for retailers, wholesalers and the food "
+"industry."
+msgstr ""
+"التوصيل على موازين مختلفة: مناسبة لتجار التجزئة وتجار الجملة وصناعة الأغذية"
+
+#: templates/food.html:86
+msgid "High quality tomato paste"
+msgstr "معجون الطماطم عالي الجودة"
+
+#: templates/food.html:87
+msgid ""
+"Tomato paste is one of the most basic food ingredients used in many "
+"countries. We source this product directly from reputable factories and "
+"offer it to our customers with guaranteed quality."
+msgstr ""
+"معجون الطماطم هو واحد من أبسط المكونات الغذائية المستخدمة في العديد من "
+"البلدان. نحن نرسم هذا المنتج مباشرة من المصانع ذات السمعة الطيبة ونقدمه "
+"لعملائنا بجودة مضمونة"
+
+#: templates/food.html:88
+msgid "Features of the tomato paste offered by us:"
+msgstr "ميزات معجون الطماطم المقدمة من قبلنا:"
+
+#: templates/food.html:89
+msgid "High concentration: Made from fresh, high-quality tomatoes."
+msgstr "تركيز عالي: مصنوعة من الطماطم الطازجة عالية الجودة"
+
+#: templates/food.html:90
+msgid ""
+"Various packaging: Available in cans, jars, and industrial packaging for use "
+"in the food industry."
+msgstr ""
+"عبوات مختلفة: متوفرة في العلب ، الجرار ، والتغليف الصناعي للاستخدام في صناعة "
+"المواد الغذائية"
+
+#: templates/food.html:91
+msgid "Natural flavor and aroma: No preservatives and long-lasting."
+msgstr "النكهة الطبيعية والرائحة: لا حافظة وطويلة الأمد"
+
+#: templates/food.html:92
+msgid "Why our services?"
+msgstr "لماذا خدماتنا؟"
+
+#: templates/food.html:93
+msgid ""
+"Direct supply without intermediaries: We supply food products directly from "
+"reputable factories and manufacturers, which reduces costs and ensures "
+"quality."
+msgstr ""
+"الإمداد المباشر بدون الوسطاء: نحن نوفر منتجات غذائية مباشرة من المصانع "
+"والمصنعين ذوي السمعة الطيبة ، مما يقلل من التكاليف ويضمن الجودة"
+
+#: templates/food.html:94
+msgid ""
+"Guaranteed quality: All our products are manufactured and packaged in "
+"accordance with international standards."
+msgstr ""
+"الجودة المضمونة: يتم تصنيع جميع منتجاتنا وتعبئتها وفقًا للمعايير الدولية"
+
+#: templates/food.html:95
+msgid ""
+"Worldwide shipping: We use an extensive and professional transportation "
+"network that allows for fast and safe delivery of products to any part of "
+"the world."
+msgstr ""
+"الشحن في جميع أنحاء العالم: نستخدم شبكة نقل واسعة ومحترفة تسمح بتسليم "
+"المنتجات السريعة والآمنة إلى أي جزء من العالم"
+
+#: templates/food.html:96
+msgid ""
+"Competitive price: By eliminating intermediaries, we offer the best prices "
+"for food products."
+msgstr ""
+"السعر التنافسي: من خلال القضاء على الوسطاء ، نقدم أفضل أسعار المنتجات "
+"الغذائية"
+
+#: templates/food.html:97
+msgid ""
+"Expert Support: Our team is ready to provide expert advice to select the "
+"most appropriate products and transportation solutions."
+msgstr ""
+"دعم الخبراء: فريقنا مستعد لتوفير مشورة الخبراء لاختيار أنسب المنتجات وحلول "
+"النقل"
+
+#: templates/food.html:98
+msgid "A different experience of food supply"
+msgstr "تجربة مختلفة من الإمداد الغذائي"
+
+#: templates/food.html:99
+msgid ""
+"We are committed to providing transparent and professional services, "
+"focusing on gaining customer trust. Brazilian sugar and tomato paste are "
+"just some of our products, and we are ready to meet your diverse food needs."
+msgstr ""
+"نحن ملتزمون بتقديم خدمات شفافة ومهنية ، مع التركيز على الحصول على ثقة "
+"العملاء. إن السكر البرازيلي والطماطم هي مجرد بعض منتجاتنا ، ونحن على استعداد "
+"لتلبية احتياجاتك الغذائية المتنوعة"
+
+#: templates/food.html:100
+msgid ""
+"To place an order, receive advice or more information, contact us today. "
+"Working with us guarantees a reliable, fast and economical supply of food."
+msgstr ""
+"لتقديم طلب ، وتلقي المشورة أو مزيد من المعلومات ، اتصل بنا اليوم. يضمن العمل "
+"معنا إمدادات موثوقة وسريعة واقتصادية من الطعام."
+
+#: templates/food.html:109 templates/food.html:122 templates/food.html:135
+#: templates/global.html:107
+msgid "Sugar trade photo"
+msgstr "صورة تجارة السكر"
+
+#: templates/food.html:112
+msgid "We are in contact with Brazilian sugar factories around the world."
+msgstr "نحن على اتصال بمصانع السكر البرازيلية في جميع أنحاء العالم"
+
+#: templates/food.html:113
+msgid "We offer you Brazilian sugar based on global standards."
+msgstr "نحن نقدم لك السكر البرازيلي على أساس المعايير العالمية"
+
+#: templates/food.html:125
+msgid "We guarantee the quality of Brazilian sugar."
+msgstr "نحن نضمن جودة السكر البرازيلي"
+
+#: templates/food.html:138
+msgid "We can deliver tomato paste to your port."
+msgstr "يمكننا توصيل معجون الطماطم إلى منفذك"
+
+#: templates/global.html:5 templates/global.html:15 templates/global.html:22
+#: templates/global.html:27 templates/global.html:73
+#: templates/services-side.html:7 templates/services.html:75
+msgid "global trade"
+msgstr "التجارة العالمية"
+
+#: templates/global.html:76
+msgid "Global trade in petrochemicals, refining and sugar"
+msgstr "التجارة العالمية في البتروكيماويات والتكرير والسكر"
+
+#: templates/global.html:77 templates/index.html:307 templates/services.html:76
+msgid ""
+"Global trade in petrochemicals, refined products and sugar is recognized as "
+"one of the key pillars of the global economy. Due to their widespread use in "
+"various industries and the daily needs of humans, these materials play a "
+"vital role in energy supply, industrial and food production. Given the "
+"economic, political and technological developments, the trade in these "
+"materials in the world faces different challenges and opportunities."
+msgstr ""
+"يتم التعرف على التجارة العالمية في البتروكيماويات والمنتجات المكررة والسكر "
+"كواحدة من الركائز الرئيسية للاقتصاد العالمي. نظرًا لاستخدامها الواسع النطاق "
+"في مختلف الصناعات والاحتياجات اليومية للبشر ، تلعب هذه المواد دورًا حيويًا في "
+"إمدادات الطاقة والصناعية والإنتاج الغذائي. بالنظر إلى التطورات الاقتصادية "
+"والسياسية والتكنولوجية ، تواجه التجارة في هذه المواد في العالم تحديات وفرص "
+"مختلفة."
+
+#: templates/global.html:78
+msgid "Global petrochemical trade"
+msgstr "التجارة البتروكيماوية العالمية"
+
+#: templates/global.html:79
+msgid ""
+"Petrochemicals are produced from the processing of crude oil and natural gas "
+"and are considered the building blocks of the chemical industry. These "
+"materials include polyethylene, polypropylene, styrene, and other chemical "
+"compounds that are used in the production of a variety of products, "
+"including plastics, synthetic fibers, and industrial chemicals."
+msgstr ""
+"يتم إنتاج البتروكيماويات من معالجة النفط الخام والغاز الطبيعي وتعتبر لبنات "
+"البناء في الصناعة الكيميائية. وتشمل هذه المواد البولي إيثيلين ، البولي "
+"بروبيلين ، الستايرين ، وغيرها من المركبات الكيميائية المستخدمة في إنتاج "
+"مجموعة متنوعة من المنتجات ، بما في ذلك البلاستيك والألياف الاصطناعية والمواد "
+"الكيميائية الصناعية."
+
+#: templates/global.html:80
+msgid ""
+"Petrochemical trade is highly dependent on global oil prices and the "
+"economic situation of producing and consuming countries. The most important "
+"countries in petrochemical trade include China, the United States, and the "
+"Gulf countries. In recent years, demand for petrochemicals in Asia, "
+"especially China, has increased significantly."
+msgstr ""
+"تعتمد تجارة البتروكيماويات اعتمادًا كبيرًا على أسعار النفط العالمية والوضع "
+"الاقتصادي للبلدان المستهلكة. تشمل أهم البلدان في تجارة البتروكيماويات الصين "
+"والولايات المتحدة ودول الخليج. في السنوات الأخيرة ، زاد الطلب على "
+"البتروكيماويات في آسيا ، وخاصة الصين ، بشكل كبير."
+
+#: templates/global.html:81
+msgid ""
+"Changes in environmental regulations and concerns about chemical waste can "
+"affect the trade and production of petrochemicals. Fluctuations in oil and "
+"natural gas prices can also affect production costs."
+msgstr ""
+"يمكن أن تؤثر التغييرات في اللوائح البيئية والمخاوف بشأن النفايات الكيميائية "
+"على تجارة وإنتاج البتروكيماويات. يمكن أن تؤثر التقلبات في أسعار النفط والغاز "
+"الطبيعي أيضًا على تكاليف الإنتاج."
+
+#: templates/global.html:82
+msgid "Global trade in refinery materials"
+msgstr "التجارة العالمية في مواد المصفاة"
+
+#: templates/global.html:83
+msgid ""
+"The oil refining industry converts crude oil into various products, "
+"including gasoline, diesel, fuel oil, and chemical products. As the heart of "
+"the oil and gas industries, refineries supply their products to "
+"international markets."
+msgstr ""
+"تعمل صناعة تكرير النفط على تحويل الزيت الخام إلى منتجات مختلفة ، بما في ذلك "
+"البنزين والديزل وزيت الوقود والمنتجات الكيميائية. بصفتها قلب صناعات النفط "
+"والغاز ، تزود المصافي منتجاتها بالأسواق الدولية."
+
+#: templates/global.html:84
+msgid ""
+"The refining market is influenced by global energy demand and the policies "
+"of oil-producing countries. Middle Eastern countries, especially Saudi "
+"Arabia and the UAE, play a prominent role in the production and export of "
+"refined products."
+msgstr ""
+"يتأثر سوق التكرير بالطلب العالمي للطاقة وسياسات البلدان المنتجة للنفط. تلعب "
+"دول الشرق الأوسط ، وخاصة المملكة العربية السعودية والإمارات العربية "
+"المتحدة ، دورًا بارزًا في إنتاج وتصدير المنتجات المكررة."
+
+#: templates/global.html:85
+msgid ""
+"Environmental pressures and policy shifts towards renewable energy could "
+"affect the future of the oil refining industry. Also, the sustainability of "
+"the crude oil supply required for refineries is a significant challenge."
+msgstr ""
+"قد تؤثر الضغوط البيئية والتحولات السياسية نحو الطاقة المتجددة على مستقبل "
+"صناعة تكرير النفط. أيضا ، فإن استدامة إمدادات النفط الخام المطلوبة للمصافي "
+"يمثل تحديًا كبيرًا."
+
+#: templates/global.html:86
+msgid "Global sugar and food trade"
+msgstr "تجارة السكر والغذاء العالمية"
+
+#: templates/global.html:87
+msgid ""
+"Sugar is a key food ingredient used as a sweetener in the food and beverage "
+"industries. It is also used in the production of bioethanol and other "
+"chemical products."
+msgstr ""
+"السكر هو مكون أساسي من المواد الغذائية المستخدمة كحلى في صناعات الطعام "
+"والمشروبات. كما أنه يستخدم في إنتاج الإيثانول والمنتجات الكيميائية الأخرى."
+
+#: templates/global.html:88
+msgid ""
+"The sugar trade is influenced by agriculture, trade policies, and global "
+"demand. Brazil and India are the largest sugar producers, supplying a "
+"portion of global demand."
+msgstr ""
+"تتأثر تجارة السكر بالزراعة والسياسات التجارية والطلب العالمي. البرازيل "
+"والهند هما أكبر منتجين للسكر ، حيث توفر جزءًا من الطلب العالمي."
+
+#: templates/global.html:89
+msgid ""
+"Trade disputes and import tariffs can disrupt the sugar trade, while climate "
+"change and issues related to sustainable agriculture can also affect sugar "
+"production."
+msgstr ""
+"يمكن أن تعطل النزاعات التجارية وتعريفات الاستيراد تجارة السكر ، في حين أن "
+"تغير المناخ والقضايا المتعلقة بالزراعة المستدامة يمكن أن يؤثر أيضًا على إنتاج "
+"السكر."
+
+#: templates/global.html:90
+msgid "Shipping to ports around the world"
+msgstr "الشحن إلى الموانئ في جميع أنحاء العالم"
+
+#: templates/global.html:91
+msgid ""
+"For global trade in petrochemicals, refined products and food, "
+"transportation and shipping to global ports play a vital role. As major "
+"transit points, ports have a major impact on costs and delivery times."
+msgstr ""
+"للتجارة العالمية في البتروكيماويات ، تلعب المنتجات المكررة والغذاء والنقل "
+"والشحن إلى الموانئ العالمية دورًا حيويًا. كنقاط عبور رئيسية ، يكون للموانئ "
+"تأثير كبير على التكاليف وأوقات التسليم."
+
+#: templates/global.html:92
+msgid "Factors affecting transportation"
+msgstr "العوامل التي تؤثر على النقل"
+
+#: templates/global.html:93
+msgid ""
+"Port infrastructure: The quality and capacity of ports has an impact on "
+"facilitating or disrupting the transportation process."
+msgstr ""
+"البنية التحتية للموانئ: لها جودة وسعة الموانئ تأثير على تسهيل أو تعطيل عملية "
+"النقل."
+
+#: templates/global.html:94
+msgid ""
+"Choice of transportation method: including sea, road, and rail "
+"transportation, depending on the type of goods and distance."
+msgstr ""
+"طريقة نقل النقل: بما في ذلك النقل البحري والطريق والسكك الحديدية ، اعتمادًا "
+"على نوع البضائع والمسافة."
+
+#: templates/global.html:95
+msgid ""
+"Laws and regulations: Customs and trade laws can affect shipping speeds and "
+"costs."
+msgstr ""
+"القوانين واللوائح: يمكن أن تؤثر قوانين الجمارك والتجارة على سرعات الشحن "
+"والتكاليف."
+
+#: templates/global.html:96
+msgid "Conclusion"
+msgstr "خاتمة"
+
+#: templates/global.html:97
+msgid ""
+"The global trade in petrochemicals, refining and sugar, despite the many "
+"challenges and opportunities it presents, continues to be one of the engines "
+"of economic progress and development of various countries and industries. "
+"Given the continuous changes in global markets and economic conditions, the "
+"need for innovative solutions and sustainable strategies in this industry is "
+"felt more than ever."
+msgstr ""
+"لا تزال التجارة العالمية في البتروكيماويات ، والتكرير والسكر ، على الرغم من "
+"التحديات والفرص العديدة التي تقدمها ، واحدة من محركات التقدم الاقتصادي "
+"وتنمية مختلف البلدان والصناعات. بالنظر إلى التغييرات المستمرة في الأسواق "
+"العالمية والظروف الاقتصادية ، فإن الحاجة إلى حلول مبتكرة واستراتيجيات "
+"مستدامة في هذه الصناعة تشعر أكثر من أي وقت مضى."
+
+#: templates/global.html:110
+msgid "Sugar is a key nutrient."
+msgstr "السكر هو المغذيات الرئيسية."
+
+#: templates/global.html:111
+msgid "Sugar transportation from Brazil is our specialty."
+msgstr "نقل السكر من البرازيل هو تخصصنا."
+
+#: templates/global.html:120
+msgid "Refinery business photo"
+msgstr "صورة أعمال المصفاة"
+
+#: templates/global.html:123
+msgid "Refineries are the heart of the oil and gas industries."
+msgstr "المصافي هي قلب صناعات النفط والغاز."
+
+#: templates/global.html:124
+msgid "Transit of refinery materials around the world."
+msgstr "عبور مواد المصفاة في جميع أنحاء العالم."
+
+#: templates/global.html:133
+msgid "Petrochemical trade photo"
+msgstr "صورة التجارة البتروكيماوية"
+
+#: templates/global.html:136
+msgid "Demand for petrochemicals is increasing in Asia and Africa."
+msgstr "يتزايد الطلب على البتروكيماويات في آسيا وأفريقيا."
+
+#: templates/global.html:137
+msgid "Our expert support team is ready to answer you."
+msgstr "فريق دعم الخبراء لدينا مستعد للإجابة عليك."
+
 #: templates/index.html:248
 msgid "Our Best Services"
 msgstr "أفضل خدماتنا"
@@ -383,6 +1154,10 @@ msgstr ""
 "لعملائنا في جميع أنحاء العالم. هدفنا هو إنشاء حلول موثوقة وسريعة واقتصادية "
 "لتلبية احتياجاتك الإستراتيجية والأساسية من الوقود."
 
+#: templates/index.html:306
+msgid "Global trade"
+msgstr "التجارة العالمية"
+
 #: templates/index.html:2046
 msgid "Newsletter Signup"
 msgstr "الاشتراك في النشرة الإخبارية"
@@ -407,10 +1182,6 @@ msgstr "فريق وراء بالایش کود"
 msgid "refinery"
 msgstr "مصفاة"
 
-#: templates/refinery.html:48
-msgid "Our Brochures"
-msgstr "كتيباتنا"
-
 #: templates/refinery.html:76
 msgid "Direct supply of refinery products from all over the world"
 msgstr "التوريد المباشر لمنتجات المصفاة من جميع أنحاء العالم"
@@ -420,7 +1191,10 @@ msgid ""
 "We proudly provide direct, quality-assured refinery supply services to our "
 "customers worldwide. Our goal is to create reliable, fast and economical "
 "solutions to meet your critical and strategic fuel needs."
-msgstr "نحن نقدم بكل فخر خدمات توريد مصافي مباشرة ومضمونة الجودة لعملائنا في جميع أنحاء العالم. هدفنا هو إنشاء حلول موثوقة وسريعة واقتصادية لتلبية احتياجاتك الحرجة والاستراتيجية من الوقود."
+msgstr ""
+"نحن نقدم بكل فخر خدمات توريد مصافي مباشرة ومضمونة الجودة لعملائنا في جميع "
+"أنحاء العالم. هدفنا هو إنشاء حلول موثوقة وسريعة واقتصادية لتلبية احتياجاتك "
+"الحرجة والاستراتيجية من الوقود."
 
 #: templates/refinery.html:78
 msgid "Refinery products offered by us:"
@@ -437,7 +1211,11 @@ msgid ""
 "industrial equipment and environmentally sensitive applications. This fuel "
 "is produced in full compliance with environmental standards and guarantees "
 "high efficiency."
-msgstr "يعد الديزل منخفض الكبريت (10 جزء في المليون) واحدًا من أنظف أنواع الوقود المتوفرة في السوق العالمية وأعلى جودة، وهو مناسب لمركبات الديزل والمعدات الصناعية والتطبيقات الحساسة للبيئة. يتم إنتاج هذا الوقود وفقًا للمعايير البيئية ويضمن كفاءة عالية."
+msgstr ""
+"يعد الديزل منخفض الكبريت (10 جزء في المليون) واحدًا من أنظف أنواع الوقود "
+"المتوفرة في السوق العالمية وأعلى جودة، وهو مناسب لمركبات الديزل والمعدات "
+"الصناعية والتطبيقات الحساسة للبيئة. يتم إنتاج هذا الوقود وفقًا للمعايير "
+"البيئية ويضمن كفاءة عالية."
 
 #: templates/refinery.html:81
 msgid "2- Diesel with a standard of 5000 ppm:"
@@ -449,7 +1227,11 @@ msgid ""
 "duty transportation applications. This product is an ideal choice for large "
 "industries and infrastructure projects that require diesel fuels due to its "
 "affordable price and high quality."
-msgstr "تم تصميم الديزل الكبريتي بنسبة 5000 جزء في المليون لمجموعة متنوعة من تطبيقات النقل الصناعية والثقيلة. يعد هذا المنتج خيارًا مثاليًا للصناعات الكبيرة ومشاريع البنية التحتية التي تتطلب وقود الديزل نظرًا لسعره المعقول وجودته العالية."
+msgstr ""
+"تم تصميم الديزل الكبريتي بنسبة 5000 جزء في المليون لمجموعة متنوعة من تطبيقات "
+"النقل الصناعية والثقيلة. يعد هذا المنتج خيارًا مثاليًا للصناعات الكبيرة "
+"ومشاريع البنية التحتية التي تتطلب وقود الديزل نظرًا لسعره المعقول وجودته "
+"العالية."
 
 #: templates/refinery.html:83
 msgid "3- Jet Fuel:"
@@ -462,7 +1244,11 @@ msgid ""
 "with quality and safety assurance by sourcing jet fuel from the most "
 "reputable international refineries. The jet fuel we provide complies with "
 "global standards such as ASTM D1655 and DEF STAN 91-91."
-msgstr "يعد وقود الطائرات أحد أهم منتجات التكرير وأكثرها حساسية والمصمم للاستخدام في طائرات الركاب والبضائع. نحن نقدم لعملائنا ضمان الجودة والسلامة من خلال الحصول على وقود الطائرات من المصافي العالمية الأكثر شهرة. يتوافق وقود الطائرات الذي نقدمه مع المعايير العالمية مثل ASTM D1655 وDEF STAN 91-91."
+msgstr ""
+"يعد وقود الطائرات أحد أهم منتجات التكرير وأكثرها حساسية والمصمم للاستخدام في "
+"طائرات الركاب والبضائع. نحن نقدم لعملائنا ضمان الجودة والسلامة من خلال "
+"الحصول على وقود الطائرات من المصافي العالمية الأكثر شهرة. يتوافق وقود "
+"الطائرات الذي نقدمه مع المعايير العالمية مثل ASTM D1655 وDEF STAN 91-91."
 
 #: templates/refinery.html:85
 msgid "Work with us"
@@ -474,7 +1260,11 @@ msgid ""
 "refineries, we provide high quality products at competitive prices. All "
 "products are offered in accordance with global standards such as EN590 for "
 "diesel and specialized standards for jet fuel."
-msgstr "ومن خلال الاستغناء عن الوسطاء والتواصل مباشرة مع المصافي العالمية ذات السمعة الطيبة، فإننا نقدم منتجات عالية الجودة بأسعار تنافسية. يتم تقديم جميع المنتجات وفقًا للمعايير العالمية مثل EN590 للديزل والمعايير المتخصصة لوقود الطائرات."
+msgstr ""
+"ومن خلال الاستغناء عن الوسطاء والتواصل مباشرة مع المصافي العالمية ذات السمعة "
+"الطيبة، فإننا نقدم منتجات عالية الجودة بأسعار تنافسية. يتم تقديم جميع "
+"المنتجات وفقًا للمعايير العالمية مثل EN590 للديزل والمعايير المتخصصة لوقود "
+"الطائرات."
 
 #: templates/refinery.html:87
 msgid ""
@@ -484,7 +1274,12 @@ msgid ""
 "delivery to ensure a flawless cooperation experience. We are ready to "
 "fulfill small and large orders, from meeting the needs of industrial "
 "projects to supplying fuel for air and ground transportation companies."
-msgstr "نقوم بشحن المنتجات إلى أي جزء من العالم باستخدام شبكة النقل الواسعة لدينا وبما يتوافق تمامًا مع اللوائح الدولية. فريقنا المحترف معك من مرحلة اختيار المنتج إلى التسليم النهائي لضمان تجربة تعاون لا تشوبها شائبة. نحن على استعداد لتلبية الطلبات الصغيرة والكبيرة، من تلبية احتياجات المشاريع الصناعية إلى توريد الوقود لشركات النقل الجوي والبري."
+msgstr ""
+"نقوم بشحن المنتجات إلى أي جزء من العالم باستخدام شبكة النقل الواسعة لدينا "
+"وبما يتوافق تمامًا مع اللوائح الدولية. فريقنا المحترف معك من مرحلة اختيار "
+"المنتج إلى التسليم النهائي لضمان تجربة تعاون لا تشوبها شائبة. نحن على "
+"استعداد لتلبية الطلبات الصغيرة والكبيرة، من تلبية احتياجات المشاريع الصناعية "
+"إلى توريد الوقود لشركات النقل الجوي والبري."
 
 #: templates/refinery.html:88
 msgid "Why choose us?"
@@ -521,42 +1316,35 @@ msgid ""
 "We strive to provide you with the best possible service for your refinery "
 "fuels needs. From supplying high-quality diesel to standard jet fuel, our "
 "goal is to earn our customers' trust and build lasting partnerships."
-msgstr "نحن نسعى جاهدين لنقدم لك أفضل خدمة ممكنة لتلبية احتياجات وقود المصافي الخاصة بك. بدءًا من توريد الديزل عالي الجودة إلى وقود الطائرات القياسي، هدفنا هو كسب ثقة عملائنا وبناء شراكات دائمة."
+msgstr ""
+"نحن نسعى جاهدين لنقدم لك أفضل خدمة ممكنة لتلبية احتياجات وقود المصافي الخاصة "
+"بك. بدءًا من توريد الديزل عالي الجودة إلى وقود الطائرات القياسي، هدفنا هو كسب "
+"ثقة عملائنا وبناء شراكات دائمة."
 
 #: templates/refinery.html:96
 msgid ""
 "To place an order, receive expert advice, or for more information, contact "
 "us today. Working with us guarantees a reliable and economical supply of "
 "refinery products."
-msgstr "لتقديم طلب، والحصول على مشورة الخبراء، أو لمزيد من المعلومات، اتصل بنا اليوم. إن العمل معنا يضمن إمدادًا موثوقًا واقتصاديًا لمنتجات التكرير."
+msgstr ""
+"لتقديم طلب، والحصول على مشورة الخبراء، أو لمزيد من المعلومات، اتصل بنا "
+"اليوم. إن العمل معنا يضمن إمدادًا موثوقًا واقتصاديًا لمنتجات التكرير."
 
-#: templates/refinery.html:111
+#: templates/refinery.html:108
 msgid "We are in contact with the world's most reputable refineries."
 msgstr "نحن على اتصال مع المصافي الأكثر شهرة في العالم."
 
-#: templates/refinery.html:112
+#: templates/refinery.html:109
 msgid "We guarantee the quality of our products."
 msgstr "نحن نضمن جودة منتجاتنا."
 
-#: templates/refinery.html:124
+#: templates/refinery.html:121
 msgid "Direct supply of diesel fuel is our specialty."
 msgstr "التوريد المباشر لوقود الديزل هو تخصصنا."
 
-#: templates/refinery.html:125
-msgid "We ship worldwide."
-msgstr "نحن نشحن في جميع أنحاء العالم."
-
-#: templates/refinery.html:137
+#: templates/refinery.html:134
 msgid "We can deliver jet fuel to your port."
 msgstr "يمكننا توصيل وقود الطائرات إلى الميناء الخاص بك."
-
-#: templates/refinery.html:138
-msgid "We have expert support to answer you."
-msgstr "لدينا دعم الخبراء للرد عليك."
-
-#: templates/refinery.html:151
-msgid "Get a free consultation"
-msgstr "احصل على استشارة مجانية"
 
 #: templates/services.html:17
 msgid "Our Services"

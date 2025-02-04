@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from haman.views import index, contact, about, team, contactformsaver
+from haman.views import index, contact, about, team, contactformsaver, faq
 
 urlpatterns = [
     path("i18n/", include("django.conf.urls.i18n")),
@@ -30,7 +30,7 @@ urlpatterns = [
     path("save-meassages/", contactformsaver, name="savemessages"),
     path("about-us/", about, name="about"),
     path("our-team/", team, name="team"),
-    # path("services/refinery", ,name=""),
+    path("FAQs/", faq, name="faq"),
 
 
 

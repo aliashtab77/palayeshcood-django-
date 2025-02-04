@@ -4,39 +4,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60508cdf-84c1-4e38-9f07-29198cb6ba53" name="Changes" comment="about us page wass updated">
-      <change afterPath="$PROJECT_DIR$/services/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/css/haman.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/logo-main.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/refinerbg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/refinery.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/service-single.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/services-side.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/services.html" afterDir="false" />
+    <list default="true" id="60508cdf-84c1-4e38-9f07-29198cb6ba53" name="Changes" comment="a service wass adedd and many things more">
+      <change afterPath="$PROJECT_DIR$/static/haman/images/icons/flog1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/b-tejarat1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/b-tejarat2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/baner-shekar1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/baner-shekar2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/baner-shekar3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/banerpet1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/banerpet2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/banerpet3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/food.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/global.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/pet.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/pet1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/pet2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/pet3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/shek1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/shek2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/shek3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/tejarat shekar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/tejarat-palayeshgah.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/tejarat-petroshimi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Petrochemicals.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/faq.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/food.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/global.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/haman/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/haman/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/haman/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/haman/apps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/haman/locale/ar/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/haman/locale/ar/LC_MESSAGES/django.mo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/haman/locale/ar/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/haman/locale/ar/LC_MESSAGES/django.po" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/haman/locale/fa/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/haman/locale/fa/LC_MESSAGES/django.mo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/haman/locale/fa/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/haman/locale/fa/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/haman/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/haman/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/haman/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/haman/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/palayeshcood/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/palayeshcood/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/palayeshcood/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/palayeshcood/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/haman/css/mamad.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/haman/css/mamad.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about-us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/haman/images/icons/flog.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/haman/images/icons/flog.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/services-side.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/services-side.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/services.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,13 +98,14 @@
     &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
     &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/stark/Downloads/ml-llm-251.18673.49.zip&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -128,8 +138,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.220" />
-        <option value="bundled-python-sdk-0fc6c617c4bd-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.220" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-PY-243.23654.177" />
+        <option value="bundled-python-sdk-91d3a02ef49d-43b77aa2d136-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.23654.177" />
       </set>
     </attachedChunks>
   </component>
@@ -156,7 +166,17 @@
       <workItem from="1737066768012" duration="8102000" />
       <workItem from="1737251343513" duration="4796000" />
       <workItem from="1737259103528" duration="7266000" />
-      <workItem from="1737279393135" duration="23781000" />
+      <workItem from="1737279393135" duration="25536000" />
+      <workItem from="1737374937546" duration="3300000" />
+      <workItem from="1737452963828" duration="5179000" />
+      <workItem from="1737544329498" duration="1212000" />
+      <workItem from="1737571270141" duration="4438000" />
+      <workItem from="1737993479221" duration="10252000" />
+      <workItem from="1738445016548" duration="1804000" />
+      <workItem from="1738690256503" duration="42000" />
+      <workItem from="1738690524273" duration="607000" />
+      <workItem from="1738693984701" duration="494000" />
+      <workItem from="1738694549373" duration="15849000" />
     </task>
     <task id="LOCAL-00001" summary="first haman see">
       <option name="closed" value="true" />
@@ -198,7 +218,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737075237141</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="a service wass adedd and many things more">
+      <option name="closed" value="true" />
+      <created>1737311351575</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1737311351575</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +249,8 @@
     <MESSAGE value="stark team link was added" />
     <MESSAGE value="first of two pages abou an team added and django requesty was added" />
     <MESSAGE value="about us page wass updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="about us page wass updated" />
+    <MESSAGE value="a service wass adedd and many things more" />
+    <option name="LAST_COMMIT_MESSAGE" value="a service wass adedd and many things more" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -235,6 +264,16 @@
           <url>file://$PROJECT_DIR$/templates/about-us.html</url>
           <line>19</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="django-line">
+          <url>file://$PROJECT_DIR$/templates/food.html</url>
+          <line>11</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="django-line">
+          <url>file://$PROJECT_DIR$/templates/faq.html</url>
+          <line>8</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
