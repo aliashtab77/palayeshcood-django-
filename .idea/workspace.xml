@@ -4,45 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60508cdf-84c1-4e38-9f07-29198cb6ba53" name="Changes" comment="a service wass adedd and many things more">
-      <change afterPath="$PROJECT_DIR$/static/haman/images/icons/flog1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/b-tejarat1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/b-tejarat2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/baner-shekar1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/baner-shekar2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/baner-shekar3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/banerpet1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/banerpet2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/banerpet3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/food.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/global.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/pet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/pet1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/pet2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/pet3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/shek1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/shek2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/shek3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/tejarat shekar.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/tejarat-palayeshgah.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/tejarat-petroshimi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Petrochemicals.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/faq.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/food.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/global.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="60508cdf-84c1-4e38-9f07-29198cb6ba53" name="Changes" comment="many things">
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/keshavarzibg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/supportbg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/agriculture.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/support.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/haman/locale/ar/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/haman/locale/ar/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/haman/locale/ar/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/haman/locale/ar/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/haman/locale/fa/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/haman/locale/fa/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/haman/locale/fa/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/haman/locale/fa/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/haman/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/haman/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/palayeshcood/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/palayeshcood/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/palayeshcood/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/palayeshcood/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/haman/images/icons/flog.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/haman/images/icons/flog.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/services-side.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/services-side.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/services.html" afterDir="false" />
@@ -176,7 +147,9 @@
       <workItem from="1738690256503" duration="42000" />
       <workItem from="1738690524273" duration="607000" />
       <workItem from="1738693984701" duration="494000" />
-      <workItem from="1738694549373" duration="15849000" />
+      <workItem from="1738694549373" duration="16239000" />
+      <workItem from="1738717258066" duration="1962000" />
+      <workItem from="1739656471366" duration="4468000" />
     </task>
     <task id="LOCAL-00001" summary="first haman see">
       <option name="closed" value="true" />
@@ -226,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737311351575</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="many things">
+      <option name="closed" value="true" />
+      <created>1738711109952</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1738711109952</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +231,8 @@
     <MESSAGE value="first of two pages abou an team added and django requesty was added" />
     <MESSAGE value="about us page wass updated" />
     <MESSAGE value="a service wass adedd and many things more" />
-    <option name="LAST_COMMIT_MESSAGE" value="a service wass adedd and many things more" />
+    <MESSAGE value="many things" />
+    <option name="LAST_COMMIT_MESSAGE" value="many things" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

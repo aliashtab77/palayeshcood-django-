@@ -334,49 +334,48 @@
 
                     </div>
                 </div>
-{% comment %}
-                <div class="service-block-two col-lg-4 col-md-6 col-sm-12 col-xs-12">
+
+                <div class="service-block-two col-lg-4 col-md-6 col-sm-12 col-xs-12 haman_left">
                 	<!--inner-box-->
                 	<div class="inner-box wow fadeIn" data-wow-delay="400ms" data-wow-duration="1500ms">
-                    	<div class="image-layer" style="background-image:url(images/resource/service-block-two-bg.jpg)"></div>
+                    	<div class="image-layer" style="background-image:url({% static 'haman/images/resource/services/keshavarzibg.jpg' %})"></div>
                     	<!--icon-box-->
                     	<div class="icon-box">
-                        	<span class="flaticon-two"></span>
+                        	<img src="{% static 'haman/images/icons/planting.png' %}" alt="agriculture products icon">
                         </div>
 
-                        <h3>Furniture Work</h3>
-                        <div class="text">We will give you complete account of the system, and expound the of the great explorer of the truth.</div>
-                        <a href="#" class="read-more">Read More</a>
+                        <h3 class="haman_right">{% translate 'Agriculture products' %}</h3>
+                        <div class="text haman_right">{% translate 'In the world of agriculture, the use of high-quality and reliable fertilizers is one of the most important factors in increasing the yield of farmland and gardens. With years of experience in the direct supply and distribution of agricultural fertilizers, we assure you that we will provide you with urea, sulfur, diammonium phosphate and other agricultural inputs without intermediaries, with guaranteed quality and at competitive prices.'|truncatewords:15 %}</div>
+                        <a href="{% url 'agriculture' %}" class="read-more">{% translate 'Read More' %}</a>
 
                         <!--bottom-icon-->
                         <div class="bottom-icon">
-                        	<span class="flaticon-dinner"></span>
+                        	<img src="{% static 'haman/images/icons/planting.png' %}" alt="agriculture products icon">
                         </div>
 
                     </div>
                 </div>
 
-                <div class="service-block-two col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                <div class="service-block-two col-lg-4 col-md-6 col-sm-12 col-xs-12 haman_left">
                 	<!--inner-box-->
-                	<div class="inner-box wow fadeIn" data-wow-delay="800ms" data-wow-duration="1500ms">
-                    	<div class="image-layer" style="background-image:url(images/resource/service-block-two-bg.jpg)"></div>
+                	<div class="inner-box wow fadeIn" data-wow-delay="400ms" data-wow-duration="1500ms">
+                    	<div class="image-layer" style="background-image:url({% static 'haman/images/resource/services/supportbg.jpg' %})"></div>
                     	<!--icon-box-->
                     	<div class="icon-box">
-                        	<span class="flaticon-bright-lightbulb"></span>
+                        	<img src="{% static 'haman/images/icons/financial-advisor.png' %}" alt="support icon">
                         </div>
 
-                        <h3>Lighting Works</h3>
-                        <div class="text">Expound the actual teachings of explorer of truth masters builder of human happiness.</div>
-                        <a href="#" class="read-more">Read More</a>
+                        <h3 class="haman_right">{% translate 'Support' %}</h3>
+                        <div class="text haman_right">{% translate "We understand that making smart and successful decisions on any project requires accurate information and professional support. That's why we have assembled a team of experienced and professional professionals to be with you at every stage of the collaboration. Our goal is to provide services that exceed your expectations and create a different and reliable experience."|truncatewords:13 %}</div>
+                        <a href="{% url 'support' %}" class="read-more">{% translate 'Read More' %}</a>
 
                         <!--bottom-icon-->
                         <div class="bottom-icon">
-                        	<span class="flaticon-bright-lightbulb"></span>
+                        	<img src="{% static 'haman/images/icons/financial-advisor.png' %}" alt="support icon">
                         </div>
 
                     </div>
                 </div>
-                    {% endcomment %}
 
             </div>
         </div>

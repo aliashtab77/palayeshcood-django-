@@ -1,0 +1,251 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %}
+	{% translate 'support' %}
+{% endblock title %}
+{% block servicesc %}current{% endblock servicesc%}
+{% block servicescz %}current{% endblock servicescz%}
+{% block body %}
+
+    <!--Page Title-->
+    <section class="page-title" style="background-image:url({% static 'haman/images/background/bg-page-title-1.jpg' %});">
+        <div class="auto-container">
+            <h1>{% translate 'support' %}</h1>
+        </div>
+    </section>
+
+    <!--Page Info-->
+    <section class="page-info">
+        <div class="auto-container clearfix">
+            <div class="pull-left"><h2>{% translate 'support' %}</h2></div>
+            <div class="pull-right">
+                <ul class="bread-crumb clearfix">
+                    <li><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
+                    <li><a href="{% url 'services' %}">{% translate 'Services' %}</a></li>
+                    <li>{% translate 'support' %}</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!--Sidebar Page-->
+    <div class="sidebar-page-container">
+        <div class="auto-container">
+            <div class="row clearfix">
+
+
+                <!--Sidebar-->
+                <div class="sidebar-side col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                    <aside class="sidebar">
+
+                        <!--Sidebar Widget / Boxed Nav-->
+                        {% include 'services-side.html' with support="current" only %}
+
+                        <!--Sidebar Widget / Downloads-->
+                        <div class="widget sidebar-widget downloads">
+                            <div class="sidebar-title"><h3>{% translate 'Our Brochures' %}</h3></div>
+                            <ul>
+                                <li class="haman_left"><a href="#"><span class="icon fa fa-file-pdf-o"></span> Download.Pdf</a></li>
+                                <li class="haman_left"><a href="#"><span class="icon fa fa-file-word-o"></span> Download.Doc</a></li>
+                            </ul>
+                        </div>
+
+
+                    </aside>
+                </div><!--End Sidebar-->
+
+                <!--Content Side-->
+
+                <div class="content-side col-lg-9 col-md-8 col-sm-12 col-xs-12">
+                    <!--Service Single-->
+                    <section class="service-details">
+                    	<!--Service Images-->
+                        <div class="service-images">
+                            <ul class="single-item-carousel">
+                                <li><figure class="image-box"><a href="{% static 'haman/images/resource/services/baner-shekar1.jpg' %}" class="lightbox-image" title="Image Caption Here"><img src="{% static 'haman/images/resource/services/baner-shekar1.jpg' %}" alt="Food products photo"></a></figure></li>
+                                <li><figure class="image-box"><a href="{% static 'haman/images/resource/services/baner-shekar2.jpg' %}" class="lightbox-image" title="Image Caption Here"><img src="{% static 'haman/images/resource/services/baner-shekar2.jpg' %}" alt="Food products photo"></a></figure></li>
+                                <li><figure class="image-box"><a href="{% static 'haman/images/resource/services/baner-shekar3.jpg' %}" class="lightbox-image" title="Image Caption Here"><img src="{% static 'haman/images/resource/services/baner-shekar3.jpg' %}" alt="Food products photo"></a></figure></li>
+
+
+                            </ul>
+                        </div>
+
+                       	<div class="sec-title"><h2>{% translate 'support' %}</h2></div>
+                        <!--Text Content-->
+                        <div class="text-content">
+                            <h3>{% translate 'Direct supply of premium quality food and shipping worldwide' %}</h3>
+                        	<p>{% translate 'We are proud to serve the needs of our customers worldwide by providing food supply services directly from reputable factories. With a focus on quality, transparency, and speed in service delivery, we strive to provide the best experience for customers in various food industries.' %}</p>
+                            <h3>{% translate 'Food products offered by us' %}</h3>
+                            <h4>{% translate 'Brazilian Sugar' %}</h4>
+                            <p>{% translate 'Brazilian sugar is known as one of the most popular and highest quality types of sugar on the global market. We source this product directly from the most reputable factories in Brazil.' %}</p>
+                            <h5>{% translate 'Features of Brazilian sugar offered by us:' %}</h5>
+                            <p>{% translate 'Superior quality: Manufactured in accordance with global standards.' %}</p>
+                            <p>{% translate 'Variety in grades: white, raw, and brown sugar for various uses.' %}</p>
+                            <p>{% translate 'Delivery on various scales: suitable for retailers, wholesalers and the food industry.' %}</p>
+                            <h4>{% translate 'High quality tomato paste' %}</h4>
+                            <p>{% translate 'Tomato paste is one of the most basic food ingredients used in many countries. We source this product directly from reputable factories and offer it to our customers with guaranteed quality.' %}</p>
+                            <h5>{% translate 'Features of the tomato paste offered by us:' %}</h5>
+                            <p>{% translate 'High concentration: Made from fresh, high-quality tomatoes.' %}</p>
+                            <p>{% translate 'Various packaging: Available in cans, jars, and industrial packaging for use in the food industry.' %}</p>
+                            <p>{% translate 'Natural flavor and aroma: No preservatives and long-lasting.' %}</p>
+                            <h3>{% translate 'Why our services?' %}</h3>
+                            <p>{% translate 'Direct supply without intermediaries: We supply food products directly from reputable factories and manufacturers, which reduces costs and ensures quality.' %}</p>
+                            <p>{% translate 'Guaranteed quality: All our products are manufactured and packaged in accordance with international standards.' %}</p>
+                            <p>{% translate 'Worldwide shipping: We use an extensive and professional transportation network that allows for fast and safe delivery of products to any part of the world.' %}</p>
+                            <p>{% translate 'Competitive price: By eliminating intermediaries, we offer the best prices for food products.' %}</p>
+                            <p>{% translate 'Expert Support: Our team is ready to provide expert advice to select the most appropriate products and transportation solutions.' %}</p>
+                            <h3>{% translate 'A different experience of food supply' %}</h3>
+                            <p>{% translate 'We are committed to providing transparent and professional services, focusing on gaining customer trust. Brazilian sugar and tomato paste are just some of our products, and we are ready to meet your diverse food needs.' %}</p>
+                            <h4>{% translate 'To place an order, receive advice or more information, contact us today. Working with us guarantees a reliable, fast and economical supply of food.' %}</h4>
+                        </div>
+
+                        <!--Service Types-->
+                        <div class="service-types">
+                        	<div class="row clearfix">
+                            	<!--Service Type-->
+                                <div class="service-type col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                	<div class="inner-box">
+                                    	<figure class="image-box"><img src="{% static 'haman/images/resource/services/shek1.jpg' %}" alt="{% translate 'Sugar trade photo' %}"></figure>
+                                        <div class="lower-content">
+                                            <ul class="list-style-one">
+                                            	<li>{% translate 'We are in contact with Brazilian sugar factories around the world.' %}</li>
+                                                <li>{% translate 'We offer you Brazilian sugar based on global standards.' %}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Service Type-->
+                                <div class="service-type col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                	<div class="inner-box">
+                                    	<figure class="image-box"><img src="{% static 'haman/images/resource/services/shek2.jpg' %}" alt="{% translate 'Sugar trade photo' %}"></figure>
+                                        <div class="lower-content">
+                                            <ul class="list-style-one">
+                                            	<li>{% translate 'We guarantee the quality of Brazilian sugar.' %}</li>
+                                                <li>{% translate 'We ship worldwide.' %}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Service Type-->
+                                <div class="service-type col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                	<div class="inner-box">
+                                    	<figure class="image-box"><img src="{% static 'haman/images/resource/services/shek3.jpg' %}" alt="{% translate 'Sugar trade photo' %}"></figure>
+                                        <div class="lower-content">
+                                            <ul class="list-style-one">
+                                            	<li>{% translate 'We can deliver tomato paste to your port.' %}</li>
+                                                <li>{% translate 'We have expert support to answer you.' %}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                        <!--Get Quote-->
+                        <div class="get-quote">
+                            <div class="sec-title medium"><h2>{% translate 'Get a free consultation' %}</h2></div>
+                                <div class="row clearfix">
+                                    <!--Content COlumn-->
+                                    <!--Form Column-->
+                                    <div class="column col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                                        <!--form-box-->
+                                        <div class="form-box default-form">
+                                            <div class="contact-form default-form">
+                                                <form method="post" action="{% url 'savemessages' %}" id="mform">
+                                                    <div class="row clearfix">
+                                                            {% csrf_token %}
+                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="text" name="subject" value="" placeholder="{% translate 'subject' %}">
+                                                        </div>
+
+                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="text" name="username" value="" placeholder="{% translate 'Your Name *' %}" required>
+                                                        </div>
+
+                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="email" name="email" value="" placeholder="{% translate 'Your Mail *' %}" required>
+                                                        </div>
+
+                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="text" name="number" value="" placeholder="{% translate 'Phone Number' %}">
+                                                        </div>
+
+                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                            <textarea name="message" placeholder="{% translate 'Message *' %}"></textarea>
+                                                        </div>
+                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                            <button type="submit" class="theme-btn btn-style-two">{% translate 'Get Quote' %}</button>
+                                                        </div>
+                                                        <div id="response">
+
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+
+                    </section>
+                </div><!--End Content Side-->
+
+            </div>
+        </div>
+    </div>
+
+
+{% endblock body %}
+
+{% block escript %}
+    <script>
+
+        $(document).ready(function() {
+
+            $('#mform').on('submit', function(event) {
+
+                {#event.preventDefault(); // Prevent the default form submission#}
+
+
+                $.ajax({
+
+                    type: 'POST',
+
+                    url: '{% url "savemessages" %}',  // Replace with your view's URL
+
+                    data: $(this).serialize(), // Serialize the form data
+
+                    success: function(response) {
+
+                        if (response.success) {
+
+                            $('#response').html('<p>' + response.message + '</p>');
+
+                        } else {
+
+                            $('#response').html('<p>Error: ' + JSON.stringify(response.errors) + '</p>');
+
+                        }
+
+                    },
+
+                    error: function(xhr, status, error) {
+
+                        $('#response').html('<p>An error occurred: ' + error + '</p>');
+
+                    }
+
+                });
+
+            });
+
+        });
+
+    </script>
+{% endblock %}

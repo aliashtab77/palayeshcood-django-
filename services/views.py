@@ -30,3 +30,16 @@ def food(request):
 
     }
     return render(request, 'food.html', context=context)
+
+
+def agriculture(request):
+    context = {
+
+    }
+    return render(request, 'agriculture.html', context=context)
+
+def support(request):
+    context = {
+
+    }
+    return render(request, 'support.html', context=context)
