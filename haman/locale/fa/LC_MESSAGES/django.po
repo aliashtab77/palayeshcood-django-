@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-05 02:16+0330\n"
+"POT-Creation-Date: 2025-02-16 05:47+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,9 +38,10 @@ msgstr "ایمیل"
 msgid "message"
 msgstr "پیام"
 
-#: haman/models.py:10 templates/Petrochemicals.html:164 templates/faq.html:153
+#: haman/models.py:10 templates/Petrochemicals.html:164
+#: templates/agriculture.html:162 templates/faq.html:153
 #: templates/food.html:164 templates/global.html:162
-#: templates/refinery.html:161
+#: templates/refinery.html:161 templates/support.html:162
 msgid "subject"
 msgstr "موضوع"
 
@@ -76,15 +77,15 @@ msgstr "نام لازم است"
 msgid "email is required"
 msgstr "ایمیل مورد نیاز است"
 
-#: palayeshcood/settings.py:117
+#: palayeshcood/settings.py:121
 msgid "Persian"
 msgstr "فارسی"
 
-#: palayeshcood/settings.py:118
+#: palayeshcood/settings.py:122
 msgid "English"
 msgstr "انگلیسی"
 
-#: palayeshcood/settings.py:119
+#: palayeshcood/settings.py:123
 msgid "Arabic"
 msgstr "عربی"
 
@@ -99,24 +100,26 @@ msgid "petrochemical products"
 msgstr "محصولات پتروشیمی"
 
 #: templates/Petrochemicals.html:25 templates/about-us.html:34
-#: templates/base.html:88 templates/base.html:174 templates/base.html:353
-#: templates/contact.html:23 templates/faq.html:20 templates/food.html:24
-#: templates/global.html:25 templates/index.html:7 templates/our-team.html:7
-#: templates/our-team.html:32 templates/refinery.html:25
-#: templates/services.html:27
+#: templates/agriculture.html:24 templates/base.html:88 templates/base.html:174
+#: templates/base.html:353 templates/contact.html:23 templates/faq.html:20
+#: templates/food.html:24 templates/global.html:25 templates/index.html:7
+#: templates/our-team.html:7 templates/our-team.html:32
+#: templates/refinery.html:25 templates/services.html:27
+#: templates/support.html:24
 msgid "Home"
 msgstr "خانه"
 
-#: templates/Petrochemicals.html:26 templates/base.html:89
-#: templates/base.html:175 templates/base.html:355 templates/food.html:25
-#: templates/global.html:26 templates/refinery.html:26
+#: templates/Petrochemicals.html:26 templates/agriculture.html:25
+#: templates/base.html:89 templates/base.html:175 templates/base.html:355
+#: templates/food.html:25 templates/global.html:26 templates/refinery.html:26
 #: templates/services.html:5 templates/services.html:24
-#: templates/services.html:28
+#: templates/services.html:28 templates/support.html:25
 msgid "Services"
 msgstr "خدمات"
 
-#: templates/Petrochemicals.html:48 templates/food.html:47
-#: templates/global.html:48 templates/refinery.html:48
+#: templates/Petrochemicals.html:48 templates/agriculture.html:47
+#: templates/food.html:47 templates/global.html:48 templates/refinery.html:48
+#: templates/support.html:47
 msgid "Our Brochures"
 msgstr "بروشورهای ما"
 
@@ -285,38 +288,41 @@ msgstr "ما میتوانیم مواد اولیه پلاستیک را در بن�
 msgid "We have expert support to answer you."
 msgstr "ما پشتیبانی متخصصی برای پاسخگویی به شما داریم"
 
-#: templates/Petrochemicals.html:152 templates/food.html:152
-#: templates/global.html:150 templates/refinery.html:148
+#: templates/Petrochemicals.html:152 templates/agriculture.html:150
+#: templates/food.html:152 templates/global.html:150
+#: templates/refinery.html:148 templates/support.html:150
 msgid "Get a free consultation"
 msgstr "مشاوره رایگان دریافت کنید"
 
-#: templates/Petrochemicals.html:168 templates/contact.html:56
-#: templates/faq.html:141 templates/food.html:168 templates/global.html:166
-#: templates/index.html:2059 templates/refinery.html:165
+#: templates/Petrochemicals.html:168 templates/agriculture.html:166
+#: templates/contact.html:56 templates/faq.html:141 templates/food.html:168
+#: templates/global.html:166 templates/index.html:2057
+#: templates/refinery.html:165 templates/support.html:166
 msgid "Your Name *"
 msgstr "نام شما *"
 
-#: templates/Petrochemicals.html:172 templates/contact.html:60
-#: templates/food.html:172 templates/global.html:170
-#: templates/refinery.html:169
+#: templates/Petrochemicals.html:172 templates/agriculture.html:170
+#: templates/contact.html:60 templates/food.html:172 templates/global.html:170
+#: templates/refinery.html:169 templates/support.html:170
 msgid "Your Mail *"
 msgstr "ایمیل شما *"
 
-#: templates/Petrochemicals.html:176 templates/contact.html:64
-#: templates/food.html:176 templates/global.html:174
-#: templates/refinery.html:173
+#: templates/Petrochemicals.html:176 templates/agriculture.html:174
+#: templates/contact.html:64 templates/food.html:176 templates/global.html:174
+#: templates/refinery.html:173 templates/support.html:174
 msgid "Phone Number"
 msgstr "شماره تماس"
 
-#: templates/Petrochemicals.html:180 templates/base.html:329
-#: templates/contact.html:68 templates/food.html:180 templates/global.html:178
-#: templates/refinery.html:177
+#: templates/Petrochemicals.html:180 templates/agriculture.html:178
+#: templates/base.html:329 templates/contact.html:68 templates/food.html:180
+#: templates/global.html:178 templates/refinery.html:177
+#: templates/support.html:178
 msgid "Message *"
 msgstr "پیام *"
 
-#: templates/Petrochemicals.html:183 templates/contact.html:71
-#: templates/food.html:183 templates/global.html:181
-#: templates/refinery.html:180
+#: templates/Petrochemicals.html:183 templates/agriculture.html:181
+#: templates/contact.html:71 templates/food.html:183 templates/global.html:181
+#: templates/refinery.html:180 templates/support.html:181
 msgid "Get Quote"
 msgstr "ارسال"
 
@@ -460,6 +466,159 @@ msgstr ""
 "اعتماد شناخته شده‌ایم. کیفیت تضمین‌شده، قیمت منصفانه و تعهد به رضایت مشتری، "
 "پایه‌های همکاری پایدار ما هستند."
 
+#: templates/agriculture.html:5 templates/agriculture.html:14
+#: templates/agriculture.html:21 templates/agriculture.html:26
+#: templates/agriculture.html:74 templates/services-side.html:9
+#: templates/services.html:100
+msgid "agriculture products"
+msgstr "محصولات کشاورزی"
+
+#: templates/agriculture.html:77
+msgid "Direct supply of agricultural products with the best quality and price"
+msgstr "تأمین مستقیم ومحصولات کشاورزی با بهترین کیفیت و قیمت"
+
+#: templates/agriculture.html:78
+msgid "Quality assurance, reasonable price and fast delivery"
+msgstr "تضمین کیفیت، قیمت مناسب و تحویل سریع"
+
+#: templates/agriculture.html:79 templates/index.html:349
+#: templates/services.html:101
+msgid ""
+"In the world of agriculture, the use of high-quality and reliable "
+"fertilizers is one of the most important factors in increasing the yield of "
+"farmland and gardens. With years of experience in the direct supply and "
+"distribution of agricultural fertilizers, we assure you that we will provide "
+"you with urea, sulfur, diammonium phosphate and other agricultural inputs "
+"without intermediaries, with guaranteed quality and at competitive prices."
+msgstr "در دنیای کشاورزی، استفاده از کودهای باکیفیت و مطمئن یکی از مهم‌ترین عوامل برای افزایش بازدهی زمین های زراعی و باغ‌ها است. ما با سال‌ها تجربه در تأمین و توزیع مستقیم کودهای کشاورزی، این اطمینان را به شما می دهیم که کود اوره، گوگرد، دی آمونیوم فسفات و سایر نهاده های کشاورزی را بدون واسطه، با کیفیت تضمین شده و قیمت رقابتی در اختیار شما قرار دهیم"
+
+#: templates/agriculture.html:80
+msgid "Direct supply from reliable sources"
+msgstr "تأمین مستقیم از منابع معتبر"
+
+#: templates/agriculture.html:81
+msgid ""
+"We source and deliver agricultural fertilizers directly from reputable "
+"domestic and international manufacturers and petrochemicals. This method not "
+"only reduces costs, but also ensures that you receive an original, high-"
+"quality, and standardized product."
+msgstr "ما کودهای کشاورزی را مستقیماً از تولیدکنندگان و پتروشیمی های معتبر داخلی و بین المللی تهیه کرده و به دست شما می رسانیم. این روش نه تنها باعث کاهش هزینه ها می شود، بلکه تضمین می کند که محصولی اصلی، باکیفیت و استاندارد دریافت می کنید"
+
+#: templates/agriculture.html:82
+msgid "Guaranteed quality and international standards"
+msgstr "کیفیت تضمین شده و استانداردهای بین المللی"
+
+#: templates/agriculture.html:83
+msgid ""
+"All our products have quality approvals and valid standards. The urea, "
+"sulfur and diammonium phosphate fertilizers we offer are of high purity, "
+"effective performance and fully comply with the needs of modern agriculture. "
+"These products improve the growth and yield of your final product by "
+"increasing soil productivity and providing the nutrients needed by plants."
+msgstr "تمام محصولات ما دارای تأییدیه های کیفی و استانداردهای معتبر هستند. کود اوره، گوگرد و دی  آمونیوم فسفات که ارائه می کنیم، دارای خلوص بالا، عملکرد مؤثر و تطابق کامل با نیازهای کشاورزی مدرن هستند. این محصولات با افزایش بهره وری خاک و تأمین مواد مغذی مورد نیاز گیاهان، باعث بهبود رشد و عملکرد محصول نهایی شما می شوند"
+
+#: templates/agriculture.html:84
+msgid "Competitive prices and elimination of intermediaries"
+msgstr "قیمت‌های رقابتی و حذف واسطه ها"
+
+#: templates/agriculture.html:85
+msgid ""
+"By buying directly from us, you no longer need to pay extra fees to "
+"middlemen. We offer products at real and fair prices so you can get the most "
+"out of your investment in agriculture."
+msgstr "با خرید مستقیم ازما، دیگر نیازی به پرداخت هزینه های اضافی به واسطه ها ندارید. ما محصولات را با قیمت واقعی و منصفانه ارائه می دهیم تا بتوانید بیشترین سود را از سرمایه گذاری خود در کشاورزی ببرید"
+
+#: templates/agriculture.html:86
+msgid "Fast and secure shipping nationwide"
+msgstr "ارسال سریع و مطمئن به سراسر کشور"
+
+#: templates/agriculture.html:87
+msgid ""
+"We are aware of the importance of timely delivery of agricultural inputs. "
+"For this reason, using a reliable transportation network and careful "
+"planning, we deliver the products to you in the shortest possible time and "
+"with safe packaging."
+msgstr "ما به اهمیت تحویل به موقع نهاده های کشاورزی آگاه هستیم. به همین دلیل، با استفاده از شبکه حمل ونقل مطمئن و برنامه ریزی دقیق، محصولات را در کوتاه ترین زمان ممکن و با بسته بندی ایمن به دست شما می رسانیم"
+
+#: templates/agriculture.html:88
+msgid "Expert advice and ongoing support"
+msgstr "مشاوره تخصصی و پشتیبانی دائمی"
+
+#: templates/agriculture.html:89
+msgid ""
+"Agriculture is a dynamic and changing industry, and choosing the right crop "
+"has a direct impact on the yield and health of the soil and plants. Our "
+"expert team will help you make the best choice for your farmland by "
+"providing technical and scientific advice."
+msgstr "کشاورزی یک صنعت پویا و متغیر است و انتخاب محصول مناسب، تأثیر مستقیمی بر بازدهی و سلامت خاک و گیاهان دارد. تیم متخصص ما با ارائه مشاوره فنی و علمی به شما کمک می کند تا بهترین انتخاب را برای زمین کشاورزی خود داشته باشید"
+
+#: templates/agriculture.html:90
+msgid "Our products include:"
+msgstr "محصولات ما شامل:"
+
+#: templates/agriculture.html:92
+msgid "Urea fertilizer – rich in nitrogen to increase plant growth"
+msgstr " کود اوره – غنی از نیتروژن برای افزایش رشد گیاه"
+
+#: templates/agriculture.html:93
+msgid "Sulfur – improves soil quality and meets plant nutritional needs"
+msgstr "گوگرد – بهبود کیفیت خاک و تأمین نیازهای تغذیه ای گیاه"
+
+#: templates/agriculture.html:94
+msgid ""
+"Diammonium Phosphate (DAP) – Excellent source of phosphorus and nitrogen for "
+"stronger crop growth"
+msgstr " دی آمونیوم فسفات (DAP) – منبع عالی فسفر و نیتروژن برای رشد قوی تر محصولات"
+
+#: templates/agriculture.html:96
+msgid "We are the reliable companion of farmers and producers!"
+msgstr "ما همراه مطمئن کشاورزان و تولیدکنندگان هستیم!"
+
+#: templates/agriculture.html:97
+msgid ""
+"Our goal is to provide you with a safe and hassle-free agricultural product "
+"purchasing experience. If you are looking for a reliable, quality and "
+"professional supplier, contact us today and experience a different shopping "
+"experience."
+msgstr "هدف ما این است که تجربه ای مطمئن و بی دردسر از خرید محصولات کشاورزی برای شما فراهم کنیم. اگر به دنبال تأمین کننده ای قابل اعتماد، باکیفیت و حرفه ای هستید، همین امروز با ما تماس بگیرید و تجربه ای متفاوت از خرید را احساس کنید"
+
+#: templates/agriculture.html:98
+msgid ""
+"We are always ready to respond and provide the best products for your "
+"success in agriculture!"
+msgstr "ما همیشه آماده پاسخگویی و ارائه بهترین محصولات برای موفقیت شما در کشاورزی هستیم!"
+
+#: templates/agriculture.html:107 templates/agriculture.html:120
+#: templates/agriculture.html:133
+msgid "agriculture products photo"
+msgstr "عکس محصولات کشاورزی"
+
+#: templates/agriculture.html:110
+msgid "A country's agricultural growth is directly related to its fertilizers."
+msgstr "رشد کشاورزی یک کشور، رابطه مستقیم با کودهای آن دارد"
+
+#: templates/agriculture.html:111
+msgid "Our company guarantees the quality of its fertilizers."
+msgstr "شرکت ما کیفیت کودهای خود را تضمین می کنید"
+
+#: templates/agriculture.html:123
+msgid "Our specialty is supplying chemical fertilizers from petrochemicals."
+msgstr "تخصص ما تامین کودهای شیمیایی از پتروشیمی ها می باشد"
+
+#: templates/agriculture.html:124
+msgid "We can ship our products to you on FOB and CIF terms."
+msgstr "مامی توانیم محصولات خود را صورت  fob و cif برای شما ارسال کنیم"
+
+#: templates/agriculture.html:136
+msgid ""
+"To protect the environment and soil, avoid excessive use of chemical "
+"fertilizers."
+msgstr "برای حفاظت از محیط زیست و خاک از استفاده زیاده کودهای شیمیایی پرهیز کنید"
+
+#: templates/agriculture.html:137
+msgid "We are responsive to you with fast support."
+msgstr "ما با پشتیبانی سریع ، پاسخگویی به شما هستیم"
+
 #: templates/base.html:111 templates/base.html:199 templates/our-team.html:29
 #: templates/our-team.html:33
 msgid "Our Team"
@@ -505,9 +664,11 @@ msgid "Recent News"
 msgstr "اخبار اخیر"
 
 #: templates/base.html:310 templates/index.html:266 templates/index.html:287
-#: templates/index.html:308 templates/index.html:329 templates/services.html:49
+#: templates/index.html:308 templates/index.html:329 templates/index.html:350
+#: templates/index.html:371 templates/services.html:49
 #: templates/services.html:64 templates/services.html:77
-#: templates/services.html:90
+#: templates/services.html:90 templates/services.html:102
+#: templates/services.html:114
 msgid "Read More"
 msgstr "بیشتر"
 
@@ -586,7 +747,10 @@ msgid ""
 "refinery products. At Palayeshcood, we work with the world's most reputable "
 "manufacturers to provide our customers with high quality products at "
 "reasonable prices."
-msgstr "شرکت پالایش کود به عنوان یک توزیع‌کننده محصولات شیمیایی و پالایشگاهی شناخته می‌شود. در پالایش کود ، ما با معتبرترین تولیدکنندگان دنیا همکاری می‌کنیم تا محصولات با کیفیت بالا و قیمت مناسب را برای مشتریان فراهم آوریم"
+msgstr ""
+"شرکت پالایش کود به عنوان یک توزیع‌کننده محصولات شیمیایی و پالایشگاهی شناخته "
+"می‌شود. در پالایش کود ، ما با معتبرترین تولیدکنندگان دنیا همکاری می‌کنیم تا "
+"محصولات با کیفیت بالا و قیمت مناسب را برای مشتریان فراهم آوریم"
 
 #: templates/faq.html:49
 msgid "What products do you offer?"
@@ -597,7 +761,10 @@ msgid ""
 "We operate in the field of selling petrochemicals (such as urea, "
 "polyethylene, polypropylene), refinery products (such as gasoline, diesel, "
 "jet fuel), and food products (such as sugar and tomato paste)."
-msgstr "ما در زمینه فروش مواد پتروشیمی (مانند اوره، پلی اتیلن، پلی پروپیلن)، محصولات پالایشگاهی (مانند بنزین، گازوئیل،سوخت جت) و مواد غذایی (مانند شکر و رب گوجه فرنگی) فعالیت می‌کنیم."
+msgstr ""
+"ما در زمینه فروش مواد پتروشیمی (مانند اوره، پلی اتیلن، پلی پروپیلن)، محصولات "
+"پالایشگاهی (مانند بنزین، گازوئیل،سوخت جت) و مواد غذایی (مانند شکر و رب گوجه "
+"فرنگی) فعالیت می‌کنیم."
 
 #: templates/faq.html:59
 msgid "How to order at PKK?"
@@ -611,7 +778,12 @@ msgid ""
 "possible to send a sample after receiving the shipping fee. The shipping "
 "steps will be followed up carefully and step by step by the responsible "
 "expert."
-msgstr "۱- می توانید با تماس یا ایمیل و یا از طریق واتس آپ با شرکت، سفارش خود را ثبت بعد ازاستعلام شما توسط کارشناسان ما، اطلاعات مورد نیاز را در اختیار شما قرار می دهیم و همچنین آنالیز محصول را ارسال می کنیم، در صورت درخواست امکان ارسال نمونه بعد از دریافت هزینه ارسال مقدور است. مراحل ارسال به صورت دقیق و گام به گام توسط کارشناس مسئول پیگیری خواهد شد."
+msgstr ""
+"۱- می توانید با تماس یا ایمیل و یا از طریق واتس آپ با شرکت، سفارش خود را ثبت "
+"بعد ازاستعلام شما توسط کارشناسان ما، اطلاعات مورد نیاز را در اختیار شما قرار "
+"می دهیم و همچنین آنالیز محصول را ارسال می کنیم، در صورت درخواست امکان ارسال "
+"نمونه بعد از دریافت هزینه ارسال مقدور است. مراحل ارسال به صورت دقیق و گام به "
+"گام توسط کارشناس مسئول پیگیری خواهد شد."
 
 #: templates/faq.html:63
 msgid ""
@@ -620,7 +792,11 @@ msgid ""
 "CEO, and the expert in charge will follow up on the results of the meeting "
 "until the desired result is achieved. Usually, export products require "
 "careful examination, the procedure for which is coordinated in the meeting."
-msgstr "۲- ثبت سفارش حضوری با تشکیل جلسه در دفتر مرکزی ما می توانید با مدیر بازرگانی و مدیرعامل شرکت به صورت رودررو مذاکره کنید و کارشناس مسئول پیگیر نتایج جلسه تا حصول نتیجه مطلوب خواهد بود. معمولاً محصولات صادراتی نیاز به بررسی دقیق دارند که رویه آن در جلسه هماهنگ می شود."
+msgstr ""
+"۲- ثبت سفارش حضوری با تشکیل جلسه در دفتر مرکزی ما می توانید با مدیر بازرگانی "
+"و مدیرعامل شرکت به صورت رودررو مذاکره کنید و کارشناس مسئول پیگیر نتایج جلسه "
+"تا حصول نتیجه مطلوب خواهد بود. معمولاً محصولات صادراتی نیاز به بررسی دقیق "
+"دارند که رویه آن در جلسه هماهنگ می شود."
 
 #: templates/faq.html:70
 msgid "How can I find out the price of products?"
@@ -630,7 +806,9 @@ msgstr "چگونه می‌توانم از قیمت محصولات مطلع شو�
 msgid ""
 "Product prices may change due to market fluctuations. To get the latest "
 "prices, you can contact our sales department via phone number or email."
-msgstr "قیمت محصولات به دلیل نوسانات بازار ممکن است تغییر کند. برای دریافت آخرین قیمت‌ها، می‌توانید با بخش فروش ما از طریق شماره تلفن یا ایمیل تماس بگیرید."
+msgstr ""
+"قیمت محصولات به دلیل نوسانات بازار ممکن است تغییر کند. برای دریافت آخرین "
+"قیمت‌ها، می‌توانید با بخش فروش ما از طریق شماره تلفن یا ایمیل تماس بگیرید."
 
 #: templates/faq.html:80
 msgid "What are the technical specifications of your petrochemical materials?"
@@ -641,7 +819,10 @@ msgid ""
 "The technical specifications of each product (such as grade, density, "
 "melting point) are listed in the \"Technical Information\" section of each "
 "product. If you need more information, please contact our technical experts."
-msgstr "مشخصات فنی هر محصول (مانند گرید، دانسیته، نقطه ذوب) در بخش ‘اطلاعات فنی’ هر محصول درج شده است. در صورت نیاز به اطلاعات بیشتر، با کارشناسان فنی ما تماس بگیرید."
+msgstr ""
+"مشخصات فنی هر محصول (مانند گرید، دانسیته، نقطه ذوب) در بخش ‘اطلاعات فنی’ هر "
+"محصول درج شده است. در صورت نیاز به اطلاعات بیشتر، با کارشناسان فنی ما تماس "
+"بگیرید."
 
 #: templates/faq.html:90
 msgid "What are your shipping methods?"
@@ -652,7 +833,9 @@ msgid ""
 "We use various methods such as road, sea and rail transportation. The "
 "transportation method is determined according to your needs and the type of "
 "product."
-msgstr "ما از روش‌های مختلفی مانند حمل جاده‌ای، دریایی و ریلی استفاده می‌کنیم. روش حمل و نقل با توجه به نیاز شما و نوع محصول تعیین می‌شود."
+msgstr ""
+"ما از روش‌های مختلفی مانند حمل جاده‌ای، دریایی و ریلی استفاده می‌کنیم. روش حمل "
+"و نقل با توجه به نیاز شما و نوع محصول تعیین می‌شود."
 
 #: templates/faq.html:100
 msgid "Do your products have a warranty?"
@@ -664,7 +847,10 @@ msgid ""
 "specifications and if they do not meet the stated specifications, they can "
 "be returned or exchanged. For food products, returns are only possible if "
 "there is a problem with packaging or quality."
-msgstr "محصولات پتروشیمی و پالایشگاهی بر اساس مشخصات فنی ارائه می‌شوند و در صورت مغایرت با مشخصات اعلام شده، امکان بازگشت یا تعویض وجود دارد. برای محصولات غذایی، بازگشت تنها در صورت وجود مشکل در بسته‌بندی یا کیفیت امکان‌پذیر است."
+msgstr ""
+"محصولات پتروشیمی و پالایشگاهی بر اساس مشخصات فنی ارائه می‌شوند و در صورت "
+"مغایرت با مشخصات اعلام شده، امکان بازگشت یا تعویض وجود دارد. برای محصولات "
+"غذایی، بازگشت تنها در صورت وجود مشکل در بسته‌بندی یا کیفیت امکان‌پذیر است."
 
 #: templates/faq.html:109
 msgid "How can I become your sales representative?"
@@ -674,7 +860,9 @@ msgstr "چگونه می‌توانم نماینده فروش شما شوم؟"
 msgid ""
 "To cooperate and receive representation, please send your resume to the "
 "company's email. Our experts will contact you as soon as possible."
-msgstr "برای همکاری و دریافت نمایندگی، لطفاً رزومه خود را به ایمیل شرکت ارسال کنید. کارشناسان ما در اسرع وقت با شما تماس خواهند گرفت."
+msgstr ""
+"برای همکاری و دریافت نمایندگی، لطفاً رزومه خود را به ایمیل شرکت ارسال کنید. "
+"کارشناسان ما در اسرع وقت با شما تماس خواهند گرفت."
 
 #: templates/faq.html:118
 msgid "How can I contact support?"
@@ -684,7 +872,9 @@ msgstr "چگونه می‌توانم با پشتیبانی تماس بگیرم؟
 msgid ""
 "You can contact us via phone number, email, or contact form on the site. "
 "Contact information is listed in the \"Contact Us\" section."
-msgstr "شما می‌توانید از طریق شماره تلفن، ایمیل یا فرم تماس در سایت با ما ارتباط برقرار کنید. اطلاعات تماس در بخش’تماس با ما‘ درج شده است."
+msgstr ""
+"شما می‌توانید از طریق شماره تلفن، ایمیل یا فرم تماس در سایت با ما ارتباط "
+"برقرار کنید. اطلاعات تماس در بخش’تماس با ما‘ درج شده است."
 
 #: templates/faq.html:130
 msgid "Ask Your Questions"
@@ -1159,19 +1349,38 @@ msgstr ""
 msgid "Global trade"
 msgstr "تجارت جهانی"
 
-#: templates/index.html:2046
+#: templates/index.html:348
+msgid "Agriculture products"
+msgstr "محصولات کشاورزی"
+
+#: templates/index.html:369 templates/services.html:112
+#: templates/support.html:74
+msgid "Support"
+msgstr "پشتیبانی"
+
+#: templates/index.html:370 templates/services.html:113
+#: templates/support.html:78
+msgid ""
+"We understand that making smart and successful decisions on any project "
+"requires accurate information and professional support. That's why we have "
+"assembled a team of experienced and professional professionals to be with "
+"you at every stage of the collaboration. Our goal is to provide services "
+"that exceed your expectations and create a different and reliable experience."
+msgstr "ما درک می‌کنیم که تصمیم‌گیری‌های هوشمندانه و موفق در هر پروژه‌ای، به اطلاعات دقیق و پشتیبانی حرفه‌ای نیاز دارد. به همین دلیل، تیمی از متخصصان مجرب و حرفه‌ای را گرد هم آورده‌ایم تا در هر مرحله از همکاری، در کنار شما باشیم. هدف ما، ارائه خدماتی فراتر از انتظارات شما و ایجاد تجربه‌ای متفاوت و مطمئن است"
+
+#: templates/index.html:2044
 msgid "Newsletter Signup"
 msgstr "ثبت نام در خبرنامه"
 
-#: templates/index.html:2047
+#: templates/index.html:2045
 msgid "We send you latest news couple a month ( No Spam)."
 msgstr "ما ماهانه آخرین اخبار را برای شما ارسال می کنیم (بدون هرزنامه)."
 
-#: templates/index.html:2066
+#: templates/index.html:2064
 msgid "Your Email *"
 msgstr "ایمیل شما *"
 
-#: templates/index.html:2073
+#: templates/index.html:2071
 msgid "Subscribe"
 msgstr "مشترک شوید"
 
@@ -1349,6 +1558,162 @@ msgstr "تامین مستقیم سوخت دیزل در تخصص ماست."
 msgid "We can deliver jet fuel to your port."
 msgstr "ما میتوانیم سوخت جت را در بندر شما تحویل دهیم."
 
+#: templates/services-side.html:10 templates/support.html:5
+#: templates/support.html:14 templates/support.html:21
+#: templates/support.html:26
+msgid "support"
+msgstr "پشتیبانی"
+
 #: templates/services.html:17
 msgid "Our Services"
 msgstr "خدمات ما"
+
+#: templates/support.html:77
+msgid ""
+"Specialized support and free consultation; a professional team by your side"
+msgstr "پشتیبانی تخصصی و مشاوره رایگان؛ تیمی حرفه‌ای در کنار شما"
+
+#: templates/support.html:79
+msgid "Why is expert advice and support important?"
+msgstr "چرا مشاوره و پشتیبانی تخصصی اهمیت دارد؟"
+
+#: templates/support.html:80
+msgid ""
+"In today's complex world, making the right choices can make a big "
+"difference. We are here to help you make the best decisions and complete "
+"your projects with confidence and success by providing expert advice and "
+"full support."
+msgstr "در دنیای پیچیده امروز، انتخاب‌های درست می‌تواند تفاوت بزرگی ایجاد کند. ما اینجاییم تا با ارائه مشاوره تخصصی و پشتیبانی کامل، به شما کمک کنیم تا بهترین تصمیم‌ها را بگیرید و پروژه‌های خود را با اطمینان و موفقیت به سرانجام برسانید."
+
+#: templates/support.html:81
+msgid "Benefits of our consulting and support services"
+msgstr "مزایای خدمات مشاوره و پشتیبانی ما"
+
+#: templates/support.html:82
+msgid "Expert and experienced team:"
+msgstr " تیم متخصص و با تجربه:"
+
+#: templates/support.html:83
+msgid ""
+"Our team consists of experts with years of experience in various industries "
+"who provide you with their knowledge and skills. This team specializes in "
+"areas such as raw material supply, petrochemical industries, food, and "
+"refinery products."
+msgstr "تیم ما متشکل از کارشناسانی با سال‌ها تجربه در صنایع مختلف است که دانش و مهارت خود را در اختیار شما قرار می‌دهند. این تیم در زمینه‌هایی همچون تأمین مواد اولیه، صنایع پتروشیمی، مواد غذایی، و محصولات پالایشگاهی تخصص دارد"
+
+#: templates/support.html:84
+msgid "Free and professional advice:"
+msgstr " مشاوره رایگان و حرفه‌ای:"
+
+#: templates/support.html:85
+msgid ""
+"We are committed to providing free, targeted advice. Whether you are looking "
+"for basic information or need detailed guidance on product selection, our "
+"team is ready to guide you with a friendly and professional approach."
+msgstr "ما به ارائه مشاوره رایگان و هدفمند متعهدیم. چه به دنبال اطلاعات اولیه باشید، چه نیاز به راهنمایی دقیق در مورد انتخاب محصول، تیم ما آماده است تا با رویکردی دوستانه و حرفه‌ای شما را راهنمایی کند"
+
+#: templates/support.html:86
+msgid "Support at all stages:"
+msgstr " پشتیبانی در تمامی مراحل:"
+
+#: templates/support.html:87
+msgid ""
+"From the moment you place your order to the final delivery, our support team "
+"is always by your side. Whatever questions or challenges you may have, we "
+"are ready to answer and resolve them."
+msgstr "از لحظه ثبت سفارش تا تحویل نهایی، تیم پشتیبانی ما به‌صورت مستمر در کنار شماست. هر سوال یا چالشی که داشته باشید، ما آماده‌ایم تا پاسخ دهیم و مشکلات را برطرف کنیم."
+
+#: templates/support.html:88
+msgid "Complete transparency in communication:"
+msgstr " شفافیت کامل در ارتباطات:"
+
+#: templates/support.html:89
+msgid ""
+"We believe that transparent and honest communication is the foundation of a "
+"successful partnership. At every stage, we provide you with accurate and "
+"complete information about the process, schedule, and costs."
+msgstr "ما بر این باوریم که ارتباط شفاف و صادقانه اساس یک همکاری موفق است. در هر مرحله، اطلاعات دقیق و کاملی درباره روند کار، زمان‌بندی و هزینه‌ها در اختیار شما قرار می‌دهیم."
+
+#: templates/support.html:90
+msgid "Providing customized solutions:"
+msgstr "ارائه راهکارهای سفارشی:"
+
+#: templates/support.html:91
+msgid ""
+"Every project has its own unique needs. By carefully understanding your "
+"needs, we provide customized solutions tailored to your project's "
+"circumstances."
+msgstr "هر پروژه نیازهای خاص خود را دارد. ما با درک دقیق از نیازهای شما، راهکارهایی سفارشی و متناسب با شرایط پروژه‌تان ارائه می‌دهیم."
+
+#: templates/support.html:92
+msgid "Training and empowerment:"
+msgstr "آموزش و توانمندسازی:"
+
+#: templates/support.html:93
+msgid ""
+"In addition to consulting, we provide you with the information you need to "
+"make better, more informed decisions in the future. Our goal is to empower "
+"you for greater success."
+msgstr "علاوه بر مشاوره، ما اطلاعات لازم را در اختیار شما قرار می‌دهیم تا در آینده بتوانید تصمیمات بهتر و آگاهانه‌تری بگیرید. هدف ما توانمندسازی شما برای موفقیت‌های بیشتر است"
+
+#: templates/support.html:94
+msgid "A different experience of professional collaboration"
+msgstr "تجربه‌ای متفاوت از همکاری حرفه‌ای"
+
+#: templates/support.html:95
+msgid ""
+"Our team doesn't just provide services; we seek to build lasting and "
+"trusting relationships with our clients. The experience of working with us "
+"is a combination of expertise, commitment, and unparalleled support that "
+"guarantees your satisfaction and confidence."
+msgstr "تیم ما تنها به ارائه خدمات اکتفا نمی‌کند؛ ما به دنبال ایجاد یک رابطه پایدار و اعتمادآمیز با مشتریان خود هستیم. تجربه همکاری با ما، ترکیبی از تخصص، تعهد و پشتیبانی بی‌نظیر است که رضایت و اطمینان شما را تضمین می‌کند"
+
+#: templates/support.html:96
+msgid "Cooperation with us; a step towards success"
+msgstr "همکاری با ما؛ گامی به سوی موفقیت"
+
+#: templates/support.html:97
+msgid ""
+"We believe that every client deserves the best service. By choosing our "
+"consulting and support services, you can be sure that a team of experts and "
+"professionals is by your side, ready to pave the way for success."
+msgstr "ما باور داریم که هر مشتری شایسته بهترین خدمات است. با انتخاب خدمات مشاوره و پشتیبانی ما، مطمئن باشید که تیمی متخصص و حرفه‌ای در کنار شماست و آماده است تا مسیر موفقیت را هموار کند."
+
+#: templates/support.html:98
+msgid ""
+"For more information and a free consultation, contact us today. A brighter "
+"and more successful future awaits you!"
+msgstr "برای اطلاعات بیشتر و بهره‌مندی از مشاوره رایگان، همین امروز با ما تماس بگیرید. آینده‌ای روشن‌تر و موفق‌تر در انتظار شماست!"
+
+#: templates/support.html:107 templates/support.html:120
+#: templates/support.html:133
+msgid "support photo"
+msgstr "عکس پشتبانی"
+
+#: templates/support.html:110
+msgid ""
+"In today's complex world, making the right choices can make a big difference."
+msgstr "در دنیای پیچیده امروز، انتخاب‌های درست می‌تواند تفاوت بزرگی ایجاد کند."
+
+#: templates/support.html:111
+msgid "We will help you by providing expert advice and full support."
+msgstr "ما با ارائه مشاوره تخصصی و پشتیبانی کامل، به شما کمک کنیم."
+
+#: templates/support.html:123
+msgid "You can entrust your projects to us with peace of mind."
+msgstr "شما می توانید با آسودگی خاطر، پروژه‌های خود را به ما بس‍‍پارید."
+
+#: templates/support.html:124
+msgid ""
+"Our team consists of experts with years of experience in various industries."
+msgstr "تیم ما متشکل از کارشناسانی با سال‌ها تجربه در صنایع مختلف است."
+
+#: templates/support.html:136
+msgid ""
+"We can provide you with specialized support in the fields of petrochemicals, "
+"refining and food."
+msgstr "ما می توانیم در زمینه مواد پتروشیمی، پالایشگاهی و مواد غذایی به شما پشتیبانی تخصصی دهیم."
+
+#: templates/support.html:137
+msgid "We are committed to providing free and targeted advice."
+msgstr "ما به ارائه مشاوره رایگان و هدفمند متعهدیم."

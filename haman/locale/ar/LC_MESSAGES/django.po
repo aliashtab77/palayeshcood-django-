@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-05 02:16+0330\n"
+"POT-Creation-Date: 2025-02-16 05:47+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,9 +39,10 @@ msgstr "بريد إلكتروني"
 msgid "message"
 msgstr "رسالة"
 
-#: haman/models.py:10 templates/Petrochemicals.html:164 templates/faq.html:153
+#: haman/models.py:10 templates/Petrochemicals.html:164
+#: templates/agriculture.html:162 templates/faq.html:153
 #: templates/food.html:164 templates/global.html:162
-#: templates/refinery.html:161
+#: templates/refinery.html:161 templates/support.html:162
 msgid "subject"
 msgstr "موضوع"
 
@@ -77,15 +78,15 @@ msgstr "الاسم مطلوب"
 msgid "email is required"
 msgstr "البريد الإلكتروني مطلوب"
 
-#: palayeshcood/settings.py:117
+#: palayeshcood/settings.py:121
 msgid "Persian"
 msgstr "الفارسية"
 
-#: palayeshcood/settings.py:118
+#: palayeshcood/settings.py:122
 msgid "English"
 msgstr "إنجليزي"
 
-#: palayeshcood/settings.py:119
+#: palayeshcood/settings.py:123
 msgid "Arabic"
 msgstr "عربي"
 
@@ -100,24 +101,26 @@ msgid "petrochemical products"
 msgstr "المنتجات البتروكيماوية"
 
 #: templates/Petrochemicals.html:25 templates/about-us.html:34
-#: templates/base.html:88 templates/base.html:174 templates/base.html:353
-#: templates/contact.html:23 templates/faq.html:20 templates/food.html:24
-#: templates/global.html:25 templates/index.html:7 templates/our-team.html:7
-#: templates/our-team.html:32 templates/refinery.html:25
-#: templates/services.html:27
+#: templates/agriculture.html:24 templates/base.html:88 templates/base.html:174
+#: templates/base.html:353 templates/contact.html:23 templates/faq.html:20
+#: templates/food.html:24 templates/global.html:25 templates/index.html:7
+#: templates/our-team.html:7 templates/our-team.html:32
+#: templates/refinery.html:25 templates/services.html:27
+#: templates/support.html:24
 msgid "Home"
 msgstr "بيت"
 
-#: templates/Petrochemicals.html:26 templates/base.html:89
-#: templates/base.html:175 templates/base.html:355 templates/food.html:25
-#: templates/global.html:26 templates/refinery.html:26
+#: templates/Petrochemicals.html:26 templates/agriculture.html:25
+#: templates/base.html:89 templates/base.html:175 templates/base.html:355
+#: templates/food.html:25 templates/global.html:26 templates/refinery.html:26
 #: templates/services.html:5 templates/services.html:24
-#: templates/services.html:28
+#: templates/services.html:28 templates/support.html:25
 msgid "Services"
 msgstr "خدمات"
 
-#: templates/Petrochemicals.html:48 templates/food.html:47
-#: templates/global.html:48 templates/refinery.html:48
+#: templates/Petrochemicals.html:48 templates/agriculture.html:47
+#: templates/food.html:47 templates/global.html:48 templates/refinery.html:48
+#: templates/support.html:47
 msgid "Our Brochures"
 msgstr "كتيباتنا"
 
@@ -287,38 +290,41 @@ msgstr "يمكننا توصيل المواد الخام البلاستيكية �
 msgid "We have expert support to answer you."
 msgstr "لدينا دعم الخبراء للرد عليك."
 
-#: templates/Petrochemicals.html:152 templates/food.html:152
-#: templates/global.html:150 templates/refinery.html:148
+#: templates/Petrochemicals.html:152 templates/agriculture.html:150
+#: templates/food.html:152 templates/global.html:150
+#: templates/refinery.html:148 templates/support.html:150
 msgid "Get a free consultation"
 msgstr "احصل على استشارة مجانية"
 
-#: templates/Petrochemicals.html:168 templates/contact.html:56
-#: templates/faq.html:141 templates/food.html:168 templates/global.html:166
-#: templates/index.html:2059 templates/refinery.html:165
+#: templates/Petrochemicals.html:168 templates/agriculture.html:166
+#: templates/contact.html:56 templates/faq.html:141 templates/food.html:168
+#: templates/global.html:166 templates/index.html:2057
+#: templates/refinery.html:165 templates/support.html:166
 msgid "Your Name *"
 msgstr "اسمك *"
 
-#: templates/Petrochemicals.html:172 templates/contact.html:60
-#: templates/food.html:172 templates/global.html:170
-#: templates/refinery.html:169
+#: templates/Petrochemicals.html:172 templates/agriculture.html:170
+#: templates/contact.html:60 templates/food.html:172 templates/global.html:170
+#: templates/refinery.html:169 templates/support.html:170
 msgid "Your Mail *"
 msgstr "بريدك الإلكتروني *"
 
-#: templates/Petrochemicals.html:176 templates/contact.html:64
-#: templates/food.html:176 templates/global.html:174
-#: templates/refinery.html:173
+#: templates/Petrochemicals.html:176 templates/agriculture.html:174
+#: templates/contact.html:64 templates/food.html:176 templates/global.html:174
+#: templates/refinery.html:173 templates/support.html:174
 msgid "Phone Number"
 msgstr "رقم التليفون"
 
-#: templates/Petrochemicals.html:180 templates/base.html:329
-#: templates/contact.html:68 templates/food.html:180 templates/global.html:178
-#: templates/refinery.html:177
+#: templates/Petrochemicals.html:180 templates/agriculture.html:178
+#: templates/base.html:329 templates/contact.html:68 templates/food.html:180
+#: templates/global.html:178 templates/refinery.html:177
+#: templates/support.html:178
 msgid "Message *"
 msgstr "رسالة *"
 
-#: templates/Petrochemicals.html:183 templates/contact.html:71
-#: templates/food.html:183 templates/global.html:181
-#: templates/refinery.html:180
+#: templates/Petrochemicals.html:183 templates/agriculture.html:181
+#: templates/contact.html:71 templates/food.html:183 templates/global.html:181
+#: templates/refinery.html:180 templates/support.html:181
 msgid "Get Quote"
 msgstr "الحصول على الاقتباس"
 
@@ -460,6 +466,159 @@ msgstr ""
 "الجودة المضمونة والأسعار العادلة والالتزام بإرضاء العملاء هي أسس تعاوننا "
 "المستدام."
 
+#: templates/agriculture.html:5 templates/agriculture.html:14
+#: templates/agriculture.html:21 templates/agriculture.html:26
+#: templates/agriculture.html:74 templates/services-side.html:9
+#: templates/services.html:100
+msgid "agriculture products"
+msgstr "المنتجات الزراعية"
+
+#: templates/agriculture.html:77
+msgid "Direct supply of agricultural products with the best quality and price"
+msgstr "الإمداد المباشر للمنتجات الزراعية بأفضل جودة وسعر"
+
+#: templates/agriculture.html:78
+msgid "Quality assurance, reasonable price and fast delivery"
+msgstr "ضمان الجودة وسعر معقول وتسليم سريع"
+
+#: templates/agriculture.html:79 templates/index.html:349
+#: templates/services.html:101
+msgid ""
+"In the world of agriculture, the use of high-quality and reliable "
+"fertilizers is one of the most important factors in increasing the yield of "
+"farmland and gardens. With years of experience in the direct supply and "
+"distribution of agricultural fertilizers, we assure you that we will provide "
+"you with urea, sulfur, diammonium phosphate and other agricultural inputs "
+"without intermediaries, with guaranteed quality and at competitive prices."
+msgstr "في عالم الزراعة ، يعد استخدام الأسمدة عالية الجودة والموثوقة أحد أهم العوامل في زيادة محصول الأراضي الزراعية والحدائق. مع سنوات من الخبرة في الإمداد المباشر وتوزيع الأسمدة الزراعية ، نؤكد لكم أننا سنزودك باليوريا والكبريت وفوسفات ديامونيوم وغيرها من المدخلات الزراعية دون وسطاء ، مع جودة مضمونة وبأسعار تنافسية."
+
+#: templates/agriculture.html:80
+msgid "Direct supply from reliable sources"
+msgstr "العرض المباشر من مصادر موثوقة"
+
+#: templates/agriculture.html:81
+msgid ""
+"We source and deliver agricultural fertilizers directly from reputable "
+"domestic and international manufacturers and petrochemicals. This method not "
+"only reduces costs, but also ensures that you receive an original, high-"
+"quality, and standardized product."
+msgstr "نحن نحصل ونقدم الأسمدة الزراعية مباشرة من الشركات المصنعة المحلية والدولية ذات السمعة الطيبة والبتروكيماويات. لا تقلل هذه الطريقة التكاليف فحسب ، بل تضمن أيضًا أن تتلقى منتجًا أصليًا وعالي الجودة وموحد."
+
+#: templates/agriculture.html:82
+msgid "Guaranteed quality and international standards"
+msgstr "الجودة المضمونة والمعايير الدولية"
+
+#: templates/agriculture.html:83
+msgid ""
+"All our products have quality approvals and valid standards. The urea, "
+"sulfur and diammonium phosphate fertilizers we offer are of high purity, "
+"effective performance and fully comply with the needs of modern agriculture. "
+"These products improve the growth and yield of your final product by "
+"increasing soil productivity and providing the nutrients needed by plants."
+msgstr "جميع منتجاتنا لديها موافقات عالية الجودة ومعايير صالحة. الأسمدة اليوريا والكبريت والفوسفات المدمون التي نقدمها هي ذات نقاء عالية وأداء فعال وامتثال تام لاحتياجات الزراعة الحديثة. تعمل هذه المنتجات على تحسين نمو المنتج النهائي والعائد عن طريق زيادة إنتاجية التربة وتوفير العناصر الغذائية التي تحتاجها النباتات."
+
+#: templates/agriculture.html:84
+msgid "Competitive prices and elimination of intermediaries"
+msgstr "الأسعار التنافسية والقضاء على الوسطاء"
+
+#: templates/agriculture.html:85
+msgid ""
+"By buying directly from us, you no longer need to pay extra fees to "
+"middlemen. We offer products at real and fair prices so you can get the most "
+"out of your investment in agriculture."
+msgstr "من خلال الشراء مباشرة منا ، لم تعد بحاجة إلى دفع رسوم إضافية للوسطاء. نحن نقدم منتجات بأسعار حقيقية وعادلة حتى تتمكن من الحصول على أقصى استثمار من استثمارك في الزراعة."
+
+#: templates/agriculture.html:86
+msgid "Fast and secure shipping nationwide"
+msgstr "الشحن السريع والآمن على مستوى البلاد"
+
+#: templates/agriculture.html:87
+msgid ""
+"We are aware of the importance of timely delivery of agricultural inputs. "
+"For this reason, using a reliable transportation network and careful "
+"planning, we deliver the products to you in the shortest possible time and "
+"with safe packaging."
+msgstr "نحن ندرك أهمية تسليم المدخلات الزراعية في الوقت المناسب. لهذا السبب ، باستخدام شبكة نقل موثوقة والتخطيط الدقيق ، نقوم بتسليم المنتجات لك في أقصر وقت ممكن ومع عبوات آمنة."
+
+#: templates/agriculture.html:88
+msgid "Expert advice and ongoing support"
+msgstr "نصيحة الخبراء والدعم المستمر"
+
+#: templates/agriculture.html:89
+msgid ""
+"Agriculture is a dynamic and changing industry, and choosing the right crop "
+"has a direct impact on the yield and health of the soil and plants. Our "
+"expert team will help you make the best choice for your farmland by "
+"providing technical and scientific advice."
+msgstr "الزراعة هي صناعة ديناميكية ومتغيرة ، واختيار المحصول المناسب له تأثير مباشر على غلة وصحة التربة والنباتات. سيساعدك فريق الخبراء لدينا على اتخاذ الخيار الأفضل للأراضي الزراعية من خلال تقديم المشورة التقنية والعلمية."
+
+#: templates/agriculture.html:90
+msgid "Our products include:"
+msgstr "تشمل منتجاتنا:"
+
+#: templates/agriculture.html:92
+msgid "Urea fertilizer – rich in nitrogen to increase plant growth"
+msgstr "الأسمدة اليوريا - غنية بالنيتروجين لزيادة نمو النبات"
+
+#: templates/agriculture.html:93
+msgid "Sulfur – improves soil quality and meets plant nutritional needs"
+msgstr "الكبريت - يحسن جودة التربة ويلبي الاحتياجات الغذائية النباتية"
+
+#: templates/agriculture.html:94
+msgid ""
+"Diammonium Phosphate (DAP) – Excellent source of phosphorus and nitrogen for "
+"stronger crop growth"
+msgstr "فوسفات ديامونيوم (DAP) - مصدر ممتاز للفوسفور والنيتروجين لنمو أقوى للمحاصيل"
+
+#: templates/agriculture.html:96
+msgid "We are the reliable companion of farmers and producers!"
+msgstr "نحن رفيق موثوق للمزارعين والمنتجين!"
+
+#: templates/agriculture.html:97
+msgid ""
+"Our goal is to provide you with a safe and hassle-free agricultural product "
+"purchasing experience. If you are looking for a reliable, quality and "
+"professional supplier, contact us today and experience a different shopping "
+"experience."
+msgstr "هدفنا هو تزويدك بتجربة شراء منتجات زراعية آمنة وخالية من المتاعب. إذا كنت تبحث عن مورد موثوق وجودة ومهني ، فاتصل بنا اليوم وتجربة تجربة تسوق مختلفة."
+
+#: templates/agriculture.html:98
+msgid ""
+"We are always ready to respond and provide the best products for your "
+"success in agriculture!"
+msgstr "نحن دائمًا على استعداد للرد وتوفير أفضل المنتجات لنجاحك في الزراعة!"
+
+#: templates/agriculture.html:107 templates/agriculture.html:120
+#: templates/agriculture.html:133
+msgid "agriculture products photo"
+msgstr "صور المنتجات الزراعية"
+
+#: templates/agriculture.html:110
+msgid "A country's agricultural growth is directly related to its fertilizers."
+msgstr "يرتبط النمو الزراعي لبلد مباشرة بالأسمدة."
+
+#: templates/agriculture.html:111
+msgid "Our company guarantees the quality of its fertilizers."
+msgstr "تضمن شركتنا جودة الأسمدة."
+
+#: templates/agriculture.html:123
+msgid "Our specialty is supplying chemical fertilizers from petrochemicals."
+msgstr "تخصصنا هو تزويد الأسمدة الكيميائية من البتروكيماويات."
+
+#: templates/agriculture.html:124
+msgid "We can ship our products to you on FOB and CIF terms."
+msgstr "يمكننا شحن منتجاتنا لك على شروط FOB و CIF."
+
+#: templates/agriculture.html:136
+msgid ""
+"To protect the environment and soil, avoid excessive use of chemical "
+"fertilizers."
+msgstr "لحماية البيئة والتربة ، تجنب الاستخدام المفرط للأسمدة الكيميائية."
+
+#: templates/agriculture.html:137
+msgid "We are responsive to you with fast support."
+msgstr "نحن نستجيب لك بدعم سريع."
+
 #: templates/base.html:111 templates/base.html:199 templates/our-team.html:29
 #: templates/our-team.html:33
 msgid "Our Team"
@@ -505,9 +664,11 @@ msgid "Recent News"
 msgstr "الأخبار الأخيرة"
 
 #: templates/base.html:310 templates/index.html:266 templates/index.html:287
-#: templates/index.html:308 templates/index.html:329 templates/services.html:49
+#: templates/index.html:308 templates/index.html:329 templates/index.html:350
+#: templates/index.html:371 templates/services.html:49
 #: templates/services.html:64 templates/services.html:77
-#: templates/services.html:90
+#: templates/services.html:90 templates/services.html:102
+#: templates/services.html:114
 msgid "Read More"
 msgstr "اقرأ المزيد"
 
@@ -586,7 +747,10 @@ msgid ""
 "refinery products. At Palayeshcood, we work with the world's most reputable "
 "manufacturers to provide our customers with high quality products at "
 "reasonable prices."
-msgstr "تُعرف شركة بالایشکود باسم موزع منتجات المواد الكيميائية ومصفاة. في بالایشکود ، نعمل مع أكثر الشركات المصنعة في العالم لتزويد عملائنا بمنتجات عالية الجودة بأسعار معقولة."
+msgstr ""
+"تُعرف شركة بالایشکود باسم موزع منتجات المواد الكيميائية ومصفاة. في "
+"بالایشکود ، نعمل مع أكثر الشركات المصنعة في العالم لتزويد عملائنا بمنتجات "
+"عالية الجودة بأسعار معقولة."
 
 #: templates/faq.html:49
 msgid "What products do you offer?"
@@ -597,7 +761,10 @@ msgid ""
 "We operate in the field of selling petrochemicals (such as urea, "
 "polyethylene, polypropylene), refinery products (such as gasoline, diesel, "
 "jet fuel), and food products (such as sugar and tomato paste)."
-msgstr "نعمل في مجال بيع البتروكيماويات (مثل اليوريا ، البولي إيثيلين ، البولي بروبيلين) ، منتجات المصفاة (مثل البنزين ، الديزل ، وقود النفاث) ، والمنتجات الغذائية (مثل السكر والطماطم)."
+msgstr ""
+"نعمل في مجال بيع البتروكيماويات (مثل اليوريا ، البولي إيثيلين ، البولي "
+"بروبيلين) ، منتجات المصفاة (مثل البنزين ، الديزل ، وقود النفاث) ، والمنتجات "
+"الغذائية (مثل السكر والطماطم)."
 
 #: templates/faq.html:59
 msgid "How to order at PKK?"
@@ -611,7 +778,11 @@ msgid ""
 "possible to send a sample after receiving the shipping fee. The shipping "
 "steps will be followed up carefully and step by step by the responsible "
 "expert."
-msgstr "1- يمكنك تقديم طلبك عن طريق الاتصال أو إرسال بريد إلكتروني أو ما يتجه إلى الشركة. بعد استفسارك ، سيزودك خبراؤنا بالمعلومات المطلوبة وأيضًا إرسال تحليل المنتج لك. إذا تم طلبها ، فمن الممكن إرسال عينة بعد تلقي رسوم الشحن. سيتم متابعة خطوات الشحن بعناية وخطوة بخطوة من قبل الخبير المسؤول."
+msgstr ""
+"1- يمكنك تقديم طلبك عن طريق الاتصال أو إرسال بريد إلكتروني أو ما يتجه إلى "
+"الشركة. بعد استفسارك ، سيزودك خبراؤنا بالمعلومات المطلوبة وأيضًا إرسال تحليل "
+"المنتج لك. إذا تم طلبها ، فمن الممكن إرسال عينة بعد تلقي رسوم الشحن. سيتم "
+"متابعة خطوات الشحن بعناية وخطوة بخطوة من قبل الخبير المسؤول."
 
 #: templates/faq.html:63
 msgid ""
@@ -624,13 +795,19 @@ msgstr ""
 
 #: templates/faq.html:70
 msgid "How can I find out the price of products?"
-msgstr "2- تسجيل أمر شخصي من خلال عقد اجتماع في مكتبنا الرئيسي ، يمكنك التفاوض وجهاً لوجه مع المدير التجاري والمدير التنفيذي للشركة ، وسيتابع الخبير المسؤول نتائج الاجتماع حتى تكون النتيجة المرجوة تحققت. عادة ، تتطلب منتجات التصدير فحصًا دقيقًا ، والإجراء الذي يتم تنسيقه في الاجتماع."
+msgstr ""
+"2- تسجيل أمر شخصي من خلال عقد اجتماع في مكتبنا الرئيسي ، يمكنك التفاوض وجهاً "
+"لوجه مع المدير التجاري والمدير التنفيذي للشركة ، وسيتابع الخبير المسؤول "
+"نتائج الاجتماع حتى تكون النتيجة المرجوة تحققت. عادة ، تتطلب منتجات التصدير "
+"فحصًا دقيقًا ، والإجراء الذي يتم تنسيقه في الاجتماع."
 
 #: templates/faq.html:73
 msgid ""
 "Product prices may change due to market fluctuations. To get the latest "
 "prices, you can contact our sales department via phone number or email."
-msgstr "قد تتغير أسعار المنتجات بسبب تقلبات السوق. للحصول على أحدث الأسعار ، يمكنك الاتصال بقسم المبيعات لدينا عبر رقم الهاتف أو البريد الإلكتروني."
+msgstr ""
+"قد تتغير أسعار المنتجات بسبب تقلبات السوق. للحصول على أحدث الأسعار ، يمكنك "
+"الاتصال بقسم المبيعات لدينا عبر رقم الهاتف أو البريد الإلكتروني."
 
 #: templates/faq.html:80
 msgid "What are the technical specifications of your petrochemical materials?"
@@ -641,7 +818,10 @@ msgid ""
 "The technical specifications of each product (such as grade, density, "
 "melting point) are listed in the \"Technical Information\" section of each "
 "product. If you need more information, please contact our technical experts."
-msgstr "يتم إدراج المواصفات الفنية لكل منتج (مثل الدرجة والكثافة ونقطة الانصهار) في قسم'المعلومات الفنية' لكل منتج. إذا كنت بحاجة إلى مزيد من المعلومات، يرجى الاتصال بخبرائنا الفنيين"
+msgstr ""
+"يتم إدراج المواصفات الفنية لكل منتج (مثل الدرجة والكثافة ونقطة الانصهار) في "
+"قسم'المعلومات الفنية' لكل منتج. إذا كنت بحاجة إلى مزيد من المعلومات، يرجى "
+"الاتصال بخبرائنا الفنيين"
 
 #: templates/faq.html:90
 msgid "What are your shipping methods?"
@@ -652,7 +832,9 @@ msgid ""
 "We use various methods such as road, sea and rail transportation. The "
 "transportation method is determined according to your needs and the type of "
 "product."
-msgstr "نستخدم طرق مختلفة مثل النقل على الطرق والبحر والسكك الحديدية. يتم تحديد طريقة النقل وفقًا لاحتياجاتك ونوع المنتج."
+msgstr ""
+"نستخدم طرق مختلفة مثل النقل على الطرق والبحر والسكك الحديدية. يتم تحديد "
+"طريقة النقل وفقًا لاحتياجاتك ونوع المنتج."
 
 #: templates/faq.html:100
 msgid "Do your products have a warranty?"
@@ -664,7 +846,10 @@ msgid ""
 "specifications and if they do not meet the stated specifications, they can "
 "be returned or exchanged. For food products, returns are only possible if "
 "there is a problem with packaging or quality."
-msgstr "يتم توفير منتجات البتروكيماويات ومصفاة المصفاة بناءً على المواصفات الفنية ، وإذا لم تفي بالمواصفات المعلنة ، فيمكن إرجاعها أو تبادلها. بالنسبة للمنتجات الغذائية ، تكون العوائد ممكنة فقط إذا كانت هناك مشكلة في التغليف أو الجودة"
+msgstr ""
+"يتم توفير منتجات البتروكيماويات ومصفاة المصفاة بناءً على المواصفات الفنية ، "
+"وإذا لم تفي بالمواصفات المعلنة ، فيمكن إرجاعها أو تبادلها. بالنسبة للمنتجات "
+"الغذائية ، تكون العوائد ممكنة فقط إذا كانت هناك مشكلة في التغليف أو الجودة"
 
 #: templates/faq.html:109
 msgid "How can I become your sales representative?"
@@ -674,7 +859,9 @@ msgstr "كيف يمكنني أن أصبح ممثل المبيعات الخاص �
 msgid ""
 "To cooperate and receive representation, please send your resume to the "
 "company's email. Our experts will contact you as soon as possible."
-msgstr "للتعاون وتلقي التمثيل ، يرجى إرسال سيرتك الذاتية إلى البريد الإلكتروني للشركة. سيتصل بك خبرائنا في أقرب وقت ممكن"
+msgstr ""
+"للتعاون وتلقي التمثيل ، يرجى إرسال سيرتك الذاتية إلى البريد الإلكتروني "
+"للشركة. سيتصل بك خبرائنا في أقرب وقت ممكن"
 
 #: templates/faq.html:118
 msgid "How can I contact support?"
@@ -684,7 +871,9 @@ msgstr "كيف يمكنني الاتصال بالدعم؟"
 msgid ""
 "You can contact us via phone number, email, or contact form on the site. "
 "Contact information is listed in the \"Contact Us\" section."
-msgstr "يمكنك التواصل معنا عبر رقم الهاتف أو البريد الإلكتروني أو نموذج الاتصال الموجود على الموقع. معلومات الاتصال مدرجة في قسم'اتصل بنا'."
+msgstr ""
+"يمكنك التواصل معنا عبر رقم الهاتف أو البريد الإلكتروني أو نموذج الاتصال "
+"الموجود على الموقع. معلومات الاتصال مدرجة في قسم'اتصل بنا'."
 
 #: templates/faq.html:130
 msgid "Ask Your Questions"
@@ -1158,19 +1347,38 @@ msgstr ""
 msgid "Global trade"
 msgstr "التجارة العالمية"
 
-#: templates/index.html:2046
+#: templates/index.html:348
+msgid "Agriculture products"
+msgstr "المنتجات الزراعية"
+
+#: templates/index.html:369 templates/services.html:112
+#: templates/support.html:74
+msgid "Support"
+msgstr "يدعم"
+
+#: templates/index.html:370 templates/services.html:113
+#: templates/support.html:78
+msgid ""
+"We understand that making smart and successful decisions on any project "
+"requires accurate information and professional support. That's why we have "
+"assembled a team of experienced and professional professionals to be with "
+"you at every stage of the collaboration. Our goal is to provide services "
+"that exceed your expectations and create a different and reliable experience."
+msgstr "نحن نتفهم أن اتخاذ القرارات الذكية والناجحة في أي مشروع يتطلب معلومات دقيقة ودعم مهني. لهذا السبب قمنا بتجميع فريق من المهنيين ذوي الخبرة والمحترفين ليكون معك في كل مرحلة من مراحل التعاون. هدفنا هو توفير الخدمات التي تتجاوز توقعاتك وخلق تجربة مختلفة وموثوقة."
+
+#: templates/index.html:2044
 msgid "Newsletter Signup"
 msgstr "الاشتراك في النشرة الإخبارية"
 
-#: templates/index.html:2047
+#: templates/index.html:2045
 msgid "We send you latest news couple a month ( No Spam)."
 msgstr "نرسل لك آخر الأخبار زوجين شهريا (بدون البريد العشوائي)."
 
-#: templates/index.html:2066
+#: templates/index.html:2064
 msgid "Your Email *"
 msgstr "بريدك الإلكتروني *"
 
-#: templates/index.html:2073
+#: templates/index.html:2071
 msgid "Subscribe"
 msgstr "يشترك"
 
@@ -1346,6 +1554,162 @@ msgstr "التوريد المباشر لوقود الديزل هو تخصصنا.
 msgid "We can deliver jet fuel to your port."
 msgstr "يمكننا توصيل وقود الطائرات إلى الميناء الخاص بك."
 
+#: templates/services-side.html:10 templates/support.html:5
+#: templates/support.html:14 templates/support.html:21
+#: templates/support.html:26
+msgid "support"
+msgstr "يدعم"
+
 #: templates/services.html:17
 msgid "Our Services"
 msgstr "خدماتنا"
+
+#: templates/support.html:77
+msgid ""
+"Specialized support and free consultation; a professional team by your side"
+msgstr "الدعم المتخصص والتشاور المجاني ؛ فريق محترف بجانبك"
+
+#: templates/support.html:79
+msgid "Why is expert advice and support important?"
+msgstr "لماذا تعتبر نصيحة الخبراء ودعمها مهمة؟"
+
+#: templates/support.html:80
+msgid ""
+"In today's complex world, making the right choices can make a big "
+"difference. We are here to help you make the best decisions and complete "
+"your projects with confidence and success by providing expert advice and "
+"full support."
+msgstr "في عالم اليوم المعقد ، يمكن أن تحدث الخيارات الصحيحة فرقًا كبيرًا. نحن هنا لمساعدتك في اتخاذ أفضل القرارات وإكمال مشاريعك بثقة ونجاح من خلال تقديم مشورة الخبراء والدعم الكامل."
+
+#: templates/support.html:81
+msgid "Benefits of our consulting and support services"
+msgstr "فوائد خدمات الاستشارات والدعم لدينا"
+
+#: templates/support.html:82
+msgid "Expert and experienced team:"
+msgstr "خبير وفريق ذو خبرة:"
+
+#: templates/support.html:83
+msgid ""
+"Our team consists of experts with years of experience in various industries "
+"who provide you with their knowledge and skills. This team specializes in "
+"areas such as raw material supply, petrochemical industries, food, and "
+"refinery products."
+msgstr "يتكون فريقنا من خبراء يتمتعون بسنوات من الخبرة في مختلف الصناعات التي تزودك بمعرفتهم ومهاراتهم. هذا الفريق متخصص في مجالات مثل إمدادات المواد الخام والصناعات البتروكيماوية والغذاء ومصفاة المنتجات."
+
+#: templates/support.html:84
+msgid "Free and professional advice:"
+msgstr "نصيحة مجانية ومهنية:"
+
+#: templates/support.html:85
+msgid ""
+"We are committed to providing free, targeted advice. Whether you are looking "
+"for basic information or need detailed guidance on product selection, our "
+"team is ready to guide you with a friendly and professional approach."
+msgstr "نحن ملتزمون بتقديم نصيحة مجانية مستهدفة. سواء كنت تبحث عن معلومات أساسية أو تحتاج إلى إرشادات مفصلة حول اختيار المنتج ، فإن فريقنا مستعد لإرشادك بنهج ودود ومهني."
+
+#: templates/support.html:86
+msgid "Support at all stages:"
+msgstr "الدعم في جميع المراحل:"
+
+#: templates/support.html:87
+msgid ""
+"From the moment you place your order to the final delivery, our support team "
+"is always by your side. Whatever questions or challenges you may have, we "
+"are ready to answer and resolve them."
+msgstr "من اللحظة التي تقدم فيها طلبك إلى التسليم النهائي ، يكون فريق الدعم الخاص بنا دائمًا بجانبك. مهما كانت الأسئلة أو التحديات التي قد تواجهها ، فنحن على استعداد للإجابة عليها وحلها."
+
+#: templates/support.html:88
+msgid "Complete transparency in communication:"
+msgstr "الشفافية الكاملة في التواصل:"
+
+#: templates/support.html:89
+msgid ""
+"We believe that transparent and honest communication is the foundation of a "
+"successful partnership. At every stage, we provide you with accurate and "
+"complete information about the process, schedule, and costs."
+msgstr "نعتقد أن التواصل الشفاف والصادق هو أساس شراكة ناجحة. في كل مرحلة ، نوفر لك معلومات دقيقة وكاملة حول العملية والجدول الزمني والتكاليف."
+
+#: templates/support.html:90
+msgid "Providing customized solutions:"
+msgstr "توفير حلول مخصصة:"
+
+#: templates/support.html:91
+msgid ""
+"Every project has its own unique needs. By carefully understanding your "
+"needs, we provide customized solutions tailored to your project's "
+"circumstances."
+msgstr "كل مشروع له احتياجاته الفريدة. من خلال فهم احتياجاتك بعناية ، فإننا نقدم حلولًا مخصصة مصممة لظروف مشروعك."
+
+#: templates/support.html:92
+msgid "Training and empowerment:"
+msgstr "التدريب والتمكين:"
+
+#: templates/support.html:93
+msgid ""
+"In addition to consulting, we provide you with the information you need to "
+"make better, more informed decisions in the future. Our goal is to empower "
+"you for greater success."
+msgstr "بالإضافة إلى الاستشارات ، فإننا نوفر لك المعلومات التي تحتاجها لاتخاذ قرارات أفضل وأكثر استنارة في المستقبل. هدفنا هو تمكينك من أجل نجاح أكبر."
+
+#: templates/support.html:94
+msgid "A different experience of professional collaboration"
+msgstr "تجربة مختلفة في التعاون المهني"
+
+#: templates/support.html:95
+msgid ""
+"Our team doesn't just provide services; we seek to build lasting and "
+"trusting relationships with our clients. The experience of working with us "
+"is a combination of expertise, commitment, and unparalleled support that "
+"guarantees your satisfaction and confidence."
+msgstr "فريقنا لا يقدم الخدمات فقط ؛ نسعى إلى بناء علاقات دائمة وثقة مع عملائنا. إن تجربة العمل معنا هي مزيج من الخبرة والالتزام والدعم الذي لا مثيل له يضمن رضاك وثقتك."
+
+#: templates/support.html:96
+msgid "Cooperation with us; a step towards success"
+msgstr "التعاون معنا ؛ خطوة نحو النجاح"
+
+#: templates/support.html:97
+msgid ""
+"We believe that every client deserves the best service. By choosing our "
+"consulting and support services, you can be sure that a team of experts and "
+"professionals is by your side, ready to pave the way for success."
+msgstr "نعتقد أن كل عميل يستحق أفضل خدمة. من خلال اختيار خدمات الاستشارات والدعم لدينا ، يمكنك التأكد من أن فريقًا من الخبراء والمهنيين هو بجانبك ، على استعداد لتمهيد الطريق للنجاح."
+
+#: templates/support.html:98
+msgid ""
+"For more information and a free consultation, contact us today. A brighter "
+"and more successful future awaits you!"
+msgstr "لمزيد من المعلومات والتشاور المجاني ، اتصل بنا اليوم. مستقبل أكثر إشراقًا وأكثر نجاحًا في انتظارك!"
+
+#: templates/support.html:107 templates/support.html:120
+#: templates/support.html:133
+msgid "support photo"
+msgstr "صورة دعم"
+
+#: templates/support.html:110
+msgid ""
+"In today's complex world, making the right choices can make a big difference."
+msgstr "في عالم اليوم المعقد ، يمكن أن تحدث الخيارات الصحيحة فرقًا كبيرًا."
+
+#: templates/support.html:111
+msgid "We will help you by providing expert advice and full support."
+msgstr "سنساعدك من خلال تقديم مشورة الخبراء والدعم الكامل."
+
+#: templates/support.html:123
+msgid "You can entrust your projects to us with peace of mind."
+msgstr "يمكنك تكليف مشاريعك لنا براحة البال."
+
+#: templates/support.html:124
+msgid ""
+"Our team consists of experts with years of experience in various industries."
+msgstr "يتكون فريقنا من خبراء لديهم سنوات من الخبرة في مختلف الصناعات."
+
+#: templates/support.html:136
+msgid ""
+"We can provide you with specialized support in the fields of petrochemicals, "
+"refining and food."
+msgstr "يمكننا تزويدك بدعم متخصص في مجالات البتروكيماويات والتكرير والطعام."
+
+#: templates/support.html:137
+msgid "We are committed to providing free and targeted advice."
+msgstr "نحن ملتزمون بتقديم نصيحة مجانية ومستهدفة."
