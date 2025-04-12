@@ -164,7 +164,7 @@
         </div>
     </section>
 
-    {% comment %}
+
     <!--welcome-section-->
     <section class="welcome-section">
     	<div class="auto-container">
@@ -173,22 +173,16 @@
             	<div class="col-md-6 col-sm-12 col-xs-12 welcome-column">
                 	<!--inner-content-->
                 	<div class="inner-content wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                    	<h2>Welcome to Decorators</h2>
-                        <h3>We Have The Right Products to Fit Your Needs and Budget <span>Purchase - Decorators.</span></h3>
-
-                        <div class="text">Explain to you how all this mistaken idea of denouncing ut pleasures work
-                        praising pain was born and  will give you can complete design account sed
-                        the system, and expound the actual teachngs interiors of the great design
-                        explorer of the truth, the master-builders design of human happiness one
-                        seds rejects, dislikes, or avoids pleasures itself.</div>
+                    	<h2>{% translate 'Welcome to Palayeshcood' %}</h2>
+                        <div class="text">{% translate 'With over 15 years of experience in exporting chemicals, petrochemicals, agricultural fertilizers and sugar, Royan Kimia Soil Refining Company has a prominent position in domestic and international markets as a pioneer in the industry. The company meets global needs by emphasizing quality, innovation and customer satisfaction. Its expert team provides products of the highest quality using up-to-date technical knowledge and international standards. The company’s mission is to sustainably develop the agricultural and refining industries and create added value for customers. Its vision is to expand export markets and provide differentiated services to global business partners. With an extensive distribution network and a commitment to environmentally friendly products, the company provides a greener and more sustainable future for customers and the global community.' %}</div>
                         <figure class="signature">
-                        	<img src="images/icons/signature.png" alt="" />
+                        	<img src="{% static 'haman/images/icons/signature.png' %}" alt="" />
                         </figure>
 
                         <!--author-title-->
                         <div class="author-title">
-                        	<div class="author-info">William Shocks, <span>Founder</span></div>
-                            <div class="author-designation">Decorators.</div>
+                        	<div class="author-info">{% translate 'Haman Lesan, ' %}<span>{% translate 'Founder' %}</span></div>
+                            <div class="author-designation">{% translate 'Palayeshcood' %}</div>
                         </div>
                     </div>
                 </div>
@@ -202,9 +196,8 @@
                             <div class="icon-box">
                                 <span class="flaticon-avatar-1"></span>
                             </div>
-                            <h3>We are Professional</h3>
-                            <div class="category"><a href="#">Designers</a></div>
-                            <div class="text">How all this mistakens idea of denouncing pleasures and praising pain was born and I will give you a completed by account of the system, and expound.</div>
+                            <h3>{% translate 'Professional and expert team' %}</h3>
+                            <div class="text">{% translate 'Relying on a team of experts and professionals, along with comprehensive support, we provide the best solutions for your needs.' %}</div>
                         </div>
                     </div>
                     <!--service-block-one-->
@@ -214,9 +207,8 @@
                             <div class="icon-box">
                                 <span class="flaticon-correct"></span>
                             </div>
-                            <h3>We are Trusted</h3>
-                            <div class="category"><a href="#">Team Members</a></div>
-                            <div class="text">Idea of denouncing pleasure and praisings pain was born and I will give you a complete account of the system and expound the actual great explorer of the truth.</div>
+                            <h3>{% translate 'Competitive price' %}</h3>
+                            <div class="text">{% translate 'All products with the highest quality and competitive prices, meeting diverse industrial, agricultural and food needs.' %}</div>
                         </div>
                     </div>
                     <!--service-block-one-->
@@ -226,9 +218,8 @@
                             <div class="icon-box">
                                 <span class="flaticon-compass"></span>
                             </div>
-                            <h3>We are Expert</h3>
-                            <div class="category"><a href="#">Interiors</a></div>
-                            <div class="text">Denouncing pleasures and praisings pain was born work  will give you a complete seds account of the system, and actual master-builder of human happiness.</div>
+                            <h3>{% translate 'Easy shopping' %}</h3>
+                            <div class="text">{% translate 'Easy shopping, fast and reliable shipping worldwide, along with quality assurance and assurance of your satisfaction.' %}</div>
                         </div>
                     </div>
 
@@ -236,7 +227,7 @@
             </div>
         </div>
     </section>
-    {% endcomment %}
+
 
     <!--best-service-section-->
     <section class="best-service-section">

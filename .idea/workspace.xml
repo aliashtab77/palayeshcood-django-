@@ -4,26 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60508cdf-84c1-4e38-9f07-29198cb6ba53" name="Changes" comment="many things">
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/b posh3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/baner-k1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/baner-k2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/baner-k3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/k1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/k2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/k3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/posh1 (1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/posh1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/posh2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/services/posh3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="60508cdf-84c1-4e38-9f07-29198cb6ba53" name="Changes" comment="services translations all done">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/160d7e23-1e39-41cf-9262-d3f949a424c8.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/palayeshcood.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/palayeshcood.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/agriculture.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/agriculture.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/support.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/support.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,9 +31,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {}
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {}
+}</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;git@github.com:aliashtab77/palayeshcood-django-.git&quot;,
@@ -66,27 +51,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "django.template.preview.state": "SHOW_EDITOR",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/stark/Downloads/ml-llm-251.18673.49.zip",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.palayeshcood.executor&quot;: &quot;Profiler&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/stark/Desktop/palayeshcood&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="palayeshcood" type="Python.DjangoServer" factoryName="Django server">
       <module name="palayeshcood" />
@@ -95,9 +81,11 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="palayeshcood.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (palayeshcood)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -157,6 +145,7 @@
       <workItem from="1738694549373" duration="16239000" />
       <workItem from="1738717258066" duration="1962000" />
       <workItem from="1739656471366" duration="4468000" />
+      <workItem from="1739812012989" duration="286000" />
     </task>
     <task id="LOCAL-00001" summary="first haman see">
       <option name="closed" value="true" />
@@ -214,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738711109952</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="services translations all done">
+      <option name="closed" value="true" />
+      <created>1739677381583</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1739677381583</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +237,8 @@
     <MESSAGE value="about us page wass updated" />
     <MESSAGE value="a service wass adedd and many things more" />
     <MESSAGE value="many things" />
-    <option name="LAST_COMMIT_MESSAGE" value="many things" />
+    <MESSAGE value="services translations all done" />
+    <option name="LAST_COMMIT_MESSAGE" value="services translations all done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
