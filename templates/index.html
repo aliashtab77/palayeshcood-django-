@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 {% load static %}
-
-
+{% load humanize %}
+{% load custom_filters %}
 {% block title %}
 	{% translate 'Home' %}
 {% endblock title %}
@@ -11,9 +12,6 @@
 
 
 {% block body %}
-
-
-
 
     <!--Main Slider-->
     <section class="main-slider">
@@ -504,1318 +502,124 @@
             </div>
         </div>
     </section>
+    {% endcomment %}
     <!--tabbed-shop-section-->
-    <section class="tabbed-shop-section">
+    {% if probanner %}
+        <section class="tabbed-shop-section">
     	<div class="auto-container">
 
             <div class="sec-title-four">
-                <h2>From The Shop</h2>
+                <h2>{% translate 'From The Shop' %}</h2>
             </div>
 
             <!--Shop Tabs Box-->
             <div class="shop-tabs-box">
                 <!--Tab Buttons-->
-                <ul class="tab-buttons">
-                    <li data-tab="#tab-one" class="tab-btn active-btn">Furnitures</li>
-                    <li data-tab="#tab-two" class="tab-btn">Curtains</li>
-                    <li data-tab="#tab-three" class="tab-btn">Floor Mat</li>
-                    <li data-tab="#tab-four" class="tab-btn">Ceiling Lights</li>
-                    <li data-tab="#tab-five" class="tab-btn">Kitchen</li>
-                </ul>
+{#                <ul class="tab-buttons">#}
+{#                    <li data-tab="#tab-one" class="tab-btn active-btn">Furnitures</li>#}
+{#                    <li data-tab="#tab-two" class="tab-btn">Curtains</li>#}
+{#                    <li data-tab="#tab-three" class="tab-btn">Floor Mat</li>#}
+{#                    <li data-tab="#tab-four" class="tab-btn">Ceiling Lights</li>#}
+{#                    <li data-tab="#tab-five" class="tab-btn">Kitchen</li>#}
+{#                </ul>#}
 
                 <!--Tabs Content-->
                 <div class="tabs-content">
                     <!--Tab / Active Tab-->
                     <div class="shop-tab active-tab" id="tab-one">
                         <div class="tabbed-shop-carousel">
-
-                            <div class="default-shop-item">
+                            {% for p in probanner %}
+                                {% if LANGUAGE_CODE == "fa" %}
+                                   <div class="default-shop-item">
                                 <!--inner-box-->
-                                <div class="inner-box">
+                                    <div class="inner-box">
                                     <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-1.jpg" alt="" /></a>
-                                    </figure>
+                                        <figure class="image-box">
+                                            <a href="{% url 'shopdetail' slug=p.product.persian_slug %}"><img src="{{ p.product.avatar.url }}" alt="{{ p.product.title_persian }}" /></a>
+                                            {% if p.product.is_new %}
+                                            	<div class="item-sale-tag new">جدید</div>
+                                            {% endif %}
+                                        </figure>
+                                    <!--lower-content-->
+                                        <div class="lower-content">
+                                            <h3><a href="{% url 'shopdetail' slug=p.product.persian_slug %}">{{ p.product.title_persian }}</a></h3>
+                                            <div class="rating">
+                                                {% for _ in 0|range:p.product.star %}
+                                                    <span class="fa fa-star"></span>
+                                                {% endfor %}
+                                            </div>
+                                            <div class="price"><p style="display: inline">تومان</p> <p style="display: inline">{{ p.product.price_persian|floatformat:1|intcomma }}</p>{# <span>35.99</span>#}</div>
+                                            <div class="links-box">
+                                                <a class="cart-btn" href="#">Add to Cart</a>
+                                                <a class="zoom-btn lightbox-image" href="{{ p.product.avatar.url }}" title="{{ p.product.title_persian }}"><span class="fa fa-search-plus" title="{% translate 'Quick View' %}"></span></a>
+                                                <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                {% elif LANGUAGE_CODE == "en" %}
+                                    <div class="default-shop-item">
+                                        <!--inner-box-->
+                                        <div class="inner-box">
+                                            <!--image-box-->
+                                            <figure class="image-box">
+                                                <a href="{% url 'shopdetail' slug=p.product.english_slug %}"><img src="{{ p.product.avatar.url }}" alt="{{ p.product.title_english }}" /></a>
+                                                {% if p.product.is_new %}
+                                            	    <div class="item-sale-tag new">New</div>
+                                                {% endif %}
+                                            </figure>
+                                        <!--lower-content-->
+                                        <div class="lower-content">
+                                            <h3><a href="{% url 'shopdetail' slug=p.product.english_slug %}">{{ p.product.title_english }}</a></h3>
+                                            <div class="rating">
+                                                {% for _ in 0|range:p.product.star %}
+                                                    <span class="fa fa-star"></span>
+                                                {% endfor %}
+                                            </div>
+                                           <div class="price">$ {{ p.product.price_english|intcomma }} {# <span>$ 35.99</span>#}</div>
+                                            <div class="links-box">
+                                                <a class="cart-btn" href="#">Add to Cart</a>
+                                                <a class="zoom-btn lightbox-image" href="{{ p.product.avatar.url }}" title="{{ p.product.title_english }}"><span class="fa fa-search-plus" title="{% translate 'Quick View' %}"></span></a>
+                                                <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% else %}
+                                    <div class="default-shop-item">
+                                        <!--inner-box-->
+                                        <div class="inner-box">
+                                            <!--image-box-->
+                                            <figure class="image-box">
+                                                <a href="{% url 'shopdetail' slug=p.product.arabic_slug %}"><img src="{{ p.product.avatar.url }}" alt="{{ p.product.title_arabic }}" /></a>
+                                                {% if p.product.is_new %}
+                                                    <div class="item-sale-tag new">الجدید</div>
+                                                {% endif %}
+                                            </figure>
 
                                     <!--lower-content-->
                                     <div class="lower-content">
-                                        <h3><a href="shop-single.html">Walton Single Sofa</a></h3>
+                                        <h3><a href="{% url 'shopdetail' slug=p.product.arabic_slug %}">{{ p.product.title_arabic }}</a></h3>
 
                                         <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
+                                            {% for _ in 0|range:p.product.star %}
+                                              <span class="fa fa-star"></span>
+                                            {% endfor %}
                                         </div>
 
-                                        <div class="price">$ 25.99 <span>$ 35.99</span></div>
+                                        <div class="price"><p style="display: inline">الریال</p> <p style="display: inline">{{ p.product.price_arabic|floatformat:1|intcomma }}</p>{#<span>$ 35.99</span>#}</div>
                                         <div class="links-box">
                                             <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
+                                            <a class="zoom-btn lightbox-image" href="{{ p.product.avatar.url }}" title="{{ p.product.title_arabic }}"><span class="fa fa-search-plus" title="{% translate 'Quick View' %}"></span></a>
                                             <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
                                         </div>
                                     </div>
 
                                 </div>
                             </div>
+                                {% endif %}
+                            {% endfor %}
 
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-2.jpg" alt="" /></a>
-                                        <div class="item-sale-tag new">New</div>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Greeney Study Chair</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 19.00 <span>$ 25.00</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-3.jpg" alt="" /></a>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Nile Coffee Table</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 20.00</div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-4.jpg" alt="" /></a>
-                                        <div class="item-sale-tag top">Top</div>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Fabric Sofa 3 Set</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 25.99 <span>$ 35.99</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-1.jpg" alt="" /></a>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Walton Single Sofa</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 25.99 <span>$ 35.99</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-2.jpg" alt="" /></a>
-                                        <div class="item-sale-tag new">New</div>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Greeney Study Chair</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 19.00 <span>$ 25.00</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-3.jpg" alt="" /></a>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Nile Coffee Table</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 20.00</div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-4.jpg" alt="" /></a>
-                                        <div class="item-sale-tag top">Top</div>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Fabric Sofa 3 Set</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 25.99 <span>$ 35.99</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!--Tab-->
-                    <div class="shop-tab" id="tab-two">
-                        <div class="tabbed-shop-carousel">
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-1.jpg" alt="" /></a>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Walton Single Sofa</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 25.99 <span>$ 35.99</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-2.jpg" alt="" /></a>
-                                        <div class="item-sale-tag new">New</div>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Greeney Study Chair</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 19.00 <span>$ 25.00</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-3.jpg" alt="" /></a>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Nile Coffee Table</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 20.00</div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-4.jpg" alt="" /></a>
-                                        <div class="item-sale-tag top">Top</div>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Fabric Sofa 3 Set</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 25.99 <span>$ 35.99</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-1.jpg" alt="" /></a>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Walton Single Sofa</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 25.99 <span>$ 35.99</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-2.jpg" alt="" /></a>
-                                        <div class="item-sale-tag new">New</div>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Greeney Study Chair</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 19.00 <span>$ 25.00</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-3.jpg" alt="" /></a>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Nile Coffee Table</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 20.00</div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-4.jpg" alt="" /></a>
-                                        <div class="item-sale-tag top">Top</div>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Fabric Sofa 3 Set</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 25.99 <span>$ 35.99</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!--Tab-->
-                    <div class="shop-tab" id="tab-three">
-                        <div class="tabbed-shop-carousel">
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-1.jpg" alt="" /></a>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Walton Single Sofa</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 25.99 <span>$ 35.99</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-2.jpg" alt="" /></a>
-                                        <div class="item-sale-tag new">New</div>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Greeney Study Chair</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 19.00 <span>$ 25.00</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-3.jpg" alt="" /></a>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Nile Coffee Table</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 20.00</div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-4.jpg" alt="" /></a>
-                                        <div class="item-sale-tag top">Top</div>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Fabric Sofa 3 Set</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 25.99 <span>$ 35.99</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-1.jpg" alt="" /></a>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Walton Single Sofa</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 25.99 <span>$ 35.99</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-2.jpg" alt="" /></a>
-                                        <div class="item-sale-tag new">New</div>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Greeney Study Chair</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 19.00 <span>$ 25.00</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-3.jpg" alt="" /></a>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Nile Coffee Table</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 20.00</div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-4.jpg" alt="" /></a>
-                                        <div class="item-sale-tag top">Top</div>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Fabric Sofa 3 Set</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 25.99 <span>$ 35.99</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!--Tab-->
-                    <div class="shop-tab" id="tab-four">
-                        <div class="tabbed-shop-carousel">
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-1.jpg" alt="" /></a>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Walton Single Sofa</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 25.99 <span>$ 35.99</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-2.jpg" alt="" /></a>
-                                        <div class="item-sale-tag new">New</div>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Greeney Study Chair</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 19.00 <span>$ 25.00</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-3.jpg" alt="" /></a>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Nile Coffee Table</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 20.00</div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-4.jpg" alt="" /></a>
-                                        <div class="item-sale-tag top">Top</div>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Fabric Sofa 3 Set</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 25.99 <span>$ 35.99</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-1.jpg" alt="" /></a>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Walton Single Sofa</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 25.99 <span>$ 35.99</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-2.jpg" alt="" /></a>
-                                        <div class="item-sale-tag new">New</div>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Greeney Study Chair</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 19.00 <span>$ 25.00</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-3.jpg" alt="" /></a>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Nile Coffee Table</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 20.00</div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-4.jpg" alt="" /></a>
-                                        <div class="item-sale-tag top">Top</div>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Fabric Sofa 3 Set</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 25.99 <span>$ 35.99</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!--Tab-->
-                    <div class="shop-tab" id="tab-five">
-                        <div class="tabbed-shop-carousel">
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-1.jpg" alt="" /></a>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Walton Single Sofa</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 25.99 <span>$ 35.99</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-2.jpg" alt="" /></a>
-                                        <div class="item-sale-tag new">New</div>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Greeney Study Chair</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 19.00 <span>$ 25.00</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-3.jpg" alt="" /></a>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Nile Coffee Table</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 20.00</div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-4.jpg" alt="" /></a>
-                                        <div class="item-sale-tag top">Top</div>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Fabric Sofa 3 Set</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 25.99 <span>$ 35.99</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-1.jpg" alt="" /></a>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Walton Single Sofa</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 25.99 <span>$ 35.99</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-2.jpg" alt="" /></a>
-                                        <div class="item-sale-tag new">New</div>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Greeney Study Chair</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 19.00 <span>$ 25.00</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-3.jpg" alt="" /></a>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Nile Coffee Table</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 20.00</div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="default-shop-item">
-                                <!--inner-box-->
-                                <div class="inner-box">
-                                    <!--image-box-->
-                                    <figure class="image-box">
-                                        <a href="shop-single.html"><img src="images/resource/products/image-4.jpg" alt="" /></a>
-                                        <div class="item-sale-tag top">Top</div>
-                                    </figure>
-
-                                    <!--lower-content-->
-                                    <div class="lower-content">
-                                        <h3><a href="shop-single.html">Fabric Sofa 3 Set</a></h3>
-
-                                        <div class="rating">
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                            <span class="fa fa-star"></span>
-                                        </div>
-
-                                        <div class="price">$ 25.99 <span>$ 35.99</span></div>
-                                        <div class="links-box">
-                                            <a class="cart-btn" href="#">Add to Cart</a>
-                                            <a class="zoom-btn lightbox-image" href="images/resource/products/image-1.jpg" title="Image Caption Here"><span class="fa fa-search-plus" title="Quick View"></span></a>
-                                            <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
 
                         </div>
                     </div>
@@ -1825,8 +629,8 @@
             </div>
         </div>
     </section>
-
-
+    {% endif %}
+{% comment %}
     <!--Sponsors Section-->
     <section class="sponsors-section">
     	<div class="auto-container">

@@ -31,6 +31,7 @@ urlpatterns = [
     path("about-us/", about, name="about"),
     path("our-team/", team, name="team"),
     path("FAQs/", faq, name="faq"),
+    path("shop/", include("shop.urls")),
 
 
 
@@ -45,4 +46,3 @@ if settings.IS_DEVEL:
 urlpatterns += [
     path("ckeditor5/", include('django_ckeditor_5.urls')),
 ]
-

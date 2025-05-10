@@ -96,15 +96,7 @@
                                         </ul>
                                     </li>
 
-                                    <li class="dropdown"><a href="#">Shop</a>
-                                        <ul>
-                                            <li><a href="shop.html">Shop Products</a></li>
-                                            <li><a href="shop-single.html">Shop Single</a></li>
-                                            <li><a href="shopping-cart.html">Shopping Cart</a></li>
-                                            <li><a href="checkout.html">Checkout</a></li>
-                                            <li><a href="register.html">Login / Register</a></li>
-                                        </ul>
-                                    </li>
+                                    <li class="{% block shopc %}{% endblock shopc %}"><a href="{% url 'shop' %}">{% translate 'Shop' %}</a></li>
                                     <li class="{% block aboutc %}{% endblock aboutc %} dropdown"><a href="#">{% translate 'About Us' %}</a>
                                     	<ul>
                                             <li><a href="{% url 'about' %}">{% translate 'About Us' %}</a></li>
@@ -138,11 +130,13 @@
                             {% else %}
                                 <button  class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><img src="{% static 'haman/images/icons/arab.png' %} " width="24px" height="14px" alt="Arabian flag logo"/> &nbsp; <span class="fa fa-angle-down"></span></button>
                             {% endif %}
+                        {% block det %}
                             <ul class="dropdown-menu" style="min-width: auto;">
                                 <li><button onclick="chLaToPe();"><img src="{% static 'haman/images/icons/iran2.png' %}" class="chanelangimg" alt="iran flag logo" /></button></li>
                                 <li><button onclick="chLaToEn();"><img src="{% static 'haman/images/icons/flog.png' %}" class="chanelangimg" alt="british flag logo" /></button></li>
                                 <li><button onclick="chLaToAr();"><img src="{% static 'haman/images/icons/arab.png' %}" class="chanelangimg" width="24px" height="14px" alt="Arabian flag logo" /></button></li>
                             </ul>
+                        {% endblock det %}
                         </form>
                     </div>
             	</div>

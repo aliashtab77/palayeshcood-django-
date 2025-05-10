@@ -1,0 +1,298 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+{% load humanize %}
+{% load custom_filters %}
+{% block title %}
+	{% translate 'shop' %}
+{% endblock title %}
+{% block shopc %}current{% endblock shopc%}
+{% block body %}
+    <!--Page Title-->
+    <section class="page-title" style="background-image:url({% static 'haman/images/background/bg-page-title-1.jpg' %});">
+        <div class="auto-container">
+            <h1>{% translate 'Shop Products' %}</h1>
+        </div>
+    </section>
+    
+    <!--Page Info-->
+    <section class="page-info">
+        <div class="auto-container clearfix">
+            <div class="pull-left"><h2>{% translate 'Shop Products' %}</h2></div>
+            <div class="pull-right">
+                <ul class="bread-crumb clearfix">
+                    <li><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
+                    <li>{% translate 'Shop' %}</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!--Sidebar Page-->
+    <div class="sidebar-page-container">
+        <div class="auto-container">
+            <div class="row clearfix">
+                
+                <!--Content Side-->      
+                <div class="content-side col-lg-9 col-md-8 col-sm-12 col-xs-12">
+                    
+                    <!--Products Section-->
+                    <section class="products-section no-padd-top">
+                        
+                        <div class="shop-upper-box">
+                            <div class="clearfix">
+                                <div class="pull-left items-label">Showing {{ products.number }}-{{ pagenator.num_pages }} of {{ pagenator.count }} items</div>
+                            </div>
+                        </div>
+
+                        <div class="row clearfix">
+                            {% for product in products.object_list %}
+                                {% if LANGUAGE_CODE == "fa" %}
+                                	<div class="default-shop-item {% if not product.inventory %}out-of-stock{% endif %}  col-lg-4 col-md-6 col-sm-4 col-xs-12">
+                                        <!--inner-box-->
+                                        <div class="inner-box">
+                                            <!--image-box-->
+                                            <figure class="image-box">
+                                                <a href="{% url 'shopdetail' slug=product.persian_slug %}"><img src="{{ product.avatar.url }}" alt="{{ product.title_persian }}" /></a>
+                                                {% if product.is_new %}
+                                                    <div class="item-sale-tag new">جدید</div>
+                                                {% endif %}
+                                            </figure>
+                                            <!--lower-content-->
+                                            <div class="lower-content">
+                                                <h3><a href="{% url 'shopdetail' slug=product.persian_slug %}">{{ product.title_persian }}</a></h3>
+
+                                                <div class="rating">
+                                                    {% for _ in 0|range:product.star %}
+                                                        <span class="fa fa-star"></span>
+                                                    {% endfor %}
+                                                </div>
+
+                                                <div class="price"><p style="display: inline">تومان</p> <p style="display: inline">{{ product.price_persian|floatformat:1|intcomma }}</p>{#<span>$ 35.99</span>#}</div>
+                                                <div class="links-box">
+                                                    <a class="cart-btn" href="#">Add to Cart</a>
+                                                    <a class="zoom-btn lightbox-image" href="{{ product.avatar.url }}" title="{{ product.title_persian }}"><span class="fa fa-search-plus" title="{% translate 'Quick View' %}"></span></a>
+                                                    <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                                </div>
+                                            </div>
+                                           {% if not product.inventory %}
+                                                <div class="dead-overlay"><span class="text">موجود نیست</span></div>
+                                           {% endif %}
+                                        </div>
+                                   </div>
+                                {% elif LANGUAGE_CODE == "en" %}
+                                    <div class="default-shop-item {% if not product.inventory %}out-of-stock{% endif %}  col-lg-4 col-md-6 col-sm-4 col-xs-12">
+                                        <!--inner-box-->
+                                        <div class="inner-box">
+                                            <!--image-box-->
+                                            <figure class="image-box">
+                                                <a href="{% url 'shopdetail' slug=product.english_slug %}"><img src="{{ product.avatar.url }}" alt="{{ product.title_english }}" /></a>
+                                                {% if product.is_new %}
+                                                    <div class="item-sale-tag new">New</div>
+                                                {% endif %}
+                                            </figure>
+                                            <!--lower-content-->
+                                            <div class="lower-content">
+                                                <h3><a href="{% url 'shopdetail' slug=product.english_slug %}">{{ product.title_english }}</a></h3>
+
+                                                <div class="rating">
+                                                    {% for _ in 0|range:product.star %}
+                                                        <span class="fa fa-star"></span>
+                                                    {% endfor %}
+                                                </div>
+
+                                                <div class="price">$ {{ product.price_english|intcomma }}{#<span>$ 35.99</span>#}</div>
+                                                <div class="links-box">
+                                                    <a class="cart-btn" href="#">Add to Cart</a>
+                                                    <a class="zoom-btn lightbox-image" href="{{ product.avatar.url }}" title="{{ product.title_english }}"><span class="fa fa-search-plus" title="{% translate 'Quick View' %}"></span></a>
+                                                    <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                                </div>
+                                            </div>
+                                           {% if not product.inventory %}
+                                                <div class="dead-overlay"><span class="text">Out Of Stock</span></div>
+                                           {% endif %}
+                                        </div>
+                                   </div>
+                                {% else %}
+                                    <div class="default-shop-item {% if not product.inventory %}out-of-stock{% endif %}  col-lg-4 col-md-6 col-sm-4 col-xs-12">
+                                        <!--inner-box-->
+                                        <div class="inner-box">
+                                            <!--image-box-->
+                                            <figure class="image-box">
+                                                <a href="{% url 'shopdetail' slug=product.arabic_slug %}"><img src="{{ product.avatar.url }}" alt="{{ product.title_arabic }}" /></a>
+                                                {% if product.is_new %}
+                                                    <div class="item-sale-tag new">الجدید</div>
+                                                {% endif %}
+                                            </figure>
+                                            <!--lower-content-->
+                                            <div class="lower-content">
+                                                <h3><a href="{% url 'shopdetail' slug=product.arabic_slug %}">{{ product.title_arabic }}</a></h3>
+
+                                                <div class="rating">
+                                                    {% for _ in 0|range:product.star %}
+                                                        <span class="fa fa-star"></span>
+                                                    {% endfor %}
+                                                </div>
+
+                                                <div class="price"><p style="display: inline">الریال</p> <p style="display: inline">{{ product.price_arabic|floatformat:1|intcomma }}</p>{#<span>$ 35.99</span>#}</div>
+                                                <div class="links-box">
+                                                    <a class="cart-btn" href="#">Add to Cart</a>
+                                                    <a class="zoom-btn lightbox-image" href="{{ product.avatar.url }}" title="{{ product.title_arabic }}"><span class="fa fa-search-plus" title="{% translate 'Quick View' %}"></span></a>
+                                                    <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                                </div>
+                                            </div>
+                                           {% if not product.inventory %}
+                                                <div class="dead-overlay"><span class="text">إنتهى من المخزن</span></div>
+                                           {% endif %}
+                                        </div>
+                                   </div>
+                                {% endif %}
+                            {% empty %}
+                                <div class="text-center">
+                            	    <h4>{% translate 'No suitable products found.' %}</h4>
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                        <hr class="no-margin">
+                        {% if products.has_other_pages %}
+                        <!-- Styled Pagination -->
+                            <div class="styled-pagination padd-top-30 text-center">
+                                <ul>
+                                    {% if products.has_previous%}
+                                        <li><a class="prev" href="{% url 'shop' %}?page={{ products.previous_page_number }}"><span class="fa fa-angle-left"></span></a></li>
+                                    {% endif %}
+                                    {% for i in pagenator.page_range %}
+                                        {% if i == products.number %}
+                                            <li><a class="active">{{ i }}</a></li>
+                                        {% else %}
+                                            <li><a href="{% url 'shop' %}?page={{ i }}">{{ i }}</a></li>
+                                        {% endif %} 
+
+                                    {% endfor %}
+                                    {% if products.has_next %}
+                                        <li><a class="next" href="{% url 'shop' %}?page={{ products.next_page_number }}"><span class="fa fa-angle-right"></span></a></li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        {% endif %}
+                    </section>
+                
+                </div><!--End Content Side-->   
+                
+                <!--Sidebar-->      
+                <div class="sidebar-side col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <aside class="sidebar">
+                        
+                        <!-- Search Form -->
+                        <div class="widget search-box sidebar-widget">
+                            
+                            <form method="post" action="{% url 'shop' %}">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <input type="search" name="search-field" value="" placeholder="{% translate 'Search here' %}">
+                                    <button type="submit" {% if LANGUAGE_BIDI %}style="left: 0px" {% endif %}><span class="icon fa fa-search"></span></button>
+                                </div>
+                            </form>
+                            
+                        </div>
+                        {% comment %}
+                        <!-- Popular Categories -->
+                        <div class="widget popular-categories sidebar-widget">
+                            <div class="sidebar-title"><h3>Product Categories</h3></div>
+                            
+                            <ul class="list-three">
+                                <li><a href="#">Gardern Lights (15)</a></li>
+                                <li><a href="#">Kitchen &amp; Dining (22)</a></li>
+                                <li><a href="#">Fabric &amp; Wooden Sofa (20)</a></li>
+                                <li><a href="#">Living Room Storage (10) </a></li>
+                                <li><a href="#">Carpets &amp; Doormats (05) </a></li>
+                            </ul>
+                            
+                        </div>
+
+                        <!-- Price Filter -->
+                        <div class="widget rangeslider-widget sidebar-widget">
+                            <div class="sidebar-title"><h3>Filter By Price</h3></div>
+                                
+                            <div class="range-slider-price" id="range-slider-price"></div>
+                            
+                            <br>
+                            <div class="form-group">
+                                <input type="text" class="val-box" id="min-value-rangeslider">
+                                <input type="text" class="val-box" id="max-value-rangeslider">
+                                <button type="button">Filter ($)</button>
+                            </div>
+                        </div>
+                        {% endcomment %}
+                        <!-- Best Sellers -->
+                        <div class="widget best-sellers sidebar-widget">
+                            {% if shopbaner %}
+                                <div class="sidebar-title"><h3>{% translate 'Latest Products' %}</h3></div>
+                                {% if LANGUAGE_CODE == "fa" %}
+                                    {% for p in shopbaner %}
+                                        <div class="item">
+                                            <div class="post-thumb"><a href="{% url 'shopdetail' slug=p.product.persian_slug %}"><img src="{{ p.product.avatar.url }}" alt="{{ p.product.title_persian }}"></a></div>
+                                            <h4><a href="{% url 'shopdetail' slug=p.product.persian_slug %}">{{ p.product.title_persian }}</a></h4>
+                                            <div class="rating">
+                                                {% for _ in 0|range:p.product.star %}
+                                                      <span class="fa fa-star"></span>
+                                                {% endfor %}
+                                            </div>
+                                            <div class="item-price"><p style="display: inline">تومان</p> <p style="display: inline">{{ p.product.price_persian|floatformat:1|intcomma }}</p>{#<span class="strike-through">$ 25.99</span>#}</div>
+                                        </div>
+                                    {% endfor %}
+                                {% elif LANGUAGE_CODE == "en" %}
+                                    {% for p in shopbaner %}
+                                        <div class="item">
+                                            <div class="post-thumb"><a href="{% url 'shopdetail' slug=p.product.english_slug %}"><img src="{{ p.product.avatar.url }}" alt="{{ p.product.title_english }}"></a></div>
+                                            <h4><a href="{% url 'shopdetail' slug=p.product.english_slug %}">{{ p.product.title_english }}</a></h4>
+                                             <div class="rating">
+                                                {% for _ in 0|range:p.product.star %}
+                                                      <span class="fa fa-star"></span>
+                                                {% endfor %}
+                                            </div>
+                                            <div class="item-price">$ {{ p.product.price_english|intcomma }} {#<span class="strike-through">$ 25.99</span>#}</div>
+                                        </div>
+                                    {% endfor %}
+                                {% else %}
+                                    {% for p in shopbaner %}
+                                        <div class="item">
+                                            <div class="post-thumb"><a href="{% url 'shopdetail' slug=p.product.arabic_slug %}"><img src="{{ p.product.avatar.url }}" alt="{{ p.product.title_arabic }}"></a></div>
+                                            <h4><a href="{% url 'shopdetail' slug=p.product.arabic_slug %}">{{ p.product.title_arabic }}</a></h4>
+                                            <div class="rating">
+                                                {% for _ in 0|range:p.product.star %}
+                                                      <span class="fa fa-star"></span>
+                                                {% endfor %}
+                                            </div>
+                                            <div class="item-price"><p style="display: inline">الریال</p> <p style="display: inline">{{ p.product.price_arabic|floatformat:1|intcomma }}</p>{#<span class="strike-through">$ 25.99</span>#}</div>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                        {% comment %}
+                        <!-- Popular Tags -->
+                        <div class="widget sidebar-widget popular-tags">
+                            <div class="sidebar-title"><h3>Products Tags</h3></div>
+                            
+                            <a href="#">Furniture</a>
+                            <a href="#">Wood</a>
+                            <a href="#">Lighting</a>
+                            <a href="#">Artificial Grass</a>
+                            <a href="#">Painting</a>
+                            <a href="#">Curtains</a>
+                            <a href="#">Tile &amp; Marble</a>
+                            
+                        </div>
+                        {% endcomment %}
+                    </aside>
+                </div><!--End Sidebar-->      
+                
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}

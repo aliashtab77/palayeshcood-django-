@@ -97,3 +97,10 @@ input , textarea{
   bottom: 3px;
   background-color: #fc721e;
 }
+.related-products .owl-controls .owl-nav {
+    margin: 0px !important;
+    position: absolute;
+    top: -80px;
+    left: -85%;
+    /* right: 0px; */
+}

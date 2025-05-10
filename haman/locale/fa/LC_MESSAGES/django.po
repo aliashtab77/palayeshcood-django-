@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-12 19:28+0330\n"
+"POT-Creation-Date: 2025-05-10 07:24+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Admin Panel"
 msgstr "پنل مدیریت"
 
-#: haman/models.py:7 haman/models.py:22
+#: haman/models.py:7 haman/models.py:22 shop/models.py:7
 msgid "name"
 msgstr "نام"
 
@@ -30,7 +30,7 @@ msgstr "نام"
 msgid "your email is not valid"
 msgstr "ایمیل وارد شده معتبر نمی باشد"
 
-#: haman/models.py:8 haman/models.py:23
+#: haman/models.py:8 haman/models.py:23 shop/models.py:8
 msgid "email"
 msgstr "ایمیل"
 
@@ -69,27 +69,182 @@ msgstr "پیام های کاربران"
 msgid "News Shelter"
 msgstr "خبر نامه"
 
-#: haman/views.py:24
+#: haman/views.py:34
 msgid "name is required"
 msgstr "نام لازم است"
 
-#: haman/views.py:27
+#: haman/views.py:37
 msgid "email is required"
 msgstr "ایمیل مورد نیاز است"
 
-#: palayeshcood/settings.py:121
+#: palayeshcood/settings.py:123
 msgid "Persian"
 msgstr "فارسی"
 
-#: palayeshcood/settings.py:122
+#: palayeshcood/settings.py:124
 msgid "English"
 msgstr "انگلیسی"
 
-#: palayeshcood/settings.py:123
+#: palayeshcood/settings.py:125
 msgid "Arabic"
 msgstr "عربی"
 
-#: templates/Petrochemicals.html:5 templates/index.html:275
+#: shop/apps.py:7 templates/shop.html:9
+msgid "shop"
+msgstr "فروشگاه"
+
+#: shop/models.py:9
+msgid "phone"
+msgstr "تلفن"
+
+#: shop/models.py:10
+msgid "comment"
+msgstr "نظر"
+
+#: shop/models.py:11
+msgid "rate"
+msgstr "امتیاز"
+
+#: shop/models.py:12
+msgid "SHOW"
+msgstr "نشان دادن"
+
+#: shop/models.py:14
+msgid "Review"
+msgstr "نظر"
+
+#: shop/models.py:15 templates/shop-single.html:72
+#: templates/shop-single.html:121 templates/shop-single.html:337
+#: templates/shop-single.html:386 templates/shop-single.html:602
+#: templates/shop-single.html:652
+msgid "Reviews"
+msgstr "نظرات"
+
+#: shop/models.py:21
+msgid "persian slug"
+msgstr "اسلاگ پارسی"
+
+#: shop/models.py:22
+msgid "english slug"
+msgstr "اسلاگ انگلیسی"
+
+#: shop/models.py:23
+msgid "arabic slug"
+msgstr "اسلاگ عربی"
+
+#: shop/models.py:24
+msgid "show on English"
+msgstr "نمایان بودن در قسمت انگلیسی"
+
+#: shop/models.py:25
+msgid "show on Persian"
+msgstr "نمایان بودن در قسمت پارسی"
+
+#: shop/models.py:26
+msgid "show on Arabic"
+msgstr "نمایان بودن در قسمت عربی"
+
+#: shop/models.py:27
+msgid "English Title"
+msgstr "عنوان انگلیسی"
+
+#: shop/models.py:28
+msgid "Persian Title"
+msgstr "عنوان فارسی"
+
+#: shop/models.py:29
+msgid "Arabic Title"
+msgstr "عنوان عربی"
+
+#: shop/models.py:30
+msgid "English Price"
+msgstr "قیمت انگلیسی"
+
+#: shop/models.py:31
+msgid "Persian Price"
+msgstr "قیمت فارسی"
+
+#: shop/models.py:32
+msgid "Arabic Price"
+msgstr "قیمت عربی"
+
+#: shop/models.py:33
+msgid "enable if this product is new"
+msgstr "اگر محصول جدید است فعال شود"
+
+#: shop/models.py:34
+msgid "inventory"
+msgstr "موجودی"
+
+#: shop/models.py:35
+msgid "product image"
+msgstr "عکس محصول"
+
+#: shop/models.py:36
+msgid "related products"
+msgstr "محصولات مرتبط"
+
+#: shop/models.py:38
+msgid "English description"
+msgstr "توضیحات انگلیسی"
+
+#: shop/models.py:39
+msgid "Persian description"
+msgstr "توضیحات پارسی"
+
+#: shop/models.py:40
+msgid "Arabic description"
+msgstr "توضیحات عربی"
+
+#: shop/models.py:48
+msgid "Rate"
+msgstr "امتیاز"
+
+#: shop/models.py:49
+msgid "tags"
+msgstr "تگ ها"
+
+#: shop/models.py:51
+msgid "Product"
+msgstr "محصول"
+
+#: shop/models.py:52
+msgid "Products"
+msgstr "محصولات"
+
+#: shop/models.py:58 shop/models.py:67 shop/models.py:80
+msgid "baner product"
+msgstr "محصولات نمادین"
+
+#: shop/models.py:59 shop/models.py:69 shop/models.py:82
+msgid "enable"
+msgstr "فعال"
+
+#: shop/models.py:61
+msgid "english baner product"
+msgstr "محصول نمادین انگلیسی"
+
+#: shop/models.py:62
+msgid "english baner products"
+msgstr "محصولات نمادین انگلیسی"
+
+#: shop/models.py:72
+msgid "persian baner product"
+msgstr "محصول نمادین پارسی"
+
+#: shop/models.py:73
+msgid "persian baner products"
+msgstr "محصولات نمادین پارسی"
+
+#: shop/models.py:85
+msgid "arabic baner product"
+msgstr "محصول نمادین عربی"
+
+#: shop/models.py:86
+msgid "arabic baner products"
+msgstr "محصولات نمادین عربی"
+
+#: templates/Petrochemicals.html:5 templates/index.html:273
 msgid "petrochemical"
 msgstr "پتروشیمی"
 
@@ -100,17 +255,19 @@ msgid "petrochemical products"
 msgstr "محصولات پتروشیمی"
 
 #: templates/Petrochemicals.html:25 templates/about-us.html:34
-#: templates/agriculture.html:24 templates/base.html:88 templates/base.html:174
-#: templates/base.html:353 templates/contact.html:23 templates/faq.html:20
-#: templates/food.html:24 templates/global.html:25 templates/index.html:7
+#: templates/agriculture.html:24 templates/base.html:88 templates/base.html:168
+#: templates/base.html:347 templates/contact.html:23 templates/faq.html:20
+#: templates/food.html:24 templates/global.html:25 templates/index.html:8
 #: templates/our-team.html:7 templates/our-team.html:32
 #: templates/refinery.html:25 templates/services.html:27
+#: templates/shop-single.html:42 templates/shop-single.html:307
+#: templates/shop-single.html:572 templates/shop.html:26
 #: templates/support.html:24
 msgid "Home"
 msgstr "خانه"
 
 #: templates/Petrochemicals.html:26 templates/agriculture.html:25
-#: templates/base.html:89 templates/base.html:175 templates/base.html:355
+#: templates/base.html:89 templates/base.html:169 templates/base.html:349
 #: templates/food.html:25 templates/global.html:26 templates/refinery.html:26
 #: templates/services.html:5 templates/services.html:24
 #: templates/services.html:28 templates/support.html:25
@@ -127,7 +284,7 @@ msgstr "بروشورهای ما"
 msgid "Direct supply of petrochemical products worldwide"
 msgstr "تأمین مستقیم محصولات پتروشیمی به سراسر جهان"
 
-#: templates/Petrochemicals.html:78 templates/index.html:276
+#: templates/Petrochemicals.html:78 templates/index.html:274
 #: templates/services.html:63
 msgid ""
 "We specialize in direct supply of petrochemical products and our main goal "
@@ -296,7 +453,7 @@ msgstr "مشاوره رایگان دریافت کنید"
 
 #: templates/Petrochemicals.html:168 templates/agriculture.html:166
 #: templates/contact.html:56 templates/faq.html:141 templates/food.html:168
-#: templates/global.html:166 templates/index.html:2047
+#: templates/global.html:166 templates/index.html:852
 #: templates/refinery.html:165 templates/support.html:166
 msgid "Your Name *"
 msgstr "نام شما *"
@@ -314,7 +471,7 @@ msgid "Phone Number"
 msgstr "شماره تماس"
 
 #: templates/Petrochemicals.html:180 templates/agriculture.html:178
-#: templates/base.html:329 templates/contact.html:68 templates/food.html:180
+#: templates/base.html:323 templates/contact.html:68 templates/food.html:180
 #: templates/global.html:178 templates/refinery.html:177
 #: templates/support.html:178
 msgid "Message *"
@@ -327,8 +484,8 @@ msgid "Get Quote"
 msgstr "ارسال"
 
 #: templates/about-us.html:9 templates/about-us.html:31
-#: templates/about-us.html:35 templates/base.html:108 templates/base.html:110
-#: templates/base.html:196 templates/base.html:198 templates/base.html:354
+#: templates/about-us.html:35 templates/base.html:100 templates/base.html:102
+#: templates/base.html:190 templates/base.html:192 templates/base.html:348
 msgid "About Us"
 msgstr "درباره ما"
 
@@ -413,11 +570,11 @@ msgstr ""
 msgid "Haman Lesan,"
 msgstr "هامان لسان,"
 
-#: templates/about-us.html:63 templates/index.html:184
+#: templates/about-us.html:63 templates/index.html:182
 msgid "Founder"
 msgstr "بنیانگذار"
 
-#: templates/about-us.html:64 templates/base.html:34 templates/index.html:185
+#: templates/about-us.html:64 templates/base.html:34 templates/index.html:183
 msgid "Palayeshcood"
 msgstr "پالایش گود"
 
@@ -481,7 +638,7 @@ msgstr "تأمین مستقیم ومحصولات کشاورزی با بهتری�
 msgid "Quality assurance, reasonable price and fast delivery"
 msgstr "تضمین کیفیت، قیمت مناسب و تحویل سریع"
 
-#: templates/agriculture.html:79 templates/index.html:339
+#: templates/agriculture.html:79 templates/index.html:337
 #: templates/services.html:101
 msgid ""
 "In the world of agriculture, the use of high-quality and reliable "
@@ -649,20 +806,26 @@ msgstr ""
 msgid "We are responsive to you with fast support."
 msgstr "ما با پشتیبانی سریع ، پاسخگویی به شما هستیم"
 
-#: templates/base.html:111 templates/base.html:199 templates/our-team.html:29
+#: templates/base.html:99 templates/shop-single.html:43
+#: templates/shop-single.html:308 templates/shop-single.html:573
+#: templates/shop.html:27
+msgid "Shop"
+msgstr "فروشگاه"
+
+#: templates/base.html:103 templates/base.html:193 templates/our-team.html:29
 #: templates/our-team.html:33
 msgid "Our Team"
 msgstr "تیم ما"
 
-#: templates/base.html:114 templates/base.html:202 templates/base.html:356
+#: templates/base.html:106 templates/base.html:196 templates/base.html:350
 msgid "Contact"
 msgstr "تماس با ما"
 
-#: templates/base.html:115 templates/base.html:203 templates/faq.html:4
+#: templates/base.html:107 templates/base.html:197 templates/faq.html:4
 msgid "FAQ"
 msgstr "سوالات متداول"
 
-#: templates/base.html:243
+#: templates/base.html:237
 msgid ""
 "Palayeshcood Company, as a reputable distributor of chemicals, refineries "
 "and sugar, is ready to sell raw materials from petrochemicals, refineries "
@@ -677,48 +840,48 @@ msgstr ""
 "تمامی مناطق هستیم. به ما بپیوندید و از تخصص و تجربه ما بهره‌مند شوید. برای "
 "اطلاعات بیشتر و ثبت سفارش، با ما در تماس باشید."
 
-#: templates/base.html:245 templates/contact.html:85
+#: templates/base.html:239 templates/contact.html:85
 msgid "Unit 31, Safavieh Office Complex, Rajaee St, Kashan, Iran"
 msgstr "ایران, کاشان، خیابان رجائی، مجتمع اداری صفویه، واحد 31"
 
-#: templates/base.html:256
+#: templates/base.html:250
 msgid "Popular Tags"
 msgstr "تگ های محبوب"
 
-#: templates/base.html:268
+#: templates/base.html:262
 msgid "Recent Works"
 msgstr "کار های اخیر"
 
-#: templates/base.html:296
+#: templates/base.html:290
 msgid "Recent News"
 msgstr "اخبار اخیر"
 
-#: templates/base.html:310 templates/index.html:256 templates/index.html:277
-#: templates/index.html:298 templates/index.html:319 templates/index.html:340
-#: templates/index.html:361 templates/services.html:49
+#: templates/base.html:304 templates/index.html:254 templates/index.html:275
+#: templates/index.html:296 templates/index.html:317 templates/index.html:338
+#: templates/index.html:359 templates/services.html:49
 #: templates/services.html:64 templates/services.html:77
 #: templates/services.html:90 templates/services.html:102
 #: templates/services.html:114
 msgid "Read More"
 msgstr "بیشتر"
 
-#: templates/base.html:318
+#: templates/base.html:312
 msgid "Send Us Message"
 msgstr "برای ما پیام ارسال کنید"
 
-#: templates/base.html:323
+#: templates/base.html:317
 msgid "Name *"
 msgstr "نام *"
 
-#: templates/base.html:326
+#: templates/base.html:320
 msgid "Email *"
 msgstr "ایمیل *"
 
-#: templates/base.html:331
+#: templates/base.html:325
 msgid "Send us"
 msgstr "ارسال"
 
-#: templates/base.html:350
+#: templates/base.html:344
 msgid "Stark Team"
 msgstr "استارک تیم"
 
@@ -914,7 +1077,8 @@ msgstr "سوالات خود را بپرسید"
 msgid "Email Address *"
 msgstr "ایمیل *"
 
-#: templates/faq.html:149
+#: templates/faq.html:149 templates/shop-single.html:182
+#: templates/shop-single.html:447 templates/shop-single.html:713
 msgid "Phone"
 msgstr "تلفن"
 
@@ -939,7 +1103,7 @@ msgid "contact Team"
 msgstr "تماس با ما"
 
 #: templates/food.html:5 templates/food.html:14 templates/food.html:21
-#: templates/food.html:26 templates/food.html:74 templates/index.html:317
+#: templates/food.html:26 templates/food.html:74 templates/index.html:315
 #: templates/services-side.html:8 templates/services.html:88
 msgid "Food products"
 msgstr "محصولات غذایی"
@@ -948,7 +1112,7 @@ msgstr "محصولات غذایی"
 msgid "Direct supply of premium quality food and shipping worldwide"
 msgstr "تأمین مستقیم مواد غذایی با کیفیت برتر و ارسال به سراسر جهان"
 
-#: templates/food.html:78 templates/index.html:318 templates/services.html:89
+#: templates/food.html:78 templates/index.html:316 templates/services.html:89
 msgid ""
 "We are proud to serve the needs of our customers worldwide by providing food "
 "supply services directly from reputable factories. With a focus on quality, "
@@ -1130,7 +1294,7 @@ msgstr "تجارت جهانی"
 msgid "Global trade in petrochemicals, refining and sugar"
 msgstr "تجارت جهانی مواد پتروشیمی، پالایشگاهی و شکر"
 
-#: templates/global.html:77 templates/index.html:297 templates/services.html:76
+#: templates/global.html:77 templates/index.html:295 templates/services.html:76
 msgid ""
 "Global trade in petrochemicals, refined products and sugar is recognized as "
 "one of the key pillars of the global economy. Due to their widespread use in "
@@ -1348,11 +1512,11 @@ msgstr "تقاضا برای مواد پتروشیمی در آسیا و آفری�
 msgid "Our expert support team is ready to answer you."
 msgstr "تیم پشتیبانی متخصص ما آماده پاسخگویی به شما است"
 
-#: templates/index.html:176
+#: templates/index.html:174
 msgid "Welcome to Palayeshcood"
 msgstr "به پالایش کود خوش آمدید"
 
-#: templates/index.html:177
+#: templates/index.html:175
 msgid ""
 "With over 15 years of experience in exporting chemicals, petrochemicals, "
 "agricultural fertilizers and sugar, Royan Kimia Soil Refining Company has a "
@@ -1366,58 +1530,74 @@ msgid ""
 "partners. With an extensive distribution network and a commitment to "
 "environmentally friendly products, the company provides a greener and more "
 "sustainable future for customers and the global community."
-msgstr "شرکت پالایش خاک رویان کیمیا با بیش از ۱۵ سال تجربه در صادرات مواد شیمیایی، پتروشیمی، کودهای کشاورزی و شکر، به‌عنوان پیشگام در صنعت، جایگاهی برجسته در بازارهای داخلی و بین المللی دارد. این شرکت با تأکید بر کیفیت، نوآوری و رضایت مشتری، نیازهای جهانی را برآورده می کند. تیم متخصص آن با استفاده از دانش فنی روز و استانداردهای بین المللی، محصولاتی با بالاترین کیفیت ارائه می دهد. رسالت شرکت، توسعه پایدار در صنایع کشاورزی و پالایشگاهی و ایجاد ارزش افزوده برای مشتریان است. چشم انداز آن گسترش بازارهای صادراتی و ارائه خدمات متمایز به شرکای تجاری جهانی است. با شبکه توزیع گسترده و تعهد به محصولات سازگار با محیط زیست، شرکت آینده ای سبزتر و پایدارتر را برای مشتریان و جامعه جهانی فراهم می کند."
+msgstr ""
+"شرکت پالایش خاک رویان کیمیا با بیش از ۱۵ سال تجربه در صادرات مواد شیمیایی، "
+"پتروشیمی، کودهای کشاورزی و شکر، به‌عنوان پیشگام در صنعت، جایگاهی برجسته در "
+"بازارهای داخلی و بین المللی دارد. این شرکت با تأکید بر کیفیت، نوآوری و رضایت "
+"مشتری، نیازهای جهانی را برآورده می کند. تیم متخصص آن با استفاده از دانش فنی "
+"روز و استانداردهای بین المللی، محصولاتی با بالاترین کیفیت ارائه می دهد. "
+"رسالت شرکت، توسعه پایدار در صنایع کشاورزی و پالایشگاهی و ایجاد ارزش افزوده "
+"برای مشتریان است. چشم انداز آن گسترش بازارهای صادراتی و ارائه خدمات متمایز "
+"به شرکای تجاری جهانی است. با شبکه توزیع گسترده و تعهد به محصولات سازگار با "
+"محیط زیست، شرکت آینده ای سبزتر و پایدارتر را برای مشتریان و جامعه جهانی "
+"فراهم می کند."
 
-#: templates/index.html:184
+#: templates/index.html:182
 msgid "Haman Lesan, "
 msgstr "هامان لسان,"
 
-#: templates/index.html:199
+#: templates/index.html:197
 msgid "Professional and expert team"
 msgstr "تیم حرفه ایی و متخصص"
 
-#: templates/index.html:200
+#: templates/index.html:198
 msgid ""
 "Relying on a team of experts and professionals, along with comprehensive "
 "support, we provide the best solutions for your needs."
-msgstr "با تکیه بر تیم متخصص و حرفه‌ای، همراه با پشتیبانی همه جانبه، بهترین راه‌حل‌ها را برای نیازهای شما ارائه می دهیم."
+msgstr ""
+"با تکیه بر تیم متخصص و حرفه‌ای، همراه با پشتیبانی همه جانبه، بهترین راه‌حل‌ها "
+"را برای نیازهای شما ارائه می دهیم."
 
-#: templates/index.html:210
+#: templates/index.html:208
 msgid "Competitive price"
 msgstr "قیمت رقابتی"
 
-#: templates/index.html:211
+#: templates/index.html:209
 msgid ""
 "All products with the highest quality and competitive prices, meeting "
 "diverse industrial, agricultural and food needs."
-msgstr "تمام محصولات با بالاترین کیفیت و قیمت های رقابتی، پاسخگوی نیازهای متنوع صنعتی و کشاورزی و غذایی"
+msgstr ""
+"تمام محصولات با بالاترین کیفیت و قیمت های رقابتی، پاسخگوی نیازهای متنوع "
+"صنعتی و کشاورزی و غذایی"
 
-#: templates/index.html:221
+#: templates/index.html:219
 msgid "Easy shopping"
 msgstr "خرید آسان"
 
-#: templates/index.html:222
+#: templates/index.html:220
 msgid ""
 "Easy shopping, fast and reliable shipping worldwide, along with quality "
 "assurance and assurance of your satisfaction."
-msgstr "خرید آسان، حمل ونقل سریع و مطمئن به سراسر جهان، همراه با تضمین کیفیت و اطمینان از رضایت شما."
+msgstr ""
+"خرید آسان، حمل ونقل سریع و مطمئن به سراسر جهان، همراه با تضمین کیفیت و "
+"اطمینان از رضایت شما."
 
-#: templates/index.html:238
+#: templates/index.html:236
 msgid "Our Best Services"
 msgstr "بهترین خدمات ما"
 
-#: templates/index.html:239
+#: templates/index.html:237
 msgid "More Services"
 msgstr "خدمات بیشتر"
 
-#: templates/index.html:254 templates/refinery.html:15
+#: templates/index.html:252 templates/refinery.html:15
 #: templates/refinery.html:22 templates/refinery.html:27
 #: templates/refinery.html:73 templates/services-side.html:5
 #: templates/services.html:47
 msgid "refinery products"
 msgstr "محصولات پالایشگاهی"
 
-#: templates/index.html:255 templates/services.html:48
+#: templates/index.html:253 templates/services.html:48
 msgid ""
 "We are proud to provide direct and quality guaranteed refinery products "
 "supply services to our customers around the world. Our goal is to create "
@@ -1429,20 +1609,20 @@ msgstr ""
 "مطمئن، سریع و اقتصادی برای تأمین نیازهای شما به سوخت‌های ضروری و استراتژیک "
 "است."
 
-#: templates/index.html:296
+#: templates/index.html:294
 msgid "Global trade"
 msgstr "تجارت جهانی"
 
-#: templates/index.html:338
+#: templates/index.html:336
 msgid "Agriculture products"
 msgstr "محصولات کشاورزی"
 
-#: templates/index.html:359 templates/services.html:112
+#: templates/index.html:357 templates/services.html:112
 #: templates/support.html:74
 msgid "Support"
 msgstr "پشتیبانی"
 
-#: templates/index.html:360 templates/services.html:113
+#: templates/index.html:358 templates/services.html:113
 #: templates/support.html:78
 msgid ""
 "We understand that making smart and successful decisions on any project "
@@ -1456,19 +1636,30 @@ msgstr ""
 "حرفه‌ای را گرد هم آورده‌ایم تا در هر مرحله از همکاری، در کنار شما باشیم. هدف "
 "ما، ارائه خدماتی فراتر از انتظارات شما و ایجاد تجربه‌ای متفاوت و مطمئن است"
 
-#: templates/index.html:2034
+#: templates/index.html:513
+msgid "From The Shop"
+msgstr "از فروشگاه"
+
+#: templates/index.html:555 templates/index.html:583 templates/index.html:614
+#: templates/shop-single.html:233 templates/shop-single.html:498
+#: templates/shop-single.html:764 templates/shop.html:76
+#: templates/shop.html:109 templates/shop.html:142
+msgid "Quick View"
+msgstr "نمایش سریع"
+
+#: templates/index.html:839
 msgid "Newsletter Signup"
 msgstr "ثبت نام در خبرنامه"
 
-#: templates/index.html:2035
+#: templates/index.html:840
 msgid "We send you latest news couple a month ( No Spam)."
 msgstr "ما ماهانه آخرین اخبار را برای شما ارسال می کنیم (بدون هرزنامه)."
 
-#: templates/index.html:2054
+#: templates/index.html:859
 msgid "Your Email *"
 msgstr "ایمیل شما *"
 
-#: templates/index.html:2061
+#: templates/index.html:866
 msgid "Subscribe"
 msgstr "مشترک شوید"
 
@@ -1655,6 +1846,66 @@ msgstr "پشتیبانی"
 #: templates/services.html:17
 msgid "Our Services"
 msgstr "خدمات ما"
+
+#: templates/shop-single.html:120 templates/shop-single.html:129
+#: templates/shop-single.html:385 templates/shop-single.html:394
+#: templates/shop-single.html:651 templates/shop-single.html:660
+msgid "Description"
+msgstr "شرح"
+
+#: templates/shop-single.html:158 templates/shop-single.html:191
+#: templates/shop-single.html:423 templates/shop-single.html:456
+#: templates/shop-single.html:689 templates/shop-single.html:722
+msgid "Add Review"
+msgstr "نظر خود را اضافه کنید"
+
+#: templates/shop-single.html:176 templates/shop-single.html:441
+#: templates/shop-single.html:707
+msgid "Your Name"
+msgstr "نام شما "
+
+#: templates/shop-single.html:179 templates/shop-single.html:444
+#: templates/shop-single.html:710
+msgid "Your Lastname"
+msgstr "نام خانوادگی شما "
+
+#: templates/shop-single.html:185 templates/shop-single.html:450
+#: templates/shop-single.html:716
+msgid "Email Address"
+msgstr "ایمیل "
+
+#: templates/shop-single.html:188 templates/shop-single.html:453
+#: templates/shop-single.html:719
+msgid "Review Comments"
+msgstr "نظرات خود را بیان کنید"
+
+#: templates/shop-single.html:209 templates/shop-single.html:474
+#: templates/shop-single.html:740
+msgid "Related Products"
+msgstr "محصولات مرتبط"
+
+#: templates/shop-single.html:259 templates/shop-single.html:524
+#: templates/shop-single.html:790 templates/shop.html:195
+msgid "Search here"
+msgstr "اینجا جستجو کنید"
+
+#: templates/shop-single.html:269 templates/shop-single.html:534
+#: templates/shop-single.html:800 templates/shop.html:234
+msgid "Latest Products"
+msgstr "محصولات اخیر"
+
+#: templates/shop-single.html:288 templates/shop-single.html:553
+#: templates/shop-single.html:819
+msgid "Products Tags"
+msgstr "تگ های محصولات"
+
+#: templates/shop.html:16 templates/shop.html:23
+msgid "Shop Products"
+msgstr "فروشگاه محصولات"
+
+#: templates/shop.html:154
+msgid "No suitable products found."
+msgstr "هیچ محصول مناسبی یافت نشد."
 
 #: templates/support.html:77
 msgid ""

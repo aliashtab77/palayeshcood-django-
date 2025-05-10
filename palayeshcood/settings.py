@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'services.apps.ServicesConfig',
     'django_ckeditor_5',
     'request',
+    'shop.apps.ShopConfig',
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [

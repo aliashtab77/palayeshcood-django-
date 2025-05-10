@@ -1,0 +1,843 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+{% load humanize %}
+{% load custom_filters %}
+{% block title %}
+	{% if LANGUAGE_CODE == "fa" %}
+        {{ product.title_persian }}
+    {% elif LANGUAGE_CODE == "en" %}
+        {{ product.title_english }}
+    {% else %}
+        {{ product.title_arabic }}
+    {% endif %}
+{% endblock title %}
+{% block shopc %}current{% endblock shopc%}
+{% block det %}
+    <ul class="dropdown-menu" style="min-width: auto;">
+        {% if product.show_on_persian %}
+        	<input type="hidden" value="{% url 'shopdetail' slug=product.persian_slug %}" name="penext" id="penext">
+            <li><button onclick="chLaToPeShDe();"><img src="{% static 'haman/images/icons/iran2.png' %}" class="chanelangimg" alt="iran flag logo" /></button></li>
+        {% endif %}
+        {% if product.show_on_english %}
+        	<input type="hidden" value="{% url 'shopdetail' slug=product.english_slug %}" name="ennext" id="ennext">
+            <li><button onclick="chLaToEnShDe();"><img src="{% static 'haman/images/icons/flog.png' %}" class="chanelangimg" alt="british flag logo" /></button></li>
+        {% endif %}
+        {% if product.show_on_arabic %}
+        	<input type="hidden" value="{% url 'shopdetail' slug=product.arabic_slug %}" name="arnext" id="arnext">
+            <li><button onclick="chLaToArShDe();"><img src="{% static 'haman/images/icons/arab.png' %}" class="chanelangimg" width="24px" height="14px" alt="Arabian flag logo" /></button></li>
+        {% endif %}
+    </ul>
+{% endblock det %}
+{% block body %}
+    <!--Page Title-->
+    <section class="page-title" style="background-image:url({% static 'haman/images/background/bg-page-title-1.jpg' %});">
+        <div class="auto-container">
+            <h1>
+                {% if LANGUAGE_CODE == "fa" %}
+                    {{ product.title_persian }}
+                {% elif LANGUAGE_CODE == "en" %}
+                    {{ product.title_english }}
+                {% else %}
+                    {{ product.title_arabic }}
+                {% endif %}
+            </h1>
+        </div>
+    </section>
+
+    {% if LANGUAGE_CODE == "fa" %}
+        <!--Page Info-->
+        <section class="page-info">
+            <div class="auto-container clearfix">
+                <div class="pull-left"><h2>{{ product.title_persian }}</h2></div>
+                <div class="pull-right">
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
+                        <li><a href="{% url 'shop' %}">{% translate 'Shop' %}</a></li>
+                        <li>{{ product.title_persian }}</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--Sidebar Page-->
+        <div class="sidebar-page-container">
+            <div class="auto-container">
+                <div class="row clearfix">
+
+                    <!--Content Side-->
+                    <div class="content-side col-lg-9 col-md-8 col-sm-12 col-xs-12">
+
+                        <!--Product Details Section-->
+                        <section class="products-section product-details no-padd-top no-padd-bottom">
+                            <!--Basic Details-->
+                            <div class="basic-details">
+                                <div class="row clearfix">
+                                    <div class="image-column col-md-5 col-sm-6 col-xs-12">
+                                        <figure class="image-box"><img class="img-responsive" src="{{ product.avatar.url }}" alt="{{ product.title_persian }}"></figure>
+                                    </div>
+                                    <div class="info-column col-md-7 col-sm-6 col-xs-12">
+                                        <div class="details-header">
+                                            <h4>{{ product.title_persian }}</h4>
+                                            <div class="rating">
+                                                {% for _ in 0|range:product.star %}
+                                                          <span class="fa fa-star"></span>
+                                                {% endfor %}
+                                                 <span class="txt">({{ rev }} {%  translate 'Reviews' %})</span>
+                                            </div>
+                                            <div class="item-price"><p style="display: inline">تومان</p> <p style="display: inline">{{ product.price_persian|floatformat:1|intcomma }}</p></div>
+                                        </div>
+                                        {% comment %}
+                                        <div class="text">
+                                            <p>There are many variations of passages,the ut majority have suffered seds alterationin some form, by injected humourr andomised words which don't look evenslightly believable when get finance. </p>
+                                        </div>
+
+                                        <div class="check-delivery">
+                                            <h4>Check Delivery Option at Your Location:</h4>
+
+                                            <div class="form-outer">
+                                                <form method="post" action="#">
+                                                    <div class="clearfix">
+                                                        <div class="form-group">
+                                                            <input type="text" name="chk-delivery" placeholder="Pincode" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <button type="button">Check</button>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <div class="field-label">Expected Delivery in 8 Days</div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <div class="clearfix options">
+                                            <div class="pull-left padd-right-20 item-quantity"><input class="quantity-spinner" type="text" value="1" name="quantity"></div>
+                                            <div class="pull-left padd-right-20"><a href="#" class="theme-btn btn-style-one">Add to Cart</a></div>
+                                        </div>
+                                        {% endcomment %}
+                                    </div>
+                                </div>
+                            </div><!--Basic Details-->
+
+                            <!--Product Info Tabs-->
+                            <div class="product-info-tabs">
+
+                                <!--Product Tabs-->
+                                <div class="prod-tabs" id="product-tabs">
+
+                                    <!--Tab Btns-->
+                                    <div class="tab-btns clearfix">
+                                        <a href="#prod-description" class="tab-btn active-btn">{% translate 'Description' %}</a>
+                                        <a href="#prod-reviews" class="tab-btn">{% translate 'Reviews' %} ( {{ rev }} )</a>
+                                    </div>
+
+                                    <!--Tabs Container-->
+                                    <div class="tabs-container">
+
+                                        <!--Tab-->
+                                        <div class="tab active-tab" id="prod-description">
+                                            <h3>{% translate 'Description' %}</h3>
+                                            <div class="content">
+                                               {{ product.description_persian | safe }}
+                                            </div>
+                                        </div>
+
+                                        <!--Tab / Active Tab-->
+                                        <div class="tab" id="prod-reviews">
+
+                                            <!--Reviews Container-->
+                                            <div class="reviews-container">
+                                                <!--Reviews-->
+                                                {% for comment in comments %}
+                                                    <article class="review-box clearfix">
+                                                        <figure class="rev-thumb"><img src="{% static 'haman/images/resource/author-thumb-5.jpg' %}" alt="person avatar"></figure>
+                                                        <div class="rev-content">
+                                                            <div class="rev-header clearfix">
+                                                                <h4>{{ comment.name }}</h4>
+    {#                                                            <div class="rating"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></div>#}
+                                                            </div>
+    {#                                                        <div class="rev-info">21 December 2015 at 11.00am / <a href="#">Reply</a></div>#}
+                                                            <div class="rev-text">{{ comment.comment }}</div>
+                                                        </div>
+                                                    </article>
+                                                {% endfor %}
+                                            </div>
+
+                                            <!--Add Review-->
+                                            <div class="add-review">
+                                                <div class="sec-title medium"><h2>{% translate 'Add Review' %}</h2></div>
+
+                                                <form method="post" action="#">
+                                                    <div class="row clearfix">
+                                                        {% comment %}
+                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                            <label>Your Rating </label>
+                                                            <ul class="rating">
+                                                                <li><a class="rate-box" title="1 Out of 5"><span class="fa fa-star"></span></a></li>
+                                                                <li><a class="rate-box" title="2 Out of 5"><span class="fa fa-star"></span> <span class="fa fa-star"></span></a></li>
+                                                                <li><a class="rate-box" title="3 Out of 5"><span class="fa fa-star"></span> <span class="fa fa-star"> </span> <span class="fa fa-star"></span></a></li>
+                                                                <li><a class="rate-box" title="4 Out of 5"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></a></li>
+                                                                <li><a class="rate-box" title="5 Out of 5"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        {% endcomment %}
+                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="text" name="firstname" value="" placeholder="{% translate 'Your Name' %}" required>
+                                                        </div>
+                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="text" name="lastname" value="" placeholder="{% translate 'Your Lastname' %}">
+                                                        </div>
+                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="text" name="phone" value="" placeholder="{% translate 'Phone' %}">
+                                                        </div>
+                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="email" name="email" value="" placeholder="{% translate 'Email Address' %}" required>
+                                                        </div>
+                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                            <textarea name="review-message" placeholder="{% translate 'Review Comments' %}"></textarea>
+                                                        </div>
+                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                            <button type="submit" class="theme-btn hvr-bounce-to-right">{% translate 'Add Review' %}</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </section>
+                        {% if related %}
+                            <!--Related Products Section-->
+                            <section class="related-products">
+                            <div class="sec-title medium"><h2>{% translate 'Related Products' %}</h2></div>
+
+                            <div class="related-items-carousel">
+                                {% for foo in related %}
+                                    <div class="default-shop-item {% if not foo.inventory%}out-of-stock{% endif %}">
+                                    <!--inner-box-->
+                                    <div class="inner-box">
+                                        <!--image-box-->
+                                        <figure class="image-box">
+                                            <a href="{% url 'shopdetail' slug=foo.persian_slug %}"><img src="{{ foo.avatar.url }}" alt="{{ foo.title_persian }}" /></a>
+                                        </figure>
+
+                                        <!--lower-content-->
+                                        <div class="lower-content">
+                                            <h3><a href="{% url 'shopdetail' slug=foo.persian_slug %}">{{ foo.title_persian }}</a></h3>
+
+                                            <div class="rating">
+                                                {% for _ in 0|range:foo.star %}
+                                                    <span class="fa fa-star"></span>
+                                                {% endfor %}
+                                            </div>
+                                            <div class="price"><p style="display: inline">تومان</p> <p style="display: inline">{{ foo.price_persian|floatformat:1|intcomma }}</p> {#<span>$ 35.99</span>#}</div>
+                                            <div class="links-box">
+                                                <a class="cart-btn" href="#">Add to Cart</a>
+                                                <a class="zoom-btn lightbox-image" href="{{ foo.avatar.url }}" title="{{ foo.title_persian }}"><span class="fa fa-search-plus" title="{% translate 'Quick View' %}"></span></a>
+                                                <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                            </div>
+                                        </div>
+                                        {% if foo.inventory %}
+                                            <div class="dead-overlay"><span class="text">موجود نیست</span></div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                {% endfor %}
+
+                            </div>
+                        </section>
+                        {% endif %}
+                    </div><!--End Content Side-->
+
+                    <!--Sidebar-->
+                    <div class="sidebar-side col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <aside class="sidebar">
+
+                            <!-- Search Form -->
+                            <div class="widget search-box sidebar-widget">
+
+                                <form method="post" action="{% url 'shop' %}">
+                                {% csrf_token %}
+                                    <div class="form-group">
+                                        <input type="search" name="search-field" value="" placeholder="{% translate 'Search here' %}">
+                                        <button type="submit" {% if LANGUAGE_BIDI %}style="left: 0px" {% endif %}><span class="icon fa fa-search"></span></button>
+                                    </div>
+                                </form>
+
+                            </div>
+
+                            <!-- Best Sellers -->
+                            <div class="widget best-sellers sidebar-widget">
+                                {% if shopbaner %}
+                                    <div class="sidebar-title"><h3>{% translate 'Latest Products' %}</h3></div>
+                                    {% for p in shopbaner %}
+                                        <div class="item">
+                                            <div class="post-thumb"><a href="{% url 'shopdetail' slug=p.product.persian_slug %}"><img src="{{ p.product.avatar.url }}" alt="{{ p.product.title_persian }}"></a></div>
+                                            <h4><a href="{% url 'shopdetail' slug=p.product.persian_slug %}">{{ p.product.title_persian }}</a></h4>
+                                            <div class="rating">
+                                                {% for _ in 0|range:p.product.star %}
+                                                    <span class="fa fa-star"></span>
+                                                {% endfor %}
+                                            </div>
+                                            <div class="item-price"><p style="display: inline">تومان</p> <p style="display: inline">{{ product.price_persian|floatformat:1|intcomma }}</p> {#<span class="strike-through">$ 25.99</span>#}</div>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+
+                            <!-- Popular Tags -->
+                            {% if tags %}
+                                <div class="widget sidebar-widget popular-tags">
+                                    <div class="sidebar-title"><h3>{% translate 'Products Tags' %}</h3></div>
+                                    {% for tag in tags %}
+                                        <a>{{ tag }}</a>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </aside>
+                    </div><!--End Sidebar-->
+
+                </div>
+            </div>
+        </div>
+    {% elif LANGUAGE_CODE == "en" %}
+        <!--Page Info-->
+        <section class="page-info">
+            <div class="auto-container clearfix">
+                <div class="pull-left"><h2>{{ product.title_english }}</h2></div>
+                <div class="pull-right">
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
+                        <li><a href="{% url 'shop' %}">{% translate 'Shop' %}</a></li>
+                        <li>{{ product.title_english }}</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--Sidebar Page-->
+        <div class="sidebar-page-container">
+            <div class="auto-container">
+                <div class="row clearfix">
+
+                    <!--Content Side-->
+                    <div class="content-side col-lg-9 col-md-8 col-sm-12 col-xs-12">
+
+                        <!--Product Details Section-->
+                        <section class="products-section product-details no-padd-top no-padd-bottom">
+                            <!--Basic Details-->
+                            <div class="basic-details">
+                                <div class="row clearfix">
+                                    <div class="image-column col-md-5 col-sm-6 col-xs-12">
+                                        <figure class="image-box"><img class="img-responsive" src="{{ product.avatar.url }}" alt="{{ product.title_english }}"></figure>
+                                    </div>
+                                    <div class="info-column col-md-7 col-sm-6 col-xs-12">
+                                        <div class="details-header">
+                                            <h4>{{ product.title_english }}</h4>
+                                            <div class="rating">
+                                                {% for _ in 0|range:product.star %}
+                                                          <span class="fa fa-star"></span>
+                                                {% endfor %}
+                                                 <span class="txt">({{ rev }} {%  translate 'Reviews' %})</span>
+                                            </div>
+                                            <div class="item-price">$ {{ product.price_english|intcomma }}</div>
+                                        </div>
+                                        {% comment %}
+                                        <div class="text">
+                                            <p>There are many variations of passages,the ut majority have suffered seds alterationin some form, by injected humourr andomised words which don't look evenslightly believable when get finance. </p>
+                                        </div>
+
+                                        <div class="check-delivery">
+                                            <h4>Check Delivery Option at Your Location:</h4>
+
+                                            <div class="form-outer">
+                                                <form method="post" action="#">
+                                                    <div class="clearfix">
+                                                        <div class="form-group">
+                                                            <input type="text" name="chk-delivery" placeholder="Pincode" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <button type="button">Check</button>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <div class="field-label">Expected Delivery in 8 Days</div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <div class="clearfix options">
+                                            <div class="pull-left padd-right-20 item-quantity"><input class="quantity-spinner" type="text" value="1" name="quantity"></div>
+                                            <div class="pull-left padd-right-20"><a href="#" class="theme-btn btn-style-one">Add to Cart</a></div>
+                                        </div>
+                                        {% endcomment %}
+                                    </div>
+                                </div>
+                            </div><!--Basic Details-->
+
+                            <!--Product Info Tabs-->
+                            <div class="product-info-tabs">
+
+                                <!--Product Tabs-->
+                                <div class="prod-tabs" id="product-tabs">
+
+                                    <!--Tab Btns-->
+                                    <div class="tab-btns clearfix">
+                                        <a href="#prod-description" class="tab-btn active-btn">{% translate 'Description' %}</a>
+                                        <a href="#prod-reviews" class="tab-btn">{% translate 'Reviews' %} ( {{ rev }} )</a>
+                                    </div>
+
+                                    <!--Tabs Container-->
+                                    <div class="tabs-container">
+
+                                        <!--Tab-->
+                                        <div class="tab active-tab" id="prod-description">
+                                            <h3>{% translate 'Description' %}</h3>
+                                            <div class="content">
+                                                {{ product.description_english | safe }}
+                                            </div>
+                                        </div>
+
+                                        <!--Tab / Active Tab-->
+                                        <div class="tab" id="prod-reviews">
+
+                                            <!--Reviews Container-->
+                                            <div class="reviews-container">
+                                                <!--Reviews-->
+                                                {% for comment in comments %}
+                                                    <article class="review-box clearfix">
+                                                        <figure class="rev-thumb"><img src="{% static 'haman/images/resource/author-thumb-5.jpg' %}" alt="person avatar"></figure>
+                                                        <div class="rev-content">
+                                                            <div class="rev-header clearfix">
+                                                                <h4>{{ comment.name }}</h4>
+    {#                                                            <div class="rating"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></div>#}
+                                                            </div>
+    {#                                                        <div class="rev-info">21 December 2015 at 11.00am / <a href="#">Reply</a></div>#}
+                                                            <div class="rev-text">{{ comment.comment }}</div>
+                                                        </div>
+                                                    </article>
+                                                {% endfor %}
+                                            </div>
+
+                                            <!--Add Review-->
+                                            <div class="add-review">
+                                                <div class="sec-title medium"><h2>{% translate 'Add Review' %}</h2></div>
+
+                                                <form method="post" action="#">
+                                                    <div class="row clearfix">
+                                                        {% comment %}
+                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                            <label>Your Rating </label>
+                                                            <ul class="rating">
+                                                                <li><a class="rate-box" title="1 Out of 5"><span class="fa fa-star"></span></a></li>
+                                                                <li><a class="rate-box" title="2 Out of 5"><span class="fa fa-star"></span> <span class="fa fa-star"></span></a></li>
+                                                                <li><a class="rate-box" title="3 Out of 5"><span class="fa fa-star"></span> <span class="fa fa-star"> </span> <span class="fa fa-star"></span></a></li>
+                                                                <li><a class="rate-box" title="4 Out of 5"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></a></li>
+                                                                <li><a class="rate-box" title="5 Out of 5"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        {% endcomment %}
+                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="text" name="firstname" value="" placeholder="{% translate 'Your Name' %}" required>
+                                                        </div>
+                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="text" name="lastname" value="" placeholder="{% translate 'Your Lastname' %}">
+                                                        </div>
+                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="text" name="phone" value="" placeholder="{% translate 'Phone' %}">
+                                                        </div>
+                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="email" name="email" value="" placeholder="{% translate 'Email Address' %}" required>
+                                                        </div>
+                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                            <textarea name="review-message" placeholder="{% translate 'Review Comments' %}"></textarea>
+                                                        </div>
+                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                            <button type="submit" class="theme-btn hvr-bounce-to-right">{% translate 'Add Review' %}</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </section>
+                        {% if related %}
+                            <!--Related Products Section-->
+                            <section class="related-products">
+                            <div class="sec-title medium"><h2>{% translate 'Related Products' %}</h2></div>
+
+                            <div class="related-items-carousel">
+                                {% for foo in related %}
+                                    <div class="default-shop-item {% if not foo.inventory%}out-of-stock{% endif %}">
+                                    <!--inner-box-->
+                                    <div class="inner-box">
+                                        <!--image-box-->
+                                        <figure class="image-box">
+                                            <a href="{% url 'shopdetail' slug=foo.english_slug %}"><img src="{{ foo.avatar.url }}" alt="{{ foo.title_english }}" /></a>
+                                        </figure>
+
+                                        <!--lower-content-->
+                                        <div class="lower-content">
+                                            <h3><a href="{% url 'shopdetail' slug=foo.english_slug %}">{{ foo.title_english }}</a></h3>
+
+                                            <div class="rating">
+                                                {% for _ in 0|range:foo.star %}
+                                                    <span class="fa fa-star"></span>
+                                                {% endfor %}
+                                            </div>
+                                            <div class="price">$ {{ foo.price_english|intcomma }} {#<span>$ 35.99</span>#}</div>
+                                            <div class="links-box">
+                                                <a class="cart-btn" href="#">Add to Cart</a>
+                                                <a class="zoom-btn lightbox-image" href="{{ foo.avatar.url }}" title="{{ foo.title_english }}"><span class="fa fa-search-plus" title="{% translate 'Quick View' %}"></span></a>
+                                                <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                            </div>
+                                        </div>
+                                        {% if foo.inventory %}
+                                            <div class="dead-overlay"><span class="text">Out Of Stock</span></div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                {% endfor %}
+
+                            </div>
+                        </section>
+                        {% endif %}
+                    </div><!--End Content Side-->
+
+                    <!--Sidebar-->
+                    <div class="sidebar-side col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <aside class="sidebar">
+
+                            <!-- Search Form -->
+                            <div class="widget search-box sidebar-widget">
+
+                                <form method="post" action="{% url 'shop' %}">
+                                {% csrf_token %}
+                                    <div class="form-group">
+                                        <input type="search" name="search-field" value="" placeholder="{% translate 'Search here' %}">
+                                        <button type="submit" {% if LANGUAGE_BIDI %}style="left: 0px" {% endif %}><span class="icon fa fa-search"></span></button>
+                                    </div>
+                                </form>
+
+                            </div>
+
+                            <!-- Best Sellers -->
+                            <div class="widget best-sellers sidebar-widget">
+                                {% if shopbaner %}
+                                    <div class="sidebar-title"><h3>{% translate 'Latest Products' %}</h3></div>
+                                    {% for p in shopbaner %}
+                                        <div class="item">
+                                            <div class="post-thumb"><a href="{% url 'shopdetail' slug=p.product.english_slug %}"><img src="{{ p.product.avatar.url }}" alt="{{ p.product.title_english }}"></a></div>
+                                            <h4><a href="{% url 'shopdetail' slug=p.product.english_slug %}">{{ p.product.title_english }}</a></h4>
+                                            <div class="rating">
+                                                {% for _ in 0|range:p.product.star %}
+                                                    <span class="fa fa-star"></span>
+                                                {% endfor %}
+                                            </div>
+                                            <div class="item-price">$ {{ p.product.price_english|intcomma }} {#<span class="strike-through">$ 25.99</span>#}</div>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+
+                            <!-- Popular Tags -->
+                            {% if tags %}
+                                <div class="widget sidebar-widget popular-tags">
+                                    <div class="sidebar-title"><h3>{% translate 'Products Tags' %}</h3></div>
+                                    {% for tag in tags %}
+                                        <a>{{ tag }}</a>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </aside>
+                    </div><!--End Sidebar-->
+
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <!--Page Info-->
+        <section class="page-info">
+            <div class="auto-container clearfix">
+                <div class="pull-left"><h2>{{ product.title_arabic }}</h2></div>
+                <div class="pull-right">
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
+                        <li><a href="{% url 'shop' %}">{% translate 'Shop' %}</a></li>
+                        <li>{{ product.title_arabic }}</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--Sidebar Page-->
+        <div class="sidebar-page-container">
+            <div class="auto-container">
+                <div class="row clearfix">
+
+                    <!--Content Side-->
+                    <div class="content-side col-lg-9 col-md-8 col-sm-12 col-xs-12">
+
+                        <!--Product Details Section-->
+                        <section class="products-section product-details no-padd-top no-padd-bottom">
+                            <!--Basic Details-->
+                            <div class="basic-details">
+                                <div class="row clearfix">
+                                    <div class="image-column col-md-5 col-sm-6 col-xs-12">
+                                        <figure class="image-box"><img class="img-responsive" src="{{ product.avatar.url }}" alt="{{ product.title_arabic }}"></figure>
+                                    </div>
+                                    <div class="info-column col-md-7 col-sm-6 col-xs-12">
+                                        <div class="details-header">
+                                            <h4>{{ product.title_arabic }}</h4>
+                                            <div class="rating">
+                                                {% for _ in 0|range:product.star %}
+                                                          <span class="fa fa-star"></span>
+                                                {% endfor %}
+                                                 <span class="txt">({{ rev }} {%  translate 'Reviews' %})</span>
+                                            </div>
+                                            <div class="item-price"><p style="display: inline">الریال</p> <p style="display: inline">{{ product.price_arabic|floatformat:1|intcomma }}</p></div>
+
+                                        </div>
+                                        {% comment %}
+                                        <div class="text">
+                                            <p>There are many variations of passages,the ut majority have suffered seds alterationin some form, by injected humourr andomised words which don't look evenslightly believable when get finance. </p>
+                                        </div>
+
+                                        <div class="check-delivery">
+                                            <h4>Check Delivery Option at Your Location:</h4>
+
+                                            <div class="form-outer">
+                                                <form method="post" action="#">
+                                                    <div class="clearfix">
+                                                        <div class="form-group">
+                                                            <input type="text" name="chk-delivery" placeholder="Pincode" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <button type="button">Check</button>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <div class="field-label">Expected Delivery in 8 Days</div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <div class="clearfix options">
+                                            <div class="pull-left padd-right-20 item-quantity"><input class="quantity-spinner" type="text" value="1" name="quantity"></div>
+                                            <div class="pull-left padd-right-20"><a href="#" class="theme-btn btn-style-one">Add to Cart</a></div>
+                                        </div>
+                                        {% endcomment %}
+                                    </div>
+                                </div>
+                            </div><!--Basic Details-->
+
+                            <!--Product Info Tabs-->
+                            <div class="product-info-tabs">
+
+                                <!--Product Tabs-->
+                                <div class="prod-tabs" id="product-tabs">
+
+                                    <!--Tab Btns-->
+                                    <div class="tab-btns clearfix">
+                                        <a href="#prod-description" class="tab-btn active-btn">{% translate 'Description' %}</a>
+                                        <a href="#prod-reviews" class="tab-btn">{% translate 'Reviews' %} ( {{ rev }} )</a>
+                                    </div>
+
+                                    <!--Tabs Container-->
+                                    <div class="tabs-container">
+
+                                        <!--Tab-->
+                                        <div class="tab active-tab" id="prod-description">
+                                            <h3>{% translate 'Description' %}</h3>
+                                            <div class="content">
+                                                {{ product.description_arabic }}
+                                            </div>
+                                        </div>
+
+                                        <!--Tab / Active Tab-->
+                                        <div class="tab" id="prod-reviews">
+
+                                            <!--Reviews Container-->
+                                            <div class="reviews-container">
+                                                <!--Reviews-->
+                                                {% for comment in comments %}
+                                                    <article class="review-box clearfix">
+                                                        <figure class="rev-thumb"><img src="{% static 'haman/images/resource/author-thumb-5.jpg' %}" alt="person avatar"></figure>
+                                                        <div class="rev-content">
+                                                            <div class="rev-header clearfix">
+                                                                <h4>{{ comment.name }}</h4>
+    {#                                                            <div class="rating"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></div>#}
+                                                            </div>
+    {#                                                        <div class="rev-info">21 December 2015 at 11.00am / <a href="#">Reply</a></div>#}
+                                                            <div class="rev-text">{{ comment.comment }}</div>
+                                                        </div>
+                                                    </article>
+                                                {% endfor %}
+                                            </div>
+
+                                            <!--Add Review-->
+                                            <div class="add-review">
+                                                <div class="sec-title medium"><h2>{% translate 'Add Review' %}</h2></div>
+
+                                                <form method="post" action="#">
+                                                    <div class="row clearfix">
+                                                        {% comment %}
+                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                            <label>Your Rating </label>
+                                                            <ul class="rating">
+                                                                <li><a class="rate-box" title="1 Out of 5"><span class="fa fa-star"></span></a></li>
+                                                                <li><a class="rate-box" title="2 Out of 5"><span class="fa fa-star"></span> <span class="fa fa-star"></span></a></li>
+                                                                <li><a class="rate-box" title="3 Out of 5"><span class="fa fa-star"></span> <span class="fa fa-star"> </span> <span class="fa fa-star"></span></a></li>
+                                                                <li><a class="rate-box" title="4 Out of 5"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></a></li>
+                                                                <li><a class="rate-box" title="5 Out of 5"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        {% endcomment %}
+                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="text" name="firstname" value="" placeholder="{% translate 'Your Name' %}" required>
+                                                        </div>
+                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="text" name="lastname" value="" placeholder="{% translate 'Your Lastname' %}">
+                                                        </div>
+                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="text" name="phone" value="" placeholder="{% translate 'Phone' %}">
+                                                        </div>
+                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="email" name="email" value="" placeholder="{% translate 'Email Address' %}" required>
+                                                        </div>
+                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                            <textarea name="review-message" placeholder="{% translate 'Review Comments' %}"></textarea>
+                                                        </div>
+                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                            <button type="submit" class="theme-btn hvr-bounce-to-right">{% translate 'Add Review' %}</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </section>
+                        {% if related %}
+                            <!--Related Products Section-->
+                            <section class="related-products">
+                            <div class="sec-title medium"><h2>{% translate 'Related Products' %}</h2></div>
+
+                            <div class="related-items-carousel">
+                                {% for foo in related %}
+                                    <div class="default-shop-item {% if not foo.inventory%}out-of-stock{% endif %}">
+                                    <!--inner-box-->
+                                    <div class="inner-box">
+                                        <!--image-box-->
+                                        <figure class="image-box">
+                                            <a href="{% url 'shopdetail' slug=foo.arabic_slug %}"><img src="{{ foo.avatar.url }}" alt="{{ foo.title_arabic }}" /></a>
+                                        </figure>
+
+                                        <!--lower-content-->
+                                        <div class="lower-content">
+                                            <h3><a href="{% url 'shopdetail' slug=foo.arabic_slug %}">{{ foo.title_arabic }}</a></h3>
+
+                                            <div class="rating">
+                                                {% for _ in 0|range:foo.star %}
+                                                    <span class="fa fa-star"></span>
+                                                {% endfor %}
+                                            </div>
+                                            <div class="price"><p style="display: inline">الریال</p> <p style="display: inline">{{ foo.price_arabic|floatformat:1|intcomma }}</p> {#<span>$ 35.99</span>#}</div>
+                                            <div class="links-box">
+                                                <a class="cart-btn" href="#">Add to Cart</a>
+                                                <a class="zoom-btn lightbox-image" href="{{ foo.avatar.url }}" title="{{ foo.title_arabic }}"><span class="fa fa-search-plus" title="{% translate 'Quick View' %}"></span></a>
+                                                <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                            </div>
+                                        </div>
+                                        {% if foo.inventory %}
+                                            <div class="dead-overlay"><span class="text">إنتهى من المخزن</span></div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                {% endfor %}
+
+                            </div>
+                        </section>
+                        {% endif %}
+                    </div><!--End Content Side-->
+
+                    <!--Sidebar-->
+                    <div class="sidebar-side col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <aside class="sidebar">
+
+                            <!-- Search Form -->
+                            <div class="widget search-box sidebar-widget">
+
+                                <form method="post" action="{% url 'shop' %}">
+                                {% csrf_token %}
+                                    <div class="form-group">
+                                        <input type="search" name="search-field" value="" placeholder="{% translate 'Search here' %}">
+                                        <button type="submit" {% if LANGUAGE_BIDI %}style="left: 0px" {% endif %}><span class="icon fa fa-search"></span></button>
+                                    </div>
+                                </form>
+
+                            </div>
+
+                            <!-- Best Sellers -->
+                            <div class="widget best-sellers sidebar-widget">
+                                {% if shopbaner %}
+                                    <div class="sidebar-title"><h3>{% translate 'Latest Products' %}</h3></div>
+                                    {% for p in shopbaner %}
+                                        <div class="item">
+                                            <div class="post-thumb"><a href="{% url 'shopdetail' slug=p.product.arabic_slug %}"><img src="{{ p.product.avatar.url }}" alt="{{ p.product.title_arabic }}"></a></div>
+                                            <h4><a href="{% url 'shopdetail' slug=p.product.arabic_slug %}">{{ p.product.title_arabic }}</a></h4>
+                                            <div class="rating">
+                                                {% for _ in 0|range:p.product.star %}
+                                                    <span class="fa fa-star"></span>
+                                                {% endfor %}
+                                            </div>
+                                            <div class="item-price"><p style="display: inline">الریال</p> <p style="display: inline">{{ p.product.price_arabic|floatformat:1|intcomma }}</p> {#<span class="strike-through">$ 25.99</span>#}</div>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+
+                            <!-- Popular Tags -->
+                            {% if tags %}
+                                <div class="widget sidebar-widget popular-tags">
+                                    <div class="sidebar-title"><h3>{% translate 'Products Tags' %}</h3></div>
+                                    {% for tag in tags %}
+                                        <a>{{ tag }}</a>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </aside>
+                    </div><!--End Sidebar-->
+
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+{% endblock body %}
+    
