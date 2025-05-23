@@ -4,45 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60508cdf-84c1-4e38-9f07-29198cb6ba53" name="Changes" comment="shop app has done">
-      <change afterPath="$PROJECT_DIR$/blogs/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blogs/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blogs/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blogs/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blogs/migrations/0002_blogsmodel_short_description_arabic_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blogs/migrations/0003_blogsmodel_time_created.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blogs/migrations/0004_alter_blogsmodel_avatar.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blogs/migrations/0005_rename_product_english_indexblog_blog.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blogs/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blogs/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blogs/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blogs/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blogs/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/blogs/blog-image-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/blogs/blog-image-8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/blog-single.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="60508cdf-84c1-4e38-9f07-29198cb6ba53" name="Changes" comment="blogs add and bugs fix">
+      <change afterPath="$PROJECT_DIR$/templates/news.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/haman/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/haman/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/palayeshcood/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/palayeshcood/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/palayeshcood/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/palayeshcood/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shop-single.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop-single.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +158,7 @@
       <workItem from="1747569076276" duration="99000" />
       <workItem from="1747574057235" duration="1854000" />
       <workItem from="1747580270149" duration="18653000" />
-      <workItem from="1747993409834" duration="5334000" />
+      <workItem from="1747993409834" duration="6438000" />
     </task>
     <task id="LOCAL-00001" summary="first haman see">
       <option name="closed" value="true" />
@@ -274,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746874452650</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="blogs add and bugs fix">
+      <option name="closed" value="true" />
+      <created>1747999154340</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1747999154340</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +277,8 @@
     <MESSAGE value="services translations all done" />
     <MESSAGE value="black box added to index" />
     <MESSAGE value="shop app has done" />
-    <option name="LAST_COMMIT_MESSAGE" value="shop app has done" />
+    <MESSAGE value="blogs add and bugs fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="blogs add and bugs fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

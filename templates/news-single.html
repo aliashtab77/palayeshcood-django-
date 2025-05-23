@@ -1,0 +1,504 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+{% block title %}
+	{% if LANGUAGE_CODE == "fa" %}
+        {{ blogs.title_persian }}
+    {% elif LANGUAGE_CODE == "en" %}
+        {{ blogs.title_english }}
+    {% else %}
+        {{ blogs.title_arabic }}
+    {% endif %}
+{% endblock title %}
+{% block newsc %}current{% endblock newsc %}
+{% block newscz %}currnt{% endblock newscz %}
+{% block det %}
+    <ul class="dropdown-menu" style="min-width: auto;">
+        {% if blogs.show_on_persian %}
+        	<input type="hidden" value="{% url 'newsdetail' slug=blogs.persian_slug %}" name="penext" id="penext">
+            <li><button onclick="chLaToPeShDe();"><img src="{% static 'haman/images/icons/iran2.png' %}" class="chanelangimg" alt="iran flag logo" /></button></li>
+        {% endif %}
+        {% if blogs.show_on_english %}
+        	<input type="hidden" value="{% url 'newsdetail' slug=blogs.english_slug %}" name="ennext" id="ennext">
+            <li><button onclick="chLaToEnShDe();"><img src="{% static 'haman/images/icons/flog.png' %}" class="chanelangimg" alt="british flag logo" /></button></li>
+        {% endif %}
+        {% if blogs.show_on_arabic %}
+        	<input type="hidden" value="{% url 'newsdetail' slug=blogs.arabic_slug %}" name="arnext" id="arnext">
+            <li><button onclick="chLaToArShDe();"><img src="{% static 'haman/images/icons/arab.png' %}" class="chanelangimg" width="24px" height="14px" alt="Arabian flag logo" /></button></li>
+        {% endif %}
+    </ul>
+{% endblock det %}
+
+
+
+{% block body %}
+    {% if LANGUAGE_CODE == "fa" %}
+        <!--Page Title-->
+        <section class="page-title" style="background-image:url({% static 'haman/images/background/bg-page-title-1.jpg' %});">
+            <div class="auto-container">
+                <h1>{{ blogs.title_persian }}</h1>
+            </div>
+        </section>
+
+        <!--Page Info-->
+        <section class="page-info">
+            <div class="auto-container clearfix">
+                <div class="pull-left"><h2>{{ blogs.title_persian }}</h2></div>
+                <div class="pull-right">
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
+                        <li><a href="{% url 'news' %}">{% translate 'News' %}</a></li>
+                        <li>{{ blogs.title_persian }}</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    {% elif LANGUAGE_CODE == "en" %}
+        <section class="page-title" style="background-image:url({% static 'haman/images/background/bg-page-title-1.jpg' %});">
+            <div class="auto-container">
+                <h1>{{ blogs.title_english }}</h1>
+            </div>
+        </section>
+
+        <!--Page Info-->
+        <section class="page-info">
+            <div class="auto-container clearfix">
+                <div class="pull-left"><h2>{{ blogs.title_english }}</h2></div>
+                <div class="pull-right">
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
+                        <li><a href="{% url 'news' %}">{% translate 'News' %}</a></li>
+                        <li>{{ blogs.title_english }}</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    {% else %}
+        <section class="page-title" style="background-image:url({% static 'haman/images/background/bg-page-title-1.jpg' %});">
+            <div class="auto-container">
+                <h1>{{ blogs.title_arabic }}</h1>
+            </div>
+        </section>
+
+        <!--Page Info-->
+        <section class="page-info">
+            <div class="auto-container clearfix">
+                <div class="pull-left"><h2>{{ blogs.title_arabic }}</h2></div>
+                <div class="pull-right">
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
+                        <li><a href="{% url 'news' %}">{% translate 'News' %}</a></li>
+                        <li>{{ blogs.title_arabic }}</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+
+    {% if LANGUAGE_CODE == "fa" %}
+    	<!--Sidebar Page-->
+        <div class="sidebar-page-container">
+            <div class="auto-container">
+                <div class="row clearfix">
+
+                    <!--Content Side-->
+                    <div class="content-side col-lg-9 col-md-8 col-sm-12 col-xs-12">
+
+                        <!--News Section-->
+                        <section class="news-section large-image-view blog-details no-padd-top no-padd-bottom">
+
+                            <!--News Style One / Boxed-->
+                            <div class="news-style-one boxed">
+                                <div class="inner-box">
+                                    <figure class="image-box"><img src="{{ blogs.avatar.url }}" alt="{{ blogs.title_persian }}"></figure>
+                                    <div class="content">
+                                        <h3><a href="{% url 'newsdetail' slug=blogs.persian_slug %}">{{ blogs.title_persian }}</a></h3>
+                                        <ul class="post-meta clearfix">
+                                            <li><a href="#"><span class="icon fa fa-clock-o"></span> {{ blogs.time_created }}</a></li>
+                                            <li><a href="#"><span class="icon fa fa-tags"></span> {% translate 'news' %}</a></li>
+                                            <li><a href="#"><span class="icon fa fa-comments"></span> {{ rev }} {% translate 'Comments' %}</a></li>
+                                        </ul>
+                                        <div class="text">
+                                           {{ blogs.description_persian | safe }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="sec-title medium"><h2>{% translate 'Comments' %} ({{ rev }})</h2></div>
+                            {% if comments %}
+                                <!--Comments Area-->
+                                <div class="comments-area">
+
+                                    <div class="comment-box">
+                                        {% for comm in comments %}
+                                            <div class="comment">
+                                                <div class="comment-inner">
+                                                    <div class="author-thumb"><img src="{% static 'haman/images/resource/author-thumb-5.jpg' %}" alt=""></div>
+                                                    <div class="comment-header clearfix">
+                                                        <h4>{{ comm.name }}</h4>
+                                                    </div>
+                                                    <div class="text">{{ comm.comment }}</div>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% endif %}
+
+                            <div class="sec-title medium"><h2>{% translate 'Leave a Reply' %}</h2></div>
+
+                            <div class="comment-form">
+                                <!--form-box-->
+                                <div class="form-box default-form">
+                                    <div class="contact-form default-form">
+                                        <form method="post" action="#">
+                                            <div class="row clearfix">
+
+                                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                    <input type="text" name="firstname" value="" placeholder="{% translate 'Your Name' %}" required>
+                                                </div>
+                                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                    <input type="text" name="lastname" value="" placeholder="{% translate 'Your Lastname' %}">
+                                                </div>
+                                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                    <input type="text" name="phone" value="" placeholder="{% translate 'Phone' %}">
+                                                </div>
+                                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                    <input type="email" name="email" value="" placeholder="{% translate 'Email Address' %}" required>
+                                                </div>
+                                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                    <textarea name="review-message" placeholder="{% translate 'Review Comments' %}"></textarea>
+                                                </div>
+                                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                    <button type="submit" class="theme-btn btn-style-two">{% translate 'Post Comment' %}</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </section>
+
+                    </div><!--End Content Side-->
+
+                    <!--Sidebar-->
+                    <div class="sidebar-side col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <aside class="sidebar">
+
+                            <!-- Search Form -->
+                            <div class="widget search-box sidebar-widget">
+
+                                <form method="post" action="{% url 'news' %}">
+                                {% csrf_token %}
+                                    <div class="form-group">
+                                        <input type="search" name="search-field" value="" placeholder="{% translate 'Search here' %}">
+                                        <button type="submit" {% if LANGUAGE_BIDI %}style="left: 0px" {% endif %}><span class="icon fa fa-search"></span></button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        {% if blogbaner %}
+                            <!-- Recent Posts -->
+                            <div class="widget recent-posts sidebar-widget">
+                                <div class="sidebar-title"><h3>{% translate 'Popular Posts' %}</h3></div>
+                                {% for post in blogbaner %}
+                                    <div class="post">
+                                        <figure class="post-thumb"><img src="{{ post.news.avatar.url }}" alt="{{ post.news.title_persian }}"><a href="{% url 'newsdetail' slug=post.news.persian_slug %}" class="overlay-link"><span class="flaticon-plus-1"></span></a></figure>
+                                        <h4><a href="{% url 'newsdetail' slug=post.news.persian_slug %}">{{ post.news.title_persian }}</a></h4>
+                                    </div>
+                                {% endfor %}
+
+                            </div>
+                        {% endif %}
+                        {% if tags %}
+                            <!-- Popular Tags -->
+                            <div class="widget sidebar-widget popular-tags">
+                                <div class="sidebar-title"><h3>{% translate 'Popular Tags' %}</h3></div>
+                                {% for tag in tags %}
+                                    <a href="#">{{ tag }}</a>
+                                {% endfor %}
+
+                            </div>
+                        {% endif %}
+                        </aside>
+                    </div><!--End Sidebar-->
+
+                </div>
+            </div>
+        </div>
+    {% elif LANGUAGE_CODE == "en" %}
+        <!--Sidebar Page-->
+        <div class="sidebar-page-container">
+            <div class="auto-container">
+                <div class="row clearfix">
+
+                    <!--Content Side-->
+                    <div class="content-side col-lg-9 col-md-8 col-sm-12 col-xs-12">
+
+                        <!--News Section-->
+                        <section class="news-section large-image-view blog-details no-padd-top no-padd-bottom">
+
+                            <!--News Style One / Boxed-->
+                            <div class="news-style-one boxed">
+                                <div class="inner-box">
+                                    <figure class="image-box"><img src="{{ blogs.avatar.url }}" alt="{{ blogs.title_english }}"></figure>
+                                    <div class="content">
+                                        <h3><a href="{% url 'newsdetail' slug=blogs.english_slug %}">{{ blogs.title_english }}</a></h3>
+                                        <ul class="post-meta clearfix">
+                                            <li><a href="#"><span class="icon fa fa-clock-o"></span> {{ blogs.time_created }}</a></li>
+                                            <li><a href="#"><span class="icon fa fa-tags"></span> {% translate 'news' %}</a></li>
+                                            <li><a href="#"><span class="icon fa fa-comments"></span> {{ rev }} {% translate 'Comments' %}</a></li>
+                                        </ul>
+                                        <div class="text">
+                                           {{ blogs.description_english | safe }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="sec-title medium"><h2>{% translate 'Comments' %} ({{ rev }})</h2></div>
+                            {% if comments %}
+                                <!--Comments Area-->
+                                <div class="comments-area">
+
+                                    <div class="comment-box">
+                                        {% for comm in comments %}
+                                            <div class="comment">
+                                                <div class="comment-inner">
+                                                    <div class="author-thumb"><img src="{% static 'haman/images/resource/author-thumb-5.jpg' %}" alt=""></div>
+                                                    <div class="comment-header clearfix">
+                                                        <h4>{{ comm.name }}</h4>
+                                                    </div>
+                                                    <div class="text">{{ comm.comment }}</div>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% endif %}
+
+                            <div class="sec-title medium"><h2>{% translate 'Leave a Reply' %}</h2></div>
+
+                            <div class="comment-form">
+                                <!--form-box-->
+                                <div class="form-box default-form">
+                                    <div class="contact-form default-form">
+                                        <form method="post" action="#">
+                                            <div class="row clearfix">
+
+                                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                    <input type="text" name="firstname" value="" placeholder="{% translate 'Your Name' %}" required>
+                                                </div>
+                                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                    <input type="text" name="lastname" value="" placeholder="{% translate 'Your Lastname' %}">
+                                                </div>
+                                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                    <input type="text" name="phone" value="" placeholder="{% translate 'Phone' %}">
+                                                </div>
+                                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                    <input type="email" name="email" value="" placeholder="{% translate 'Email Address' %}" required>
+                                                </div>
+                                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                    <textarea name="review-message" placeholder="{% translate 'Review Comments' %}"></textarea>
+                                                </div>
+                                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                    <button type="submit" class="theme-btn btn-style-two">{% translate 'Post Comment' %}</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </section>
+
+                    </div><!--End Content Side-->
+
+                    <!--Sidebar-->
+                    <div class="sidebar-side col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <aside class="sidebar">
+
+                            <!-- Search Form -->
+                            <div class="widget search-box sidebar-widget">
+
+                                <form method="post" action="{% url 'news' %}">
+                                {% csrf_token %}
+                                    <div class="form-group">
+                                        <input type="search" name="search-field" value="" placeholder="{% translate 'Search here' %}">
+                                        <button type="submit" {% if LANGUAGE_BIDI %}style="left: 0px" {% endif %}><span class="icon fa fa-search"></span></button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        {% if blogbaner %}
+                            <!-- Recent Posts -->
+                            <div class="widget recent-posts sidebar-widget">
+                                <div class="sidebar-title"><h3>{% translate 'Popular Posts' %}</h3></div>
+                                {% for post in blogbaner %}
+                                    <div class="post">
+                                        <figure class="post-thumb"><img src="{{ post.news.avatar.url }}" alt="{{ post.news.title_english }}"><a href="{% url 'newsdetail' slug=post.news.english_slug %}" class="overlay-link"><span class="flaticon-plus-1"></span></a></figure>
+                                        <h4><a href="{% url 'newsdetail' slug=post.news.english_slug %}">{{ post.news.title_english }}</a></h4>
+                                    </div>
+                                {% endfor %}
+
+                            </div>
+                        {% endif %}
+                        {% if tags %}
+                            <!-- Popular Tags -->
+                            <div class="widget sidebar-widget popular-tags">
+                                <div class="sidebar-title"><h3>{% translate 'Popular Tags' %}</h3></div>
+                                {% for tag in tags %}
+                                    <a href="#">{{ tag }}</a>
+                                {% endfor %}
+
+                            </div>
+                        {% endif %}
+                        </aside>
+                    </div><!--End Sidebar-->
+
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <!--Sidebar Page-->
+        <div class="sidebar-page-container">
+            <div class="auto-container">
+                <div class="row clearfix">
+
+                    <!--Content Side-->
+                    <div class="content-side col-lg-9 col-md-8 col-sm-12 col-xs-12">
+
+                        <!--News Section-->
+                        <section class="news-section large-image-view blog-details no-padd-top no-padd-bottom">
+
+                            <!--News Style One / Boxed-->
+                            <div class="news-style-one boxed">
+                                <div class="inner-box">
+                                    <figure class="image-box"><img src="{{ blogs.avatar.url }}" alt="{{ blogs.title_arabic }}"></figure>
+                                    <div class="content">
+                                        <h3><a href="{% url 'newsdetail' slug=blogs.arabic_slug %}">{{ blogs.title_arabic }}</a></h3>
+                                        <ul class="post-meta clearfix">
+                                            <li><a href="#"><span class="icon fa fa-clock-o"></span> {{ blogs.time_created }}</a></li>
+                                            <li><a href="#"><span class="icon fa fa-tags"></span> {% translate 'news' %}</a></li>
+                                            <li><a href="#"><span class="icon fa fa-comments"></span> {{ rev }} {% translate 'Comments' %}</a></li>
+                                        </ul>
+                                        <div class="text">
+                                           {{ blogs.description_arabic | safe }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="sec-title medium"><h2>{% translate 'Comments' %} ({{ rev }})</h2></div>
+                            {% if comments %}
+                                <!--Comments Area-->
+                                <div class="comments-area">
+
+                                    <div class="comment-box">
+                                        {% for comm in comments %}
+                                            <div class="comment">
+                                                <div class="comment-inner">
+                                                    <div class="author-thumb"><img src="{% static 'haman/images/resource/author-thumb-5.jpg' %}" alt=""></div>
+                                                    <div class="comment-header clearfix">
+                                                        <h4>{{ comm.name }}</h4>
+                                                    </div>
+                                                    <div class="text">{{ comm.comment }}</div>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% endif %}
+
+                            <div class="sec-title medium"><h2>{% translate 'Leave a Reply' %}</h2></div>
+
+                            <div class="comment-form">
+                                <!--form-box-->
+                                <div class="form-box default-form">
+                                    <div class="contact-form default-form">
+                                        <form method="post" action="#">
+                                            <div class="row clearfix">
+
+                                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                    <input type="text" name="firstname" value="" placeholder="{% translate 'Your Name' %}" required>
+                                                </div>
+                                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                    <input type="text" name="lastname" value="" placeholder="{% translate 'Your Lastname' %}">
+                                                </div>
+                                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                    <input type="text" name="phone" value="" placeholder="{% translate 'Phone' %}">
+                                                </div>
+                                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                                    <input type="email" name="email" value="" placeholder="{% translate 'Email Address' %}" required>
+                                                </div>
+                                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                    <textarea name="review-message" placeholder="{% translate 'Review Comments' %}"></textarea>
+                                                </div>
+                                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                    <button type="submit" class="theme-btn btn-style-two">{% translate 'Post Comment' %}</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </section>
+
+                    </div><!--End Content Side-->
+
+                    <!--Sidebar-->
+                    <div class="sidebar-side col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <aside class="sidebar">
+
+                            <!-- Search Form -->
+                            <div class="widget search-box sidebar-widget">
+
+                                <form method="post" action="{% url 'news' %}">
+                                {% csrf_token %}
+                                    <div class="form-group">
+                                        <input type="search" name="search-field" value="" placeholder="{% translate 'Search here' %}">
+                                        <button type="submit" {% if LANGUAGE_BIDI %}style="left: 0px" {% endif %}><span class="icon fa fa-search"></span></button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        {% if blogbaner %}
+                            <!-- Recent Posts -->
+                            <div class="widget recent-posts sidebar-widget">
+                                <div class="sidebar-title"><h3>{% translate 'Popular Posts' %}</h3></div>
+                                {% for post in blogbaner %}
+                                    <div class="post">
+                                        <figure class="post-thumb"><img src="{{ post.news.avatar.url }}" alt="{{ post.news.title_arabic }}"><a href="{% url 'newsdetail' slug=post.news.arabic_slug %}" class="overlay-link"><span class="flaticon-plus-1"></span></a></figure>
+                                        <h4><a href="{% url 'newsdetail' slug=post.news.arabic_slug %}">{{ post.news.title_arabic }}</a></h4>
+                                    </div>
+                                {% endfor %}
+
+                            </div>
+                        {% endif %}
+                        {% if tags %}
+                            <!-- Popular Tags -->
+                            <div class="widget sidebar-widget popular-tags">
+                                <div class="sidebar-title"><h3>{% translate 'Popular Tags' %}</h3></div>
+                                {% for tag in tags %}
+                                    <a href="#">{{ tag }}</a>
+                                {% endfor %}
+
+                            </div>
+                        {% endif %}
+                        </aside>
+                    </div><!--End Sidebar-->
+
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+{% endblock body %}

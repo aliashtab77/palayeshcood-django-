@@ -1,8 +1,57 @@
 from django.shortcuts import render
-
+from django.utils.translation import get_language
+from news.models import NewsModel, ReviewModelNews, Arabic_IndexNews, English_IndexNews, Persian_IndexNews
+from django.core.paginator import Paginator
+from django.http import HttpResponse
 # Create your views here.
 def news(request):
-    pass
-
+    page_number = request.GET.get("page", default=1)
+    q = request.POST.get("search-field", default="").strip()
+    lang = get_language()
+    if lang == "fa":
+        products1 = NewsModel.objects.filter(show_on_persian=True, title_persian__contains=q)
+        shop_baner = Persian_IndexNews.objects.filter(is_enable=True)
+    elif lang == "en":
+        products1 = NewsModel.objects.filter(show_on_english=True, title_english__contains=q)
+        shop_baner = English_IndexNews.objects.filter(is_enable=True)
+    else:
+        products1 = NewsModel.objects.filter(show_on_arabic=True, title_arabic__contains=q)
+        shop_baner = Arabic_IndexNews.objects.filter(is_enable=True)
+    products = Paginator(products1, 9)
+    try:
+        page = products.page(page_number)
+    except:
+        page = products.page(1)
+    context = {
+        "pagenator": products,
+        "blogs": page,
+        "blogsbaner": shop_baner,
+    }
+    return render(request, 'news.html', context=context)
 def detail(request, slug):
-    pass
+    lang = get_language()
+    try:
+        if lang == "fa":
+            blog = NewsModel.objects.get(persian_slug=slug)
+            shop_baner = Persian_IndexNews.objects.filter(is_enable=True)
+        elif lang == "en":
+            blog = NewsModel.objects.get(english_slug=slug)
+            shop_baner = English_IndexNews.objects.filter(is_enable=True)
+        else:
+            blog = NewsModel.objects.get(arabic_slug=slug)
+            shop_baner = Arabic_IndexNews.objects.filter(is_enable=True)
+    except:
+        return HttpResponse(f"Bad request with {slug}")
+
+    tags = blog.tags.split(",")
+    comm = blog.comments.filter(show=True)
+    rev = len(comm)
+    context = {
+        "blogs": blog,
+        "blogbaner": shop_baner,
+        "tags": tags,
+        "rev": rev,
+        "comments": comm,
+
+    }
+    return render(request, 'news-single.html', context=context)
