@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-10 07:24+0330\n"
+"POT-Creation-Date: 2025-05-23 15:11+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,143 +19,212 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: haman/apps.py:7
-msgid "Admin Panel"
-msgstr "لوحة الإدارة"
+#: blogs/apps.py:7 templates/blog-single.html:120
+#: templates/blog-single.html:254 templates/blog-single.html:388
+#: templates/blog.html:7
+msgid "blogs"
+msgstr "المدونات"
 
-#: haman/models.py:7 haman/models.py:22 shop/models.py:7
+#: blogs/models.py:7 news/models.py:7 shop/models.py:7 haman/models.py:7
+#: haman/models.py:22
 msgid "name"
 msgstr "اسم"
 
-#: haman/models.py:8
-msgid "your email is not valid"
-msgstr "بريدك الإلكتروني غير صالح"
-
-#: haman/models.py:8 haman/models.py:23 shop/models.py:8
+#: blogs/models.py:8 news/models.py:8 shop/models.py:8 haman/models.py:8
+#: haman/models.py:23
 msgid "email"
 msgstr "بريد إلكتروني"
 
-#: haman/models.py:9
-msgid "message"
-msgstr "رسالة"
+#: blogs/models.py:9 news/models.py:9 shop/models.py:9
+msgid "phone"
+msgstr "هاتف"
 
-#: haman/models.py:10 templates/Petrochemicals.html:164
-#: templates/agriculture.html:162 templates/faq.html:153
-#: templates/food.html:164 templates/global.html:162
-#: templates/refinery.html:161 templates/support.html:162
-msgid "subject"
-msgstr "موضوع"
+#: blogs/models.py:10 news/models.py:10 shop/models.py:10
+msgid "comment"
+msgstr "تعليق"
 
-#: haman/models.py:11
-msgid "your phone number is not valid"
-msgstr "رقم هاتفك غير صالح"
+#: blogs/models.py:11 news/models.py:11 shop/models.py:11
+msgid "rate"
+msgstr "معدل"
 
-#: haman/models.py:11
-msgid "phone number"
-msgstr "رقم التليفون"
+#: blogs/models.py:12 news/models.py:12 shop/models.py:12
+msgid "SHOW"
+msgstr "يعرض"
 
-#: haman/models.py:12 haman/models.py:24
-msgid "time"
-msgstr "وقت"
+#: blogs/models.py:14 news/models.py:14 shop/models.py:14
+msgid "Review"
+msgstr "مراجعة"
 
-#: haman/models.py:14
-msgid "User Message"
-msgstr "رسالة المستخدم"
+#: blogs/models.py:15 news/models.py:15 shop/models.py:15
+#: templates/shop-single.html:88 templates/shop-single.html:137
+#: templates/shop-single.html:353 templates/shop-single.html:402
+#: templates/shop-single.html:618 templates/shop-single.html:668
+msgid "Reviews"
+msgstr "المراجعات"
 
-#: haman/models.py:15
-msgid "User Messages"
-msgstr "رسائل المستخدم"
+#: blogs/models.py:21 news/models.py:21 shop/models.py:21
+msgid "persian slug"
+msgstr "سبيكة الفارسية"
 
-#: haman/models.py:26 haman/models.py:27
-msgid "News Shelter"
-msgstr "مأوى الأخبار"
+#: blogs/models.py:22 news/models.py:22 shop/models.py:22
+msgid "english slug"
+msgstr "سبيكة الإنجليزية"
 
-#: haman/views.py:34
-msgid "name is required"
-msgstr "الاسم مطلوب"
+#: blogs/models.py:23 news/models.py:23 shop/models.py:23
+msgid "arabic slug"
+msgstr "سبيكة عربية"
 
-#: haman/views.py:37
-msgid "email is required"
-msgstr "البريد الإلكتروني مطلوب"
+#: blogs/models.py:24 news/models.py:24 shop/models.py:24
+msgid "show on English"
+msgstr "عرض على اللغة الإنجليزية"
 
-#: palayeshcood/settings.py:123
+#: blogs/models.py:25 news/models.py:25 shop/models.py:25
+msgid "show on Persian"
+msgstr "عرض على الفارسية"
+
+#: blogs/models.py:26 news/models.py:26 shop/models.py:26
+msgid "show on Arabic"
+msgstr "عرض على العربية"
+
+#: blogs/models.py:27 news/models.py:27 shop/models.py:27
+msgid "English Title"
+msgstr "العنوان الإنجليزي"
+
+#: blogs/models.py:28 news/models.py:28 shop/models.py:28
+msgid "Persian Title"
+msgstr "اللقب الفارسي"
+
+#: blogs/models.py:29 news/models.py:29 shop/models.py:29
+msgid "Arabic Title"
+msgstr "اللقب العربي"
+
+#: blogs/models.py:30
+msgid "blogs image"
+msgstr "صورة المدونات"
+
+#: blogs/models.py:32 news/models.py:32 shop/models.py:38
+msgid "English description"
+msgstr "وصف اللغة الإنجليزية"
+
+#: blogs/models.py:33 news/models.py:33 shop/models.py:39
+msgid "Persian description"
+msgstr "الوصف الفارسي"
+
+#: blogs/models.py:34 news/models.py:34 shop/models.py:40
+msgid "Arabic description"
+msgstr "الوصف العربي"
+
+#: blogs/models.py:35 news/models.py:35
+msgid "Short English description"
+msgstr "وصف اللغة الإنجليزية القصير"
+
+#: blogs/models.py:37 news/models.py:37
+msgid "Short Persian description"
+msgstr "وصف فارسي قصير"
+
+#: blogs/models.py:39 news/models.py:39
+msgid "Short Arabic description"
+msgstr "وصف عربي قصير"
+
+#: blogs/models.py:41 news/models.py:41 shop/models.py:49
+msgid "tags"
+msgstr "العلامات"
+
+#: blogs/models.py:44 templates/blog.html:58 templates/blog.html:90
+#: templates/blog.html:121
+msgid "Blog"
+msgstr "مدونة"
+
+#: blogs/models.py:45 templates/base.html:90 templates/base.html:163
+#: templates/blog-single.html:52 templates/blog-single.html:72
+#: templates/blog-single.html:92 templates/blog.html:17 templates/blog.html:24
+#: templates/blog.html:28 templates/index.html:684 templates/index.html:711
+#: templates/index.html:738
+msgid "Blogs"
+msgstr "المدونات"
+
+#: blogs/models.py:51 blogs/models.py:60 blogs/models.py:73
+msgid "baner blog"
+msgstr "مدونة بانز"
+
+#: blogs/models.py:52 blogs/models.py:62 blogs/models.py:75 news/models.py:52
+#: news/models.py:62 news/models.py:75 shop/models.py:59 shop/models.py:69
+#: shop/models.py:82
+msgid "enable"
+msgstr "يُمكَِن"
+
+#: blogs/models.py:54
+msgid "english baner blog"
+msgstr "مدونة الصفحات الإنجليزية"
+
+#: blogs/models.py:55
+msgid "english baner blogs"
+msgstr "مدونات الصفحات الإنجليزية"
+
+#: blogs/models.py:65
+msgid "persian baner blog"
+msgstr "مدونة الملاعب الفارسية"
+
+#: blogs/models.py:66
+msgid "persian baner blogs"
+msgstr "مدونات الملاعب الفارسية"
+
+#: blogs/models.py:78
+msgid "arabic baner blog"
+msgstr "مدونة الممرات العربية"
+
+#: blogs/models.py:79
+msgid "arabic baner blogs"
+msgstr "مدونات الممرات العربية"
+
+#: news/apps.py:8 news/models.py:44 news/models.py:45 templates/base.html:91
+#: templates/base.html:164 templates/index.html:787 templates/index.html:814
+#: templates/index.html:841 templates/news-single.html:52
+#: templates/news-single.html:72 templates/news-single.html:92
+#: templates/news.html:17 templates/news.html:24 templates/news.html:28
+#: templates/news.html:58 templates/news.html:90 templates/news.html:121
+msgid "News"
+msgstr "أخبار"
+
+#: news/models.py:30
+msgid "news image"
+msgstr "صورة الأخبار"
+
+#: news/models.py:51 news/models.py:60 news/models.py:73
+msgid "baner news"
+msgstr "حظر الأخبار"
+
+#: news/models.py:54 news/models.py:55
+msgid "english baner news"
+msgstr "أخبار حظر اللغة الإنجليزية"
+
+#: news/models.py:65 news/models.py:66
+msgid "persian baner news"
+msgstr "أخبار بانر الفارسية"
+
+#: news/models.py:78 news/models.py:79
+msgid "arabic baner news"
+msgstr "أخبار بانر العربية"
+
+#: palayeshcood/settings.py:125
 msgid "Persian"
 msgstr "الفارسية"
 
-#: palayeshcood/settings.py:124
+#: palayeshcood/settings.py:126
 msgid "English"
 msgstr "إنجليزي"
 
-#: palayeshcood/settings.py:125
+#: palayeshcood/settings.py:127
 msgid "Arabic"
 msgstr "عربي"
+
+#: services/apps.py:7
+msgid "services"
+msgstr "خدمات"
 
 #: shop/apps.py:7 templates/shop.html:9
 msgid "shop"
 msgstr "محل"
-
-#: shop/models.py:9
-msgid "phone"
-msgstr "هاتف"
-
-#: shop/models.py:10
-msgid "comment"
-msgstr "تعليق"
-
-#: shop/models.py:11
-msgid "rate"
-msgstr "معدل"
-
-#: shop/models.py:12
-msgid "SHOW"
-msgstr "يعرض"
-
-#: shop/models.py:14
-msgid "Review"
-msgstr "مراجعة"
-
-#: shop/models.py:15 templates/shop-single.html:72
-#: templates/shop-single.html:121 templates/shop-single.html:337
-#: templates/shop-single.html:386 templates/shop-single.html:602
-#: templates/shop-single.html:652
-msgid "Reviews"
-msgstr "المراجعات"
-
-#: shop/models.py:21
-msgid "persian slug"
-msgstr "سبيكة الفارسية"
-
-#: shop/models.py:22
-msgid "english slug"
-msgstr "سبيكة الإنجليزية"
-
-#: shop/models.py:23
-msgid "arabic slug"
-msgstr "سبيكة عربية"
-
-#: shop/models.py:24
-msgid "show on English"
-msgstr "عرض على اللغة الإنجليزية"
-
-#: shop/models.py:25
-msgid "show on Persian"
-msgstr "عرض على الفارسية"
-
-#: shop/models.py:26
-msgid "show on Arabic"
-msgstr "عرض على العربية"
-
-#: shop/models.py:27
-msgid "English Title"
-msgstr "العنوان الإنجليزي"
-
-#: shop/models.py:28
-msgid "Persian Title"
-msgstr "اللقب الفارسي"
-
-#: shop/models.py:29
-msgid "Arabic Title"
-msgstr "اللقب العربي"
 
 #: shop/models.py:30
 msgid "English Price"
@@ -185,25 +254,9 @@ msgstr "صورة المنتج"
 msgid "related products"
 msgstr "المنتجات ذات الصلة"
 
-#: shop/models.py:38
-msgid "English description"
-msgstr "وصف اللغة الإنجليزية"
-
-#: shop/models.py:39
-msgid "Persian description"
-msgstr "الوصف الفارسي"
-
-#: shop/models.py:40
-msgid "Arabic description"
-msgstr "الوصف العربي"
-
 #: shop/models.py:48
 msgid "Rate"
 msgstr "معدل"
-
-#: shop/models.py:49
-msgid "tags"
-msgstr "العلامات"
 
 #: shop/models.py:51
 msgid "Product"
@@ -216,10 +269,6 @@ msgstr "منتجات"
 #: shop/models.py:58 shop/models.py:67 shop/models.py:80
 msgid "baner product"
 msgstr "منتج بانر"
-
-#: shop/models.py:59 shop/models.py:69 shop/models.py:82
-msgid "enable"
-msgstr "يُمكَِن"
 
 #: shop/models.py:61
 msgid "english baner product"
@@ -256,19 +305,23 @@ msgid "petrochemical products"
 msgstr "المنتجات البتروكيماوية"
 
 #: templates/Petrochemicals.html:25 templates/about-us.html:34
-#: templates/agriculture.html:24 templates/base.html:88 templates/base.html:168
-#: templates/base.html:347 templates/contact.html:23 templates/faq.html:20
+#: templates/agriculture.html:24 templates/base.html:88 templates/base.html:161
+#: templates/base.html:323 templates/blog-single.html:51
+#: templates/blog-single.html:71 templates/blog-single.html:91
+#: templates/blog.html:27 templates/contact.html:23 templates/faq.html:20
 #: templates/food.html:24 templates/global.html:25 templates/index.html:8
+#: templates/news-single.html:51 templates/news-single.html:71
+#: templates/news-single.html:91 templates/news.html:27
 #: templates/our-team.html:7 templates/our-team.html:32
 #: templates/refinery.html:25 templates/services.html:27
-#: templates/shop-single.html:42 templates/shop-single.html:307
-#: templates/shop-single.html:572 templates/shop.html:26
+#: templates/shop-single.html:58 templates/shop-single.html:323
+#: templates/shop-single.html:588 templates/shop.html:27
 #: templates/support.html:24
 msgid "Home"
 msgstr "بيت"
 
 #: templates/Petrochemicals.html:26 templates/agriculture.html:25
-#: templates/base.html:89 templates/base.html:169 templates/base.html:349
+#: templates/base.html:89 templates/base.html:162 templates/base.html:325
 #: templates/food.html:25 templates/global.html:26 templates/refinery.html:26
 #: templates/services.html:5 templates/services.html:24
 #: templates/services.html:28 templates/support.html:25
@@ -453,9 +506,15 @@ msgstr "لدينا دعم الخبراء للرد عليك."
 msgid "Get a free consultation"
 msgstr "احصل على استشارة مجانية"
 
+#: templates/Petrochemicals.html:164 templates/agriculture.html:162
+#: templates/faq.html:153 templates/food.html:164 templates/global.html:162
+#: templates/refinery.html:161 templates/support.html:162 haman/models.py:10
+msgid "subject"
+msgstr "موضوع"
+
 #: templates/Petrochemicals.html:168 templates/agriculture.html:166
 #: templates/contact.html:56 templates/faq.html:141 templates/food.html:168
-#: templates/global.html:166 templates/index.html:852
+#: templates/global.html:166 templates/index.html:981
 #: templates/refinery.html:165 templates/support.html:166
 msgid "Your Name *"
 msgstr "اسمك *"
@@ -473,7 +532,7 @@ msgid "Phone Number"
 msgstr "رقم التليفون"
 
 #: templates/Petrochemicals.html:180 templates/agriculture.html:178
-#: templates/base.html:323 templates/contact.html:68 templates/food.html:180
+#: templates/base.html:299 templates/contact.html:68 templates/food.html:180
 #: templates/global.html:178 templates/refinery.html:177
 #: templates/support.html:178
 msgid "Message *"
@@ -486,8 +545,8 @@ msgid "Get Quote"
 msgstr "الحصول على الاقتباس"
 
 #: templates/about-us.html:9 templates/about-us.html:31
-#: templates/about-us.html:35 templates/base.html:100 templates/base.html:102
-#: templates/base.html:190 templates/base.html:192 templates/base.html:348
+#: templates/about-us.html:35 templates/base.html:93 templates/base.html:95
+#: templates/base.html:166 templates/base.html:168 templates/base.html:324
 msgid "About Us"
 msgstr "معلومات عنا"
 
@@ -570,7 +629,11 @@ msgstr ""
 msgid "Haman Lesan,"
 msgstr "هامان لسان،"
 
-#: templates/about-us.html:63 templates/index.html:182
+#: templates/about-us.html:63 templates/blog.html:64 templates/blog.html:96
+#: templates/blog.html:127 templates/index.html:182 templates/index.html:690
+#: templates/index.html:717 templates/index.html:744 templates/index.html:793
+#: templates/index.html:820 templates/index.html:847 templates/news.html:64
+#: templates/news.html:96 templates/news.html:127
 msgid "Founder"
 msgstr "مؤسس"
 
@@ -801,26 +864,26 @@ msgstr "لحماية البيئة والتربة ، تجنب الاستخدام 
 msgid "We are responsive to you with fast support."
 msgstr "نحن نستجيب لك بدعم سريع."
 
-#: templates/base.html:99 templates/shop-single.html:43
-#: templates/shop-single.html:308 templates/shop-single.html:573
-#: templates/shop.html:27
+#: templates/base.html:92 templates/base.html:165 templates/shop-single.html:59
+#: templates/shop-single.html:324 templates/shop-single.html:589
+#: templates/shop.html:28
 msgid "Shop"
 msgstr "محل"
 
-#: templates/base.html:103 templates/base.html:193 templates/our-team.html:29
+#: templates/base.html:96 templates/base.html:169 templates/our-team.html:29
 #: templates/our-team.html:33
 msgid "Our Team"
 msgstr "فريقنا"
 
-#: templates/base.html:106 templates/base.html:196 templates/base.html:350
+#: templates/base.html:99 templates/base.html:172 templates/base.html:326
 msgid "Contact"
 msgstr "اتصال"
 
-#: templates/base.html:107 templates/base.html:197 templates/faq.html:4
+#: templates/base.html:100 templates/base.html:173 templates/faq.html:4
 msgid "FAQ"
 msgstr "الأسئلة المتداولة"
 
-#: templates/base.html:237
+#: templates/base.html:213
 msgid ""
 "Palayeshcood Company, as a reputable distributor of chemicals, refineries "
 "and sugar, is ready to sell raw materials from petrochemicals, refineries "
@@ -835,23 +898,26 @@ msgstr ""
 "الكرام في جميع المناطق. انضم إلينا واستفد من خبرتنا وتجربتنا. لمزيد من "
 "المعلومات وتقديم الطلب، اتصل بنا."
 
-#: templates/base.html:239 templates/contact.html:85
+#: templates/base.html:215 templates/contact.html:85
 msgid "Unit 31, Safavieh Office Complex, Rajaee St, Kashan, Iran"
 msgstr "إيران، كاشان، شارع رجائي، مجمع صفوية الإداري، وحدة 31"
 
-#: templates/base.html:250
+#: templates/base.html:226 templates/blog-single.html:221
+#: templates/blog-single.html:355 templates/blog-single.html:489
+#: templates/news-single.html:221 templates/news-single.html:355
+#: templates/news-single.html:489
 msgid "Popular Tags"
 msgstr "العلامات الشعبية"
 
-#: templates/base.html:262
+#: templates/base.html:238
 msgid "Recent Works"
 msgstr "الأعمال الأخيرة"
 
-#: templates/base.html:290
+#: templates/base.html:266 templates/index.html:768
 msgid "Recent News"
 msgstr "الأخبار الأخيرة"
 
-#: templates/base.html:304 templates/index.html:254 templates/index.html:275
+#: templates/base.html:280 templates/index.html:254 templates/index.html:275
 #: templates/index.html:296 templates/index.html:317 templates/index.html:338
 #: templates/index.html:359 templates/services.html:49
 #: templates/services.html:64 templates/services.html:77
@@ -860,25 +926,118 @@ msgstr "الأخبار الأخيرة"
 msgid "Read More"
 msgstr "اقرأ المزيد"
 
-#: templates/base.html:312
+#: templates/base.html:288
 msgid "Send Us Message"
 msgstr "أرسل لنا رسالة"
 
-#: templates/base.html:317
+#: templates/base.html:293
 msgid "Name *"
 msgstr "اسم *"
 
-#: templates/base.html:320
+#: templates/base.html:296
 msgid "Email *"
 msgstr "بريد إلكتروني *"
 
-#: templates/base.html:325
+#: templates/base.html:301
 msgid "Send us"
 msgstr "أرسل لنا"
 
-#: templates/base.html:344
+#: templates/base.html:320
 msgid "Stark Team"
 msgstr "فريق استارك"
+
+#: templates/blog-single.html:121 templates/blog-single.html:131
+#: templates/blog-single.html:255 templates/blog-single.html:265
+#: templates/blog-single.html:389 templates/blog-single.html:399
+#: templates/news-single.html:121 templates/news-single.html:131
+#: templates/news-single.html:255 templates/news-single.html:265
+#: templates/news-single.html:389 templates/news-single.html:399
+msgid "Comments"
+msgstr "تعليقات"
+
+#: templates/blog-single.html:152 templates/blog-single.html:286
+#: templates/blog-single.html:420 templates/news-single.html:152
+#: templates/news-single.html:286 templates/news-single.html:420
+msgid "Leave a Reply"
+msgstr "اترك الرد"
+
+#: templates/blog-single.html:162 templates/blog-single.html:296
+#: templates/blog-single.html:430 templates/news-single.html:162
+#: templates/news-single.html:296 templates/news-single.html:430
+#: templates/shop-single.html:192 templates/shop-single.html:457
+#: templates/shop-single.html:723
+msgid "Your Name"
+msgstr "اسمك *"
+
+#: templates/blog-single.html:165 templates/blog-single.html:299
+#: templates/blog-single.html:433 templates/news-single.html:165
+#: templates/news-single.html:299 templates/news-single.html:433
+#: templates/shop-single.html:195 templates/shop-single.html:460
+#: templates/shop-single.html:726
+msgid "Your Lastname"
+msgstr "اسمه الأخير"
+
+#: templates/blog-single.html:168 templates/blog-single.html:302
+#: templates/blog-single.html:436 templates/faq.html:149
+#: templates/news-single.html:168 templates/news-single.html:302
+#: templates/news-single.html:436 templates/shop-single.html:198
+#: templates/shop-single.html:463 templates/shop-single.html:729
+msgid "Phone"
+msgstr "هاتف"
+
+#: templates/blog-single.html:171 templates/blog-single.html:305
+#: templates/blog-single.html:439 templates/news-single.html:171
+#: templates/news-single.html:305 templates/news-single.html:439
+#: templates/shop-single.html:201 templates/shop-single.html:466
+#: templates/shop-single.html:732
+msgid "Email Address"
+msgstr "بريد إلكتروني *"
+
+#: templates/blog-single.html:174 templates/blog-single.html:308
+#: templates/blog-single.html:442 templates/news-single.html:174
+#: templates/news-single.html:308 templates/news-single.html:442
+#: templates/shop-single.html:204 templates/shop-single.html:469
+#: templates/shop-single.html:735
+msgid "Review Comments"
+msgstr "مراجعة التعليقات"
+
+#: templates/blog-single.html:177 templates/blog-single.html:311
+#: templates/blog-single.html:445 templates/news-single.html:177
+#: templates/news-single.html:311 templates/news-single.html:445
+msgid "Post Comment"
+msgstr "بعد التعليق"
+
+#: templates/blog-single.html:199 templates/blog-single.html:333
+#: templates/blog-single.html:467 templates/blog.html:178
+#: templates/news-single.html:199 templates/news-single.html:333
+#: templates/news-single.html:467 templates/news.html:178
+#: templates/shop-single.html:275 templates/shop-single.html:540
+#: templates/shop-single.html:806 templates/shop.html:196
+msgid "Search here"
+msgstr "ابحث هنا"
+
+#: templates/blog-single.html:208 templates/blog-single.html:342
+#: templates/blog-single.html:476 templates/news-single.html:208
+#: templates/news-single.html:342 templates/news-single.html:476
+msgid "Popular Posts"
+msgstr "الوظائف الشعبية"
+
+#: templates/blog.html:63 templates/blog.html:95 templates/blog.html:126
+#: templates/index.html:689 templates/index.html:716 templates/index.html:743
+#: templates/index.html:792 templates/index.html:819 templates/index.html:846
+#: templates/news.html:63 templates/news.html:95 templates/news.html:126
+msgid "Haman Lesan"
+msgstr "هامان لسان،"
+
+#: templates/blog.html:73 templates/blog.html:105 templates/blog.html:136
+#: templates/news.html:73 templates/news.html:105 templates/news.html:136
+#: templates/shop.html:155
+msgid "No suitable products found."
+msgstr "لم يتم العثور على منتجات مناسبة."
+
+#: templates/blog.html:187 templates/news.html:187
+msgid "Recent Posts"
+msgstr "الوظائف الحديثة"
 
 #: templates/contact.html:4 templates/contact.html:13 templates/contact.html:20
 #: templates/contact.html:24
@@ -979,7 +1138,11 @@ msgid ""
 "CEO, and the expert in charge will follow up on the results of the meeting "
 "until the desired result is achieved. Usually, export products require "
 "careful examination, the procedure for which is coordinated in the meeting."
-msgstr "2- تسجيل أمر شخصيا من خلال عقد اجتماع في مكتبنا الرئيسي ، يمكنك التفاوض وجهاً لوجه مع المدير التجاري والمدير التنفيذي للشركة ، وسيتابع الخبير المسؤول نتائج الاجتماع حتى يتم تحقيق النتيجة المرجوة. عادة ، تتطلب منتجات التصدير فحصًا دقيقًا ، والإجراء الذي يتم تنسيقه في الاجتماع."
+msgstr ""
+"2- تسجيل أمر شخصيا من خلال عقد اجتماع في مكتبنا الرئيسي ، يمكنك التفاوض وجهاً "
+"لوجه مع المدير التجاري والمدير التنفيذي للشركة ، وسيتابع الخبير المسؤول "
+"نتائج الاجتماع حتى يتم تحقيق النتيجة المرجوة. عادة ، تتطلب منتجات التصدير "
+"فحصًا دقيقًا ، والإجراء الذي يتم تنسيقه في الاجتماع."
 
 #: templates/faq.html:70
 msgid "How can I find out the price of products?"
@@ -1070,11 +1233,6 @@ msgstr "اطرح أسئلتك"
 #: templates/faq.html:145
 msgid "Email Address *"
 msgstr "بريد إلكتروني *"
-
-#: templates/faq.html:149 templates/shop-single.html:182
-#: templates/shop-single.html:447 templates/shop-single.html:713
-msgid "Phone"
-msgstr "هاتف"
 
 #: templates/faq.html:157
 msgid "Your Question"
@@ -1634,27 +1792,36 @@ msgid "From The Shop"
 msgstr "من المتجر"
 
 #: templates/index.html:555 templates/index.html:583 templates/index.html:614
-#: templates/shop-single.html:233 templates/shop-single.html:498
-#: templates/shop-single.html:764 templates/shop.html:76
-#: templates/shop.html:109 templates/shop.html:142
+#: templates/shop-single.html:249 templates/shop-single.html:514
+#: templates/shop-single.html:780 templates/shop.html:77
+#: templates/shop.html:110 templates/shop.html:143
 msgid "Quick View"
 msgstr "عرض سريع"
 
-#: templates/index.html:839
+#: templates/index.html:665
+msgid "Recent Blogs"
+msgstr "المدونات الحديثة"
+
+#: templates/index.html:968
 msgid "Newsletter Signup"
 msgstr "الاشتراك في النشرة الإخبارية"
 
-#: templates/index.html:840
+#: templates/index.html:969
 msgid "We send you latest news couple a month ( No Spam)."
 msgstr "نرسل لك آخر الأخبار زوجين شهريا (بدون البريد العشوائي)."
 
-#: templates/index.html:859
+#: templates/index.html:988
 msgid "Your Email *"
 msgstr "بريدك الإلكتروني *"
 
-#: templates/index.html:866
+#: templates/index.html:995
 msgid "Subscribe"
 msgstr "يشترك"
+
+#: templates/news-single.html:120 templates/news-single.html:254
+#: templates/news-single.html:388 templates/news.html:7
+msgid "news"
+msgstr "أخبار"
 
 #: templates/our-team.html:22
 msgid "Team Behind Palayeshcood"
@@ -1838,65 +2005,36 @@ msgstr "يدعم"
 msgid "Our Services"
 msgstr "خدماتنا"
 
-#: templates/shop-single.html:120 templates/shop-single.html:129
-#: templates/shop-single.html:385 templates/shop-single.html:394
-#: templates/shop-single.html:651 templates/shop-single.html:660
+#: templates/shop-single.html:136 templates/shop-single.html:145
+#: templates/shop-single.html:401 templates/shop-single.html:410
+#: templates/shop-single.html:667 templates/shop-single.html:676
 msgid "Description"
 msgstr "وصف"
 
-#: templates/shop-single.html:158 templates/shop-single.html:191
-#: templates/shop-single.html:423 templates/shop-single.html:456
-#: templates/shop-single.html:689 templates/shop-single.html:722
+#: templates/shop-single.html:174 templates/shop-single.html:207
+#: templates/shop-single.html:439 templates/shop-single.html:472
+#: templates/shop-single.html:705 templates/shop-single.html:738
 msgid "Add Review"
 msgstr "إضافة المراجعة"
 
-#: templates/shop-single.html:176 templates/shop-single.html:441
-#: templates/shop-single.html:707
-msgid "Your Name"
-msgstr "اسمك *"
-
-#: templates/shop-single.html:179 templates/shop-single.html:444
-#: templates/shop-single.html:710
-msgid "Your Lastname"
-msgstr "اسمه الأخير"
-
-#: templates/shop-single.html:185 templates/shop-single.html:450
-#: templates/shop-single.html:716
-msgid "Email Address"
-msgstr "بريد إلكتروني *"
-
-#: templates/shop-single.html:188 templates/shop-single.html:453
-#: templates/shop-single.html:719
-msgid "Review Comments"
-msgstr "مراجعة التعليقات"
-
-#: templates/shop-single.html:209 templates/shop-single.html:474
-#: templates/shop-single.html:740
+#: templates/shop-single.html:225 templates/shop-single.html:490
+#: templates/shop-single.html:756
 msgid "Related Products"
 msgstr "المنتجات ذات الصلة"
 
-#: templates/shop-single.html:259 templates/shop-single.html:524
-#: templates/shop-single.html:790 templates/shop.html:195
-msgid "Search here"
-msgstr "ابحث هنا"
-
-#: templates/shop-single.html:269 templates/shop-single.html:534
-#: templates/shop-single.html:800 templates/shop.html:234
+#: templates/shop-single.html:285 templates/shop-single.html:550
+#: templates/shop-single.html:816 templates/shop.html:235
 msgid "Latest Products"
 msgstr "أحدث المنتجات"
 
-#: templates/shop-single.html:288 templates/shop-single.html:553
-#: templates/shop-single.html:819
+#: templates/shop-single.html:304 templates/shop-single.html:569
+#: templates/shop-single.html:835
 msgid "Products Tags"
 msgstr "علامات المنتجات"
 
-#: templates/shop.html:16 templates/shop.html:23
+#: templates/shop.html:17 templates/shop.html:24
 msgid "Shop Products"
 msgstr "منتجات التسوق"
-
-#: templates/shop.html:154
-msgid "No suitable products found."
-msgstr "لم يتم العثور على منتجات مناسبة."
 
 #: templates/support.html:77
 msgid ""
@@ -2073,3 +2211,47 @@ msgstr "يمكننا تزويدك بدعم متخصص في مجالات البت
 #: templates/support.html:137
 msgid "We are committed to providing free and targeted advice."
 msgstr "نحن ملتزمون بتقديم نصيحة مجانية ومستهدفة."
+
+#: haman/apps.py:7
+msgid "Admin Panel"
+msgstr "لوحة الإدارة"
+
+#: haman/models.py:8
+msgid "your email is not valid"
+msgstr "بريدك الإلكتروني غير صالح"
+
+#: haman/models.py:9
+msgid "message"
+msgstr "رسالة"
+
+#: haman/models.py:11
+msgid "your phone number is not valid"
+msgstr "رقم هاتفك غير صالح"
+
+#: haman/models.py:11
+msgid "phone number"
+msgstr "رقم التليفون"
+
+#: haman/models.py:12 haman/models.py:24
+msgid "time"
+msgstr "وقت"
+
+#: haman/models.py:14
+msgid "User Message"
+msgstr "رسالة المستخدم"
+
+#: haman/models.py:15
+msgid "User Messages"
+msgstr "رسائل المستخدم"
+
+#: haman/models.py:26 haman/models.py:27
+msgid "News Shelter"
+msgstr "مأوى الأخبار"
+
+#: haman/views.py:44
+msgid "name is required"
+msgstr "الاسم مطلوب"
+
+#: haman/views.py:47
+msgid "email is required"
+msgstr "البريد الإلكتروني مطلوب"
