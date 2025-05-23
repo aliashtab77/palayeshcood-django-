@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'request',
     'shop.apps.ShopConfig',
     'django.contrib.humanize',
+    'blogs.apps.BlogsConfig',
+    'news.apps.NewsConfig'
 ]
 
 MIDDLEWARE = [

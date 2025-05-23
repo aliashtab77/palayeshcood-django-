@@ -1,24 +1,229 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+{% block title %}
+	{% translate 'blogs' %}
+{% endblock title %}
+{% block blogc %}current{% endblock blogc %}
+{% block blogcz %}currnt{% endblock blogcz %}
+
+{% block body %}
+
+    <!--Page Title-->
+    <section class="page-title" style="background-image:url({% static 'haman/images/background/bg-page-title-1.jpg' %});">
+        <div class="auto-container">
+            <h1>{% translate 'Blogs' %}</h1>
+        </div>
+    </section>
+
+    <!--Page Info-->
+    <section class="page-info">
+        <div class="auto-container clearfix">
+            <div class="pull-left"><h2>{% translate 'Blogs' %}</h2></div>
+            <div class="pull-right">
+                <ul class="bread-crumb clearfix">
+                    <li><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
+                    <li>{% translate 'Blogs' %}</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!--Sidebar Page-->
+    <div class="sidebar-page-container">
+        <div class="auto-container">
+            <div class="row clearfix">
+                
+                <!--Content Side-->      
+                <div class="content-side col-lg-9 col-md-8 col-sm-12 col-xs-12">
+                    
+                    <!--News Section-->
+                    <section class="news-section list-view no-padd-top no-padd-bottom">
+                        {% if LANGUAGE_CODE == "fa" %}
+                        	{% for b in blogs %}
+                                <!--News Style One-->
+                                <div class="news-style-one">
+                                    <div class="inner-box">
+                                        <div class="row clearfix">
+                                            <div class="image-column col-md-5 col-sm-6 col-xs-12">
+                                                <figure class="image-box"><img src="{{ b.avatar.url }}" alt="{{ b.title_persian }}"><a class="overlay-link" href="{% url 'blogsdetail' slug=b.persian_slug %}"><span class="icon flaticon-plus-1"></span></a></figure>
+                                            </div>
+                                            <div class="content-column col-md-7 col-sm-6 col-xs-12">
+                                                <div class="content">
+                                                    <h3><a href="{% url 'blogsdetail' slug=b.persian_slug %}">{{ b.title_persian }}</a></h3>
+                                                    <ul class="post-meta clearfix">
+                                                        <li><a href="#"><span class="icon fa fa-clock-o"></span> {{ b.time_created }}</a></li>
+                                                        <li><a href="#"><span class="icon fa fa-tags"></span> {% translate 'Blog' %}</a></li>
+                                                    </ul>
+                                                            <div class="text">{{ b.short_description_persian | safe }}</div>
+                                                            <div class="author-info">
+                                                        <figure class="author-thumb"><img src="{% static 'haman/images/resource/author-thumb-1.jpg' %}" alt=""></figure>
+                                                        <h4>{% translate 'Haman Lesan' %}</h4>
+                                                        <div class="designation">{% translate 'Founder' %}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% empty %}
+                                <div class="text-center">
+                            	    <h4>{% translate 'No suitable products found.' %}</h4>
+                                </div>
+                            {% endfor %}
+                        {% elif LANGUAGE_CODE == "en" %}
+                            {% for b in blogs %}
+                                <!--News Style One-->
+                                <div class="news-style-one">
+                                    <div class="inner-box">
+                                        <div class="row clearfix">
+                                            <div class="image-column col-md-5 col-sm-6 col-xs-12">
+                                                <figure class="image-box"><img src="{{ b.avatar.url }}" alt="{{ b.title_english }}"><a class="overlay-link" href="{% url 'blogsdetail' slug=b.english_slug %}"><span class="icon flaticon-plus-1"></span></a></figure>
+                                            </div>
+                                            <div class="content-column col-md-7 col-sm-6 col-xs-12">
+                                                <div class="content">
+                                                    <h3><a href="{% url 'blogsdetail' slug=b.english_slug %}">{{ b.title_english }}</a></h3>
+                                                    <ul class="post-meta clearfix">
+                                                        <li><a href="#"><span class="icon fa fa-clock-o"></span> {{ b.time_created }}</a></li>
+                                                        <li><a href="#"><span class="icon fa fa-tags"></span> {% translate 'Blog' %}</a></li>
+                                                    </ul>
+                                                            <div class="text">{{ b.short_description_english | safe }}</div>
+                                                            <div class="author-info">
+                                                        <figure class="author-thumb"><img src="{% static 'haman/images/resource/author-thumb-1.jpg' %}" alt=""></figure>
+                                                        <h4>{% translate 'Haman Lesan' %}</h4>
+                                                        <div class="designation">{% translate 'Founder' %}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% empty %}
+                                <div class="text-center">
+                            	    <h4>{% translate 'No suitable products found.' %}</h4>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            {% for b in blogs %}
+                                <div class="news-style-one">
+                                    <div class="inner-box">
+                                        <div class="row clearfix">
+                                            <div class="image-column col-md-5 col-sm-6 col-xs-12">
+                                                <figure class="image-box"><img src="{{ b.avatar.url }}" alt="{{ b.title_arabic }}"><a class="overlay-link" href="{% url 'blogsdetail' slug=b.arabic_slug %}"><span class="icon flaticon-plus-1"></span></a></figure>
+                                            </div>
+                                            <div class="content-column col-md-7 col-sm-6 col-xs-12">
+                                                <div class="content">
+                                                    <h3><a href="{% url 'blogsdetail' slug=b.arabic_slug %}">{{ b.title_arabic }}</a></h3>
+                                                    <ul class="post-meta clearfix">
+                                                        <li><a href="#"><span class="icon fa fa-clock-o"></span> {{ b.time_created }}</a></li>
+                                                        <li><a href="#"><span class="icon fa fa-tags"></span> {% translate 'Blog' %}</a></li>
+                                                    </ul>
+                                                            <div class="text">{{ b.short_description_arabic | safe }}</div>
+                                                            <div class="author-info">
+                                                        <figure class="author-thumb"><img src="{% static 'haman/images/resource/author-thumb-1.jpg' %}" alt=""></figure>
+                                                        <h4>{% translate 'Haman Lesan' %}</h4>
+                                                        <div class="designation">{% translate 'Founder' %}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% empty %}
+                                <div class="text-center">
+                            	    <h4>{% translate 'No suitable products found.' %}</h4>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
 
 
-<head>
-<meta charset="utf-8">
-<title>Decorators - Design Studio HTML Template | Our Blog</title>
-<!-- Stylesheets -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-<link rel="icon" href="images/favicon.ico" type="image/x-icon">
-<!-- Responsive -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<link href="css/responsive.css" rel="stylesheet">
-<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
-<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
-</head>
 
 
+                        {% if blogs.has_other_pages %}
+                        <!-- Styled Pagination -->
+                            <div class="styled-pagination padd-top-20 text-center">
+                                <ul>
+                                    {% if blogs.has_previous %}
+                                        <li><a class="prev" href="{% url 'blogs' %}?page={{ blogs.previous_page_number }}"><span class="fa fa-angle-left"></span></a></li>
+                                    {% endif %}
+                                    {% for i in pagenator.page_range %}
+                                        {% if i == blogs.number %}
+                                            <li><a class="active">{{ i }}</a></li>
+                                        {% else %}
+                                            <li><a href="{% url 'blogs' %}?page={{ i }}">{{ i }}</a></li>
+                                        {% endif %}
+                                    {% endfor %}
+                                    {% if blogs.has_next %}
+                                        <li><a class="next" href="{% url 'blogs' %}?page={{ blogs.next_page_number }}"><span class="fa fa-angle-right"></span></a></li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        {% endif %}
+                    </section>
+                
+                </div><!--End Content Side-->   
+                
+                <!--Sidebar-->      
+                <div class="sidebar-side col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <aside class="sidebar">
+                        
+                        <!-- Search Form -->
+                        <div class="widget search-box sidebar-widget">
+                            
+                            <form method="post" action="{% url 'blogs' %}">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <input type="search" name="search-field" value="" placeholder="{% translate 'Search here' %}">
+                                    <button type="submit" {% if LANGUAGE_BIDI %}style="left: 0px" {% endif %}><span class="icon fa fa-search"></span></button>
+                                </div>
+                            </form>
+                            
+                        </div>
+                        {% if blogsbaner %}
+                        <!-- Recent Posts -->
+                            <div class="widget recent-posts sidebar-widget">
+                                <div class="sidebar-title"><h3>{% translate 'Recent Posts' %}</h3></div>
+                                {% if LANGUAGE_CODE == "fa" %}
+                                    {% for b in blogsbaner %}
+                                        <div class="post">
+                                            <figure class="post-thumb"><img src="{{ b.blog.avatar.url }}" alt="{{ b.blog.title_persian }}"><a href="{% url 'blogsdetail' slug=b.blog.persian_slug %}" class="overlay-link"><span class="flaticon-plus-1"></span></a></figure>
+                                            <h4><a href="{% url 'blogsdetail' slug=b.blog.persian_slug %}">{{ b.blog.title_persian }}</a></h4>
+{#                                            <div class="post-meta"><a href="#"><span class="fa fa-user"></span> Mano</a> <a href="#"><span class="fa fa-eye"></span> 95 Views</a></div>#}
+                                        </div>
+                                    {% endfor %}
+                                {% elif LANGUAGE_CODE == "en" %}
+                                    {% for b in blogsbaner %}
+                                        <div class="post">
+                                            <figure class="post-thumb"><img src="{{ b.blog.avatar.url }}" alt="{{ b.blog.title_english }}"><a href="{% url 'blogsdetail' slug=b.blog.english_slug %}" class="overlay-link"><span class="flaticon-plus-1"></span></a></figure>
+                                            <h4><a href="{% url 'blogsdetail' slug=b.blog.english_slug %}">{{ b.blog.title_english }}</a></h4>
+    {#                                            <div class="post-meta"><a href="#"><span class="fa fa-user"></span> Mano</a> <a href="#"><span class="fa fa-eye"></span> 95 Views</a></div>#}
+                                        </div>
+                                    {% endfor %}
+                                {% else %}
+                                    {% for b in blogsbaner %}
+                                        <div class="post">
+                                            <figure class="post-thumb"><img src="{{ b.blog.avatar.url }}" alt="{{ b.blog.title_arabic }}"><a href="{% url 'blogsdetail' slug=b.blog.arabic_slug %}" class="overlay-link"><span class="flaticon-plus-1"></span></a></figure>
+                                            <h4><a href="{% url 'blogsdetail' slug=b.blog.arabic_slug %}">{{ b.blog.title_arabic }}</a></h4>
+    {#                                            <div class="post-meta"><a href="#"><span class="fa fa-user"></span> Mano</a> <a href="#"><span class="fa fa-eye"></span> 95 Views</a></div>#}
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+{#                                <div class="post">#}
+{#                                    <figure class="post-thumb"><img src="images/resource/post-thumb-3.jpg" alt=""><a href="#" class="overlay-link"><span class="flaticon-plus-1"></span></a></figure>#}
+{#                                    <h4><a href="#">We Using High Quality Paints Only</a></h4>#}
+{#                                    <div class="post-meta"><a href="#"><span class="fa fa-user"></span> Mano</a> <a href="#"><span class="fa fa-eye"></span> 95 Views</a></div>#}
+{#                                </div>#}
 
+                            </div>
+                        {% endif %}
 
-</html>
+                    </aside>
+                </div><!--End Sidebar-->      
+                
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}

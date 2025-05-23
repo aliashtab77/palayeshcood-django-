@@ -15,6 +15,7 @@
     {% endif %}
 {% endblock title %}
 {% block shopc %}current{% endblock shopc%}
+{% block shopcz %}current{% endblock shopcz %}
 {% block det %}
     <ul class="dropdown-menu" style="min-width: auto;">
         {% if product.show_on_persian %}
@@ -247,7 +248,7 @@
                                                 <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
                                             </div>
                                         </div>
-                                        {% if foo.inventory %}
+                                        {% if not foo.inventory %}
                                             <div class="dead-overlay"><span class="text">موجود نیست</span></div>
                                         {% endif %}
                                     </div>
@@ -510,7 +511,7 @@
                                                 <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
                                             </div>
                                         </div>
-                                        {% if foo.inventory %}
+                                        {% if not foo.inventory %}
                                             <div class="dead-overlay"><span class="text">Out Of Stock</span></div>
                                         {% endif %}
                                     </div>
@@ -669,7 +670,7 @@
                                         <div class="tab active-tab" id="prod-description">
                                             <h3>{% translate 'Description' %}</h3>
                                             <div class="content">
-                                                {{ product.description_arabic }}
+                                                {{ product.description_arabic | safe }}
                                             </div>
                                         </div>
 
@@ -774,7 +775,7 @@
                                                 <a class="add-to-favorite" href="#" title="Add to Favourite"><span class="fa fa-heart"></span></a>
                                             </div>
                                         </div>
-                                        {% if foo.inventory %}
+                                        {% if not foo.inventory %}
                                             <div class="dead-overlay"><span class="text">إنتهى من المخزن</span></div>
                                         {% endif %}
                                     </div>

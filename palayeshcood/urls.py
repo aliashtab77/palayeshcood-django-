@@ -32,9 +32,9 @@ urlpatterns = [
     path("our-team/", team, name="team"),
     path("FAQs/", faq, name="faq"),
     path("shop/", include("shop.urls")),
+    path("blogs/", include("blogs.urls")),
 
-
-
+    path("news/", include("news.urls")),
 ]
 
 

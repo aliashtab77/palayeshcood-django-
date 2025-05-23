@@ -654,8 +654,212 @@
             </ul>
         </div>
     </section>
+{% endcomment %}
+{% if blogsbanner %}
+    <!--Blogs Section-->
+    <section class="news-section">
+    	<div class="auto-container">
+
+            <div class="sec-title-four">
+                <h2>{% translate 'Recent Blogs' %}</h2>
+            </div>
 
 
+            <div class="news-carousel two-column-carousel">
+                {% if LANGUAGE_CODE == "fa" %}
+                    {% for b in blogsbanner %}
+                <!--News Style One-->
+                    <div class="news-style-one">
+                	<div class="inner-box">
+                    	<div class="row clearfix">
+                        	<div class="image-column col-md-5 col-sm-6 col-xs-12">
+                            	<figure class="image-box"><img src="{{ b.blog.avatar.url }}" alt="{{ b.blog.title_persian }}"><a class="overlay-link" href="{% url 'blogsdetail' slug=b.blog.persian_slug %}"><span class="icon flaticon-plus-1"></span></a></figure>
+                            </div>
+                            <div class="content-column col-md-7 col-sm-6 col-xs-12">
+                            	<div class="content">
+                                	<h3><a href="{% url 'blogsdetail' slug=b.blog.persian_slug %}">{{ b.blog.title_persian }}</a></h3>
+                                    <ul class="post-meta clearfix">
+                                    	<li><a href="#"><span class="icon fa fa-clock-o"></span> {{ b.blog.time_created }}</a></li>
+                                        <li><a href="#"><span class="icon fa fa-tags"></span> {% translate 'Blogs' %}</a></li>
+                                    </ul>
+                                    <div class="text">{{ b.blog.short_description_persian | safe }}</div>
+                                    <div class="author-info">
+                                    	<figure class="author-thumb"><img src="{% static 'haman/images/resource/author-thumb-1.jpg' %}" alt=""></figure>
+                                        <h4>{% translate 'Haman Lesan' %}</h4>
+                                        <div class="designation">{% translate 'Founder' %}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    {% endfor %}
+                {% elif LANGUAGE_CODE == "en" %}
+                    {% for b in blogsbanner %}
+                    <div class="news-style-one">
+                	<div class="inner-box">
+                    	<div class="row clearfix">
+                        	<div class="image-column col-md-5 col-sm-6 col-xs-12">
+                            	<figure class="image-box"><img src="{{ b.blog.avatar.url }}" alt="{{ b.blog.title_english }}"><a class="overlay-link" href="{% url 'blogsdetail' slug=b.blog.english_slug %}"><span class="icon flaticon-plus-1"></span></a></figure>
+                            </div>
+                            <div class="content-column col-md-7 col-sm-6 col-xs-12">
+                            	<div class="content">
+                                	<h3><a href="{% url 'blogsdetail' slug=b.blog.english_slug %}">{{ b.blog.title_english }}</a></h3>
+                                    <ul class="post-meta clearfix">
+                                    	<li><a href="#"><span class="icon fa fa-clock-o"></span> {{ b.blog.time_created }}</a></li>
+                                        <li><a href="#"><span class="icon fa fa-tags"></span> {% translate 'Blogs' %}</a></li>
+                                    </ul>
+                                    <div class="text">{{ b.blog.short_description_english | safe }}</div>
+                                    <div class="author-info">
+                                    	<figure class="author-thumb"><img src="{% static 'haman/images/resource/author-thumb-1.jpg' %}" alt=""></figure>
+                                        <h4>{% translate 'Haman Lesan' %}</h4>
+                                        <div class="designation">{% translate 'Founder' %}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    {% endfor %}
+                {% else %}
+                    {% for b in blogsbanner %}
+                    <div class="news-style-one">
+                	<div class="inner-box">
+                    	<div class="row clearfix">
+                        	<div class="image-column col-md-5 col-sm-6 col-xs-12">
+                            	<figure class="image-box"><img src="{{ b.blog.avatar.url }}" alt="{{ b.blog.title_arabic }}"><a class="overlay-link" href="{% url 'blogsdetail' slug=b.blog.arabic_slug %}"><span class="icon flaticon-plus-1"></span></a></figure>
+                            </div>
+                            <div class="content-column col-md-7 col-sm-6 col-xs-12">
+                            	<div class="content">
+                                	<h3><a href="{% url 'blogsdetail' slug=b.blog.arabic_slug %}">{{ b.blog.title_arabic }}</a></h3>
+                                    <ul class="post-meta clearfix">
+                                    	<li><a href="#"><span class="icon fa fa-clock-o"></span> {{ b.blog.time_created }}</a></li>
+                                        <li><a href="#"><span class="icon fa fa-tags"></span> {% translate 'Blogs' %}</a></li>
+                                    </ul>
+                                    <div class="text">{{ b.blog.short_description_arabic | safe }}</div>
+                                    <div class="author-info">
+                                    	<figure class="author-thumb"><img src="{% static 'haman/images/resource/author-thumb-1.jpg' %}" alt=""></figure>
+                                        <h4>{% translate 'Haman Lesan' %}</h4>
+                                        <div class="designation">{% translate 'Founder' %}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    {% endfor %}
+                {% endif %}
+
+            </div>
+
+        </div>
+    </section>
+{% endif %}
+
+
+
+{% if newsbanner %}
+    <!--Blogs Section-->
+    <section class="news-section">
+    	<div class="auto-container">
+
+            <div class="sec-title-four">
+                <h2>{% translate 'Recent News' %}</h2>
+            </div>
+
+
+            <div class="news-carousel two-column-carousel">
+                {% if LANGUAGE_CODE == "fa" %}
+                    {% for b in newsbanner %}
+                <!--News Style One-->
+                    <div class="news-style-one">
+                	<div class="inner-box">
+                    	<div class="row clearfix">
+                        	<div class="image-column col-md-5 col-sm-6 col-xs-12">
+                            	<figure class="image-box"><img src="{{ b.news.avatar.url }}" alt="{{ b.news.title_persian }}"><a class="overlay-link" href="{% url 'newsdetail' slug=b.news.persian_slug %}"><span class="icon flaticon-plus-1"></span></a></figure>
+                            </div>
+                            <div class="content-column col-md-7 col-sm-6 col-xs-12">
+                            	<div class="content">
+                                	<h3><a href="{% url 'newsdetail' slug=b.news.persian_slug %}">{{ b.news.title_persian }}</a></h3>
+                                    <ul class="post-meta clearfix">
+                                    	<li><a href="#"><span class="icon fa fa-clock-o"></span> {{ b.news.time_created }}</a></li>
+                                        <li><a href="#"><span class="icon fa fa-tags"></span> {% translate 'News' %}</a></li>
+                                    </ul>
+                                    <div class="text">{{ b.news.short_description_persian | safe }}</div>
+                                    <div class="author-info">
+                                    	<figure class="author-thumb"><img src="{% static 'haman/images/resource/author-thumb-1.jpg' %}" alt=""></figure>
+                                        <h4>{% translate 'Haman Lesan' %}</h4>
+                                        <div class="designation">{% translate 'Founder' %}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    {% endfor %}
+                {% elif LANGUAGE_CODE == "en" %}
+                    {% for b in newsbanner %}
+                    <div class="news-style-one">
+                	<div class="inner-box">
+                    	<div class="row clearfix">
+                        	<div class="image-column col-md-5 col-sm-6 col-xs-12">
+                            	<figure class="image-box"><img src="{{ b.news.avatar.url }}" alt="{{ b.news.title_english }}"><a class="overlay-link" href="{% url 'newsdetail' slug=b.news.english_slug %}"><span class="icon flaticon-plus-1"></span></a></figure>
+                            </div>
+                            <div class="content-column col-md-7 col-sm-6 col-xs-12">
+                            	<div class="content">
+                                	<h3><a href="{% url 'newsdetail' slug=b.news.english_slug %}">{{ b.news.title_english }}</a></h3>
+                                    <ul class="post-meta clearfix">
+                                    	<li><a href="#"><span class="icon fa fa-clock-o"></span> {{ b.news.time_created }}</a></li>
+                                        <li><a href="#"><span class="icon fa fa-tags"></span> {% translate 'News' %}</a></li>
+                                    </ul>
+                                    <div class="text">{{ b.news.short_description_english | safe }}</div>
+                                    <div class="author-info">
+                                    	<figure class="author-thumb"><img src="{% static 'haman/images/resource/author-thumb-1.jpg' %}" alt=""></figure>
+                                        <h4>{% translate 'Haman Lesan' %}</h4>
+                                        <div class="designation">{% translate 'Founder' %}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    {% endfor %}
+                {% else %}
+                    {% for b in newsbanner %}
+                    <div class="news-style-one">
+                	<div class="inner-box">
+                    	<div class="row clearfix">
+                        	<div class="image-column col-md-5 col-sm-6 col-xs-12">
+                            	<figure class="image-box"><img src="{{ b.news.avatar.url }}" alt="{{ b.news.title_arabic }}"><a class="overlay-link" href="{% url 'newsdetail' slug=b.news.arabic_slug %}"><span class="icon flaticon-plus-1"></span></a></figure>
+                            </div>
+                            <div class="content-column col-md-7 col-sm-6 col-xs-12">
+                            	<div class="content">
+                                	<h3><a href="{% url 'newsdetail' slug=b.news.arabic_slug %}">{{ b.news.title_arabic }}</a></h3>
+                                    <ul class="post-meta clearfix">
+                                    	<li><a href="#"><span class="icon fa fa-clock-o"></span> {{ b.news.time_created }}</a></li>
+                                        <li><a href="#"><span class="icon fa fa-tags"></span> {% translate 'News' %}</a></li>
+                                    </ul>
+                                    <div class="text">{{ b.news.short_description_arabic | safe }}</div>
+                                    <div class="author-info">
+                                    	<figure class="author-thumb"><img src="{% static 'haman/images/resource/author-thumb-1.jpg' %}" alt=""></figure>
+                                        <h4>{% translate 'Haman Lesan' %}</h4>
+                                        <div class="designation">{% translate 'Founder' %}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    {% endfor %}
+                {% endif %}
+
+            </div>
+
+        </div>
+    </section>
+{% endif %}
+
+    {% comment %}
     <!--News Section-->
     <section class="news-section">
     	<div class="auto-container">
@@ -672,7 +876,7 @@
                 	<div class="inner-box">
                     	<div class="row clearfix">
                         	<div class="image-column col-md-5 col-sm-6 col-xs-12">
-                            	<figure class="image-box"><img src="images/resource/blog-image-1.jpg" alt=""><a class="overlay-link" href="blog-single.html"><span class="icon flaticon-plus-1"></span></a></figure>
+                            	<figure class="image-box"><img src="{% static 'haman/images/resource/blog-image-1.jpg' %}" alt=""><a class="overlay-link" href="blog-single.html"><span class="icon flaticon-plus-1"></span></a></figure>
                             </div>
                             <div class="content-column col-md-7 col-sm-6 col-xs-12">
                             	<div class="content">
@@ -683,7 +887,7 @@
                                     </ul>
                                     <div class="text">How all this mistakens idea off denouncings pleasure and praising pain was born and get will give you a complete account.</div>
                                     <div class="author-info">
-                                    	<figure class="author-thumb"><img src="images/resource/author-thumb-1.jpg" alt=""></figure>
+                                    	<figure class="author-thumb"><img src="{% static 'haman/images/resource/author-thumb-1.jpg' %}" alt=""></figure>
                                         <h4>Mark Nicholes</h4>
                                         <div class="designation">Team Leader</div>
                                     </div>
@@ -698,7 +902,7 @@
                 	<div class="inner-box">
                     	<div class="row clearfix">
                         	<div class="image-column col-md-5 col-sm-6 col-xs-12">
-                            	<figure class="image-box"><img src="images/resource/blog-image-2.jpg" alt=""><a class="overlay-link" href="blog-single.html"><span class="icon flaticon-plus-1"></span></a></figure>
+                            	<figure class="image-box"><img src="{% static 'haman/images/resource/blog-image-2.jpg' %}" alt=""><a class="overlay-link" href="blog-single.html"><span class="icon flaticon-plus-1"></span></a></figure>
                             </div>
                             <div class="content-column col-md-7 col-sm-6 col-xs-12">
                             	<div class="content">
@@ -709,7 +913,7 @@
                                     </ul>
                                     <div class="text">Pleasure and praising pain was born and will give you a complete account of the systems, and expound the actual teaching.</div>
                                     <div class="author-info">
-                                    	<figure class="author-thumb"><img src="images/resource/author-thumb-2.jpg" alt=""></figure>
+                                    	<figure class="author-thumb"><img src="{% static 'haman/images/resource/author-thumb-2.jpg' %}" alt=""></figure>
                                         <h4>William Harry</h4>
                                         <div class="designation">Designer</div>
                                     </div>
@@ -724,7 +928,7 @@
                 	<div class="inner-box">
                     	<div class="row clearfix">
                         	<div class="image-column col-md-5 col-sm-6 col-xs-12">
-                            	<figure class="image-box"><img src="images/resource/blog-image-1.jpg" alt=""><a class="overlay-link" href="blog-single.html"><span class="icon flaticon-plus-1"></span></a></figure>
+                            	<figure class="image-box"><img src="{% static 'haman/images/resource/blog-image-1.jpg' %}" alt=""><a class="overlay-link" href="blog-single.html"><span class="icon flaticon-plus-1"></span></a></figure>
                             </div>
                             <div class="content-column col-md-7 col-sm-6 col-xs-12">
                             	<div class="content">
@@ -735,7 +939,7 @@
                                     </ul>
                                     <div class="text">How all this mistakens idea off denouncings pleasure and praising pain was born and get will give you a complete account.</div>
                                     <div class="author-info">
-                                    	<figure class="author-thumb"><img src="images/resource/author-thumb-1.jpg" alt=""></figure>
+                                    	<figure class="author-thumb"><img src="{% static 'haman/images/resource/author-thumb-1.jpg' %}" alt=""></figure>
                                         <h4>Mark Nicholes</h4>
                                         <div class="designation">Team Leader</div>
                                     </div>
@@ -745,90 +949,14 @@
                     </div>
                 </div>
 
-                <!--News Style One-->
-                <div class="news-style-one">
-                	<div class="inner-box">
-                    	<div class="row clearfix">
-                        	<div class="image-column col-md-5 col-sm-6 col-xs-12">
-                            	<figure class="image-box"><img src="images/resource/blog-image-2.jpg" alt=""><a class="overlay-link" href="blog-single.html"><span class="icon flaticon-plus-1"></span></a></figure>
-                            </div>
-                            <div class="content-column col-md-7 col-sm-6 col-xs-12">
-                            	<div class="content">
-                                	<h3><a href="blog-single.html">Using High Quality Paints</a></h3>
-                                    <ul class="post-meta clearfix">
-                                    	<li><a href="#"><span class="icon fa fa-clock-o"></span> Aug 21, 2015</a></li>
-                                        <li><a href="#"><span class="icon fa fa-tags"></span> Painting</a></li>
-                                    </ul>
-                                    <div class="text">Pleasure and praising pain was born and will give you a complete account of the systems, and expound the actual teaching.</div>
-                                    <div class="author-info">
-                                    	<figure class="author-thumb"><img src="images/resource/author-thumb-2.jpg" alt=""></figure>
-                                        <h4>William Harry</h4>
-                                        <div class="designation">Designer</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!--News Style One-->
-                <div class="news-style-one">
-                	<div class="inner-box">
-                    	<div class="row clearfix">
-                        	<div class="image-column col-md-5 col-sm-6 col-xs-12">
-                            	<figure class="image-box"><img src="images/resource/blog-image-1.jpg" alt=""><a class="overlay-link" href="blog-single.html"><span class="icon flaticon-plus-1"></span></a></figure>
-                            </div>
-                            <div class="content-column col-md-7 col-sm-6 col-xs-12">
-                            	<div class="content">
-                                	<h3><a href="blog-single.html">Our First Design For Interior</a></h3>
-                                    <ul class="post-meta clearfix">
-                                    	<li><a href="#"><span class="icon fa fa-clock-o"></span> Oct 03, 2015</a></li>
-                                        <li><a href="#"><span class="icon fa fa-tags"></span> Furniture</a></li>
-                                    </ul>
-                                    <div class="text">How all this mistakens idea off denouncings pleasure and praising pain was born and get will give you a complete account.</div>
-                                    <div class="author-info">
-                                    	<figure class="author-thumb"><img src="images/resource/author-thumb-1.jpg" alt=""></figure>
-                                        <h4>Mark Nicholes</h4>
-                                        <div class="designation">Team Leader</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--News Style One-->
-                <div class="news-style-one">
-                	<div class="inner-box">
-                    	<div class="row clearfix">
-                        	<div class="image-column col-md-5 col-sm-6 col-xs-12">
-                            	<figure class="image-box"><img src="images/resource/blog-image-2.jpg" alt=""><a class="overlay-link" href="blog-single.html"><span class="icon flaticon-plus-1"></span></a></figure>
-                            </div>
-                            <div class="content-column col-md-7 col-sm-6 col-xs-12">
-                            	<div class="content">
-                                	<h3><a href="blog-single.html">Using High Quality Paints</a></h3>
-                                    <ul class="post-meta clearfix">
-                                    	<li><a href="#"><span class="icon fa fa-clock-o"></span> Aug 21, 2015</a></li>
-                                        <li><a href="#"><span class="icon fa fa-tags"></span> Painting</a></li>
-                                    </ul>
-                                    <div class="text">Pleasure and praising pain was born and will give you a complete account of the systems, and expound the actual teaching.</div>
-                                    <div class="author-info">
-                                    	<figure class="author-thumb"><img src="images/resource/author-thumb-2.jpg" alt=""></figure>
-                                        <h4>William Harry</h4>
-                                        <div class="designation">Designer</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
 
         </div>
     </section>
-{% endcomment %}
 
+    {% endcomment %}
     <!--Newsletter Style One-->
     <section class="newsletter-style-one">
     	<div class="auto-container">
@@ -873,5 +1001,6 @@
             </div>
         </div>
     </section>
+
 {% endblock body %}
 

@@ -1,9 +1,9 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django_ckeditor_5.fields import CKEditor5Field
-# Create your models here.
 
-class ReviewModel(models.Model):
+# Create your models here.
+class ReviewModelNews(models.Model):
     name = models.CharField(max_length=255, verbose_name=_("name"))
     email = models.CharField(max_length=255, verbose_name=_("email"), blank=True, null=True)
     phone = models.CharField(max_length=255, verbose_name=_("phone"), blank=True, null=True)
@@ -17,7 +17,7 @@ class ReviewModel(models.Model):
         return self.name
 
 
-class ProductsModel(models.Model):
+class NewsModel(models.Model):
     persian_slug = models.SlugField(verbose_name=_("persian slug"), allow_unicode=True, unique=True)
     english_slug = models.SlugField(verbose_name=_("english slug"), allow_unicode=True, unique=True)
     arabic_slug = models.SlugField(verbose_name=_("arabic slug"), allow_unicode=True, unique=True)
@@ -27,63 +27,56 @@ class ProductsModel(models.Model):
     title_english = models.CharField(max_length=255, verbose_name=_("English Title"), null=True, blank=True)
     title_persian = models.CharField(max_length=255, verbose_name=_("Persian Title"), null=True, blank=True)
     title_arabic = models.CharField(max_length=255, verbose_name=_("Arabic Title"), null=True, blank=True)
-    price_english = models.IntegerField(verbose_name=_("English Price"), null=True, blank=True)
-    price_persian = models.IntegerField(verbose_name=_("Persian Price"), null=True, blank=True)
-    price_arabic = models.IntegerField(verbose_name=_("Arabic Price"), null=True, blank=True)
-    is_new = models.BooleanField(default=False, verbose_name=_("enable if this product is new"))
-    inventory = models.BooleanField(default=True, verbose_name=_("inventory"))
-    avatar = models.ImageField(upload_to="products", verbose_name=_("product image"))
-    related_products = models.ManyToManyField('self', related_name="product", verbose_name=_("related products"), null=True, blank=True)
-    comments = models.ManyToManyField('ReviewModel', related_name="commentof", verbose_name="Comments", null=True, blank=True)
+    avatar = models.ImageField(upload_to="news", verbose_name=_("news image"))
+    comments = models.ManyToManyField('ReviewModelNews', related_name="commentof", verbose_name="Comments", null=True, blank=True)
     description_english = CKEditor5Field(verbose_name=_("English description"), config_name="extends", null=True, blank=True)
     description_persian = CKEditor5Field(verbose_name=_("Persian description"), config_name="extends", null=True, blank=True)
     description_arabic = CKEditor5Field(verbose_name=_("Arabic description"), config_name="extends", null=True, blank=True)
-    STAR_CHOICE = [
-        (1,"⭐"),
-        (2,"⭐⭐"),
-        (3,"⭐⭐⭐"),
-        (4,"⭐⭐⭐⭐"),
-        (5,"⭐⭐⭐⭐⭐")
-    ]
-    star = models.IntegerField(choices=STAR_CHOICE, default=5, verbose_name=_("Rate"))
+    short_description_english = CKEditor5Field(verbose_name=_("Short English description"), config_name="extends", null=True,
+                                         blank=True)
+    short_description_persian = CKEditor5Field(verbose_name=_("Short Persian description"), config_name="extends", null=True,
+                                         blank=True)
+    short_description_arabic = CKEditor5Field(verbose_name=_("Short Arabic description"), config_name="extends", null=True,
+                                        blank=True)
     tags = models.TextField(verbose_name=_("tags"), null=True, blank=True)
+    time_created = models.DateField(auto_now=True)
     class Meta:
-        verbose_name = _("Product")
-        verbose_name_plural = _("Products")
+        verbose_name = _("News")
+        verbose_name_plural = _("News")
     def __str__(self):
         return self.title_english
 
 
-class English_Index(models.Model):
-    product = models.ForeignKey(to="ProductsModel", verbose_name=_("baner product"), on_delete=models.CASCADE, related_name="english_index")
+class English_IndexNews(models.Model):
+    news = models.ForeignKey(to="NewsModel", verbose_name=_("baner news"), on_delete=models.CASCADE, related_name="english_index")
     is_enable = models.BooleanField(default=True, verbose_name=_("enable"))
     class Meta:
-        verbose_name = _("english baner product")
-        verbose_name_plural = _("english baner products")
+        verbose_name = _("english baner news")
+        verbose_name_plural = _("english baner news")
     def __str__(self):
-        return self.product.title_english
+        return self.news.title_english
 
-class Persian_Index(models.Model):
-    product = models.ForeignKey(to="ProductsModel", verbose_name=_("baner product"), on_delete=models.CASCADE,
+class Persian_IndexNews(models.Model):
+    news = models.ForeignKey(to="NewsModel", verbose_name=_("baner news"), on_delete=models.CASCADE,
                                 related_name="persian_index")
     is_enable = models.BooleanField(default=True, verbose_name=_("enable"))
 
     class Meta:
-        verbose_name = _("persian baner product")
-        verbose_name_plural = _("persian baner products")
+        verbose_name = _("persian baner news")
+        verbose_name_plural = _("persian baner news")
 
     def __str__(self):
-        return self.product.title_persian
+        return self.news.title_persian
 
 
-class Arabic_Index(models.Model):
-    product = models.ForeignKey(to="ProductsModel", verbose_name=_("baner product"), on_delete=models.CASCADE,
+class Arabic_IndexNews(models.Model):
+    news = models.ForeignKey(to="NewsModel", verbose_name=_("baner news"), on_delete=models.CASCADE,
                                 related_name="arabic_index")
     is_enable = models.BooleanField(default=True, verbose_name=_("enable"))
 
     class Meta:
-        verbose_name = _("arabic baner product")
-        verbose_name_plural = _("arabic baner products")
+        verbose_name = _("arabic baner news")
+        verbose_name_plural = _("arabic baner news")
 
     def __str__(self):
-        return self.product.title_arabic
+        return self.news.title_arabic

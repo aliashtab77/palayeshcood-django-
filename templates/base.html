@@ -87,15 +87,7 @@
                                 <ul class="navigation clearfix">
                                     <li class="{% block homec %}{% endblock homec %}"><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
                                     <li class="{% block servicesc %}{% endblock servicesc %}"><a href="{% url 'services' %}">{% translate 'Services' %}</a></li>
-
-                                    <li class="dropdown"><a href="#">Blog</a>
-                                    	<ul>
-                                            <li><a href="blog.html">Blog Standard</a></li>
-                                            <li><a href="blog-large-image.html">Blog Large Image</a></li>
-                                            <li><a href="blog-single.html">Blog Single</a></li>
-                                        </ul>
-                                    </li>
-
+                                    <li class="{% block blogc %}{% endblock blogc %}"><a href="{% url 'blogs' %}">{% translate 'Blogs' %}</a></li>
                                     <li class="{% block shopc %}{% endblock shopc %}"><a href="{% url 'shop' %}">{% translate 'Shop' %}</a></li>
                                     <li class="{% block aboutc %}{% endblock aboutc %} dropdown"><a href="#">{% translate 'About Us' %}</a>
                                     	<ul>
@@ -167,26 +159,8 @@
                 <ul class="navigation">
                     <li class="{% block homecz %}{% endblock homecz %}"><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
                     <li class="{% block servicescz %}{% endblock servicescz %}"><a href="{% url 'services' %}">{% translate 'Services' %}</a></li>
-
-                    <li class="dropdown"><a href="#">Blog</a>
-                        <ul class="submenu">
-                            <li><a href="blog.html">Blog Standard</a></li>
-                            <li><a href="blog-large-image.html">Blog large Image</a></li>
-                            <li><a href="blog-single.html">Blog Single</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown"><a href="#">Shop</a>
-                        <ul class="submenu">
-                            <li><a href="shop.html">Shop Products</a></li>
-                            <li><a href="shop-single.html">Shop Single</a></li>
-                            <li><a href="shopping-cart.html">Shopping Cart</a></li>
-                            <li><a href="checkout.html">Checkout</a></li>
-                            <li><a href="register.html">Login / Register</a></li>
-                        </ul>
-                    </li>
-
-
+                    <li class="{% block blogcz %}{% endblock blogcz %}"><a href="{% url 'blogs' %}">{% translate 'Blogs' %}</a></li>
+                    <li class="{% block shopcz %}{% endblock shopcz %}"><a href="{% url 'shop' %}">{% translate 'Shop' %}</a></li>
                     <li class="{% block aboutcz %}{% endblock aboutcz %} dropdown"><a href="#">{% translate 'About Us' %}</a>
                         <ul>
                             <li><a href="{% url 'about' %}">{% translate 'About Us' %}</a></li>

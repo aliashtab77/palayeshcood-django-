@@ -3,18 +3,28 @@ from django.http import JsonResponse
 from django.utils.translation import gettext_lazy as _
 from django.utils.translation import get_language
 from shop.models import Persian_Index, Arabic_Index, English_Index
+from blogs.models import Persian_IndexBlog, English_IndexBlog, Arabic_IndexBlog
+from news.models import Persian_IndexNews, English_IndexNews, Arabic_IndexNews
 from haman.models import ContactUSModel
 # Create your views here.
 def index(request):
     lang = get_language()
     if lang == "en":
         shop_baner = English_Index.objects.filter(is_enable=True)
+        blogs_baner = English_IndexBlog.objects.filter(is_enable=True)
+        news_banner = English_IndexNews.objects.filter(is_enable=True)
     elif lang == "fa":
         shop_baner = Persian_Index.objects.filter(is_enable=True)
+        blogs_baner = Persian_IndexBlog.objects.filter(is_enable=True)
+        news_banner = Persian_IndexNews.objects.filter(is_enable=True)
     else:
         shop_baner = Arabic_Index.objects.filter(is_enable=True)
+        blogs_baner = Arabic_IndexBlog.objects.filter(is_enable=True)
+        news_banner = Arabic_IndexNews.objects.filter(is_enable=True)
     context = {
         "probanner":shop_baner,
+        "blogsbanner":blogs_baner,
+        "newsbanner":news_banner,
 
     }
     return render(request, "index.html", context=context)

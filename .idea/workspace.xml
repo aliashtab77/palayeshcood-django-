@@ -4,40 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60508cdf-84c1-4e38-9f07-29198cb6ba53" name="Changes" comment="black box added to index">
-      <change afterPath="$PROJECT_DIR$/haman/templatetags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/haman/templatetags/custom_filters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/image-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/image-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/products/image-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/products/image-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/products/image-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/migrations/0002_arabic_index_english_index_persian_index.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/migrations/0003_alter_productsmodel_comments.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/migrations/0004_productsmodel_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/shop-single.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/shop.html" afterDir="false" />
+    <list default="true" id="60508cdf-84c1-4e38-9f07-29198cb6ba53" name="Changes" comment="shop app has done">
+      <change afterPath="$PROJECT_DIR$/blogs/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/migrations/0002_blogsmodel_short_description_arabic_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/migrations/0003_blogsmodel_time_created.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/migrations/0004_alter_blogsmodel_avatar.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/migrations/0005_rename_product_english_indexblog_blog.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blogs/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/blogs/blog-image-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/blogs/blog-image-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/news/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/blog-single.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/haman/locale/ar/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/haman/locale/ar/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/haman/locale/ar/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/haman/locale/ar/LC_MESSAGES/django.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/haman/locale/fa/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/haman/locale/fa/LC_MESSAGES/django.mo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/haman/locale/fa/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/haman/locale/fa/LC_MESSAGES/django.po" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/haman/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/haman/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/palayeshcood/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/palayeshcood/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/palayeshcood/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/palayeshcood/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/haman/css/mamad.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/haman/css/mamad.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/haman/js/changelanguge.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/haman/js/changelanguge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/shop-single.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop-single.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,11 +74,14 @@
     &quot;accountId&quot;: &quot;e34ba4c6-74f4-46b7-b962-0ea3b847af8d&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2rK3v6SZab98LKgqtahxXKVLLhn" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -133,8 +141,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-PY-243.23654.177" />
-        <option value="bundled-python-sdk-91d3a02ef49d-43b77aa2d136-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.23654.177" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-PY-251.25410.159" />
+        <option value="bundled-python-sdk-e0ed3721d81e-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.25410.159" />
       </set>
     </attachedChunks>
   </component>
@@ -179,7 +187,12 @@
       <workItem from="1744744336215" duration="4630000" />
       <workItem from="1745262455877" duration="7973000" />
       <workItem from="1746730840957" duration="15105000" />
-      <workItem from="1746812784416" duration="33349000" />
+      <workItem from="1746812784416" duration="33559000" />
+      <workItem from="1747505114038" duration="6659000" />
+      <workItem from="1747569076276" duration="99000" />
+      <workItem from="1747574057235" duration="1854000" />
+      <workItem from="1747580270149" duration="18653000" />
+      <workItem from="1747993409834" duration="5334000" />
     </task>
     <task id="LOCAL-00001" summary="first haman see">
       <option name="closed" value="true" />
@@ -253,7 +266,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744474892692</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="shop app has done">
+      <option name="closed" value="true" />
+      <created>1746874452650</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1746874452650</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,20 +302,21 @@
     <MESSAGE value="many things" />
     <MESSAGE value="services translations all done" />
     <MESSAGE value="black box added to index" />
-    <option name="LAST_COMMIT_MESSAGE" value="black box added to index" />
+    <MESSAGE value="shop app has done" />
+    <option name="LAST_COMMIT_MESSAGE" value="shop app has done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/haman/views.py</url>
-          <line>7</line>
-          <option name="timeStamp" value="1" />
+          <line>38</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/haman/views.py</url>
-          <line>28</line>
-          <option name="timeStamp" value="6" />
+          <url>file://$PROJECT_DIR$/shop/models.py</url>
+          <line>56</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="django-line">
           <url>file://$PROJECT_DIR$/templates/about-us.html</url>
@@ -318,8 +340,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="django-line">
           <url>file://$PROJECT_DIR$/templates/shop.html</url>
-          <line>26</line>
+          <line>27</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="django-line">
+          <url>file://$PROJECT_DIR$/templates/our-team.html</url>
+          <line>5</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="django-line">
+          <url>file://$PROJECT_DIR$/templates/our-team.html</url>
+          <line>9</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
