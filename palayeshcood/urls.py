@@ -33,8 +33,8 @@ urlpatterns = [
     path("FAQs/", faq, name="faq"),
     path("shop/", include("shop.urls")),
     path("blogs/", include("blogs.urls")),
-
     path("news/", include("news.urls")),
+    path("userdata/", include("userdata.urls")),
 ]
 
 

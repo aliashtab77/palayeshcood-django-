@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'django.contrib.humanize',
     'blogs.apps.BlogsConfig',
-    'news.apps.NewsConfig'
+    'news.apps.NewsConfig',
+    'userdata.apps.UserdataConfig'
 ]
 
 MIDDLEWARE = [

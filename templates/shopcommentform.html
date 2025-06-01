@@ -1,0 +1,32 @@
+{% load i18n %}
+
+
+<div class="add-review">
+    <div class="sec-title medium"><h2>{% translate 'Add Review' %}</h2></div>
+
+    <form method="post" action="{% url 'saveshopcomment' %}" id="shopcommentform">
+
+        <input type="hidden" name="prikey" id="prikey" value="{{ prikey }}">
+        <div class="row clearfix">
+            <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                <input type="text" name="firstname" id="firstnameshop" value="" placeholder="{% translate 'Your Name' %}" required>
+            </div>
+            <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                <input type="text" name="lastname" id="lastnameshop" value="" placeholder="{% translate 'Your Lastname' %}">
+            </div>
+            <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                <input type="text" name="phone" id="phoneshop" value="" placeholder="{% translate 'Phone' %}">
+            </div>
+            <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                <input type="email" name="email"  id="emailshop" value="" placeholder="{% translate 'Email Address' %}" required>
+            </div>
+            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                <textarea name="review-message" id="review-message-shop" placeholder="{% translate 'Review Comments' %}"></textarea>
+            </div>
+            <div class="text" id="shopcommentlog"></div>
+            <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                <button type="button" onclick="shopcomment()" class="theme-btn hvr-bounce-to-right">{% translate 'Add Review' %}</button>
+            </div>
+        </div>
+    </form>
+</div>

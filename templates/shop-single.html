@@ -52,7 +52,7 @@
         <!--Page Info-->
         <section class="page-info">
             <div class="auto-container clearfix">
-                <div class="pull-left"><h2>{{ product.title_persian }}</h2></div>
+                <div class="pull-left"><h2></h2></div>
                 <div class="pull-right">
                     <ul class="bread-crumb clearfix">
                         <li><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
@@ -169,46 +169,10 @@
                                             </div>
 
                                             <!--Add Review-->
-                                            <div class="add-review">
-                                                <div class="sec-title medium"><h2>{% translate 'Add Review' %}</h2></div>
-
-                                                <form method="post" action="#">
-                                                    <div class="row clearfix">
-                                                        {% comment %}
-                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                            <label>Your Rating </label>
-                                                            <ul class="rating">
-                                                                <li><a class="rate-box" title="1 Out of 5"><span class="fa fa-star"></span></a></li>
-                                                                <li><a class="rate-box" title="2 Out of 5"><span class="fa fa-star"></span> <span class="fa fa-star"></span></a></li>
-                                                                <li><a class="rate-box" title="3 Out of 5"><span class="fa fa-star"></span> <span class="fa fa-star"> </span> <span class="fa fa-star"></span></a></li>
-                                                                <li><a class="rate-box" title="4 Out of 5"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></a></li>
-                                                                <li><a class="rate-box" title="5 Out of 5"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></a></li>
-                                                            </ul>
-                                                        </div>
-                                                        {% endcomment %}
-                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                            <input type="text" name="firstname" value="" placeholder="{% translate 'Your Name' %}" required>
-                                                        </div>
-                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                            <input type="text" name="lastname" value="" placeholder="{% translate 'Your Lastname' %}">
-                                                        </div>
-                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                            <input type="text" name="phone" value="" placeholder="{% translate 'Phone' %}">
-                                                        </div>
-                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                            <input type="email" name="email" value="" placeholder="{% translate 'Email Address' %}" required>
-                                                        </div>
-                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                            <textarea name="review-message" placeholder="{% translate 'Review Comments' %}"></textarea>
-                                                        </div>
-                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                            <button type="submit" class="theme-btn hvr-bounce-to-right">{% translate 'Add Review' %}</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
+                                        <div id="shopcommentform1">
+                                            {% csrf_token %}
                                             </div>
-
-
+                                            {% include 'shopcommentform.html' with prikey=product.id only %}
                                         </div>
 
                                     </div>
@@ -315,7 +279,7 @@
         <!--Page Info-->
         <section class="page-info">
             <div class="auto-container clearfix">
-                <div class="pull-left"><h2>{{ product.title_english }}</h2></div>
+                <div class="pull-left"><h2></h2></div>
                 <div class="pull-right">
                     <ul class="bread-crumb clearfix">
                         <li><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
@@ -432,46 +396,10 @@
                                             </div>
 
                                             <!--Add Review-->
-                                            <div class="add-review">
-                                                <div class="sec-title medium"><h2>{% translate 'Add Review' %}</h2></div>
+                                            {% include 'shopcommentform.html' with prikey=product.id only %}
 
-                                                <form method="post" action="#">
-                                                    <div class="row clearfix">
-                                                        {% comment %}
-                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                            <label>Your Rating </label>
-                                                            <ul class="rating">
-                                                                <li><a class="rate-box" title="1 Out of 5"><span class="fa fa-star"></span></a></li>
-                                                                <li><a class="rate-box" title="2 Out of 5"><span class="fa fa-star"></span> <span class="fa fa-star"></span></a></li>
-                                                                <li><a class="rate-box" title="3 Out of 5"><span class="fa fa-star"></span> <span class="fa fa-star"> </span> <span class="fa fa-star"></span></a></li>
-                                                                <li><a class="rate-box" title="4 Out of 5"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></a></li>
-                                                                <li><a class="rate-box" title="5 Out of 5"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></a></li>
-                                                            </ul>
-                                                        </div>
-                                                        {% endcomment %}
-                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                            <input type="text" name="firstname" value="" placeholder="{% translate 'Your Name' %}" required>
-                                                        </div>
-                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                            <input type="text" name="lastname" value="" placeholder="{% translate 'Your Lastname' %}">
-                                                        </div>
-                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                            <input type="text" name="phone" value="" placeholder="{% translate 'Phone' %}">
-                                                        </div>
-                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                            <input type="email" name="email" value="" placeholder="{% translate 'Email Address' %}" required>
-                                                        </div>
-                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                            <textarea name="review-message" placeholder="{% translate 'Review Comments' %}"></textarea>
-                                                        </div>
-                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                            <button type="submit" class="theme-btn hvr-bounce-to-right">{% translate 'Add Review' %}</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
+{% csrf_token %}
                                             </div>
-
-
                                         </div>
 
                                     </div>
@@ -578,7 +506,7 @@
         <!--Page Info-->
         <section class="page-info">
             <div class="auto-container clearfix">
-                <div class="pull-left"><h2>{{ product.title_arabic }}</h2></div>
+                <div class="pull-left"><h2></h2></div>
                 <div class="pull-right">
                     <ul class="bread-crumb clearfix">
                         <li><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>
@@ -696,46 +624,10 @@
                                             </div>
 
                                             <!--Add Review-->
-                                            <div class="add-review">
-                                                <div class="sec-title medium"><h2>{% translate 'Add Review' %}</h2></div>
+                                            {% include 'shopcommentform.html' with prikey=product.id only %}
 
-                                                <form method="post" action="#">
-                                                    <div class="row clearfix">
-                                                        {% comment %}
-                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                            <label>Your Rating </label>
-                                                            <ul class="rating">
-                                                                <li><a class="rate-box" title="1 Out of 5"><span class="fa fa-star"></span></a></li>
-                                                                <li><a class="rate-box" title="2 Out of 5"><span class="fa fa-star"></span> <span class="fa fa-star"></span></a></li>
-                                                                <li><a class="rate-box" title="3 Out of 5"><span class="fa fa-star"></span> <span class="fa fa-star"> </span> <span class="fa fa-star"></span></a></li>
-                                                                <li><a class="rate-box" title="4 Out of 5"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></a></li>
-                                                                <li><a class="rate-box" title="5 Out of 5"><span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span></a></li>
-                                                            </ul>
-                                                        </div>
-                                                        {% endcomment %}
-                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                            <input type="text" name="firstname" value="" placeholder="{% translate 'Your Name' %}" required>
-                                                        </div>
-                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                            <input type="text" name="lastname" value="" placeholder="{% translate 'Your Lastname' %}">
-                                                        </div>
-                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                            <input type="text" name="phone" value="" placeholder="{% translate 'Phone' %}">
-                                                        </div>
-                                                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                            <input type="email" name="email" value="" placeholder="{% translate 'Email Address' %}" required>
-                                                        </div>
-                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                            <textarea name="review-message" placeholder="{% translate 'Review Comments' %}"></textarea>
-                                                        </div>
-                                                        <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                            <button type="submit" class="theme-btn hvr-bounce-to-right">{% translate 'Add Review' %}</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
+{% csrf_token %}
                                             </div>
-
-
                                         </div>
 
                                     </div>

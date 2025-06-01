@@ -54,6 +54,7 @@ def detail(request, slug):
     tags = product.tags.split(",")
     comm = product.comments.filter(show=True)
     rev = len(comm)
+    print(product.id)
     context = {
         "product":product,
         "shopbaner": shop_baner,

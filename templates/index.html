@@ -24,8 +24,8 @@
                     <img src="{% static 'haman/images/main-slider/image-1.jpg' %}"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
 
                     <div class="tp-caption sfl sfb tp-resizeme"
-                    data-x="left" data-hoffset="15"
-                    data-y="center" data-voffset="-100"
+                    data-x="right" data-hoffset="15"
+                    data-y="down" data-voffset="-100"
                     data-speed="1500"
                     data-start="0"
                     data-easing="easeOutExpo"
@@ -958,49 +958,7 @@
 
     {% endcomment %}
     <!--Newsletter Style One-->
-    <section class="newsletter-style-one">
-    	<div class="auto-container">
-        	<div class="row clearfix">
-
-                <div class="title-column col-lg-4 col-md-12 col-sm-12">
-                	<h2>{% translate 'Newsletter Signup' %}</h2>
-                    <div class="text">{% translate 'We send you latest news couple a month ( No Spam).' %}</div>
-                </div>
-                <!--Form Column-->
-                <div class="form-column col-lg-8 col-md-12 col-sm-12">
-                    <div class="inner-box">
-                        <form method="post" action="#">
-                        	<div class="row clearfix">
-                            	<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-                                	<div class="row clearfix">
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                            <div class="form-group">
-                                            	<span class="floated-icon fa fa-user"></span>
-                                                <input type="text" name="username" value="" placeholder="{% translate 'Your Name *' %}" required>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                            <div class="form-group">
-                                            	<span class="floated-icon fa fa-envelope"></span>
-                                                <input type="email" name="email" value="" placeholder="{% translate 'Your Email *' %}" required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                                	<button type="submit" class="theme-btn">{% translate 'Subscribe' %}</button>
-                                </div>
-
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
+    {% include 'newsletter.html' %}
 
 {% endblock body %}
 

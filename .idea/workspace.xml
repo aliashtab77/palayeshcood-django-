@@ -4,12 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60508cdf-84c1-4e38-9f07-29198cb6ba53" name="Changes" comment="news added">
-      <change afterPath="$PROJECT_DIR$/templates/news-single.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/news.html" afterDir="false" />
+    <list default="true" id="60508cdf-84c1-4e38-9f07-29198cb6ba53" name="Changes" comment="update translations">
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/aliashtab.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/arashmostofi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/hadilesan.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/hamanlesan.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/mahdiehvahedi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/maryamfarangis.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/royanasiri.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/resource/zahrapashaii.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/js/userdata.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/newsletter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/shopcommentform.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userdata/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userdata/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userdata/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userdata/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userdata/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userdata/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userdata/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userdata/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/haman/locale/ar/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/haman/locale/ar/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/haman/locale/ar/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/haman/locale/ar/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/haman/locale/fa/LC_MESSAGES/django.mo" beforeDir="false" afterPath="$PROJECT_DIR$/haman/locale/fa/LC_MESSAGES/django.mo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/haman/locale/fa/LC_MESSAGES/django.po" beforeDir="false" afterPath="$PROJECT_DIR$/haman/locale/fa/LC_MESSAGES/django.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/haman/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/haman/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/palayeshcood/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/palayeshcood/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/palayeshcood/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/palayeshcood/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog-single.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog-single.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/news-single.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/news-single.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/our-team.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/our-team.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/shop-single.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop-single.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,10 +52,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -66,6 +96,7 @@
     &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
     &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/stark/Desktop/palayeshcood&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -159,7 +190,10 @@
       <workItem from="1747569076276" duration="99000" />
       <workItem from="1747574057235" duration="1854000" />
       <workItem from="1747580270149" duration="18653000" />
-      <workItem from="1747993409834" duration="6929000" />
+      <workItem from="1747993409834" duration="8295000" />
+      <workItem from="1748247385484" duration="9570000" />
+      <workItem from="1748717260655" duration="14825000" />
+      <workItem from="1748741807096" duration="4933000" />
     </task>
     <task id="LOCAL-00001" summary="first haman see">
       <option name="closed" value="true" />
@@ -257,7 +291,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748000437797</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="update translations">
+      <option name="closed" value="true" />
+      <created>1748001781398</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1748001781398</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,7 +330,8 @@
     <MESSAGE value="shop app has done" />
     <MESSAGE value="blogs add and bugs fix" />
     <MESSAGE value="news added" />
-    <option name="LAST_COMMIT_MESSAGE" value="news added" />
+    <MESSAGE value="update translations" />
+    <option name="LAST_COMMIT_MESSAGE" value="update translations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

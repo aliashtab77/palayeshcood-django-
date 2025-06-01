@@ -2,6 +2,23 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 # Create your models here.
 
+class SliderModel(models.Model):
+    avatar = models.ImageField(upload_to="slider", verbose_name=_("slide picture"))
+    title_persian = models.CharField(max_length=255, verbose_name=_("persian title"), blank=True, null=True)
+    title_english = models.CharField(max_length=255, verbose_name=_("english title"), blank=True, null=True)
+    title_arabic = models.CharField(max_length=255, verbose_name=_("arabic title"), blank=True, null=True)
+    XPOS = (
+    ("right",_("right")),
+    ("left",_("left")),
+    ("center",_("center"))
+    )
+    YPOS = (
+    ("top", _("top")),
+    ("center", _("center"))
+    )
+
+
+
 
 class ContactUSModel(models.Model):
     name = models.CharField(max_length=255, verbose_name=_("name"))

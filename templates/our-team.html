@@ -4,7 +4,7 @@
 
 
 {% block title %}
-	{% translate 'Home' %}
+	{% translate 'our team' %}
 {% endblock title %}
 {% block aboutc %}current{% endblock aboutc%}
 {% block aboutcz %}current{% endblock aboutcz%}
@@ -35,18 +35,19 @@
             </div>
         </div>
     </section>
-    {% comment %}
+
     
     <!--Team Section One-->
     <section class="team-section-one">
     	<div class="auto-container">
             
             <div class="row clearfix">
+{#                haman lesan#}
             	<!--Team Member-->
                 <div class="team-member-one col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 	<div class="inner-box">
                     	<figure class="image-box">
-                        	<img src="images/resource/team-image-5.jpg" alt="">
+                        	<img src="{% static 'haman/images/resource/hamanlesan.jpg' %}" alt="{% translate 'Haman Lesan' %}">
                             <div class="overlay">
                             	<ul class="social-links">
                                 	<li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
@@ -56,19 +57,18 @@
                             </div>
                         </figure>
                         <div class="lower-content">
-                        	<h3><a href="team-single.html">Richard Antony</a></h3>
-                            <div class="designation">Founder and CEO</div>
+                        	<h3><a href="">{% translate 'Haman Lesan' %}</a></h3>
+                            <div class="designation">{% translate 'Founder and CEO' %}</div>
                             <div class="desc-text">On the other hands, we denounce with  righteous indignations and dislike men demoralized  by the charms.</div>
-                            <div class="links-box"><a class="theme-btn read-more" href="team-single.html">Enter Profile <span class="fa fa-caret-right"></span></a></div>
                         </div>
                     </div>
                 </div>
-                
+{#                hadi lesan#}
                 <!--Team Member-->
                 <div class="team-member-one col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 	<div class="inner-box">
                     	<figure class="image-box">
-                        	<img src="images/resource/team-image-6.jpg" alt="">
+                        	<img src="{% static 'haman/images/resource/hadilesan.jpg' %}" alt="{% translate 'Hadi Lesan' %}">
                             <div class="overlay">
                             	<ul class="social-links">
                                 	<li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
@@ -78,19 +78,81 @@
                             </div>
                         </figure>
                         <div class="lower-content">
-                        	<h3><a href="team-single.html">William Rickmen</a></h3>
-                            <div class="designation">Vice President</div>
+                        	<h3><a href="">{% translate 'Hadi Lesan' %}</a></h3>
+                            <div class="designation">{% translate 'Vice President' %}</div>
                             <div class="desc-text">Foresee the pains and troublle that are bound to ensue; and equall blame seds belongs to those duty finance.</div>
-                            <div class="links-box"><a class="theme-btn read-more" href="team-single.html">Enter Profile <span class="fa fa-caret-right"></span></a></div>
                         </div>
                     </div>
                 </div>
-                
+{#                ali ashtab#}
                 <!--Team Member-->
                 <div class="team-member-one col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 	<div class="inner-box">
                     	<figure class="image-box">
-                        	<img src="images/resource/team-image-7.jpg" alt="">
+                        	<img src="{% static 'haman/images/resource/aliashtab.jpg' %}" alt="{% translate 'Ali Ashetab' %}">
+                            <div class="overlay">
+                            	<ul class="social-links">
+                                	<li><a href="https://www.github.com/aliashtab77" target="_blank"><span class="fa fa-github"></span></a></li>
+                                    <li><a href="https://x.com/aliashtab77" target="_blank"><span class="fa fa-twitter"></span></a></li>
+                                    <li><a href="https://linkedin.com/in/ali-ashtab" target="_blank"><span class="fa fa-linkedin"></span></a></li>
+                                </ul>
+                            </div>
+                        </figure>
+                        <div class="lower-content">
+                        	<h3><a href="">{% translate 'Ali Ashetab' %}</a></h3>
+                            <div class="designation">{% translate 'Programming team leader' %}</div>
+                            <div class="desc-text">{% translate 'All our technological activities are carried out under the management and leadership of Mr. Ashtab.' %}</div>
+                        </div>
+                    </div>
+                </div>
+{#                zahra debar#}
+                <!--Team Member-->
+                <div class="team-member-one col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<figure class="image-box">
+                        	<img src="{% static 'haman/images/resource/zahrapashaii.jpg' %}" alt="{% translate 'Zahra PashaiiNejad' %}">
+                            <div class="overlay">
+                            	<ul class="social-links">
+                                	<li><a href="https://github.com/zahrapashaiinejhad77/" target="_blank"><span class="fa fa-github"></span></a></li>
+                                    <li><a href="https://x.com/zahrapashaii77" target="_blank"><span class="fa fa-twitter"></span></a></li>
+                                    <li><a href="https://www.linkedin.com/in/zahrapashaiinejhad77" target="_blank"><span class="fa fa-linkedin"></span></a></li>
+                                </ul>
+                            </div>
+                        </figure>
+                        <div class="lower-content">
+                        	<h3><a href="">{% translate 'Zahra PashaiiNejad' %}</a></h3>
+                            <div class="designation">{% translate 'Back-end team master' %}</div>
+                            <div class="desc-text">{% translate 'All of our back-end and server side activities are managed by Ms. Pashainejad.' %}</div>
+                        </div>
+                    </div>
+                </div>
+{#                mahdieh#}
+                <!--Team Member-->
+                <div class="team-member-one col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<figure class="image-box">
+                        	<img src="{% static 'haman/images/resource/mahdiehvahedi.jpg' %}" alt="{% translate 'Mahdieh Vahedi' %}">
+                            <div class="overlay">
+                            	<ul class="social-links">
+                                	<li><a href="https://github.com/mahdiehvahedi77" target="_blank"><span class="fa fa-github"></span></a></li>
+                                    <li><a href="https://x.com/Mhdie_2004" target="_blank"><span class="fa fa-twitter"></span></a></li>
+                                    <li><a href="www.linkedin.com/in/mahdiehvahedi77" target="_blank"><span class="fa fa-linkedin"></span></a></li>
+                                </ul>
+                            </div>
+                        </figure>
+                        <div class="lower-content">
+                        	<h3><a href="">{% translate 'Mahdieh Vahedi' %}</a></h3>
+                            <div class="designation">{% translate 'Front-End Team Master' %}</div>
+                            <div class="desc-text">{% translate 'All of our front-end and visual design activities are managed by Ms. Vahedi.' %}</div>
+                        </div>
+                    </div>
+                </div>
+{#                maryam#}
+                <!--Team Member-->
+                <div class="team-member-one col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<figure class="image-box">
+                        	<img src="{% static 'haman/images/resource/maryamfarangis.jpg' %}" alt="{% translate 'Maryam Farangis' %}">
                             <div class="overlay">
                             	<ul class="social-links">
                                 	<li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
@@ -100,85 +162,18 @@
                             </div>
                         </figure>
                         <div class="lower-content">
-                        	<h3><a href="team-single.html">David Fernando</a></h3>
-                            <div class="designation">Interior Designer</div>
-                            <div class="desc-text">When our power of choice is ut untram melled and when nothing prevents our being able to do what we like best.</div>
-                            <div class="links-box"><a class="theme-btn read-more" href="team-single.html">Enter Profile <span class="fa fa-caret-right"></span></a></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!--Team Member-->
-                <div class="team-member-one col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                	<div class="inner-box">
-                    	<figure class="image-box">
-                        	<img src="images/resource/team-image-8.jpg" alt="">
-                            <div class="overlay">
-                            	<ul class="social-links">
-                                	<li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </figure>
-                        <div class="lower-content">
-                        	<h3><a href="team-single.html">Charles Nicholes</a></h3>
-                            <div class="designation">Manager Sales</div>
-                            <div class="desc-text">Certain circumstances and owings too the claims of duty or the obligations of business it will frequently.</div>
-                            <div class="links-box"><a class="theme-btn read-more" href="team-single.html">Enter Profile <span class="fa fa-caret-right"></span></a></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!--Team Member-->
-                <div class="team-member-one col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                	<div class="inner-box">
-                    	<figure class="image-box">
-                        	<img src="images/resource/team-image-9.jpg" alt="">
-                            <div class="overlay">
-                            	<ul class="social-links">
-                                	<li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </figure>
-                        <div class="lower-content">
-                        	<h3><a href="team-single.html">Esther Fletcher</a></h3>
-                            <div class="designation">Administrator</div>
-                            <div class="desc-text">Voluptateem accusantium dolore quite laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</div>
-                            <div class="links-box"><a class="theme-btn read-more" href="team-single.html">Enter Profile <span class="fa fa-caret-right"></span></a></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!--Team Member-->
-                <div class="team-member-one col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                	<div class="inner-box">
-                    	<figure class="image-box">
-                        	<img src="images/resource/team-image-10.jpg" alt="">
-                            <div class="overlay">
-                            	<ul class="social-links">
-                                	<li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </figure>
-                        <div class="lower-content">
-                        	<h3><a href="team-single.html">Alex Simmons</a></h3>
+                        	<h3><a href="">{% translate 'Maryam Farangis' %}</a></h3>
                             <div class="designation">Tax Consultant</div>
                             <div class="desc-text">Accusantium doloremque laudanttium totam remo aperiams eaquet ipsa quae ab illo inventore veritatis et quas.</div>
-                            <div class="links-box"><a class="theme-btn read-more" href="team-single.html">Enter Profile <span class="fa fa-caret-right"></span></a></div>
                         </div>
                     </div>
                 </div>
-                
+{#                team member 1#}
                 <!--Team Member-->
                 <div class="team-member-one col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 	<div class="inner-box">
                     	<figure class="image-box">
-                        	<img src="images/resource/team-image-11.jpg" alt="">
+                        	<img src="{% static 'haman/images/resource/royanasiri.jpg' %}" alt="{% translate 'Roya Nasiri' %}">
                             <div class="overlay">
                             	<ul class="social-links">
                                 	<li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
@@ -188,19 +183,18 @@
                             </div>
                         </figure>
                         <div class="lower-content">
-                        	<h3><a href="team-single.html">Susan Stevans</a></h3>
+                        	<h3><a href="">{% translate 'Roya Nasiri' %}</a></h3>
                             <div class="designation">Marketing Manager</div>
                             <div class="desc-text">Dolorems que laudantium, total remos aperiam, eaque ipsa quae ab illo sed ut Nemo enim ipsam voluptatem.</div>
-                            <div class="links-box"><a class="theme-btn read-more" href="team-single.html">Enter Profile <span class="fa fa-caret-right"></span></a></div>
                         </div>
                     </div>
                 </div>
-                
+{#                team member 2#}
                 <!--Team Member-->
                 <div class="team-member-one col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 	<div class="inner-box">
                     	<figure class="image-box">
-                        	<img src="images/resource/team-image-12.jpg" alt="">
+                        	<img src="{% static 'haman/images/resource/arashmostofi.jpg' %}" alt="{% translate 'Arash Mostofi' %}">
                             <div class="overlay">
                             	<ul class="social-links">
                                 	<li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
@@ -210,10 +204,9 @@
                             </div>
                         </figure>
                         <div class="lower-content">
-                        	<h3><a href="team-single.html">Robert Harwing</a></h3>
+                        	<h3><a href="">{% translate 'Arash Mostofi' %}</a></h3>
                             <div class="designation">Team Leader</div>
                             <div class="desc-text">On the other hands, we denounce with  righteous indignations and dislike men demoralized  by the charms.</div>
-                            <div class="links-box"><a class="theme-btn read-more" href="team-single.html">Enter Profile <span class="fa fa-caret-right"></span></a></div>
                         </div>
                     </div>
                 </div>
@@ -223,24 +216,7 @@
         </div>
     </section>
     
-    
-    <!--Call to Action Style One-->
-    <section class="call-to-action-one">
-    	<div class="auto-container">
-        	<div class="clearfix">
-            	
-                <div class="pull-left">
-                	<h3>We provide full and specific solution for every clients &amp; Get lifetime support from us.</h3>
-                </div>
-                <div class="pull-right">
-                	<a href="contact.html" class="theme-btn btn-style-two">Buy Theme Now</a>
-                </div>
-                
-            </div>
-        </div>
-    </section>
 
-{% endcomment %}
 {% endblock body %}
     
 
