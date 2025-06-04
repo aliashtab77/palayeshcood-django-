@@ -169,7 +169,8 @@
                                             </div>
 
                                             <!--Add Review-->
-                                        <div id="shopcommentform1">
+
+                                            <div id="shopcommentform1">
                                             {% csrf_token %}
                                             </div>
                                             {% include 'shopcommentform.html' with prikey=product.id only %}

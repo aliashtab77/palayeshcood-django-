@@ -5,7 +5,7 @@ from django.utils.translation import get_language
 from shop.models import Persian_Index, Arabic_Index, English_Index
 from blogs.models import Persian_IndexBlog, English_IndexBlog, Arabic_IndexBlog
 from news.models import Persian_IndexNews, English_IndexNews, Arabic_IndexNews
-from haman.models import ContactUSModel
+from haman.models import ContactUSModel, SliderModel
 # Create your views here.
 def index(request):
     lang = get_language()
@@ -21,10 +21,13 @@ def index(request):
         shop_baner = Arabic_Index.objects.filter(is_enable=True)
         blogs_baner = Arabic_IndexBlog.objects.filter(is_enable=True)
         news_banner = Arabic_IndexNews.objects.filter(is_enable=True)
+
+    slider = SliderModel.objects.all()
     context = {
         "probanner":shop_baner,
         "blogsbanner":blogs_baner,
         "newsbanner":news_banner,
+        "slides":slider,
 
     }
     return render(request, "index.html", context=context)

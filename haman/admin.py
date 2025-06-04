@@ -1,6 +1,12 @@
 from django.contrib import admin
-from haman.models import ContactUSModel, NewsShelterModel
+from haman.models import ContactUSModel, NewsShelterModel, SliderModel
 # Register your models here.
+
+@admin.register(SliderModel)
+class SliderModelAdmin(admin.ModelAdmin):
+    list_display = ['title_persian', 'title_arabic', 'title_english', 'description_persian', 'description_english', 'description_arabic']
+    search_fields = ['title_persian', 'title_arabic', 'title_english']
+
 @admin.register(ContactUSModel)
 class ContactUSModelAdmin(admin.ModelAdmin):
     list_display = ['name', 'email', 'subject', 'phone', 'time']

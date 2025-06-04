@@ -149,38 +149,10 @@
                                 </div>
                             {% endif %}
 
-                            <div class="sec-title medium"><h2>{% translate 'Leave a Reply' %}</h2></div>
-
-                            <div class="comment-form">
-                                <!--form-box-->
-                                <div class="form-box default-form">
-                                    <div class="contact-form default-form">
-                                        <form method="post" action="#">
-                                            <div class="row clearfix">
-
-                                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                    <input type="text" name="firstname" value="" placeholder="{% translate 'Your Name' %}" required>
-                                                </div>
-                                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                    <input type="text" name="lastname" value="" placeholder="{% translate 'Your Lastname' %}">
-                                                </div>
-                                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                    <input type="text" name="phone" value="" placeholder="{% translate 'Phone' %}">
-                                                </div>
-                                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                    <input type="email" name="email" value="" placeholder="{% translate 'Email Address' %}" required>
-                                                </div>
-                                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                    <textarea name="review-message" placeholder="{% translate 'Review Comments' %}"></textarea>
-                                                </div>
-                                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                    <button type="submit" class="theme-btn btn-style-two">{% translate 'Post Comment' %}</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
+                            <div id="blogcommentform1">
+                                {% csrf_token %}
                             </div>
+                            {% include 'newscommentform.html' with prikey=blogs.id only %}
 
                         </section>
 
@@ -283,38 +255,10 @@
                                 </div>
                             {% endif %}
 
-                            <div class="sec-title medium"><h2>{% translate 'Leave a Reply' %}</h2></div>
-
-                            <div class="comment-form">
-                                <!--form-box-->
-                                <div class="form-box default-form">
-                                    <div class="contact-form default-form">
-                                        <form method="post" action="#">
-                                            <div class="row clearfix">
-
-                                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                    <input type="text" name="firstname" value="" placeholder="{% translate 'Your Name' %}" required>
-                                                </div>
-                                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                    <input type="text" name="lastname" value="" placeholder="{% translate 'Your Lastname' %}">
-                                                </div>
-                                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                    <input type="text" name="phone" value="" placeholder="{% translate 'Phone' %}">
-                                                </div>
-                                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                    <input type="email" name="email" value="" placeholder="{% translate 'Email Address' %}" required>
-                                                </div>
-                                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                    <textarea name="review-message" placeholder="{% translate 'Review Comments' %}"></textarea>
-                                                </div>
-                                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                    <button type="submit" class="theme-btn btn-style-two">{% translate 'Post Comment' %}</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
+                            <div id="blogcommentform1">
+                                {% csrf_token %}
                             </div>
+                            {% include 'newscommentform.html' with prikey=blogs.id only %}
 
                         </section>
 
@@ -417,38 +361,10 @@
                                 </div>
                             {% endif %}
 
-                            <div class="sec-title medium"><h2>{% translate 'Leave a Reply' %}</h2></div>
-
-                            <div class="comment-form">
-                                <!--form-box-->
-                                <div class="form-box default-form">
-                                    <div class="contact-form default-form">
-                                        <form method="post" action="#">
-                                            <div class="row clearfix">
-
-                                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                    <input type="text" name="firstname" value="" placeholder="{% translate 'Your Name' %}" required>
-                                                </div>
-                                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                    <input type="text" name="lastname" value="" placeholder="{% translate 'Your Lastname' %}">
-                                                </div>
-                                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                    <input type="text" name="phone" value="" placeholder="{% translate 'Phone' %}">
-                                                </div>
-                                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                                    <input type="email" name="email" value="" placeholder="{% translate 'Email Address' %}" required>
-                                                </div>
-                                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                    <textarea name="review-message" placeholder="{% translate 'Review Comments' %}"></textarea>
-                                                </div>
-                                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                                    <button type="submit" class="theme-btn btn-style-two">{% translate 'Post Comment' %}</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
+                            <div id="blogcommentform1">
+                                {% csrf_token %}
                             </div>
+                            {% include 'newscommentform.html' with prikey=blogs.id only %}
 
                         </section>
 

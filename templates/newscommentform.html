@@ -1,0 +1,36 @@
+{% load i18n%}
+
+<div class="sec-title medium"><h2>{% translate 'Leave a Reply' %}</h2></div>
+
+<div class="comment-form">
+    <!--form-box-->
+    <div class="form-box default-form">
+        <div class="contact-form default-form">
+            <form method="post" action="{% url 'savenewscomment' %}" id="blogcommentform">
+                <input type="hidden" name="prikey" id="prikey" value="{{ prikey }}">
+                <div class="row clearfix">
+
+                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" name="firstname" id="firstnameblog" value="" placeholder="{% translate 'Your Name' %}" required>
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" name="lastname" id="lastnameblog" value="" placeholder="{% translate 'Your Lastname' %}">
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                        <input type="text" name="phone" id="phoneblog" value="" placeholder="{% translate 'Phone' %}">
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                        <input type="email" name="email" id="emailblog" value="" placeholder="{% translate 'Email Address' %}" required>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <textarea name="review-message" id="review-messageblog" placeholder="{% translate 'Review Comments' %}"></textarea>
+                    </div>
+                    <div class="text" id="shopcommentlog"></div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <button type="button" onclick="blogcomment()" class="theme-btn btn-style-two">{% translate 'Post Comment' %}</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

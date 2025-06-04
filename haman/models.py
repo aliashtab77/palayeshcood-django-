@@ -1,21 +1,29 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django_ckeditor_5.fields import CKEditor5Field
 # Create your models here.
 
 class SliderModel(models.Model):
     avatar = models.ImageField(upload_to="slider", verbose_name=_("slide picture"))
     title_persian = models.CharField(max_length=255, verbose_name=_("persian title"), blank=True, null=True)
     title_english = models.CharField(max_length=255, verbose_name=_("english title"), blank=True, null=True)
-    title_arabic = models.CharField(max_length=255, verbose_name=_("arabic title"), blank=True, null=True)
-    XPOS = (
-    ("right",_("right")),
-    ("left",_("left")),
-    ("center",_("center"))
-    )
-    YPOS = (
-    ("top", _("top")),
-    ("center", _("center"))
-    )
+    title_arabic = models.CharField(max_length=255, verbose_name=_("arabic description"), blank=True, null=True)
+    description_persian = CKEditor5Field(max_length=255, verbose_name=_("persian description"), blank=True, null=True, config_name="short")
+    description_english = CKEditor5Field(max_length=255, verbose_name=_("english description"), blank=True, null=True, config_name="short")
+    description_arabic = CKEditor5Field(max_length=255, verbose_name=_("arabic description"), blank=True, null=True, config_name="short")
+    # XPOS = (
+    # ("right",_("right")),
+    # ("left",_("left")),
+    # ("center",_("center"))
+    # )
+    # YPOS = (
+    # ("top", _("top")),
+    # ("center", _("center"))
+    # )
+    # title_position_y = models.CharField(choices=YPOS, verbose_name=_("title_position_y"), null=True, blank=True)
+    # title_position_x = models.CharField(choices=XPOS, verbose_name=_("title_position_x"), null=True, blank=True)
+
+
 
 
 

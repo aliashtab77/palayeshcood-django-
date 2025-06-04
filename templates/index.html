@@ -14,154 +14,119 @@
 {% block body %}
 
     <!--Main Slider-->
-    <section class="main-slider">
+    {% if slides %}
+        <section class="main-slider">
 
-        <div class="tp-banner-container">
-            <div class="tp-banner">
-                <ul>
+            <div class="tp-banner-container">
+                <div class="tp-banner">
+                    {% if LANGUAGE_CODE == "fa" %}
+                        <ul>
+                            {% for slide in slides %}
+                                <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="{{ slide.avatar.url }}"  data-saveperformance="off"  data-title="Awesome Title Here">
+                                <img src="{{ slide.avatar.url }}"  alt="{{ slide.title_persian }}"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                <div class="tp-caption sfl sfb tp-resizeme"
+                                data-x="center" data-hoffset="0"
+                                data-y="center" data-voffset="-100"
+                                data-speed="1500"
+                                data-start="0"
+                                data-easing="easeOutExpo"
+                                data-splitin="none"
+                                data-splitout="none"
+                                data-elementdelay="0.01"
+                                data-endelementdelay="0.3"
+                                data-endspeed="1200"
+                                data-endeasing="Power4.easeIn"><h2>{{ slide.title_persian }}</h2></div>
 
-                    <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="{% static 'haman/images/main-slider/image-1.jpg' %}"  data-saveperformance="off"  data-title="Awesome Title Here">
-                    <img src="{% static 'haman/images/main-slider/image-1.jpg' %}"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                <div class="tp-caption sfl sfb tp-resizeme"
+                                data-x="center" data-hoffset="0"
+                                data-y="center" data-voffset="0"
+                                data-speed="1500"
+                                data-start="500"
+                                data-easing="easeOutExpo"
+                                data-splitin="none"
+                                data-splitout="none"
+                                data-elementdelay="0.01"
+                                data-endelementdelay="0.3"
+                                data-endspeed="1200"
+                                data-endeasing="Power4.easeIn"><div class="text text-center">{{ slide.description_persian | safe }}</div></div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% elif LANGUAGE_CODE == "en" %}
+                        <ul>
+                            {% for slide in slides %}
+                                <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="{{ slide.avatar.url }}"  data-saveperformance="off"  data-title="Awesome Title Here">
+                                <img src="{{ slide.avatar.url }}"  alt="{{ slide.title_english }}"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                <div class="tp-caption sfl sfb tp-resizeme"
+                                data-x="center" data-hoffset="0"
+                                data-y="center" data-voffset="-100"
+                                data-speed="1500"
+                                data-start="0"
+                                data-easing="easeOutExpo"
+                                data-splitin="none"
+                                data-splitout="none"
+                                data-elementdelay="0.01"
+                                data-endelementdelay="0.3"
+                                data-endspeed="1200"
+                                data-endeasing="Power4.easeIn"><h2>{{ slide.title_english }}</h2></div>
 
-                    <div class="tp-caption sfl sfb tp-resizeme"
-                    data-x="right" data-hoffset="15"
-                    data-y="down" data-voffset="-100"
-                    data-speed="1500"
-                    data-start="0"
-                    data-easing="easeOutExpo"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-elementdelay="0.01"
-                    data-endelementdelay="0.3"
-                    data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"><h2>Decorators<br> design studio</h2></div>
+                                <div class="tp-caption sfl sfb tp-resizeme"
+                                data-x="center" data-hoffset="0"
+                                data-y="center" data-voffset="0"
+                                data-speed="1500"
+                                data-start="500"
+                                data-easing="easeOutExpo"
+                                data-splitin="none"
+                                data-splitout="none"
+                                data-elementdelay="0.01"
+                                data-endelementdelay="0.3"
+                                data-endspeed="1200"
+                                data-endeasing="Power4.easeIn"><div class="text text-center">{{ slide.description_english | safe }}</div></div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <ul>
+                            {% for slide in slides %}
+                                <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="{{ slide.avatar.url }}"  data-saveperformance="off"  data-title="Awesome Title Here">
+                                <img src="{{ slide.avatar.url }}"  alt="{{ slide.title_arabic }}"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                <div class="tp-caption sfl sfb tp-resizeme"
+                                data-x="center" data-hoffset="0"
+                                data-y="center" data-voffset="-100"
+                                data-speed="1500"
+                                data-start="0"
+                                data-easing="easeOutExpo"
+                                data-splitin="none"
+                                data-splitout="none"
+                                data-elementdelay="0.01"
+                                data-endelementdelay="0.3"
+                                data-endspeed="1200"
+                                data-endeasing="Power4.easeIn"><h2>{{ slide.title_arabic }}</h2></div>
 
-                    <div class="tp-caption sfl sfb tp-resizeme"
-                    data-x="left" data-hoffset="15"
-                    data-y="center" data-voffset="40"
-                    data-speed="1500"
-                    data-start="500"
-                    data-easing="easeOutExpo"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-elementdelay="0.01"
-                    data-endelementdelay="0.3"
-                    data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"><div class="text">Decorating Decorators brings 20 years of experience<br>right to your home or office.</div></div>
-
-                    <div class="tp-caption sfr sfb tp-resizeme"
-                    data-x="left" data-hoffset="15"
-                    data-y="center" data-voffset="140"
-                    data-speed="1500"
-                    data-start="1000"
-                    data-easing="easeOutExpo"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-elementdelay="0.01"
-                    data-endelementdelay="0.3"
-                    data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"><a href="#" class="theme-btn btn-style-one">Our Services</a> &ensp; <a href="#" class="theme-btn btn-style-two">Buy now</a></div>
-
-
-                    </li>
-
-                    <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="{% static 'haman/images/main-slider/image-2.jpg' %}"  data-saveperformance="off"  data-title="Awesome Title Here">
-                    <img src="{% static 'haman/images/main-slider/image-2.jpg' %}"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-
-                    <div class="tp-caption sfl sfb tp-resizeme"
-                    data-x="center" data-hoffset="0"
-                    data-y="center" data-voffset="-100"
-                    data-speed="1500"
-                    data-start="0"
-                    data-easing="easeOutExpo"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-elementdelay="0.01"
-                    data-endelementdelay="0.3"
-                    data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"><h2>Solution For Joy Living</h2></div>
-
-                    <div class="tp-caption sfl sfb tp-resizeme"
-                    data-x="center" data-hoffset="0"
-                    data-y="center" data-voffset="0"
-                    data-speed="1500"
-                    data-start="500"
-                    data-easing="easeOutExpo"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-elementdelay="0.01"
-                    data-endelementdelay="0.3"
-                    data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"><div class="text text-center">Decorating Decorators brings 20 years of experience<br>right to your home or office.</div></div>
-
-                    <div class="tp-caption sfr sfb tp-resizeme"
-                    data-x="center" data-hoffset="15"
-                    data-y="center" data-voffset="100"
-                    data-speed="1500"
-                    data-start="1000"
-                    data-easing="easeOutExpo"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-elementdelay="0.01"
-                    data-endelementdelay="0.3"
-                    data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"><a href="#" class="theme-btn btn-style-one">Our Services</a> &ensp; <a href="#" class="theme-btn btn-style-two">Buy now</a></div>
-
-
-                    </li>
-
-                    <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="{% static 'haman/images/main-slider/image-3.jpg' %}"  data-saveperformance="off"  data-title="Awesome Title Here">
-                    <img src="{% static 'haman/images/main-slider/image-3.jpg' %}"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-
-                    <div class="tp-caption sfl sfb tp-resizeme"
-                    data-x="left" data-hoffset="500"
-                    data-y="center" data-voffset="-100"
-                    data-speed="1500"
-                    data-start="0"
-                    data-easing="easeOutExpo"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-elementdelay="0.01"
-                    data-endelementdelay="0.3"
-                    data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"><h2>We Give Life to <br>Your Home</h2></div>
-
-                    <div class="tp-caption sfl sfb tp-resizeme"
-                    data-x="left" data-hoffset="500"
-                    data-y="center" data-voffset="40"
-                    data-speed="1500"
-                    data-start="500"
-                    data-easing="easeOutExpo"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-elementdelay="0.01"
-                    data-endelementdelay="0.3"
-                    data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"><div class="text">Decorating Decorators brings 20 years of experience<br>right to your home or office.</div></div>
-
-                    <div class="tp-caption sfr sfb tp-resizeme"
-                    data-x="left" data-hoffset="500"
-                    data-y="center" data-voffset="140"
-                    data-speed="1500"
-                    data-start="1000"
-                    data-easing="easeOutExpo"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-elementdelay="0.01"
-                    data-endelementdelay="0.3"
-                    data-endspeed="1200"
-                    data-endeasing="Power4.easeIn"><a href="#" class="theme-btn btn-style-one">Our Services</a> &ensp; <a href="#" class="theme-btn btn-style-two">Buy now</a></div>
+                                <div class="tp-caption sfl sfb tp-resizeme"
+                                data-x="center" data-hoffset="0"
+                                data-y="center" data-voffset="0"
+                                data-speed="1500"
+                                data-start="500"
+                                data-easing="easeOutExpo"
+                                data-splitin="none"
+                                data-splitout="none"
+                                data-elementdelay="0.01"
+                                data-endelementdelay="0.3"
+                                data-endspeed="1200"
+                                data-endeasing="Power4.easeIn"><div class="text text-center">{{ slide.description_arabic | safe }}</div></div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
 
 
-                    </li>
 
-                </ul>
-
-            	<div class="tp-bannertimer"></div>
+                    <div class="tp-bannertimer"></div>
+                </div>
             </div>
-        </div>
-    </section>
-
+        </section>
+    {% endif %}
 
     <!--welcome-section-->
     <section class="welcome-section">
