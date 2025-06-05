@@ -38,37 +38,32 @@
                 	<!--form-box-->
                     <div class="form-box default-form">
                         <div class="contact-form default-form">
-                            <form method="post" action="/">
+                            <form method="post" action="{% url 'savecontactus' %}" id="contactusform">
                                 {% csrf_token %}
                                 <div class="row clearfix">
                                 
                                     <div class="form-group col-md-6 col-sm-6 col-xs-12">
-{#                                        <select name="subject">#}
-{#                                            <option>Subject</option>#}
-{#                                            <option>Wooden Flooring</option>#}
-{#                                            <option>Metal Flooring</option>#}
-{#                                            <option>Concrete Flooring</option>#}
-{#                                        </select>#}
-                                        <input type="text" name="subject" value="" placeholder="{% translate 'Subject' %}">
+                                        <input type="text" name="subject" id="subjectcontact" value="" placeholder="{% translate 'Subject' %}">
                                     </div>
                                 
                                     <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" name="username" value="" placeholder="{% translate 'Your Name *' %}" required>
+                                        <input type="text" name="username" id="usernamecontact" value="" placeholder="{% translate 'Your Name *' %}" required>
                                     </div>
         
                                     <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                        <input type="email" name="email" value="" placeholder="{% translate 'Your Mail *' %}" required>
+                                        <input type="email" name="email" id="emailcontact" value="" placeholder="{% translate 'Your Mail *' %}" required>
                                     </div>
                                     
                                     <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" name="phone" value="" placeholder="{% translate 'Phone Number' %}">
+                                        <input type="text" name="phone" id="phonecontact" value="" placeholder="{% translate 'Phone Number' %}">
                                     </div>
                                     
                                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                        <textarea name="message" placeholder="{% translate 'Message *' %}"></textarea>
+                                        <textarea name="message" id="messagecontact" placeholder="{% translate 'Message *' %}"></textarea>
                                     </div>
+                                    <div class="text" id="contatuslog"></div>
                                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                        <button type="submit" class="theme-btn btn-style-two">{% translate 'Get Quote' %}</button>
+                                        <button type="button" onclick="contactus()" class="theme-btn btn-style-two">{% translate 'Get Quote' %}</button>
                                     </div>
                                 </div>
                             </form>
@@ -84,7 +79,7 @@
                         <ul>
                             <li><div class="icon-box"><span class="flaticon-international-delivery"></span></div><h4>{% translate 'Address:' %}</h4><div class="text">{% translate 'Head Office: ' %}{% translate 'Unit 31, Safavieh Office Complex, Rajaee St, Kashan, Iran' %}<br>{% translate 'Factory: Kashan, after Dar-e-Salam, Amir Kabir Town, Phase 3' %}</div></li>
                             <li><div class="icon-box"><span class="flaticon-envelope"></span></div><h4>{% translate 'Mail to Haman:' %}</h4><div class="text"><a href="mailto:info@palayeshcood.com">Info@Palayeshcood.com</a></div></li>
-                            <li><div class="icon-box"><span class="flaticon-phone-call"></span></div><h4>{% translate 'Call Him:' %}</h4><div class="text"> <a href="tel:+983155578491">+98(31) 555-784-91</a>, <a href="tel:+9891300025744">+98(913) 0002-57-44</a></div></li>
+                            <li><div class="icon-box"><span class="flaticon-phone-call"></span></div><h4>{% translate 'Call Him:' %}</h4><div class="text"> <a href="tel:+983155578491">+98(31) 555-784-91</a>, <a href="tel:+989130025744">+98(913) 002-57-44</a></div></li>
                         </ul>
                     </div>
                 </div>

@@ -3,7 +3,7 @@ from django.utils.translation import gettext_lazy as _
 from django.utils.translation import get_language
 from django.http import JsonResponse
 from json import loads, JSONDecodeError
-from haman.models import NewsShelterModel
+from haman.models import NewsShelterModel, ContactUSModel
 from shop.models import ReviewModel, ProductsModel
 from blogs.models import BlogsModel, ReviewModelBlog
 from news.models import NewsModel, ReviewModelNews
@@ -102,6 +102,49 @@ def news_comment(request):
             product = NewsModel.objects.get(id=prikey)
             product.comments.add(usercomment)
             product.save()
+            return JsonResponse({'status': 'success', 'message': x1})
+        except JSONDecodeError:
+            return JsonResponse({'status': 'error', 'message': x3}, status=400)
+        except:
+            return JsonResponse({'status': 'error', 'message': x3}, status=400)
+    return JsonResponse({'status': 'error', 'message': x4}, status=405)
+
+
+def contact_ua(request):
+    x1 = _('your message save successfully')
+    x3 = _('Invalid request')
+    x4 = _('Method Not allowed')
+    if request.method == 'POST':
+        try:
+            data = loads(request.body)
+            name = data['name']
+            email = data['email']
+            phone = data['phone']
+            message = data['message']
+            subject = data['subject']
+            usermessage = ContactUSModel(name=name, phone=phone, email=email, subject=subject, message=message)
+            usermessage.save()
+            return JsonResponse({'status': 'success', 'message': x1})
+        except JSONDecodeError:
+            return JsonResponse({'status': 'error', 'message': x3}, status=400)
+        except:
+            return JsonResponse({'status': 'error', 'message': x3}, status=400)
+    return JsonResponse({'status': 'error', 'message': x4}, status=405)
+
+
+
+def contact_ua_footer(request):
+    x1 = _('your message save successfully')
+    x3 = _('Invalid request')
+    x4 = _('Method Not allowed')
+    if request.method == 'POST':
+        try:
+            data = loads(request.body)
+            name = data['name']
+            email = data['email']
+            message = data['message']
+            usermessage = ContactUSModel(name=name, email=email, message=message)
+            usermessage.save()
             return JsonResponse({'status': 'success', 'message': x1})
         except JSONDecodeError:
             return JsonResponse({'status': 'error', 'message': x3}, status=400)

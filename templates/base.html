@@ -208,12 +208,12 @@
                             <!--Footer Column-->
                         	<div class="footer-column col-md-6 col-sm-6 col-xs-12">
                             	<div class="footer-widget about-widget">
-                                	<div class="footer-logo"><figure><a href="index-2.html"><img src="{% static 'haman/images/logo-4.png' %}" alt=""></a></figure></div>
+                                	<div class="footer-logo"><figure><a href="{% url 'home' %}"><img src="{% static 'haman/images/footerlogo.png' %}" alt=""></a></figure></div>
                                     <div class="widget-content">
                                     	<div class="text">{% translate 'Palayeshcood Company, as a reputable distributor of chemicals, refineries and sugar, is ready to sell raw materials from petrochemicals, refineries and food factories all over the world and we are committed to meeting the needs of our valued customers in all regions. Join us and benefit from our expertise and experience. For more information and to place an order, contact us.' %}</div>
                                         <ul class="contact-info">
                                         	<li><span class="icon fa fa-map-marker"></span>{% translate 'Unit 31, Safavieh Office Complex, Rajaee St, Kashan, Iran' %}</li>
-                                            <li><span class="icon fa fa-phone"></span><a href="tel:+9891300025744">+98(913) 0002-57-44</a></li>
+                                            <li><span class="icon fa fa-phone"></span><a href="tel:+989130025744">+98(913) 002-57-44</a></li>
                                             <li><span class="icon fa fa-envelope-o"></span><a href="mailto:info@palayeshcood.com">Info@Palayeshcood.com</a></li>
                                         </ul>
                                     </div>
@@ -222,33 +222,24 @@
 
                             <!--Footer Column-->
                         	<div class="footer-column col-md-6 col-sm-6 col-xs-12">
-                            	<div class="footer-widget tags-widget">
-                                	<h2>{% translate 'Popular Tags' %}</h2>
+                            	<div class="footer-widget posts-widget">
+                                	<h2>{% translate 'Recent Blogs' %}</h2>
                                     <div class="widget-content">
-                                    	<ul class="tags-list">
-                                        	<li><a href="#">Designs</a></li>
-                                            <li><a href="#">Tips</a></li>
-                                            <li><a href="#">Interior</a></li>
-                                            <li><a href="#">Doors</a></li>
-                                            <li><a href="#">Curtains</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="footer-widget gallery-widget">
-                                	<h2>{% translate 'Recent Works' %}</h2>
-                                    <div class="gallery-widget-carousel">
-                                    	<div class="item"><figure class="post-thumb"><img src="{% static 'haman/images/gallery/thumb-1.jpg' %}" alt=""><a href="#" class="overlay-link"><span class="fa fa-link"></span></a></figure></div>
-                                        <div class="item"><figure class="post-thumb"><img src="{% static 'haman/images/gallery/thumb-2.jpg' %}" alt=""><a href="#" class="overlay-link"><span class="fa fa-link"></span></a></figure></div>
-                                        <div class="item"><figure class="post-thumb"><img src="{% static 'haman/images/gallery/thumb-3.jpg' %}" alt=""><a href="#" class="overlay-link"><span class="fa fa-link"></span></a></figure></div>
-                                        <div class="item"><figure class="post-thumb"><img src="{% static 'haman/images/gallery/thumb-4.jpg' %}" alt=""><a href="#" class="overlay-link"><span class="fa fa-link"></span></a></figure></div>
-                                        <div class="item"><figure class="post-thumb"><img src="{% static 'haman/images/gallery/thumb-1.jpg' %}" alt=""><a href="#" class="overlay-link"><span class="fa fa-link"></span></a></figure></div>
-                                        <div class="item"><figure class="post-thumb"><img src="{% static 'haman/images/gallery/thumb-2.jpg' %}" alt=""><a href="#" class="overlay-link"><span class="fa fa-link"></span></a></figure></div>
-                                        <div class="item"><figure class="post-thumb"><img src="{% static 'haman/images/gallery/thumb-3.jpg' %}" alt=""><a href="#" class="overlay-link"><span class="fa fa-link"></span></a></figure></div>
-                                        <div class="item"><figure class="post-thumb"><img src="{% static 'haman/images/gallery/thumb-4.jpg' %}" alt=""><a href="#" class="overlay-link"><span class="fa fa-link"></span></a></figure></div>
-                                        <div class="item"><figure class="post-thumb"><img src="{% static 'haman/images/gallery/thumb-1.jpg' %}" alt=""><a href="#" class="overlay-link"><span class="fa fa-link"></span></a></figure></div>
-                                        <div class="item"><figure class="post-thumb"><img src="{% static 'haman/images/gallery/thumb-2.jpg' %}" alt=""><a href="#" class="overlay-link"><span class="fa fa-link"></span></a></figure></div>
-                                        <div class="item"><figure class="post-thumb"><img src="{% static 'haman/images/gallery/thumb-3.jpg' %}" alt=""><a href="#" class="overlay-link"><span class="fa fa-link"></span></a></figure></div>
-                                        <div class="item"><figure class="post-thumb"><img src="{% static 'haman/images/gallery/thumb-4.jpg' %}" alt=""><a href="#" class="overlay-link"><span class="fa fa-link"></span></a></figure></div>
+                                    	<div class="posts">
+                                            {% block blogs %}
+                                                <div class="post">
+                                                    <figure class="post-thumb"><img src="{% static 'haman/images/resource/post-thumb-1.jpg' %}" alt=""><a href="#" class="overlay-link"><span class="flaticon-plus-1"></span></a></figure>
+                                                    <div class="desc-text"><a href="#">How mistakens denoncings pleasure and complete.</a></div>
+                                                    <div class="time"><span class="fa fa-clock-o"></span> Oct 03, 2015</div>
+                                                </div>
+                                                <div class="post">
+                                                    <figure class="post-thumb"><img src="{% static 'haman/images/resource/post-thumb-2.jpg' %}" alt=""><a href="#" class="overlay-link"><span class="flaticon-plus-1"></span></a></figure>
+                                                    <div class="desc-text"><a href="#">Pleasure praising pains was, expound actual teaching.</a></div>
+                                                    <div class="time"><span class="fa fa-clock-o"></span> Aug 21, 2015</div>
+                                                </div>
+                                            {% endblock blogs %}
+                                        </div>
+                                        <a class="view-more theme-btn" href="{% url 'blogs' %}">{% translate 'Read More' %} <span class="fa fa-caret-right"></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -265,7 +256,8 @@
                             	<div class="footer-widget posts-widget">
                                 	<h2>{% translate 'Recent News' %}</h2>
                                     <div class="widget-content">
-                                    	<div class="posts">
+                                        <div class="posts">
+                                        {% block news %}
                                             <div class="post">
                                                 <figure class="post-thumb"><img src="{% static 'haman/images/resource/post-thumb-1.jpg' %}" alt=""><a href="#" class="overlay-link"><span class="flaticon-plus-1"></span></a></figure>
                                                 <div class="desc-text"><a href="#">How mistakens denoncings pleasure and complete.</a></div>
@@ -276,8 +268,9 @@
                                                 <div class="desc-text"><a href="#">Pleasure praising pains was, expound actual teaching.</a></div>
                                                 <div class="time"><span class="fa fa-clock-o"></span> Aug 21, 2015</div>
                                             </div>
+                                        {% endblock news %}
                                         </div>
-                                        <a class="view-more theme-btn" href="#">{% translate 'Read More' %} <span class="fa fa-caret-right"></span></a>
+                                        <a class="view-more theme-btn" href="{% url 'news' %}">{% translate 'Read More' %} <span class="fa fa-caret-right"></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -288,17 +281,19 @@
                                 	<h2>{% translate 'Send Us Message' %}</h2>
                                     <div class="widget-content">
                                         <div class="newsletter-form">
-                                            <form method="post" action="#">
+                                            <form method="post" action="{% url 'savecontactusfooter' %}" id="contactusfooter">
+                                                {% csrf_token %}
                                                 <div class="form-group">
-                                                    <input type="text" name="name" value="" placeholder="{% translate 'Name *' %}" required>
+                                                    <input type="text" name="name" id="namefooter" value="" placeholder="{% translate 'Name *' %}" required>
                                                 </div>
                                                 <div class="form-group">
-                                                    <input type="email" name="email" value="" placeholder="{% translate 'Email *' %}" required>
+                                                    <input type="email" name="email" id="emailfooter" value="" placeholder="{% translate 'Email *' %}" required>
                                                 </div>
                                                 <div class="form-group">
-                                                    <textarea name="message" placeholder="{% translate 'Message *' %}" required></textarea>
+                                                    <textarea name="message" id="messagefooter" placeholder="{% translate 'Message *' %}" required></textarea>
                                                 </div>
-                                                <button type="submit" class="theme-btn btn-style-two">{% translate 'Send us' %}</button>
+                                                <div class="text" id="footermessageloger"></div>
+                                                <button type="button" onclick="contactusfooter()" class="theme-btn btn-style-two">{% translate 'Send us' %}</button>
                                             </form>
                                         </div>
                                     </div>
@@ -317,7 +312,7 @@
          <div class="footer-bottom">
          	<div class="auto-container">
             	<div class="clearfix">
-                	<div class="pull-left"><div class="copyright"><a href="https://www.github.com/aliashtab77" target="_blank">{% translate 'Stark Team' %}</a></div></div>
+                	<div class="pull-left"><div class="copyright"><a href="https://www.starkteam.ir/" target="_blank">{% translate 'Stark Team' %}</a></div></div>
                     <div class="pull-right">
                     	<ul class="footer-nav">
                         	<li><a href="{% url 'home' %}">{% translate 'Home' %}</a></li>

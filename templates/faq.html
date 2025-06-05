@@ -134,31 +134,32 @@
             	<!--form-box-->
                 <div class="form-box default-form">
                     <div class="contact-form default-form">
-                        <form method="post" action="#">
+                        <form method="post" action="{% url 'savecontactus' %}" id="contactusform">
+                            {% csrf_token %}
                             <div class="row clearfix">
 
                                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" name="username" value="" placeholder="{% translate 'Your Name *' %}" required>
+                                    <input type="text" name="username" id="usernamecontact" value="" placeholder="{% translate 'Your Name *' %}" required>
                                 </div>
 
                                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                    <input type="email" name="email" value="" placeholder="{% translate 'Email Address *' %}" required>
+                                    <input type="email" name="email" id="emailcontact" value="" placeholder="{% translate 'Email Address *' %}" required>
                                 </div>
 
                                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" name="number" value="" placeholder="{% translate 'Phone' %}">
+                                    <input type="text" name="number" id="phonecontact" value="" placeholder="{% translate 'Phone' %}">
                                 </div>
 
                                 <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" name="subject" value="" placeholder="{% translate 'subject' %}">
+                                    <input type="text" name="subject" id="subjectcontact" value="" placeholder="{% translate 'subject' %}">
                                 </div>
 
                                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                    <textarea name="message" placeholder="{% translate 'Your Question' %}"></textarea>
+                                    <textarea name="message" id="messagecontact" placeholder="{% translate 'Your Question' %}"></textarea>
                                 </div>
-
+                                <div class="text" id="contatuslog"></div>
                                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                    <button type="submit" class="theme-btn btn-style-two">{% translate 'Submit Now' %}</button>
+                                    <button type="button" onclick="contactus()" class="theme-btn btn-style-two">{% translate 'Submit Now' %}</button>
                                 </div>
                             </div>
                         </form>

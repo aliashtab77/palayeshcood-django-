@@ -4,22 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60508cdf-84c1-4e38-9f07-29198cb6ba53" name="Changes" comment="update translations">
-      <change afterPath="$PROJECT_DIR$/media/news/image-10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/slider/image-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shop/migrations/0005_alter_productsmodel_arabic_slug_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/blogcommentform.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/newscommentform.html" afterDir="false" />
+    <list default="true" id="60508cdf-84c1-4e38-9f07-29198cb6ba53" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/static/haman/images/footerlogo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/haman/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/haman/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/haman/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/haman/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/haman/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/haman/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/haman/js/userdata.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/haman/js/userdata.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog-single.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog-single.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/news-single.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/news-single.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shop-single.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop-single.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shopcommentform.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shopcommentform.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/faq.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/userdata/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/userdata/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/userdata/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/userdata/views.py" afterDir="false" />
     </list>
@@ -177,7 +168,8 @@
       <workItem from="1748717260655" duration="14825000" />
       <workItem from="1748741807096" duration="5174000" />
       <workItem from="1748788968526" duration="1200000" />
-      <workItem from="1749061499454" duration="5883000" />
+      <workItem from="1749061499454" duration="6072000" />
+      <workItem from="1749157141367" duration="5744000" />
     </task>
     <task id="LOCAL-00001" summary="first haman see">
       <option name="closed" value="true" />
@@ -291,7 +283,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748747033947</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="update">
+      <option name="closed" value="true" />
+      <created>1749067592526</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1749067592526</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,7 +323,8 @@
     <MESSAGE value="blogs add and bugs fix" />
     <MESSAGE value="news added" />
     <MESSAGE value="update translations" />
-    <option name="LAST_COMMIT_MESSAGE" value="update translations" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -338,25 +339,10 @@
           <line>56</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/userdata/views.py</url>
-          <line>36</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="django-line">
-          <url>file://$PROJECT_DIR$/templates/about-us.html</url>
-          <line>19</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="django-line">
           <url>file://$PROJECT_DIR$/templates/food.html</url>
           <line>11</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="django-line">
-          <url>file://$PROJECT_DIR$/templates/faq.html</url>
-          <line>8</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="django-line">
           <url>file://$PROJECT_DIR$/templates/support.html</url>
