@@ -23,8 +23,8 @@ class Persian_IndexAdmin(admin.ModelAdmin):
 
 @admin.register(English_Index)
 class English_IndexAdmin(admin.ModelAdmin):
-    pass
+    list_display = ['is_enable', 'product']
 
 @admin.register(Arabic_Index)
 class Arabic_IndexAdmin(admin.ModelAdmin):
-    pass
+    list_display = ['is_enable', 'product']

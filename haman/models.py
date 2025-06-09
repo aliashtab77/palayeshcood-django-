@@ -11,6 +11,10 @@ class SliderModel(models.Model):
     description_persian = CKEditor5Field(max_length=255, verbose_name=_("persian description"), blank=True, null=True, config_name="short")
     description_english = CKEditor5Field(max_length=255, verbose_name=_("english description"), blank=True, null=True, config_name="short")
     description_arabic = CKEditor5Field(max_length=255, verbose_name=_("arabic description"), blank=True, null=True, config_name="short")
+    class Meta:
+        verbose_name = _("Slide")
+        verbose_name_plural = _("Slides")
+
     # XPOS = (
     # ("right",_("right")),
     # ("left",_("left")),

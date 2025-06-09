@@ -39,7 +39,7 @@ class NewsModel(models.Model):
     short_description_arabic = CKEditor5Field(verbose_name=_("Short Arabic description"), config_name="extends", null=True,
                                         blank=True)
     tags = models.TextField(verbose_name=_("tags"), null=True, blank=True)
-    time_created = models.DateField(auto_now=True)
+    time_created = models.DateField(auto_now=True, verbose_name=_("time created"))
     class Meta:
         verbose_name = _("News")
         verbose_name_plural = _("News")
