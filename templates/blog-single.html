@@ -417,3 +417,64 @@
     {% endif %}
 
 {% endblock body %}
+
+
+{% if footerblogs %}
+    {% block blogs %}
+        {% if LANGUAGE_CODE == "fa" %}
+            {% for footernew in footerblogs %}
+                <div class="post">
+                    <figure class="post-thumb"><img src="{{ footernew.blog.avatar.url }}" alt="{{ footernew.blog.title_persian }}"><a href="{% url 'blogsdetail' slug=footernew.blog.persian_slug %}" class="overlay-link"><span class="flaticon-plus-1"></span></a></figure>
+                    <div class="desc-text"><a href="{% url 'blogsdetail' slug=footernew.blog.persian_slug %}">{{ footernew.blog.title_persian | truncatewords:6}}</a></div>
+                    <div class="time"><span class="fa fa-clock-o"></span> {{ footernew.blog.time_created }}</div>
+                </div>
+            {% endfor %}
+        {% elif LANGUAGE_CODE == "en" %}
+            {% for footernew in footerblogs %}
+                <div class="post">
+                    <figure class="post-thumb"><img src="{{ footernew.blog.avatar.url }}" alt="{{ footernew.blog.title_english }}"><a href="{% url 'blogsdetail' slug=footernew.blog.english_slug %}" class="overlay-link"><span class="flaticon-plus-1"></span></a></figure>
+                    <div class="desc-text"><a href="{% url 'blogsdetail' slug=footernew.blog.english_slug %}">{{ footernew.blog.title_english | truncatewords:6}}</a></div>
+                    <div class="time"><span class="fa fa-clock-o"></span> {{ footernew.blog.time_created }}</div>
+                </div>
+            {% endfor %}
+        {% else %}
+            {% for footernew in footerblogs %}
+                <div class="post">
+                    <figure class="post-thumb"><img src="{{ footernew.blog.avatar.url }}" alt="{{ footernew.blog.title_arabic }}"><a href="{% url 'blogsdetail' slug=footernew.blog.arabic_slug %}" class="overlay-link"><span class="flaticon-plus-1"></span></a></figure>
+                    <div class="desc-text"><a href="{% url 'blogsdetail' slug=footernew.blog.arabic_slug %}">{{ footernew.blog.title_arabic | truncatewords:6}}</a></div>
+                    <div class="time"><span class="fa fa-clock-o"></span> {{ footernew.blog.time_created }}</div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endblock blogs %}
+{% endif %}
+
+{% if footernews %}
+    {% block news %}
+        {% if LANGUAGE_CODE == "fa" %}
+            {% for footernew in footernews %}
+                <div class="post">
+                    <figure class="post-thumb"><img src="{{ footernew.news.avatar.url }}" alt="{{ footernew.news.title_persian }}"><a href="{% url 'newsdetail' slug=footernew.news.persian_slug %}" class="overlay-link"><span class="flaticon-plus-1"></span></a></figure>
+                    <div class="desc-text"><a href="{% url 'newsdetail' slug=footernew.news.persian_slug %}">{{ footernew.news.title_persian | truncatewords:6}}</a></div>
+                    <div class="time"><span class="fa fa-clock-o"></span> {{ footernew.news.time_created }}</div>
+                </div>
+            {% endfor %}
+        {% elif LANGUAGE_CODE == "en" %}
+            {% for footernew in footernews %}
+                <div class="post">
+                    <figure class="post-thumb"><img src="{{ footernew.news.avatar.url }}" alt="{{ footernew.news.title_english }}"><a href="{% url 'newsdetail' slug=footernew.news.english_slug %}" class="overlay-link"><span class="flaticon-plus-1"></span></a></figure>
+                    <div class="desc-text"><a href="{% url 'newsdetail' slug=footernew.news.english_slug %}">{{ footernew.news.title_english | truncatewords:6}}</a></div>
+                    <div class="time"><span class="fa fa-clock-o"></span> {{ footernew.news.time_created }}</div>
+                </div>
+            {% endfor %}
+        {% else %}
+            {% for footernew in footernews %}
+                <div class="post">
+                    <figure class="post-thumb"><img src="{{ footernew.news.avatar.url }}" alt="{{ footernew.news.title_arabic }}"><a href="{% url 'newsdetail' slug=footernew.news.arabic_slug %}" class="overlay-link"><span class="flaticon-plus-1"></span></a></figure>
+                    <div class="desc-text"><a href="{% url 'newsdetail' slug=footernew.news.arabic_slug %}">{{ footernew.news.title_arabic | truncatewords:6}}</a></div>
+                    <div class="time"><span class="fa fa-clock-o"></span> {{ footernew.news.time_created }}</div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endblock news %}
+{% endif %}

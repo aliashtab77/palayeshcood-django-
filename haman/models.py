@@ -25,9 +25,6 @@ class SliderModel(models.Model):
 
 
 
-
-
-
 class ContactUSModel(models.Model):
     name = models.CharField(max_length=255, verbose_name=_("name"))
     email = models.EmailField(error_messages=_("your email is not valid"), verbose_name=_("email"))
