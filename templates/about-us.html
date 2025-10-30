@@ -64,8 +64,12 @@
                 <div class="column image-column col-md-6 col-sm-12 col-xs-12 {% if LANGUAGE_BIDI %}order-md-first{% endif %}">
                 	<article class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
                 		<figure class="image-box video-box">
-                        	<img src="{% static 'haman/images/resource/featured-image-1.jpg' %}" alt="">
-                            <a href="https://www.youtube.com/watch?v=OrJKD11Rmdg" class="lightbox-image video-link"><div class="icon"><span class="flaticon-play-button-5"></span></div></a>
+{#                        	<img src="{% static 'haman/images/resource/featured-image-1.jpg' %}" alt="">#}
+                            <video src="{% static 'haman/480.mp4' %}" class="lightbox-image video-link" controls width="570px" height="410px">
+                                <div class="icon">
+                                    <span class="flaticon-play-button-5"></span>
+                                </div>
+                            </video>
                         </figure>
                     </article>
                 </div>

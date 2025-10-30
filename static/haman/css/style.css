@@ -4293,11 +4293,11 @@ img{
 }
 
 .about-us-section .video-box .video-link{
-	position:absolute;
+	/*position:absolute;*/
 	left:0px;
 	top:0px;
-	width:100%;
-	height:100%;
+	width: 100%;
+    height: 410px;
 	background:rgba(0,0,0,0.10);
 	transition:all 300ms ease;
 }
