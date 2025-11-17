@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-09 10:49+0330\n"
+"POT-Creation-Date: 2025-11-17 23:08+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -141,8 +141,8 @@ msgstr "بلاگ"
 #: blogs/models.py:45 templates/base.html:90 templates/base.html:163
 #: templates/blog-single.html:52 templates/blog-single.html:72
 #: templates/blog-single.html:92 templates/blog.html:17 templates/blog.html:24
-#: templates/blog.html:28 templates/index.html:649 templates/index.html:676
-#: templates/index.html:703
+#: templates/blog.html:28 templates/index.html:648 templates/index.html:675
+#: templates/index.html:702
 msgid "Blogs"
 msgstr "بلاگ ها"
 
@@ -181,8 +181,8 @@ msgid "arabic baner blogs"
 msgstr "بلاگ های نمادین عربی"
 
 #: news/apps.py:8 news/models.py:44 news/models.py:45 templates/base.html:91
-#: templates/base.html:164 templates/index.html:752 templates/index.html:779
-#: templates/index.html:806 templates/news-single.html:52
+#: templates/base.html:164 templates/index.html:751 templates/index.html:778
+#: templates/index.html:805 templates/news-single.html:52
 #: templates/news-single.html:72 templates/news-single.html:92
 #: templates/news.html:17 templates/news.html:24 templates/news.html:28
 #: templates/news.html:58 templates/news.html:90 templates/news.html:121
@@ -459,9 +459,9 @@ msgstr "اعتماد جهانی، هدف اصلی ما"
 msgid ""
 "We have earned the trust of customers in various industries from all over "
 "the world by providing reliable and high-quality services. Providing the "
-"best quality petrochemical products and fast delivery is our top priority."
-"For more information, consultation or to place an order, contact us today "
-"and experience a different kind of professional cooperation."
+"best quality petrochemical products and fast delivery is our top "
+"priority.For more information, consultation or to place an order, contact us "
+"today and experience a different kind of professional cooperation."
 msgstr ""
 "ما با ارائه خدمات قابل اعتماد و باکیفیت، موفق به جلب اعتماد مشتریان در صنایع "
 "مختلف از سراسر جهان شده‌ایم. تأمین محصولات پتروشیمی با بهترین کیفیت و تحویل "
@@ -561,7 +561,7 @@ msgstr "ما محصولات و خدمات مناسب متناسب با نیاز�
 
 #: templates/about-us.html:42
 msgid "Purchase - Palayeshcood."
-msgstr "خرید - پالایشکود."
+msgstr "خرید - پالایش‌کود."
 
 #: templates/about-us.html:45
 msgid ""
@@ -609,7 +609,7 @@ msgstr ""
 
 #: templates/about-us.html:51
 msgid "Why Palayeshcood?"
-msgstr "چرا پالایش کود"
+msgstr "چرا پالایش‌کود"
 
 #: templates/about-us.html:53
 msgid ""
@@ -633,22 +633,22 @@ msgid "Haman Lesan,"
 msgstr "هامان لسان,"
 
 #: templates/about-us.html:57 templates/blog.html:64 templates/blog.html:96
-#: templates/blog.html:127 templates/index.html:147 templates/index.html:655
-#: templates/index.html:682 templates/index.html:709 templates/index.html:758
-#: templates/index.html:785 templates/index.html:812 templates/news.html:64
+#: templates/blog.html:127 templates/index.html:147 templates/index.html:654
+#: templates/index.html:681 templates/index.html:708 templates/index.html:757
+#: templates/index.html:784 templates/index.html:811 templates/news.html:64
 #: templates/news.html:96 templates/news.html:127
 msgid "Founder"
 msgstr "بنیانگذار"
 
 #: templates/about-us.html:58 templates/base.html:34 templates/index.html:148
 msgid "Palayeshcood"
-msgstr "پالایش گود"
+msgstr "پالایش‌کود"
 
-#: templates/about-us.html:85
+#: templates/about-us.html:89
 msgid "We are Professional"
 msgstr "ما حرفه ای هستیم"
 
-#: templates/about-us.html:87
+#: templates/about-us.html:91
 msgid ""
 "With years of experience and technical knowledge, we operate in the "
 "production and supply of industrial products with the highest quality "
@@ -659,11 +659,11 @@ msgstr ""
 "استانداردهای کیفیت فعالیت می‌کنیم. با بهره‌گیری از فناوری‌های پیشرفته و تیمی "
 "متخصص، راهکارهای مطمئن و کارآمد را برای تامین صنایع مختلف ارائه می‌دهیم."
 
-#: templates/about-us.html:97
+#: templates/about-us.html:101
 msgid "We are Expert"
 msgstr "ما متخصص هستیم"
 
-#: templates/about-us.html:99
+#: templates/about-us.html:103
 msgid ""
 "With our expertise and experience in selling industrial products, we offer "
 "the best solutions to supply the products needed by various industries. With "
@@ -674,11 +674,11 @@ msgstr ""
 "محصولات مورد نیاز صنایع مختلف ارائه می‌دهیم. با تضمین کیفیت، قیمت رقابتی و "
 "مشاوره تخصصی، همراه مطمئن شما در تأمین محصولات صنعتی هستیم."
 
-#: templates/about-us.html:109
+#: templates/about-us.html:113
 msgid "We are Trusted"
 msgstr "ما مورد اعتماد هستیم"
 
-#: templates/about-us.html:111
+#: templates/about-us.html:115
 msgid ""
 "With years of experience in selling industrial products, we are known as a "
 "reliable and trusted supplier. Guaranteed quality, fair prices and a "
@@ -900,7 +900,7 @@ msgid ""
 "expertise and experience. For more information and to place an order, "
 "contact us."
 msgstr ""
-"شرکت پالایش کود، به عنوان توزیع‌ کننده معتبر مواد شیمیایی و پالایشگاهی و شکر، "
+"شرکت پالایش‌کود، به عنوان توزیع‌ کننده معتبر مواد شیمیایی و پالایشگاهی و شکر، "
 "آماده فروش مواد اولیه از پتروشیمی ها و پالایشگاهها و کارخانه های مواد غذایی "
 "به سرتاسر جهان هستیم و ما متعهد به برآورده کردن نیازهای مشتریان عزیز در "
 "تمامی مناطق هستیم. به ما بپیوندید و از تخصص و تجربه ما بهره‌مند شوید. برای "
@@ -910,7 +910,7 @@ msgstr ""
 msgid "Unit 31, Safavieh Office Complex, Rajaee St, Kashan, Iran"
 msgstr "ایران, کاشان، خیابان رجائی، مجتمع اداری صفویه، واحد 31"
 
-#: templates/base.html:226 templates/index.html:630
+#: templates/base.html:226 templates/index.html:629
 msgid "Recent Blogs"
 msgstr "بلاگ های اخیر"
 
@@ -923,7 +923,7 @@ msgstr "بلاگ های اخیر"
 msgid "Read More"
 msgstr "بیشتر"
 
-#: templates/base.html:257 templates/index.html:733
+#: templates/base.html:257 templates/index.html:732
 msgid "Recent News"
 msgstr "اخبار اخیر"
 
@@ -978,8 +978,8 @@ msgid "Popular Tags"
 msgstr "تگ های محبوب"
 
 #: templates/blog.html:63 templates/blog.html:95 templates/blog.html:126
-#: templates/index.html:654 templates/index.html:681 templates/index.html:708
-#: templates/index.html:757 templates/index.html:784 templates/index.html:811
+#: templates/index.html:653 templates/index.html:680 templates/index.html:707
+#: templates/index.html:756 templates/index.html:783 templates/index.html:810
 #: templates/news.html:63 templates/news.html:95 templates/news.html:126
 #: templates/our-team.html:46 templates/our-team.html:56
 msgid "Haman Lesan"
@@ -1084,8 +1084,8 @@ msgid ""
 "manufacturers to provide our customers with high quality products at "
 "reasonable prices."
 msgstr ""
-"شرکت پالایش کود به عنوان یک توزیع‌کننده محصولات شیمیایی و پالایشگاهی شناخته "
-"می‌شود. در پالایش کود ، ما با معتبرترین تولیدکنندگان دنیا همکاری می‌کنیم تا "
+"شرکت پالایش‌کود به عنوان یک توزیع‌کننده محصولات شیمیایی و پالایشگاهی شناخته "
+"می‌شود. در پالایش‌کود ، ما با معتبرترین تولیدکنندگان دنیا همکاری می‌کنیم تا "
 "محصولات با کیفیت بالا و قیمت مناسب را برای مشتریان فراهم آوریم"
 
 #: templates/faq.html:49
@@ -1104,7 +1104,7 @@ msgstr ""
 
 #: templates/faq.html:59
 msgid "How to order at PKK?"
-msgstr "چگونه می توان در پالایش کود سفارش داد؟"
+msgstr "چگونه می توان در پالایش‌کود سفارش داد؟"
 
 #: templates/faq.html:62
 msgid ""
@@ -1652,7 +1652,7 @@ msgstr "تیم پشتیبانی متخصص ما آماده پاسخگویی به
 
 #: templates/index.html:139
 msgid "Welcome to Palayeshcood"
-msgstr "به پالایش کود خوش آمدید"
+msgstr "به پالایش‌کود خوش آمدید"
 
 #: templates/index.html:140
 msgid ""
@@ -1785,6 +1785,22 @@ msgstr "از فروشگاه"
 msgid "Quick View"
 msgstr "نمایش سریع"
 
+#: templates/index.html:604 templates/index.html:605 templates/index.html:606
+#: templates/index.html:607 templates/index.html:608 templates/index.html:609
+#: templates/index.html:610 templates/index.html:611 templates/index.html:612
+#: templates/index.html:613 templates/index.html:614 templates/index.html:615
+#: templates/index.html:616 templates/index.html:617 templates/index.html:618
+msgid "Years"
+msgstr "سال"
+
+#: templates/index.html:604 templates/index.html:605 templates/index.html:606
+#: templates/index.html:607 templates/index.html:608 templates/index.html:609
+#: templates/index.html:610 templates/index.html:611 templates/index.html:612
+#: templates/index.html:613 templates/index.html:614 templates/index.html:615
+#: templates/index.html:616 templates/index.html:617 templates/index.html:618
+msgid "Experince"
+msgstr "تجربه"
+
 #: templates/news-single.html:120 templates/news-single.html:226
 #: templates/news-single.html:332 templates/news.html:7
 msgid "news"
@@ -1812,7 +1828,7 @@ msgstr "تیم ما"
 
 #: templates/our-team.html:18
 msgid "Team Behind Palayeshcood"
-msgstr "تیم پشتیبان پالایش کود"
+msgstr "تیم پشتیبان پالایش‌کود"
 
 #: templates/our-team.html:57
 msgid "Founder and CEO"
@@ -2418,6 +2434,10 @@ msgstr "نام لازم است"
 #: haman/views.py:74
 msgid "email is required"
 msgstr "ایمیل مورد نیاز است"
+
+#: haman/views.py:78
+msgid "message is required"
+msgstr "پیام لازم است"
 
 #~ msgid "Recent Works"
 #~ msgstr "کار های اخیر"
