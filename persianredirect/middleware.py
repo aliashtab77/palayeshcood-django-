@@ -1,6 +1,6 @@
 from django.apps import apps
 from django.conf import settings
-from django.contrib.redirects.models import Redirect
+from persianredirect.models import Redirect
 from django.contrib.sites.shortcuts import get_current_site
 from django.core.exceptions import ImproperlyConfigured
 from django.http import HttpResponseGone, HttpResponsePermanentRedirect

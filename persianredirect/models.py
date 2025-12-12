@@ -7,7 +7,7 @@ class Redirect(models.Model):
     site = models.ForeignKey(Site, models.CASCADE, verbose_name=_("site"))
     old_path = models.CharField(
         _("redirect from"),
-        max_length=200,
+        max_length=1000,
         db_index=True,
         help_text=_(
             "This should be an absolute path, excluding the domain name. Example: "

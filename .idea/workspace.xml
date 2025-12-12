@@ -5,7 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60508cdf-84c1-4e38-9f07-29198cb6ba53" name="Changes" comment="completed">
+      <change afterPath="$PROJECT_DIR$/persianredirect/migrations/0002_alter_redirect_old_path.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/icons/iran.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/haman/images/logo-main11.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/migrations/0002_blogsmodel_short_description_arabic_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/migrations/0003_blogsmodel_time_created.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/migrations/0004_alter_blogsmodel_avatar.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/migrations/0005_rename_product_english_indexblog_blog.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/migrations/0006_alter_blogsmodel_time_created.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/migrations/0002_alter_newsmodel_time_created.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/persianredirect/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/persianredirect/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persianredirect/middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/persianredirect/middleware.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persianredirect/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/persianredirect/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persianredirect/migrations/0002_alter_redirect_new_path_help_text.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/persianredirect/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/persianredirect/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/shop/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/migrations/0002_arabic_index_english_index_persian_index.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/migrations/0003_alter_productsmodel_comments.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/migrations/0004_productsmodel_tags.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop/migrations/0005_alter_productsmodel_arabic_slug_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/haman/images/footerlogo.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/haman/images/footerlogo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/haman/images/icons/iran2.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/haman/images/icons/iran2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/haman/images/logo-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/haman/images/logo-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/haman/images/logo-main.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/haman/images/logo-main.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/haman/images/logo_old.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/userdata/migrations/__init__.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,6 +198,10 @@
       <workItem from="1761779905499" duration="5181000" />
       <workItem from="1762449673000" duration="8000" />
       <workItem from="1762601758276" duration="79000" />
+      <workItem from="1763407565441" duration="2239000" />
+      <workItem from="1764182828850" duration="3946000" />
+      <workItem from="1765548746577" duration="899000" />
+      <workItem from="1765549677900" duration="4009000" />
     </task>
     <task id="LOCAL-00001" summary="first haman see">
       <option name="closed" value="true" />
@@ -314,7 +347,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761786032333</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="completed">
+      <option name="closed" value="true" />
+      <created>1763409769068</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1763409769068</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
