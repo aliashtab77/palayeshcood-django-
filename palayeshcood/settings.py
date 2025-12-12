@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.redirects',
+    #'django.contrib.redirects',
+    'persianredirect.apps.PersianredirectConfig',
     'haman.apps.HamanConfig',
     'services.apps.ServicesConfig',
     'django_ckeditor_5',
@@ -49,7 +50,8 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'blogs.apps.BlogsConfig',
     'news.apps.NewsConfig',
-    'userdata.apps.UserdataConfig'
+    'userdata.apps.UserdataConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -62,7 +64,8 @@ MIDDLEWARE = [
     'request.middleware.RequestMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
+    # 'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
+    'persianredirect.middleware.RedirectFallbackMiddleware'
 ]
 SITE_ID = 1
 ROOT_URLCONF = 'palayeshcood.urls'
