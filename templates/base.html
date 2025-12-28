@@ -65,7 +65,7 @@
         	<div class="auto-container">
             	<div class="outer-container clearfix">
                     <!--Logo Box-->
-                    <div class="logo-box">
+                    <div class="logo-box" style="padding: 15px 0px;">
                         <div class="logo"><a href=""><img src="{% static 'haman/images/logo-main.png' %}" alt=""></a></div>
 
                     </div>
@@ -210,7 +210,9 @@
                             	<div class="footer-widget about-widget">
                                 	<div class="footer-logo"><figure><a href="{% url 'home' %}"><img src="{% static 'haman/images/footerlogo.png' %}" alt=""></a></figure></div>
                                     <div class="widget-content">
-                                    	<div class="text">{% translate 'Palayeshcood Company, as a reputable distributor of chemicals, refineries and sugar, is ready to sell raw materials from petrochemicals, refineries and food factories all over the world and we are committed to meeting the needs of our valued customers in all regions. Join us and benefit from our expertise and experience. For more information and to place an order, contact us.' %}</div>
+                                    	<div class="text" style="text-align: justify; {% if LANGUAGE_BIDI %}
+                                    		direction: rtl
+                                    	{% endif %} ">{% translate 'Palayeshcood Company, as a reputable distributor of chemicals, refineries and sugar, is ready to sell raw materials from petrochemicals, refineries and food factories all over the world and we are committed to meeting the needs of our valued customers in all regions. Join us and benefit from our expertise and experience. For more information and to place an order, contact us.' %}</div>
                                         <ul class="contact-info">
                                         	<li><span class="icon fa fa-map-marker"></span>{% translate 'Unit 31, Safavieh Office Complex, Rajaee St, Kashan, Iran' %}</li>
                                             <li><span class="icon fa fa-phone"></span><a href="tel:+989130025744">+98(913) 002-57-44</a></li>

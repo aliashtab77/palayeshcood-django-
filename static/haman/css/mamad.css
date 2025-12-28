@@ -104,3 +104,59 @@ input , textarea{
     left: -85%;
     /* right: 0px; */
 }
+
+.welcome-section .welcome-column .inner-content h2:before {
+    position: absolute;
+    content: '';
+    width: 70px;
+    height: 1px;
+    left: auto;
+    right: 0px;
+    bottom: 4px;
+    display: block;
+    background-color: #fc721e;
+}
+
+.welcome-section .welcome-column .inner-content h2:after {
+    position: absolute;
+    content: '';
+    width: 70px;
+    height: 2px;
+    left: auto;
+    right: 0px;
+    bottom: 0px;
+    display: block;
+    background-color: #fc721e;
+}
+.accordion-box .block .content p{
+  text-align: justify;
+  direction: rtl;
+}
+.info-style-one li h4{
+  direction: rtl;
+}
+.contact-section .info-column .desc-text{
+  direction: rtl;
+}
+
+.about-us-section .text-column .text{
+  direction: rtl;
+  text-align: justify;
+}
+.service-block-one .inner-box .text{
+  direction: rtl;
+  text-align: justify;
+}
+
+.welcome-section .welcome-column .inner-content .text{
+  direction: rtl;
+}
+
+.service-block-two .inner-box .text{
+  direction: rtl;
+  text-align: justify;
+}
+
+.newsletter-style-one .title-column .text{
+  direction: rtl;
+}
